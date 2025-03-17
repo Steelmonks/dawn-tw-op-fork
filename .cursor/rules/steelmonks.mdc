@@ -5,6 +5,8 @@ alwaysApply: true
 ---
 We are working on Shopify's Dawn theme with Tailwind. The project uses Tailwind, as the name implies.
 
+Make sure you prefix all tailwind classes with 'twcss-' as per the config below.
+
 Always refer to the tailwind config and the README file for conventions.
 
 @file ../tailwind.config.js
