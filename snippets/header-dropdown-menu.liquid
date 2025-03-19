@@ -8,6 +8,13 @@
 <nav class='header__inline-menu'>
   <ul class='list-menu list-menu--inline' role='list'>
     {%- for link in section.settings.menu.links -%}
+      {% comment %} ! Link highlighting {% endcomment %}
+      {% assign highlighted_text = '' %}
+      {% if link.title contains '--highlighted-red' %}
+        {% assign highlighted_text = '--highlighted-red' %}
+      {% elsif link.title contains '--highlighted' %}
+        {% assign highlighted_text = '--highlighted' %}
+      {% endif %}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
@@ -17,11 +24,9 @@
                 class='header__menu-item list-menu__item link focus-inset'
               >
                 <span
-                  {%- if link.child_active %}
-                    class='header__active-menu-item'
-                  {% endif %}
+                  class='{{ highlighted_text }} {%- if link.child_active %}header__active-menu-item{% endif %}'
                 >
-                  {{- link.title | escape -}}
+                  {{- link.title | remove: highlighted_text | escape -}}
                 </span>
                 {{- 'icon-caret.svg' | inline_asset_content -}}
               </summary>
@@ -32,17 +37,24 @@
                 tabindex='-1'
               >
                 {%- for childlink in link.links -%}
+                  {% comment %} ! Link highlighting {% endcomment %}
+                  {% assign highlighted_text = '' %}
+                  {% if childlink.title contains '--highlighted-red' %}
+                    {% assign highlighted_text = '--highlighted-red' %}
+                  {% elsif childlink.title contains '--highlighted' %}
+                    {% assign highlighted_text = '--highlighted' %}
+                  {% endif %}
                   <li>
                     {%- if childlink.links == blank -%}
                       <a
                         id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
                         href='{{ childlink.url }}'
-                        class='header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}'
+                        class='{{ highlighted_text }} header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}'
                         {% if childlink.current %}
                           aria-current='page'
                         {% endif %}
                       >
-                        {{ childlink.title | escape }}
+                        {{ childlink.title | remove: highlighted_text | escape }}
                       </a>
                     {%- else -%}
                       <details id='Details-HeaderSubMenu-{{ link.handle }}-{{ childlink.handle }}'>
@@ -50,7 +62,7 @@
                           id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
                           class='header__menu-item link link--text list-menu__item focus-inset caption-large'
                         >
-                          <span>{{ childlink.title | escape }}</span>
+                          <span>{{ childlink.title | remove: highlighted_text | escape }}</span>
                           {{- 'icon-caret.svg' | inline_asset_content -}}
                         </summary>
                         <ul
@@ -58,6 +70,13 @@
                           class='header__submenu list-menu motion-reduce'
                         >
                           {%- for grandchildlink in childlink.links -%}
+                            {% comment %} ! Link highlighting {% endcomment %}
+                            {% assign highlighted_text = '' %}
+                            {% if grandchildlink.title contains '--highlighted-red' %}
+                              {% assign highlighted_text = '--highlighted-red' %}
+                            {% elsif grandchildlink.title contains '--highlighted' %}
+                              {% assign highlighted_text = '--highlighted' %}
+                            {% endif %}
                             <li>
                               <a
                                 id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}'
@@ -67,7 +86,7 @@
                                   aria-current='page'
                                 {% endif %}
                               >
-                                {{ grandchildlink.title | escape }}
+                                {{ grandchildlink.title | remove: highlighted_text | escape }}
                               </a>
                             </li>
                           {%- endfor -%}
@@ -90,10 +109,10 @@
           >
             <span
               {%- if link.current %}
-                class='header__active-menu-item'
+                class='{{ highlighted_text }} header__active-menu-item'
               {% endif %}
             >
-              {{- link.title | escape -}}
+              {{- link.title | remove: highlighted_text | escape -}}
             </span>
           </a>
         {%- endif -%}
