@@ -70,6 +70,30 @@
       padding-top: 0.5rem;
     }
   }
+
+  .--highlighted {
+    font-weight: 600;
+  
+    /* Animation */
+    animation: gradientBackground 5s ease infinite;
+    background: linear-gradient(90deg, #090a0c 0%, #04c 40%, #04c 60%, #090a0c 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .--highlighted-red {
+    font-weight: 600;
+  
+    /* Animation */
+    animation: gradientBackground 5s ease infinite;
+    background: linear-gradient(90deg, #090a0c 0%, #ad091f 40%, #ad091f 60%, #090a0c 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 </style>
 
 {%- style -%}
