@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "steelmonks_hero_BFdthq": {
+      "type": "steelmonks-hero",
+      "settings": {}
+    },
     "multicolumn": {
       "type": "multicolumn",
       "blocks": {
@@ -67,6 +71,7 @@
     }
   },
   "order": [
+    "steelmonks_hero_BFdthq",
     "multicolumn"
   ]
 }
