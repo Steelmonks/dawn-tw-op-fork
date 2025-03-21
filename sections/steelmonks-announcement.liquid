@@ -1,0 +1,416 @@
+{{ 'section-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign show_announcement_bar = true
+%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .steelmonks-announcement__container {
+      background-color: {{ section.settings.background_color }};
+      color: {{ section.settings.text_color }};
+  }
+{% endstyle %}
+
+{% if show_announcement_bar %}
+  <div class="steelmonks-announcement__container text-center">
+    <div class="announcement-bar__wrapper">
+      <div class="announcement-bar__content u-small">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'announcement' %}
+              <div style="font-size: {{ block.settings.font_size }}; font-weight: {{ block.settings.font_weight }};">
+                {{ block.settings.text }}
+              </div>
+            {% when 'countdown' %}
+              {% render 'custom_countdown', section: block %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Custom Announcement Bar",
+  "class": "shopify-section-steelmonks-announcement",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#0044cc"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#fafaff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>📯 100% Glücksgarantie</p>",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "font_size",
+          "label": "Font Size",
+          "default": "2rem"
+        },
+        {
+          "type": "range",
+          "id": "font_weight",
+          "label": "Font Weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "default": 600
+        }
+      ]
+    },
+    {
+      "type": "countdown",
+      "name": "Countdown",
+      "settings": [
+        // ! Date and Text Settings
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Countdown End Date",
+          "info": "Enter date in format: Month DD, YYYY HH:mm:ss (e.g. December 31, 2024 23:59:59)",
+          "default": "December 31, 2024 23:59:59"
+        },
+        {
+          "type": "liquid",
+          "id": "expired_text",
+          "label": "Expired Text"
+        },
+        {
+          "type": "text",
+          "id": "top_text",
+          "label": "Top Text"
+        },
+        {
+          "type": "text",
+          "id": "left_text",
+          "label": "Left Text",
+          "default": "THERE'S"
+        },
+        {
+          "type": "text",
+          "id": "right_text",
+          "label": "Right Text",
+          "default": "LEFT UNTIL"
+        },
+        {
+          "type": "text",
+          "id": "bottom_text",
+          "label": "Bottom Text",
+          "default": "The Big Sale Ends!"
+        },
+        {
+          "type": "text",
+          "id": "days_label",
+          "label": "Days Label",
+          "default": "days"
+        },
+        {
+          "type": "text",
+          "id": "hours_label",
+          "label": "Hours Label",
+          "default": "hours"
+        },
+        {
+          "type": "text",
+          "id": "minutes_label",
+          "label": "Minutes Label",
+          "default": "min"
+        },
+        {
+          "type": "text",
+          "id": "seconds_label",
+          "label": "Seconds Label",
+          "default": "sec"
+        },
+        // ! Style Settings
+        {
+          "type": "select",
+          "id": "countdown_styles",
+          "label": "Countdown animation style",
+          "options": [
+            {
+              "value": "0",
+              "label": "None"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            }
+          ],
+          "default": "0"
+        },
+        {
+          "type": "select",
+          "id": "countdown_text_alignment",
+          "label": "Countdown Text Alignment",
+          "options": [
+            { "value": "baseline", "label": "Baseline" },
+            { "value": "center", "label": "Center" },
+            { "value": "flex-start", "label": "Top" },
+            { "value": "flex-end", "label": "Bottom" }
+          ],
+          "default": "baseline"
+        },
+        // ! Text Size Settings
+        {
+          "type": "header",
+          "content": "Text Sizes"
+        },
+        {
+          "type": "range",
+          "id": "countdown_mobile_text_size",
+          "label": "Countdown Mobile Text Size",
+          "min": 8,
+          "max": 36,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "countdown_desktop_text_size",
+          "label": "Countdown Desktop Text Size",
+          "min": 8,
+          "max": 36,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "mobile_text_size",
+          "label": "Mobile Text Size",
+          "min": 8,
+          "max": 36,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "desktop_text_size",
+          "label": "Desktop Text Size",
+          "min": 8,
+          "max": 36,
+          "step": 1,
+          "default": 16
+        },
+        // ! Font Weight Settings
+        {
+          "type": "header",
+          "content": "Font Weights"
+        },
+        {
+          "type": "range",
+          "id": "vertical_font_weight",
+          "label": "Vertical Font Weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "horizontal_font_weight",
+          "label": "Horizontal Font Weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "countdown_font_weight",
+          "label": "Countdown Font Weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "default": 600
+        },
+        {
+          "type": "range",
+          "id": "label_font_weight",
+          "label": "Label Font Weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "default": 400
+        },
+        // ! Padding Settings
+        {
+          "type": "header",
+          "content": "Padding"
+        },
+        {
+          "type": "range",
+          "id": "vertical_padding",
+          "label": "Vertical Padding",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 8,
+          "info": "Adds vertical padding to the timer digits"
+        },
+        {
+          "type": "range",
+          "id": "block_padding",
+          "label": "Block Vertical Padding",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 12,
+          "info": "Adds vertical padding to the whole block"
+        },
+        {
+          "type": "range",
+          "id": "horizontal_padding",
+          "label": "Horizontal Padding",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 8,
+          "info": "Adds horizontal padding to the timer digits"
+        },
+        {
+          "type": "range",
+          "id": "border_radius",
+          "label": "Border Radius",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 8
+        },
+        // ! Color Settings
+        {
+          "type": "header",
+          "content": "Colors"
+        },
+        {
+          "type": "color",
+          "id": "timer_text_color",
+          "label": "Timer Text Color",
+          "default": "#fafaff"
+        },
+        {
+          "type": "color",
+          "id": "timer_label_color",
+          "label": "Timer Label Color",
+          "default": "#fafaff"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#0044cc"
+        },
+        // ! Visibility Settings
+        {
+          "type": "header",
+          "content": "Visibility"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_days",
+          "label": "Show Days",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_hours",
+          "label": "Show Hours",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_minutes",
+          "label": "Show Minutes",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_seconds",
+          "label": "Show Seconds",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_inner_text_on_mobile",
+          "label": "Show inner Text on Mobile",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "variant",
+          "label": "Variant",
+          "info": "Choose whether you are editing single digits or pairs of digits.",
+          "options": [
+            {
+              "value": "pairs",
+              "label": "Digit Pairs"
+            },
+            {
+              "value": "single",
+              "label": "Single Digits"
+            }
+          ],
+          "default": "single"
+        },
+        {
+          "type": "select",
+          "id": "visibility",
+          "label": "Visibility",
+          "default": "all",
+          "options": [
+            {
+              "value": "all",
+              "label": "All Devices"
+            },
+            {
+              "value": "mobile",
+              "label": "Mobile Only"
+            },
+            {
+              "value": "desktop",
+              "label": "Desktop Only"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Announcement Bar",
+      "blocks": [
+        {
+          "type": "announcement"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

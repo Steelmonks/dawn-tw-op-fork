@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn {
+  @apply twcss-p-5 twcss-rounded-xl twcss-font-semibold twcss-transition-colors twcss-duration-300 twcss-text-[1.2rem] md:twcss-text-[1.4rem] lg:twcss-text-[1.6rem] twcss-border-2 md:twcss-px-5 md:twcss-py-3 twcss-shadow-lg twcss-shadow-brandblack/25;
+}
+
+.btn-big {
+  @apply twcss-px-24 twcss-py-5 md:twcss-px-24 md:twcss-py-3;
+}
+
+.btn-primary {
+  @apply twcss-bg-brandblue twcss-text-brandwhite twcss-border-brandblack;
+}
+.btn-primary:hover {
+  @apply twcss-bg-brandblack twcss-text-brandyellow;
+}
+
+.btn-secondary {
+  @apply twcss-bg-brandblack twcss-text-brandwhite;
+}
+.btn-secondary:hover {
+  @apply twcss-bg-brandblue twcss-text-brandwhite;
+}

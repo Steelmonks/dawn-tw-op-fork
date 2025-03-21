@@ -1,0 +1,136 @@
+{{ 'steelmonks-collection-grid.css' | asset_url | stylesheet_tag }}
+
+<h3 style="color: {{ section.settings.text_color }};">
+  {{ section.settings.title }}
+</h3>
+
+<ul class="steelmonks-collection-grid__container page-gutter">
+  {% for block in section.blocks %}
+    <li class="steelmonks-collection-grid__item list-unstyled">
+      <a
+        {% if block.settings.url == blank %}
+          {% unless block.settings.show_collection %}
+            href="{{ block.settings.product.url }}"
+            class="steelmonks-collection-grid__item-link"
+          {% else %}
+            href="{{ block.settings.collection.url }}"
+          {% endunless %}
+        {% else %}
+          href="{{ block.settings.url }}"
+        {% endif %}
+      >
+        {% if block.settings.show_collection %}
+          <h4 style="color: {{ block.settings.text_color }};">
+            {% if section.settings.use_collection_title %}
+              {{ block.settings.collection.title }}
+            {% else %}
+              {{ block.settings.title }}
+            {% endif %}
+          </h4>
+        {% endif %}
+
+        <img
+          {% if block.settings.image == blank and block.settings.product.featured_image == blank %}
+            src="/cdn/shop/files/placeholder-image.webp?v=1715096222"
+          {% else %}
+            {% if block.settings.show_collection %}
+              src="{{ block.settings.image | image_url }}"
+            {% else %}
+              src="{{ block.settings.product.featured_image | image_url }}"
+            {% endif %}
+          {% endif %}
+          alt="{{ block.settings.title }}"
+          width="100%"
+          height="100%"
+        >
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% schema %}
+{
+  "name": "Collection Grid",
+  "tag": "section",
+  "class": "steelmonks-collection-grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Collection Grid"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Title Color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_collection_title",
+      "label": "Use Collection Title",
+      "default": true,
+      "info": "If enabled, displays collection title instead of custom title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection or Product",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection",
+          "info": "(Not needed if using a product, and vice versa)"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_collection",
+          "label": "Show Collection",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom Title",
+          "info": "Overrides collection title when 'Use Collection Title' is disabled"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Custom URL",
+          "info": "Overrides all other URLs for the item"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Grid",
+      "blocks": [
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

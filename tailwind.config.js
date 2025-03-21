@@ -17,6 +17,12 @@ module.exports = {
       pageMaxWidth: '1440px',
     },
     extend: {
+      colors: {
+        brandblue: '#0044cc',
+        brandblack: '#090a0c',
+        brandwhite: '#fafaff',
+        brandyellow: '#f5ae2e',
+      },
       fontFamily: {
         heading: 'var(--font-heading-family)',
       },
