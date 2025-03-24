@@ -13,65 +13,137 @@
       "type": "steelmonks-hero",
       "settings": {}
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "custom_icon_grid_Ahzicm": {
+      "type": "custom_icon_grid",
+      "settings": {}
+    },
+    "steelmonks_collection_grid_k79tHx": {
+      "type": "steelmonks-collection-grid",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "collection_YWCjD3": {
+          "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/web-germany-flag-icon.webp",
-            "title": "",
-            "text": "<p>Unschlagbar schnelle Abwicklung.</p>",
-            "link_label": "",
-            "link": ""
+            "collection": "monogramme",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Für Dich",
+            "url": "",
+            "image": "shopify://shop_images/web-fur-dich-monogram.webp",
+            "text_color": "#000000"
           }
         },
-        "column2": {
-          "type": "column",
+        "collection_w9yRdb": {
+          "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/web-medal-icon.webp",
-            "title": "",
-            "text": "<p>Über <strong>75.000+</strong> zufriedene Kunden.</p>",
-            "link_label": "",
-            "link": ""
+            "collection": "geschenke-fur-familien",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Für Familien",
+            "url": "",
+            "image": "shopify://shop_images/web-monogram-family.webp",
+            "text_color": "#000000"
           }
         },
-        "column3": {
-          "type": "column",
+        "collection_tUdLDA": {
+          "type": "collection",
           "settings": {
-            "image": "shopify://shop_images/web-stars-icon.webp",
-            "title": "",
-            "text": "<p>Über <strong>5.000+</strong> verifizierte Bewertungen.</p>",
-            "link_label": "",
-            "link": ""
+            "collection": "geschenke-fur-paare",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Für Paare",
+            "url": "",
+            "image": "shopify://shop_images/web-couples-hearts.webp",
+            "text_color": "#000000"
+          }
+        },
+        "collection_d6jjDY": {
+          "type": "collection",
+          "settings": {
+            "collection": "geschenke-fur-handwerker",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Für Handwerker",
+            "url": "",
+            "image": "shopify://shop_images/web-handworkers-png.png",
+            "text_color": "#000000"
+          }
+        },
+        "collection_zBPaTF": {
+          "type": "collection",
+          "settings": {
+            "collection": "baum-familienschilder",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Bäume",
+            "url": "",
+            "image": "shopify://shop_images/web-family-tree-baum.webp",
+            "text_color": "#000000"
+          }
+        },
+        "collection_iTWK9F": {
+          "type": "collection",
+          "settings": {
+            "collection": "hausschilder",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Hausschilder",
+            "url": "",
+            "image": "shopify://shop_images/web-house-signs-numbers.webp",
+            "text_color": "#000000"
+          }
+        },
+        "collection_w9p969": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Wappen",
+            "url": "/pages/heraldisches-wappen-aus-metall",
+            "image": "shopify://shop_images/web-wappen-coat-of-arms.webp",
+            "text_color": "#000000"
+          }
+        },
+        "collection_kYMjiB": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "product": "",
+            "show_collection": true,
+            "use_collection_title": false,
+            "title": "Sonderanfertigungen",
+            "url": "/pages/anfragen",
+            "image": "shopify://shop_images/web-custom-signs.webp",
+            "text_color": "#000000"
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "collection_YWCjD3",
+        "collection_w9yRdb",
+        "collection_tUdLDA",
+        "collection_d6jjDY",
+        "collection_zBPaTF",
+        "collection_iTWK9F",
+        "collection_w9p969",
+        "collection_kYMjiB"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "Beliebte Kollektionen",
+        "text_color": "#000000"
       }
     }
   },
   "order": [
     "steelmonks_hero_BFdthq",
-    "multicolumn"
+    "custom_icon_grid_Ahzicm",
+    "steelmonks_collection_grid_k79tHx"
   ]
 }
