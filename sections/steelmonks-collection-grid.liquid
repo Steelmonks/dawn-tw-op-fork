@@ -1,52 +1,59 @@
-{{ 'steelmonks-collection-grid.css' | asset_url | stylesheet_tag }}
+<div class='twcss-py-8'>
+  <h3
+    class='twcss-font-bold twcss-text-center twcss-text-[32px] twcss-mb-8'
+    style='color: {{ section.settings.text_color }};'
+  >
+    {{ section.settings.title }}
+  </h3>
 
-<h3 style="color: {{ section.settings.text_color }};">
-  {{ section.settings.title }}
-</h3>
-
-<ul class="steelmonks-collection-grid__container page-gutter">
-  {% for block in section.blocks %}
-    <li class="steelmonks-collection-grid__item list-unstyled">
-      <a
-        {% if block.settings.url == blank %}
-          {% unless block.settings.show_collection %}
-            href="{{ block.settings.product.url }}"
-            class="steelmonks-collection-grid__item-link"
-          {% else %}
-            href="{{ block.settings.collection.url }}"
-          {% endunless %}
-        {% else %}
-          href="{{ block.settings.url }}"
-        {% endif %}
-      >
-        {% if block.settings.show_collection %}
-          <h4 style="color: {{ block.settings.text_color }};">
-            {% if section.settings.use_collection_title %}
-              {{ block.settings.collection.title }}
+  <ul class='twcss-grid twcss-grid-cols-4 twcss-gap-4 page-gutter md:twcss-grid-cols-4 sm:twcss-grid-cols-2'>
+    {% for block in section.blocks %}
+      <li class='twcss-list-none'>
+        <a
+          class='twcss-w-full twcss-flex twcss-flex-col twcss-gap-2 twcss-justify-center twcss-items-center twcss-max-w-fit twcss-font-normal twcss-no-underline twcss-text-center twcss-text-[2rem] md:twcss-text-[2rem] sm:twcss-text-[1.5rem]'
+          {% if block.settings.url == blank %}
+            {% unless block.settings.show_collection %}
+              href='{{ block.settings.product.url }}'
             {% else %}
-              {{ block.settings.title }}
-            {% endif %}
-          </h4>
-        {% endif %}
-
-        <img
-          {% if block.settings.image == blank and block.settings.product.featured_image == blank %}
-            src="/cdn/shop/files/placeholder-image.webp?v=1715096222"
+              href='{{ block.settings.collection.url }}'
+            {% endunless %}
           {% else %}
-            {% if block.settings.show_collection %}
-              src="{{ block.settings.image | image_url }}"
-            {% else %}
-              src="{{ block.settings.product.featured_image | image_url }}"
-            {% endif %}
+            href='{{ block.settings.url }}'
           {% endif %}
-          alt="{{ block.settings.title }}"
-          width="100%"
-          height="100%"
         >
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+          {% if block.settings.show_collection %}
+            <h4
+              class='twcss-font-normal twcss-text-center twcss-text-[2rem] md:twcss-text-[2rem] sm:twcss-text-[1.5rem]'
+              style='color: {{ block.settings.text_color }};'
+            >
+              {% if block.settings.use_collection_title %}
+                {{ block.settings.collection.title }}
+              {% else %}
+                {{ block.settings.title }}
+              {% endif %}
+            </h4>
+          {% endif %}
+
+          <img
+            class='twcss-aspect-square'
+            {% if block.settings.image == blank and block.settings.product.featured_image == blank %}
+              src='/cdn/shop/files/placeholder-image.webp?v=1715096222'
+            {% else %}
+              {% if block.settings.show_collection %}
+                src='{{ block.settings.image | image_url }}'
+              {% else %}
+                src='{{ block.settings.product.featured_image | image_url }}'
+              {% endif %}
+            {% endif %}
+            alt='{{ block.settings.title }}'
+            width='100%'
+            height='100%'
+          >
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 
 {% schema %}
 {
@@ -58,20 +65,13 @@
       "type": "text",
       "id": "title",
       "label": "Title",
-      "default": "Collection Grid"
+      "default": "Beliebte Kollektionen"
     },
     {
       "type": "color",
       "id": "text_color",
       "label": "Title Color",
       "default": "#000000"
-    },
-    {
-      "type": "checkbox",
-      "id": "use_collection_title",
-      "label": "Use Collection Title",
-      "default": true,
-      "info": "If enabled, displays collection title instead of custom title"
     }
   ],
   "blocks": [
@@ -95,6 +95,13 @@
           "id": "show_collection",
           "label": "Show Collection",
           "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "use_collection_title",
+          "label": "Use Collection Title",
+          "default": false,
+          "info": "If enabled, displays collection title instead of custom title"
         },
         {
           "type": "text",
@@ -127,7 +134,66 @@
       "name": "Collection Grid",
       "blocks": [
         {
-          "type": "collection"
+          "type": "collection",
+          "settings": {
+            "collection": "monogramme",
+            "show_collection": true,
+            "title": "Für Dich"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection": "geschenke-fur-familien",
+            "show_collection": true,
+            "title": "Für Familien"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection": "geschenke-fur-paare",
+            "show_collection": true,
+            "title": "Für Paare"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection": "geschenke-fur-handwerker",
+            "show_collection": true,
+            "title": "Für Handwerker"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection": "baum-familienschilder",
+            "show_collection": true,
+            "title": "Bäume"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "collection": "hausschilder",
+            "show_collection": true,
+            "title": "Hausschilder"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "Wappen",
+            "url": "/pages/heraldisches-wappen-aus-metall"
+          }
+        },
+        {
+          "type": "collection",
+          "settings": {
+            "title": "Sonderanfertigungen",
+            "url": "/pages/anfragen"
+          }
         }
       ]
     }
