@@ -1,0 +1,53 @@
+<h2 class='twcss-font-semibold twcss-text-[30px] twcss-text-center md:twcss-hidden'>
+  <span class='twcss-text-brandblue'>Für Paare</span> und die,
+  <span class='twcss-block twcss-text-[28px]'> die Dir wichtig sind </span>
+</h2>
+
+<div
+  style='display: block; background-image: url("https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-gift-banner.webp?v=1742808272");'
+  class='twcss-bg-fixed twcss-relative twcss-w-full twcss-h-[250px] twcss-bg-cover twcss-bg-center twcss-brightness-120'
+>
+  {% comment %} overlay {% endcomment %}
+  <div style='display: block;' class='twcss-absolute twcss-inset-0 twcss-bg-brandwhite twcss-opacity-25'></div>
+</div>
+
+{% comment %} clickable image and button {% endcomment %}
+<div class='twcss-relative twcss-w-full twcss-flex twcss-justify-between twcss-max-w-[1600px] twcss-mb-12'>
+  <h2 class='twcss-font-semibold twcss-text-[30px] twcss-text-center twcss-flex-1 twcss-hidden md:twcss-block md:twcss-mt-12'>
+    <div class='twcss-text-[44px] twcss-leading-[48px]'>
+      Besondere <span class='twcss-text-brandblue'> Geschenke </span>
+    </div>
+    <div class='twcss-text-[56px] twcss-leading-[44px]'>
+      <span class='twcss-text-brandblue'> für Paare </span> und die,
+    </div>
+    <div class='twcss-text-[52px] twcss-leading-[54px]'>die Dir wichtig sind.</div>
+  </h2>
+
+  <a
+    href='/collections/geschenke-fur-paare'
+    class='twcss-relative twcss-w-full twcss-h-full twcss-flex twcss-justify-center twcss-flex-1'
+  >
+    <img
+      src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-monogram-family.webp?v=1740560328'
+      width='500'
+      height='500'
+      class='twcss-mt-[-50%] twcss-w-4/5 md:twcss-w-[500px] md:twcss-h-[500px] md:twcss-mt-[-150px]'
+    >
+    <span class='btn btn-primary twcss-absolute twcss-left-1/2 twcss-top-1/3 twcss-translate-x-[-50%] md:twcss-top-2/3'
+      >Geschenke für Paare</span
+    >
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "Parallax",
+  "tag": "section",
+  "class": "steelmonks-parallax",
+  "presets": [
+    {
+      "name": "Parallax"
+    }
+  ]
+}
+{% endschema %}

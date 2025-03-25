@@ -1,12 +1,12 @@
-<div class='twcss-py-8'>
+<div class='twcss-py-8 twcss-flex twcss-flex-col twcss-items-center'>
   <h3
-    class='twcss-font-bold twcss-text-center twcss-text-[32px] twcss-mb-8'
+    class='twcss-font-semibold twcss-text-center twcss-text-[32px] twcss-mb-8 sm:twcss-mx-8'
     style='color: {{ section.settings.text_color }};'
   >
     {{ section.settings.title }}
   </h3>
 
-  <ul class='twcss-grid twcss-grid-cols-4 twcss-gap-4 page-gutter md:twcss-grid-cols-4 sm:twcss-grid-cols-2'>
+  <ul class='twcss-grid twcss-grid-cols-4 twcss-gap-4 page-gutter md:twcss-grid-cols-4 sm:twcss-grid-cols-2 twcss-max-w-[1600px]'>
     {% for block in section.blocks %}
       <li class='twcss-list-none'>
         <a
