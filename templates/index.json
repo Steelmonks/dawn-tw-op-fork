@@ -139,11 +139,21 @@
         "title": "Beliebte Kollektionen",
         "text_color": "#000000"
       }
+    },
+    "steelmonks_parallax_mFM7tW": {
+      "type": "steelmonks-parallax",
+      "settings": {}
+    },
+    "steelmonks_parallax2_Qw8gPD": {
+      "type": "steelmonks-parallax2",
+      "settings": {}
     }
   },
   "order": [
     "steelmonks_hero_BFdthq",
     "custom_icon_grid_Ahzicm",
-    "steelmonks_collection_grid_k79tHx"
+    "steelmonks_collection_grid_k79tHx",
+    "steelmonks_parallax_mFM7tW",
+    "steelmonks_parallax2_Qw8gPD"
   ]
 }
