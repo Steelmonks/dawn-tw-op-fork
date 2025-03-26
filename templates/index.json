@@ -148,6 +148,8 @@
         "liquid_desktop_title": "{% render 'sm-parallax-1b' %}",
         "inverse_order": false,
         "image": "shopify://shop_images/web-monogram-family.webp",
+        "image_position": "center",
+        "image_width": 500,
         "banner": "shopify://shop_images/web-gift-banner.webp"
       }
     },
@@ -159,6 +161,8 @@
         "liquid_desktop_title": "{% render 'sm-parallax-2b' %}",
         "inverse_order": true,
         "image": "shopify://shop_images/web-housenumbers-collection.webp",
+        "image_position": "center",
+        "image_width": 700,
         "banner": "shopify://shop_images/web-streetsigns-banner.webp"
       }
     },
@@ -168,8 +172,10 @@
         "cta": "Geschenke für Paare",
         "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
-        "inverse_order": false,
+        "inverse_order": true,
         "image": "shopify://shop_images/web-firefighter-hand-png.webp",
+        "image_position": "left",
+        "image_width": 500,
         "banner": "shopify://shop_images/web-firefighter-banner.webp"
       }
     }
