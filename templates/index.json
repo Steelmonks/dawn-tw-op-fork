@@ -142,11 +142,21 @@
     },
     "steelmonks_parallax_mFM7tW": {
       "type": "steelmonks-parallax",
-      "settings": {}
+      "settings": {
+        "cta": "Geschenke für Paare",
+        "liquid_mobile_title": "{% render 'sm-parallax-1a' %}",
+        "liquid_desktop_title": "{% render 'sm-parallax-1b' %}",
+        "inverse_order": false
+      }
     },
-    "steelmonks_parallax2_Qw8gPD": {
-      "type": "steelmonks-parallax2",
-      "settings": {}
+    "steelmonks_parallax_BK9w8T": {
+      "type": "steelmonks-parallax",
+      "settings": {
+        "cta": "Geschenke für Paare",
+        "liquid_mobile_title": "{% render 'sm-parallax-2a' %}",
+        "liquid_desktop_title": "{% render 'sm-parallax-2b' %}",
+        "inverse_order": true
+      }
     }
   },
   "order": [
@@ -154,6 +164,6 @@
     "custom_icon_grid_Ahzicm",
     "steelmonks_collection_grid_k79tHx",
     "steelmonks_parallax_mFM7tW",
-    "steelmonks_parallax2_Qw8gPD"
+    "steelmonks_parallax_BK9w8T"
   ]
 }
