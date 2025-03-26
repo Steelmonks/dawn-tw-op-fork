@@ -1,7 +1,7 @@
 {{ section.settings.liquid_mobile_title }}
 
 <div
-  style='display: block; background-image: url("https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-gift-banner.webp?v=1742808272");'
+  style='display: block; background-image: url("{{ section.settings.banner | image_url }}");'
   class='twcss-bg-fixed twcss-relative twcss-w-full twcss-h-[250px] md:twcss-h-[300px] twcss-bg-cover twcss-bg-center twcss-brightness-120'
 >
   {% comment %} overlay {% endcomment %}
@@ -71,6 +71,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner",
+      "label": "Banner"
     }
   ]
 }
