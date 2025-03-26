@@ -172,7 +172,7 @@
         "cta": "Geschenke für Paare",
         "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
-        "inverse_order": false,
+        "inverse_order": true,
         "image": "shopify://shop_images/web-firefighter-hand-png.webp",
         "image_position": "left",
         "image_width": 500,
