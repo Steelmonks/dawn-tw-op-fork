@@ -16,7 +16,7 @@
 
   <a
     href='/collections/geschenke-fur-paare'
-    class='twcss-relative twcss-w-full twcss-h-full twcss-flex twcss-justify-center twcss-flex-1'
+    class='twcss-relative twcss-w-full twcss-h-full twcss-flex twcss-flex-1 {% if section.settings.image_position == 'left' %} twcss-justify-start {% elsif section.settings.image_position == 'right' %} twcss-justify-end {% else %} twcss-justify-center {% endif %}'
   >
     <img
       src='{{ section.settings.image | image_url}}'
@@ -71,6 +71,17 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "center"
     },
     {
       "type": "number",
