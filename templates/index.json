@@ -147,7 +147,8 @@
         "liquid_mobile_title": "{% render 'sm-parallax-1a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-1b' %}",
         "inverse_order": false,
-        "image": "shopify://shop_images/web-monogram-family.webp"
+        "image": "shopify://shop_images/web-monogram-family.webp",
+        "banner": "shopify://shop_images/web-gift-banner.webp"
       }
     },
     "steelmonks_parallax_BK9w8T": {
@@ -157,16 +158,19 @@
         "liquid_mobile_title": "{% render 'sm-parallax-2a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-2b' %}",
         "inverse_order": true,
-        "image": "shopify://shop_images/web-housenumbers-collection.webp"
+        "image": "shopify://shop_images/web-housenumbers-collection.webp",
+        "banner": "shopify://shop_images/web-streetsigns-banner.webp"
       }
     },
     "steelmonks_parallax_LLNJnL": {
       "type": "steelmonks-parallax",
       "settings": {
         "cta": "Geschenke für Paare",
-        "liquid_mobile_title": "",
-        "liquid_desktop_title": "",
-        "inverse_order": false
+        "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
+        "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
+        "inverse_order": false,
+        "image": "shopify://shop_images/web-firefighter-hand-png.webp",
+        "banner": "shopify://shop_images/web-firefighter-banner.webp"
       }
     }
   },
