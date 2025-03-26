@@ -159,6 +159,15 @@
         "inverse_order": true,
         "image": "shopify://shop_images/web-housenumbers-collection.webp"
       }
+    },
+    "steelmonks_parallax_LLNJnL": {
+      "type": "steelmonks-parallax",
+      "settings": {
+        "cta": "Geschenke für Paare",
+        "liquid_mobile_title": "",
+        "liquid_desktop_title": "",
+        "inverse_order": false
+      }
     }
   },
   "order": [
@@ -166,6 +175,7 @@
     "custom_icon_grid_Ahzicm",
     "steelmonks_collection_grid_k79tHx",
     "steelmonks_parallax_mFM7tW",
-    "steelmonks_parallax_BK9w8T"
+    "steelmonks_parallax_BK9w8T",
+    "steelmonks_parallax_LLNJnL"
   ]
 }
