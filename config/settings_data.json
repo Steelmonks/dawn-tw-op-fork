@@ -15,7 +15,7 @@
     "type_header_font": "poppins_n6",
     "heading_scale": 100,
     "type_body_font": "poppins_n4",
-    "body_scale": 100,
+    "body_scale": 110,
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
@@ -141,13 +141,13 @@
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#fafaff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "text": "#090a0c",
+          "button": "#0044cc",
+          "button_label": "#fafaff",
+          "secondary_button_label": "#090a0c",
+          "shadow": "#090a0c"
         }
       },
       "scheme-2": {
