@@ -179,7 +179,7 @@
       "settings": {
         "cta": "Geschenke für Paare",
         "cta_link": "shopify://collections/feuerwehr-geschenke",
-        "cta_style": "primary",
+        "cta_style": "outline",
         "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
         "inverse_order": true,
@@ -224,7 +224,7 @@
       "settings": {
         "cta": "Zur Anfrage",
         "cta_link": "shopify://pages/dein-firmenschild",
-        "cta_style": "primary",
+        "cta_style": "outline",
         "liquid_mobile_title": "{% render 'sm-parallax-4a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-4b' %}",
         "inverse_order": false,
