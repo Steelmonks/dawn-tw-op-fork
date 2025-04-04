@@ -6,6 +6,9 @@
 >
   {% comment %} overlay {% endcomment %}
   <div style='display: block;' class='twcss-absolute twcss-inset-0 twcss-bg-brandwhite twcss-opacity-25'></div>
+  <div class='twcss-absolute twcss-inset-0 twcss-flex twcss-flex-col twcss-items-center twcss-justify-center'>
+    {{ section.settings.text_on_banner }}
+  </div>
 </div>
 
 {% comment %} clickable image and button {% endcomment %}
@@ -93,6 +96,12 @@
       "id": "image_width",
       "label": "Image Width (px)",
       "default": 500
+    },
+    {
+      "type": "richtext",
+      "id": "text_on_banner",
+      "label": "Text on Banner",
+      "default": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>"
     },
     {
       "type": "image_picker",
