@@ -202,6 +202,10 @@
     "steelmonks_horizontal_dropdowns_XDyUkz": {
       "type": "steelmonks-horizontal-dropdowns",
       "settings": {}
+    },
+    "custom_icon_grid_ypXVPY": {
+      "type": "custom_icon_grid",
+      "settings": {}
     }
   },
   "order": [
@@ -212,6 +216,7 @@
     "steelmonks_parallax_BK9w8T",
     "steelmonks_parallax_LLNJnL",
     "steelmonks_announcement_VHr6np",
-    "steelmonks_horizontal_dropdowns_XDyUkz"
+    "steelmonks_horizontal_dropdowns_XDyUkz",
+    "custom_icon_grid_ypXVPY"
   ]
 }
