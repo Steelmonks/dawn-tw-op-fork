@@ -178,7 +178,7 @@
       "type": "steelmonks-parallax",
       "settings": {
         "cta": "Geschenke für Paare",
-        "cta_link": "/collections/geschenke-fur-paare",
+        "cta_link": "shopify://collections/feuerwehr-geschenke",
         "cta_style": "primary",
         "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
