@@ -197,7 +197,6 @@
           "type": "announcement",
           "settings": {
             "text": "<p>📯 100% Glücksgarantie</p>",
-            "font_size": "3rem",
             "font_weight": 600
           }
         }
@@ -227,7 +226,7 @@
         "cta_link": "shopify://pages/dein-firmenschild",
         "cta_style": "primary",
         "liquid_mobile_title": "{% render 'sm-parallax-4a' %}",
-        "liquid_desktop_title": "{% render 'sm-parallax-4a' %}",
+        "liquid_desktop_title": "{% render 'sm-parallax-4b' %}",
         "inverse_order": false,
         "image": "shopify://shop_images/web-wasel_truck.webp",
         "image_position": "center",
