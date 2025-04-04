@@ -221,9 +221,11 @@
         "liquid_mobile_title": "",
         "liquid_desktop_title": "",
         "inverse_order": false,
+        "image": "shopify://shop_images/web-wasel_truck.webp",
         "image_position": "center",
         "image_width": 500,
-        "text_on_banner": "<p><strong>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</strong></p>"
+        "text_on_banner": "<p><strong>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</strong></p>",
+        "banner": "shopify://shop_images/web-wasel_banner.webp"
       }
     }
   },
