@@ -1,7 +1,14 @@
 {% schema %}
 {
   "name": "Custom Icon Grid",
-  "settings": [],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_two_items",
+      "label": "Show two items",
+      "default": false
+    }
+  ],
   "presets": [
     {
       "name": "Custom Icon Grid"
@@ -11,16 +18,18 @@
 {% endschema %}
 
 <div class='twcss-flex twcss-w-full twcss-gap-8 twcss-items-center twcss-justify-center twcss-px-2'>
-  <article class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2 twcss-flex-1'>
-    <img
-      src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-germany-flag-icon.webp?v=1740560109'
-      alt='Monogram Family'
-      width='40'
-      height='40'
-      class='twcss-aspect-square twcss-object-contain md:twcss-h-[60px]'
-    >
-    <p class='twcss-text-center twcss-text-[12px] md:twcss-text-[16px]'>Unschlagbar schnelle Abwicklung.</p>
-  </article>
+  {% unless section.settings.show_two_items %}
+    <article class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2 twcss-flex-1'>
+      <img
+        src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-germany-flag-icon.webp?v=1740560109'
+        alt='Monogram Family'
+        width='40'
+        height='40'
+        class='twcss-aspect-square twcss-object-contain md:twcss-h-[60px]'
+      >
+      <p class='twcss-text-center twcss-text-[12px] md:twcss-text-[16px]'>Unschlagbar schnelle Abwicklung.</p>
+    </article>
+  {% endunless %}
   <article class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2 twcss-flex-1'>
     <img
       src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-medal-icon.webp?v=1740560102'
