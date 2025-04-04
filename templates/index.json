@@ -152,7 +152,7 @@
         "image": "shopify://shop_images/web-monogram-family.webp",
         "image_position": "center",
         "image_width": 500,
-        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
+        "text_on_banner": "",
         "banner": "shopify://shop_images/web-gift-banner.webp"
       }
     },
@@ -166,7 +166,7 @@
         "image": "shopify://shop_images/web-housenumbers-collection.webp",
         "image_position": "center",
         "image_width": 700,
-        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
+        "text_on_banner": "",
         "banner": "shopify://shop_images/web-streetsigns-banner.webp"
       }
     },
@@ -180,7 +180,7 @@
         "image": "shopify://shop_images/web-firefighter-hand-png.webp",
         "image_position": "left",
         "image_width": 500,
-        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
+        "text_on_banner": "",
         "banner": "shopify://shop_images/web-firefighter-banner.webp"
       }
     },
