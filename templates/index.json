@@ -15,7 +15,9 @@
     },
     "custom_icon_grid_Ahzicm": {
       "type": "custom_icon_grid",
-      "settings": {}
+      "settings": {
+        "show_two_items": false
+      }
     },
     "steelmonks_collection_grid_k79tHx": {
       "type": "steelmonks-collection-grid",
@@ -205,7 +207,9 @@
     },
     "custom_icon_grid_ypXVPY": {
       "type": "custom_icon_grid",
-      "settings": {}
+      "settings": {
+        "show_two_items": true
+      }
     }
   },
   "order": [
