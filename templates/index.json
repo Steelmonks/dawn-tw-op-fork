@@ -146,6 +146,8 @@
       "type": "steelmonks-parallax",
       "settings": {
         "cta": "Geschenke für Paare",
+        "cta_link": "/collections/geschenke-fur-paare",
+        "cta_style": "primary",
         "liquid_mobile_title": "{% render 'sm-parallax-1a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-1b' %}",
         "inverse_order": false,
@@ -160,6 +162,8 @@
       "type": "steelmonks-parallax",
       "settings": {
         "cta": "Geschenke für Paare",
+        "cta_link": "/collections/hausschilder",
+        "cta_style": "primary",
         "liquid_mobile_title": "{% render 'sm-parallax-2a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-2b' %}",
         "inverse_order": true,
@@ -174,6 +178,8 @@
       "type": "steelmonks-parallax",
       "settings": {
         "cta": "Geschenke für Paare",
+        "cta_link": "/collections/geschenke-fur-paare",
+        "cta_style": "primary",
         "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
         "inverse_order": true,
@@ -218,6 +224,8 @@
       "type": "steelmonks-parallax",
       "settings": {
         "cta": "Zur Anfrage",
+        "cta_link": "/collections/geschenke-fur-paare",
+        "cta_style": "primary",
         "liquid_mobile_title": "",
         "liquid_desktop_title": "",
         "inverse_order": false,
