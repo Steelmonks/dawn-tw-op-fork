@@ -10,8 +10,8 @@
     {% case block.type %}
       {% when 'announcement' %}
         <div
-          style='font-size: {{ block.settings.font_size }}; font-weight: {{ block.settings.font_weight }}; background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}'
-          class='twcss-py-8 twcss-text-center'
+          style='font-weight: {{ block.settings.font_weight }}; background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}'
+          class='twcss-py-8 twcss-text-center twcss-text-2xl md:twcss-text-4xl'
         >
           {{ block.settings.text }}
         </div>
@@ -50,12 +50,6 @@
           "id": "text",
           "default": "<p>📯 100% Glücksgarantie</p>",
           "label": "Text"
-        },
-        {
-          "type": "text",
-          "id": "font_size",
-          "label": "Font Size",
-          "default": "3rem"
         },
         {
           "type": "range",
