@@ -210,6 +210,19 @@
       "settings": {
         "show_two_items": true
       }
+    },
+    "steelmonks_parallax_3W4JmT": {
+      "type": "steelmonks-parallax",
+      "settings": {
+        "cta": "Geschenke für Paare",
+        "liquid_mobile_title": "",
+        "liquid_desktop_title": "",
+        "inverse_order": false,
+        "image": "shopify://shop_images/download_2a9a6726-25aa-4c94-bc07-5c62dafef4e6.webp",
+        "image_position": "center",
+        "image_width": 500,
+        "banner": "shopify://shop_images/wasel_banner.webp"
+      }
     }
   },
   "order": [
@@ -221,6 +234,7 @@
     "steelmonks_parallax_LLNJnL",
     "steelmonks_announcement_VHr6np",
     "steelmonks_horizontal_dropdowns_XDyUkz",
-    "custom_icon_grid_ypXVPY"
+    "custom_icon_grid_ypXVPY",
+    "steelmonks_parallax_3W4JmT"
   ]
 }
