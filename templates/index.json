@@ -178,6 +178,30 @@
         "image_width": 500,
         "banner": "shopify://shop_images/web-firefighter-banner.webp"
       }
+    },
+    "steelmonks_announcement_VHr6np": {
+      "type": "steelmonks-announcement",
+      "blocks": {
+        "announcement_tBid6k": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p>📯 100% Glücksgarantie</p>",
+            "font_size": "3rem",
+            "font_weight": 600
+          }
+        }
+      },
+      "block_order": [
+        "announcement_tBid6k"
+      ],
+      "settings": {
+        "background_color": "#0044cc",
+        "text_color": "#fafaff"
+      }
+    },
+    "steelmonks_horizontal_dropdowns_XDyUkz": {
+      "type": "steelmonks-horizontal-dropdowns",
+      "settings": {}
     }
   },
   "order": [
@@ -186,6 +210,8 @@
     "steelmonks_collection_grid_k79tHx",
     "steelmonks_parallax_mFM7tW",
     "steelmonks_parallax_BK9w8T",
-    "steelmonks_parallax_LLNJnL"
+    "steelmonks_parallax_LLNJnL",
+    "steelmonks_announcement_VHr6np",
+    "steelmonks_horizontal_dropdowns_XDyUkz"
   ]
 }
