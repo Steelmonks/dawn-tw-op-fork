@@ -16,7 +16,7 @@
           {{ block.settings.text }}
         </div>
       {% when 'countdown' %}
-        {% render 'custom_countdown', section: block %}
+        {% comment %} {% render 'custom_countdown', section: block %} {% endcomment %}
     {% endcase %}
   {% endfor %}
 {% endif %}

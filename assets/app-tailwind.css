@@ -23,3 +23,10 @@
 .btn-secondary:hover {
   @apply twcss-bg-brandblue twcss-text-brandwhite;
 }
+
+.btn-red {
+  @apply twcss-bg-brandred twcss-text-brandwhite;
+}
+.btn-red:hover {
+  @apply twcss-bg-brandblack twcss-text-brandyellow;
+}
