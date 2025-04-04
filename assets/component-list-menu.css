@@ -7,6 +7,8 @@
   min-width: 100%;
   width: 20rem;
   border: 1px solid rgba(var(--color-foreground), 0.2);
+
+  z-index: 100;
 }
 
 .list-menu--disclosure:focus {

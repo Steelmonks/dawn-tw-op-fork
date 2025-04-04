@@ -1,33 +1,24 @@
-{{ 'section-announcement-bar.css' | asset_url | stylesheet_tag }}
-
 {% liquid
   assign show_announcement_bar = true
 %}
 
 {% style %}
-  #shopify-section-{{ section.id }} .steelmonks-announcement__container {
-      background-color: {{ section.settings.background_color }};
-      color: {{ section.settings.text_color }};
-  }
 {% endstyle %}
 
 {% if show_announcement_bar %}
-  <div class="steelmonks-announcement__container text-center">
-    <div class="announcement-bar__wrapper">
-      <div class="announcement-bar__content u-small">
-        {% for block in section.blocks %}
-          {% case block.type %}
-            {% when 'announcement' %}
-              <div style="font-size: {{ block.settings.font_size }}; font-weight: {{ block.settings.font_weight }};">
-                {{ block.settings.text }}
-              </div>
-            {% when 'countdown' %}
-              {% render 'custom_countdown', section: block %}
-          {% endcase %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'announcement' %}
+        <div
+          style='font-size: {{ block.settings.font_size }}; font-weight: {{ block.settings.font_weight }}; background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }}'
+          class='twcss-py-8 twcss-text-center'
+        >
+          {{ block.settings.text }}
+        </div>
+      {% when 'countdown' %}
+        {% render 'custom_countdown', section: block %}
+    {% endcase %}
+  {% endfor %}
 {% endif %}
 
 {% schema %}
@@ -64,7 +55,7 @@
           "type": "text",
           "id": "font_size",
           "label": "Font Size",
-          "default": "2rem"
+          "default": "3rem"
         },
         {
           "type": "range",

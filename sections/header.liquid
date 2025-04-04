@@ -3,6 +3,9 @@
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 
+<!-- MILESTONES TIMELINE UNDER HEADER // CUSTOM_CUSTOM -->
+{{ 'header-milestones.css' | asset_url | stylesheet_tag }}
+
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
@@ -94,6 +97,19 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 </style>
 
 {%- style -%}
@@ -303,6 +319,60 @@
         {%- endif -%}
       </a>
     </div>
+
+  <!-- MILESTONES CODE WITHIN THE HEADER // CUSTOM_CUSTOM -->
+  <div class="milestones__container">
+    <div class="milestones__timeline">
+      <a class="milestones__timeline--1">
+        <img
+          height="35"
+          width="32"
+          src="https://cdn.shopify.com/s/files/1/0472/6420/2901/files/free-shipping.png?v=1708352230"
+        >
+        <span class="milestones__timeline__tooltip">
+          <span class="milestones__timeline--1__tooltip-text"></span>
+        </span>
+        <span class="milestones__timeline__reminder-tooltip">
+          <span class="milestones__timeline--1__reminder-tooltip-text"></span>
+        </span>
+      </a>
+      <a class="milestones__timeline--2">
+        <img
+          style="margin-top: 3px"
+          width="25"
+          height="25"
+          src="https://cdn.shopify.com/s/files/1/0472/6420/2901/files/discount-tag.png?v=1708352250"
+        >
+        <span class="milestones__timeline__tooltip">
+          <span class="milestones__timeline--2__tooltip-text"></span>
+        </span>
+        <span class="milestones__timeline__reminder-tooltip">
+          <span class="milestones__timeline--2__reminder-tooltip-text"></span>
+        </span>
+      </a>
+      <a class="milestones__timeline--3">
+        <img
+          height="25px"
+          width="25px"
+          src="https://cdn.shopify.com/s/files/1/0472/6420/2901/files/opened-gift.png?v=1708352267"
+        >
+        <span class="milestones__timeline__tooltip">
+          <span class="milestones__timeline--3__tooltip-text"></span>
+        </span>
+        <span class="milestones__timeline__reminder-tooltip">
+          <span class="milestones__timeline--3__reminder-tooltip-text"></span>
+        </span>
+      </a>
+      <div class="milestones__timeline--shine-animation"></div>
+      <img
+        class="milestones__timeline--traveling-monk"
+        height="45px"
+        width="auto"
+        src="https://cdn.shopify.com/s/files/1/0472/6420/2901/files/milestone-monk.png?v=1708352089"
+      >
+    </div>
+  </div>
+  <!-- *** END OF CUSTOM_CUSTOM *** -->
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
@@ -421,6 +491,171 @@
 
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
+
+<!-- *** START OF CUSTOM_CUSTOM *** -->
+<!-- Current cart value -->
+{% assign cartValue = cart.original_total_price %}
+<!-- Change this value to first milestone + last milestone -->
+{% assign maxCartValue = 298 %}
+
+<!-- Timeline Javascript // CUSTOM_CUSTOM -->
+<script>
+  const CONFIG = {
+    MILESTONES: {
+      FREE_SHIPPING: { value: 99, index: 0, productId: 45204915880202 },
+      DISCOUNT: { value: 149, index: 1, productId: 45204916535562 }, 
+      GIFT: { value: 199, index: 2, productId: 45204919943434 }
+    },
+    TOOLTIPS: {
+      ACHIEVED: {
+        99: "Gratisversand gesichert!",
+        149: "€10 Rabatt angewendet!",
+        199: "Überraschungsgeschenk erreicht!"
+      },
+      REMAINING: {
+        99: "Gratisversand",
+        149: "€10 Rabatt",
+        199: "Überraschungsgeschenk" 
+      }
+    },
+    REMINDER: {
+      DURATION: 4000,
+      CYCLE: 60000,
+      DELAY: 5000,
+      SHOW: 5000
+    }
+  };
+
+  class CartAPI {
+    static async request(endpoint, options = {}) {
+      try {
+        const response = await fetch(endpoint, options);
+        if (!response.ok) throw new Error(`Cart operation failed: ${endpoint}`);
+        return await response.json();
+      } catch (error) {
+        console.error('Cart API Error:', error);
+        throw error;
+      }
+    }
+
+    static fetchCart() {
+      return this.request('/cart.js');
+    }
+
+    static addItem(productId, quantity) {
+      return this.request(`/cart/add.js?quantity=${quantity}&id=${productId}`, { method: 'POST' });
+    }
+
+    static removeItem(itemKey) {
+      return this.request('/cart/update.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ updates: { [itemKey]: 0 } })
+      });
+    }
+  }
+
+  class MilestoneManager {
+    constructor(cartValue) {
+      this.cartValue = cartValue;
+      this.maxValue = {{ maxCartValue }};
+      this.elements = {
+        shine: document.querySelector(".milestones__timeline--shine-animation"),
+        monk: document.querySelector(".milestones__timeline--traveling-monk"),
+        tooltips: [...Array(3)].map((_, i) => ({
+          main: document.querySelector(`.milestones__timeline--${i + 1}__tooltip-text`),
+          reminder: document.querySelector(`.milestones__timeline--${i + 1}__reminder-tooltip-text`),
+          milestone: document.querySelector(`.milestones__timeline--${i + 1}`),
+          reminderWrapper: document.querySelector(`.milestones__timeline__reminder-tooltip:nth-child(${i + 1})`)
+        }))
+      };
+    }
+
+    updateProgress() {
+      const progress = Math.min((this.cartValue / this.maxValue) * 100, 95);
+      const duration = Math.min((progress * 8) / 100, 8);
+
+      [this.elements.shine, this.elements.monk].forEach(el => {
+        el.style.transitionDuration = `${duration}s`;
+      });
+
+      this.elements.shine.style.width = `${progress}%`;
+      this.elements.monk.style.left = `${progress}%`;
+    }
+
+    getTooltipText(milestone) {
+      const remaining = milestone - this.cartValue;
+      return remaining > 0 
+        ? `Noch ${remaining.toFixed(2)}€ bis zum ${CONFIG.TOOLTIPS.REMAINING[milestone]}`
+        : CONFIG.TOOLTIPS.ACHIEVED[milestone];
+    }
+
+    updateTooltips() {
+      Object.values(CONFIG.MILESTONES).forEach(({ value, index }) => {
+        const text = this.getTooltipText(value);
+        this.elements.tooltips[index].main.innerHTML = text;
+        this.elements.tooltips[index].reminder.innerHTML = text;
+      });
+    }
+
+    startReminders() {
+      setInterval(() => {
+        Object.values(CONFIG.MILESTONES)
+          .filter(({ value }) => this.cartValue < value)
+          .forEach(({ index }, i) => {
+            setTimeout(() => {
+              const element = this.elements.tooltips[index].reminderWrapper;
+              element.classList.add("milestones__timeline__reminder-tooltip--animation");
+              setTimeout(() => {
+                element.classList.remove("milestones__timeline__reminder-tooltip--animation");
+              }, CONFIG.REMINDER.SHOW);
+            }, i * CONFIG.REMINDER.DURATION);
+          });
+      }, CONFIG.REMINDER.CYCLE);
+    }
+
+    async updateMilestones() {
+      const cart = await CartAPI.fetchCart();
+      
+      for (const { value, index, productId } of Object.values(CONFIG.MILESTONES)) {
+        const achieved = this.cartValue >= value;
+        const milestone = this.elements.tooltips[index].milestone;
+        
+        if (achieved) {
+          milestone.style.background = "#0044cc";
+          milestone.style.borderColor = "#090a0c";
+          milestone.setAttribute('href', 'https://steelmonks.com/cart');
+          
+          if (!cart.items.some(item => item.variant_id === productId)) {
+            await CartAPI.addItem(productId, 1);
+          }
+        } else {
+          const item = cart.items.find(item => item.variant_id === productId);
+          if (item) await CartAPI.removeItem(item.key);
+        }
+      }
+    }
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', async () => {
+    const manager = new MilestoneManager({{ cartValue }} / 100);
+    manager.updateProgress();
+    manager.updateTooltips();
+    await manager.updateMilestones();
+    setTimeout(() => manager.startReminders(), CONFIG.REMINDER.DELAY);
+    
+    {% if product.metafields.seo.hidden %}
+      {% if product.id == 9784656101642 %}
+        window.location.href = "https://steelmonks.com/pages/keine-gewalt-gegen-retter";
+      {% else %}
+        window.location.href = "https://steelmonks.com/cart";
+      {% endif %}
+    {% endif %}
+  });
+</script>
+
+<!-- *** END OF CUSTOM_CUSTOM *** -->
 
 <script type="application/ld+json">
   {

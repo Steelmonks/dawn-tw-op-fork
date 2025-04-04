@@ -1,0 +1,273 @@
+.milestones__container {
+  width: 100%;
+  height: 1rem;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding-top: 1rem;
+}
+
+/* Timeline itself */
+.milestones__timeline {
+  /* Center the text within */
+  text-align: center;
+  color: #fafaff;
+
+  /* Align milestone items */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(44% / 3);
+
+  /* position: absolute;
+    top: 0;
+    left: 50%; */
+
+  /* Default background color of timeline */
+  background: #090a0c;
+
+  height: 1.5rem;
+
+  /* timeline border, design choice */
+  border-top: 4px solid #090a0c;
+  border-bottom: 4px solid #090a0c;
+
+  /* Center it */
+  /* transform: translate(-50%, 0); */
+}
+
+.milestones__timeline--1,
+.milestones__timeline--2,
+.milestones__timeline--3 {
+  position: relative;
+  transition: 250ms ease-in-out;
+
+  display: grid;
+  place-items: center;
+
+  color: #fafaff;
+  font-weight: 500;
+  font-size: 12px;
+
+  /* Size of items */
+  width: 50px;
+  height: 50px;
+
+  background-color: #090a0c;
+
+  /* the shine animation comes after in the DOM so this keeps the milestone circles on top of it */
+  z-index: 2;
+
+  /* Round it */
+  border-radius: 30px;
+  border: 2px solid transparent;
+}
+/* Colored borders */
+.milestones__timeline--1 {
+  border: 2px solid;
+  border-color: silver;
+
+  animation: milestone-reached 10s infinite;
+}
+.milestones__timeline--2 {
+  border: 2px solid;
+  border-color: gold;
+
+  animation: milestone-reached 10s infinite 1s;
+}
+.milestones__timeline--3 {
+  border: 2px solid;
+  border-color: #00c3ff;
+
+  animation: milestone-reached 10s infinite 2s;
+}
+
+.milestones__timeline--1:hover,
+.milestones__timeline--2:hover,
+.milestones__timeline--3:hover,
+.milestones__timeline--1:focus,
+.milestones__timeline--2:focus,
+.milestones__timeline--3:focus {
+  transform: scale(1.075);
+}
+
+/* tooltip on mouse hover */
+.milestones__timeline__tooltip {
+  visibility: hidden;
+  background-color: #090a0caa;
+  color: #fff;
+  text-align: center;
+
+  width: 170px;
+
+  border-radius: 7px;
+
+  padding: 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: 5.5rem;
+  z-index: 1;
+}
+.milestones__timeline__tooltip::after {
+  content: ' ';
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #090a0caa transparent;
+}
+.milestones__timeline > a:hover .milestones__timeline__tooltip {
+  visibility: visible;
+}
+/* tooltip reminders */
+.milestones__timeline__reminder-tooltip {
+  visibility: hidden;
+  background-color: #090a0caa;
+  color: #fff;
+  text-align: center;
+
+  width: 170px;
+
+  border-radius: 7px;
+
+  padding: 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: 5.5rem;
+  z-index: 1;
+}
+.milestones__timeline__reminder-tooltip::after {
+  content: ' ';
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #090a0caa transparent;
+}
+
+/* invert truck colors */
+.milestones__timeline img:first-child {
+  filter: grayscale(1) invert(1);
+}
+
+/* Filled side */
+.milestones__timeline--shine-animation {
+  display: block !important;
+
+  /* This makes it transition */
+  transition: width linear;
+  transition-duration: 8s;
+  width: 0;
+
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  border-top-right-radius: 50px;
+
+  background-color: #0044cc;
+
+  z-index: 1;
+}
+.milestones__timeline--shine-animation:after {
+  content: '';
+  top: 0;
+  transform: translateX(100%);
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  animation: shine-animation 5s infinite ease-in-out;
+
+  /* Gradient for the shining effect */
+  background: linear-gradient(
+    to right,
+    #fafaff00 0%,
+    #fafaffcc 50%,
+    #fafaff00 99%,
+    #fafaff00 100%
+  );
+}
+
+/* Animations */
+/* Timeline shine effect */
+@keyframes shine-animation {
+  0%,
+  30% {
+    transform: translateX(-150%);
+  }
+  70%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+/* The animation of the milestones */
+@keyframes milestone-reached {
+  0%,
+  45% {
+    transform: scale(1);
+  }
+  48% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.19) rotate(2deg);
+  }
+  54% {
+    transform: scale(1.2) rotate(-2deg);
+  }
+  56% {
+    transform: scale(1.19) rotate(0deg);
+  }
+  58%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes tooltip-reminder {
+  0% {
+    transform: scaleX(0);
+  }
+  20%,
+  80% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.milestones__timeline__reminder-tooltip--animation {
+  visibility: visible;
+  animation: tooltip-reminder 5s forwards;
+}
+.milestones__timeline
+  > a:hover
+  .milestones__timeline__reminder-tooltip--animation {
+  visibility: hidden;
+}
+
+/* Traveling monk styles */
+.milestones__timeline--traveling-monk {
+  position: absolute;
+  transition: left linear;
+
+  /* default transition duration */
+  transition-duration: 8s;
+
+  /* Puts monk under milestones */
+  z-index: 1;
+
+  /* Monk default position */
+  left: 0;
+
+  width: 24px;
+}
