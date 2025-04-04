@@ -22,6 +22,7 @@ module.exports = {
         brandblack: '#090a0c',
         brandwhite: '#fafaff',
         brandyellow: '#f5ae2e',
+        brandred: '#c50f0f',
       },
       fontFamily: {
         heading: 'var(--font-heading-family)',
