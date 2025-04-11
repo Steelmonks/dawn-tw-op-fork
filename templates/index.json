@@ -219,6 +219,21 @@
         "show_two_items": true
       }
     },
+    "1744354885bc91bacc": {
+      "type": "apps",
+      "blocks": {
+        "trusted_shops_reviews_and_more_review_carousel_R8Gq7i": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/review-carousel/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trusted_shops_reviews_and_more_review_carousel_R8Gq7i"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "steelmonks_parallax_3W4JmT": {
       "type": "steelmonks-parallax",
       "settings": {
@@ -246,6 +261,7 @@
     "steelmonks_announcement_VHr6np",
     "steelmonks_horizontal_dropdowns_XDyUkz",
     "custom_icon_grid_ypXVPY",
+    "1744354885bc91bacc",
     "steelmonks_parallax_3W4JmT"
   ]
 }
