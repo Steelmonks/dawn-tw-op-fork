@@ -1,0 +1,13 @@
+<article class='twcss-flex twcss-flex-col twcss-gap-3 twcss-text-center'>
+  {% comment %} Icon from settings {% endcomment %}
+  <img
+    src='{{ block.settings.icon | image_url: width: 44 }}'
+    alt='{{ block.settings.title }}'
+    width='44'
+    height='44'
+  >
+
+  {% comment %} Title and description from settings {% endcomment %}
+  <h3 class='twcss-text-brandwhite twcss-text-xl'>{{ block.settings.title }}</h3>
+  <p class='twcss-text-brandwhite twcss-text-sm'>{{ block.settings.description }}</p>
+</article>

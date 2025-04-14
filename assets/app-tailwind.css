@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply twcss-p-5 twcss-rounded-xl twcss-font-semibold twcss-transition-colors twcss-duration-300 twcss-text-[1.2rem] md:twcss-text-[1.4rem] lg:twcss-text-[1.6rem] twcss-border-2 md:twcss-px-5 md:twcss-py-3 twcss-shadow-lg twcss-shadow-brandblack/25;
+  @apply twcss-text-center twcss-p-5 twcss-rounded-xl twcss-font-semibold twcss-transition-colors twcss-duration-300 twcss-text-[1.2rem] md:twcss-text-[1.4rem] lg:twcss-text-[1.6rem] twcss-border-2 md:twcss-px-5 md:twcss-py-3 twcss-shadow-lg twcss-shadow-brandblack/25;
 }
 
 .btn-big {

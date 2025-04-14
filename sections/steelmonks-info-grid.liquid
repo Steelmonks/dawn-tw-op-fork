@@ -1,0 +1,13 @@
+{% schema %}
+{
+  "name": "Steelmonks Info Grid",
+  "tag": "div",
+  "settings": []
+}
+{% endschema %}
+
+<section class='twcss-grid sm:twcss-grid-rows-3 twcss-gap-3 md:twcss-grid-cols-3 twcss-text-center twcss-p-6 twcss-bg-brandblack twcss-text-brandwhite'>
+  {% for block in section.blocks %}
+    {% render 'sm-info-grid-item' %}
+  {% endfor %}
+</section>

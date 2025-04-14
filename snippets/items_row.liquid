@@ -1,14 +1,14 @@
-<article class='twcss-flex twcss-flex-col twcss-gap-4'>
+<article class='twcss-flex twcss-items-center twcss-flex-col twcss-gap-4 twcss-mb-6'>
   {% comment %} Title {% endcomment %}
   <h3 class='twcss-text-center twcss-text-[22px] twcss-font-semibold'>
     {{ block.settings.title }}
   </h3>
 
   {% comment %} Row of 4 images {% endcomment %}
-  <div class='twcss-grid twcss-grid-cols-4 twcss-gap-6 twcss-max-w-[1600px] twcss-mx-auto'>
+  <div class='twcss-grid twcss-grid-cols-2 md:twcss-grid-cols-4 twcss-gap-6 twcss-max-w-[1600px] twcss-mx-4'>
     <a
       href='{{ block.settings.item1_link }}'
-      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+      class='twcss-border-[1px] twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
     >
       <img
         src='{{ block.settings.item1.image | image_url }}'
@@ -20,7 +20,7 @@
     </a>
     <a
       href='{{ block.settings.item2_link }}'
-      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+      class='twcss-border-[1px] twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
     >
       <img
         src='{{ block.settings.item2.image | image_url }}'
@@ -32,7 +32,7 @@
     </a>
     <a
       href='{{ block.settings.item3_link }}'
-      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+      class='twcss-border-[1px] twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
     >
       <img
         src='{{ block.settings.item3.image | image_url }}'
@@ -44,7 +44,7 @@
     </a>
     <a
       href='{{ block.settings.item4_link }}'
-      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+      class='twcss-border-[1px] twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
     >
       <img
         src='{{ block.settings.item4.image | image_url }}'
