@@ -256,12 +256,16 @@
         "items_row_cPL963": {
           "type": "items_row",
           "settings": {
-            "title": "",
-            "item1_link": "",
-            "item2_link": "",
-            "item3_link": "",
-            "item4_link": "",
-            "cta_text": "Shop Now"
+            "title": "Hausschilder",
+            "item1": "shopify://shop_images/ST-2013-Shopify-Thumbnail_b86f3ef8-00ee-4dad-9582-3fdf9c1f2861.jpg",
+            "item1_link": "shopify://products/modernes-strassenschild-einweihungsgeschenk",
+            "item2": "shopify://shop_images/ST-1100-Shopify-Thumbnail_269b6069-aa0d-48dc-b70f-12163bfd7ea6.jpg",
+            "item2_link": "shopify://products/hausnummer-mit-namen-einweihungsgeschenk",
+            "item3": "shopify://shop_images/H-2610-Shopify-Thumbnail.jpg",
+            "item3_link": "shopify://products/geschwungene-hausnummer-einweihungsgeschenk",
+            "item4": "shopify://shop_images/H-2710-FR-Shopify-Thumbnail.webp",
+            "item4_link": "shopify://products/moderne-zahl-hausnummer-einweihungsgeschenk",
+            "cta_text": "Mehr entdecken"
           }
         },
         "items_row_iQFXyQ": {
