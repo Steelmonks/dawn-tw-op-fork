@@ -272,11 +272,15 @@
           "type": "items_row",
           "settings": {
             "title": "",
-            "item1_link": "",
-            "item2_link": "",
-            "item3_link": "",
-            "item4_link": "",
-            "cta_text": "Shop Now"
+            "item1": "shopify://shop_images/B-1018-Thumbnail-Master.jpg",
+            "item1_link": "shopify://products/baum-des-lebens-familienschild-personalisiert",
+            "item2": "shopify://shop_images/B-1006-Thumbnail-Master.jpg",
+            "item2_link": "shopify://products/schild-alter-baum-des-lebens-einweihungsgeschenk",
+            "item3": "shopify://shop_images/B-1005-Thumbnail-Master.jpg",
+            "item3_link": "shopify://products/schild-parchen-vorm-baum-hochzeitsgeschenk",
+            "item4": "shopify://shop_images/B-1015-Thumbnail-Master.jpg",
+            "item4_link": "shopify://products/baum-des-lebens-einweihungsgeschenk",
+            "cta_text": "Mehr entdecken"
           }
         },
         "items_row_GRndi4": {
