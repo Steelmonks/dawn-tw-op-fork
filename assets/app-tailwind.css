@@ -14,7 +14,7 @@
   @apply twcss-bg-brandblue twcss-text-brandwhite twcss-border-brandblack;
 }
 .btn-primary:hover {
-  @apply twcss-bg-brandblack twcss-text-brandyellow;
+  @apply twcss-bg-brandblack twcss-text-brandyellow twcss-border-brandyellow;
 }
 
 .btn-secondary {
@@ -25,8 +25,8 @@
 }
 
 .btn-red {
-  @apply twcss-bg-brandred twcss-text-brandwhite;
+  @apply twcss-bg-brandred twcss-text-brandwhite twcss-border-2 twcss-border-brandblack;
 }
 .btn-red:hover {
-  @apply twcss-bg-brandblack twcss-text-brandyellow;
+  @apply twcss-bg-brandblack twcss-text-brandyellow twcss-border-brandyellow;
 }

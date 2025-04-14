@@ -1,0 +1,25 @@
+{% schema %}
+{
+  "name": "Steelmonks Items Grid",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "items_row",
+      "name": "Items Row",
+      "settings": []
+    }
+  ],
+  "presets": [
+    {
+      "name": "Steelmonks Items Grid"
+    }
+  ]
+}
+{% endschema %}
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'items_row' %}
+      {% render 'items_row', block: block %}
+  {% endcase %}
+{% endfor %}
