@@ -1,1 +1,61 @@
-<h2 class='twcss-text-center twcss-text-brandblue twcss-text-2xl twcss-font-bold'>Hello world</h2>
+<article class='twcss-flex twcss-flex-col twcss-gap-4'>
+  {% comment %} Title {% endcomment %}
+  <h3 class='twcss-text-center twcss-text-[22px] twcss-font-semibold'>
+    {{ block.settings.title }}
+  </h3>
+
+  {% comment %} Row of 4 images {% endcomment %}
+  <div class='twcss-grid twcss-grid-cols-4 twcss-gap-6 twcss-max-w-[1600px] twcss-mx-auto'>
+    <a
+      href='{{ block.settings.item1_link }}'
+      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+    >
+      <img
+        src='{{ block.settings.item1.image | image_url }}'
+        alt='{{ block.settings.item1.title }}'
+        class='twcss-w-full'
+        width='auto'
+        height='auto'
+      >
+    </a>
+    <a
+      href='{{ block.settings.item2_link }}'
+      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+    >
+      <img
+        src='{{ block.settings.item2.image | image_url }}'
+        alt='{{ block.settings.item2.title }}'
+        class='twcss-w-full'
+        width='auto'
+        height='auto'
+      >
+    </a>
+    <a
+      href='{{ block.settings.item3_link }}'
+      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+    >
+      <img
+        src='{{ block.settings.item3.image | image_url }}'
+        alt='{{ block.settings.item3.title }}'
+        class='twcss-w-full'
+        width='auto'
+        height='auto'
+      >
+    </a>
+    <a
+      href='{{ block.settings.item4_link }}'
+      class='twcss-border-2 twcss-aspect-square twcss-border-brandblack twcss-shadow-md twcss-rounded-lg'
+    >
+      <img
+        src='{{ block.settings.item4.image | image_url }}'
+        alt='{{ block.settings.item4.title }}'
+        class='twcss-w-full'
+        width='auto'
+        height='auto'
+      >
+    </a>
+  </div>
+
+  {% comment %} CTA {% endcomment %}
+  <a href='{{ block.settings.cta_link }}' class='btn btn-primary twcss-mx-auto'>{{ block.settings.cta_text }}</a>
+</article>
