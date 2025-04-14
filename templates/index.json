@@ -302,10 +302,14 @@
           "type": "items_row",
           "settings": {
             "title": "",
-            "item1_link": "",
-            "item2_link": "",
-            "item3_link": "",
-            "item4_link": "",
+            "item1": "shopify://shop_images/MS-4002-Shopify-Thumbnail.jpg",
+            "item1_link": "shopify://products/metallschild-koordinaten-wanddekoration",
+            "item2": "shopify://shop_images/MS-1074-Shopify-Thumbnail.jpg",
+            "item2_link": "shopify://products/schild-karpfen-am-haken",
+            "item3": "shopify://shop_images/MS-1052-Shopify-Thumbnail.jpg",
+            "item3_link": "shopify://products/pferdekopf",
+            "item4": "shopify://shop_images/MS-5003-Shopify-Thumbnail.jpg",
+            "item4_link": "shopify://products/rundes-grillschild",
             "cta_text": "Mehr entdecken"
           }
         }
