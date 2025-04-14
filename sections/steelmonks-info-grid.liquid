@@ -2,12 +2,40 @@
 {
   "name": "Steelmonks Info Grid",
   "tag": "div",
-  "settings": []
+  "settings": [],
+  "blocks": [
+    {
+      "type": "info_grid_item",
+      "name": "Info Grid Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Steelmonks Info Grid"
+    }
+  ]
 }
 {% endschema %}
 
 <section class='twcss-grid sm:twcss-grid-rows-3 twcss-gap-3 md:twcss-grid-cols-3 twcss-text-center twcss-p-6 twcss-bg-brandblack twcss-text-brandwhite'>
   {% for block in section.blocks %}
-    {% render 'sm-info-grid-item' %}
+    {% render 'sm-info-grid-item', block: block %}
   {% endfor %}
 </section>
