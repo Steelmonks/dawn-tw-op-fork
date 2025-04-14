@@ -344,6 +344,37 @@
     },
     "steelmonks_info_grid_DWLQBG": {
       "type": "steelmonks-info-grid",
+      "blocks": {
+        "info_grid_item_dBTgnT": {
+          "type": "info_grid_item",
+          "settings": {
+            "icon": "shopify://shop_images/web-icon-free-shipping.svg",
+            "title": "Kostenfreier Versand",
+            "description": "Wir verschicken alle in unserem Shop verkauften Artikel, versandkostenfrei ab € 99,-."
+          }
+        },
+        "info_grid_item_tgPqJz": {
+          "type": "info_grid_item",
+          "settings": {
+            "icon": "shopify://shop_images/web-icon-easy-returns.svg",
+            "title": "Schnelle Bearbeitung",
+            "description": "Deine Bestellung wird innerhalb unserer kurzen Bearbeitungszeit von 7-10 Werktagen versandt."
+          }
+        },
+        "info_grid_item_rrKbpr": {
+          "type": "info_grid_item",
+          "settings": {
+            "icon": "shopify://shop_images/web-icon-great-support.svg",
+            "title": "Freundlicher Kundenservice",
+            "description": "Um Dir die bestmögliche Erfahrung zu liefern, bemühen wir uns zu jeder Zeit erreichbar zu sein."
+          }
+        }
+      },
+      "block_order": [
+        "info_grid_item_dBTgnT",
+        "info_grid_item_tgPqJz",
+        "info_grid_item_rrKbpr"
+      ],
       "settings": {}
     }
   },
