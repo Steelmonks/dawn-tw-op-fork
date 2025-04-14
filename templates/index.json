@@ -253,15 +253,90 @@
     "steelmonks_items_grid_EedtxA": {
       "type": "steelmonks-items-grid",
       "blocks": {
+        "items_row_cPL963": {
+          "type": "items_row",
+          "settings": {
+            "title": "Hausschilder",
+            "item1": "shopify://shop_images/ST-2013-Shopify-Thumbnail_b86f3ef8-00ee-4dad-9582-3fdf9c1f2861.jpg",
+            "item1_link": "shopify://products/modernes-strassenschild-einweihungsgeschenk",
+            "item2": "shopify://shop_images/ST-1100-Shopify-Thumbnail_269b6069-aa0d-48dc-b70f-12163bfd7ea6.jpg",
+            "item2_link": "shopify://products/hausnummer-mit-namen-einweihungsgeschenk",
+            "item3": "shopify://shop_images/H-2610-Shopify-Thumbnail.jpg",
+            "item3_link": "shopify://products/geschwungene-hausnummer-einweihungsgeschenk",
+            "item4": "shopify://shop_images/H-2710-FR-Shopify-Thumbnail.webp",
+            "item4_link": "shopify://products/moderne-zahl-hausnummer-einweihungsgeschenk",
+            "cta_text": "Mehr entdecken"
+          }
+        },
+        "items_row_iQFXyQ": {
+          "type": "items_row",
+          "settings": {
+            "title": "",
+            "item1": "shopify://shop_images/B-1018-Thumbnail-Master.jpg",
+            "item1_link": "shopify://products/baum-des-lebens-familienschild-personalisiert",
+            "item2": "shopify://shop_images/B-1006-Thumbnail-Master.jpg",
+            "item2_link": "shopify://products/schild-alter-baum-des-lebens-einweihungsgeschenk",
+            "item3": "shopify://shop_images/B-1005-Thumbnail-Master.jpg",
+            "item3_link": "shopify://products/schild-parchen-vorm-baum-hochzeitsgeschenk",
+            "item4": "shopify://shop_images/B-1015-Thumbnail-Master.jpg",
+            "item4_link": "shopify://products/baum-des-lebens-einweihungsgeschenk",
+            "cta_text": "Mehr entdecken"
+          }
+        },
+        "items_row_GRndi4": {
+          "type": "items_row",
+          "settings": {
+            "title": "",
+            "item1": "shopify://shop_images/Ivy_Monogramm.jpg",
+            "item1_link": "shopify://products/monogramm-personalisierte-wanddekoration-hochzeitsgeschenk",
+            "item2": "shopify://shop_images/M-1009-Thumbnail-Master.jpg",
+            "item2_link": "shopify://products/modernes-monogramm-einweihungsgeschenk",
+            "item3": "shopify://shop_images/M-1004-Thumbnail-Master_2a8f3d46-abe6-4b9b-a96c-60730e2ff015.jpg",
+            "item3_link": "shopify://products/geschwungenes-monogramm-einweihungsgeschenk",
+            "item4": "shopify://shop_images/M-1012-Thumbnail-Master.jpg",
+            "item4_link": "shopify://products/monogramm-volle-blume",
+            "cta_text": "Mehr entdecken"
+          }
+        },
         "items_row_qnFrbX": {
           "type": "items_row",
-          "settings": {}
+          "settings": {
+            "title": "",
+            "item1": "shopify://shop_images/MS-4002-Shopify-Thumbnail.jpg",
+            "item1_link": "shopify://products/metallschild-koordinaten-wanddekoration",
+            "item2": "shopify://shop_images/MS-1074-Shopify-Thumbnail.jpg",
+            "item2_link": "shopify://products/schild-karpfen-am-haken",
+            "item3": "shopify://shop_images/MS-1052-Shopify-Thumbnail.jpg",
+            "item3_link": "shopify://products/pferdekopf",
+            "item4": "shopify://shop_images/MS-5003-Shopify-Thumbnail.jpg",
+            "item4_link": "shopify://products/rundes-grillschild",
+            "cta_text": "Mehr entdecken"
+          }
         }
       },
       "block_order": [
+        "items_row_cPL963",
+        "items_row_iQFXyQ",
+        "items_row_GRndi4",
         "items_row_qnFrbX"
       ],
       "settings": {}
+    },
+    "steelmonks_parallax_JgTRRj": {
+      "type": "steelmonks-parallax",
+      "settings": {
+        "cta": "Geschenke für Paare",
+        "cta_link": "shopify://collections/feuerwehr-geschenke",
+        "cta_style": "red",
+        "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
+        "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
+        "inverse_order": true,
+        "image": "shopify://shop_images/web-firefighter-hand-png.webp",
+        "image_position": "left",
+        "image_width": 500,
+        "text_on_banner": "",
+        "banner": "shopify://shop_images/web-firefighter-banner.webp"
+      }
     }
   },
   "order": [
@@ -276,6 +351,7 @@
     "custom_icon_grid_ypXVPY",
     "1744354885bc91bacc",
     "steelmonks_parallax_3W4JmT",
-    "steelmonks_items_grid_EedtxA"
+    "steelmonks_items_grid_EedtxA",
+    "steelmonks_parallax_JgTRRj"
   ]
 }
