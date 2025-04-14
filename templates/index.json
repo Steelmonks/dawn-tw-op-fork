@@ -252,6 +252,15 @@
     },
     "steelmonks_items_grid_EedtxA": {
       "type": "steelmonks-items-grid",
+      "blocks": {
+        "items_row_qnFrbX": {
+          "type": "items_row",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "items_row_qnFrbX"
+      ],
       "settings": {}
     }
   },
