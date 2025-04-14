@@ -253,15 +253,74 @@
     "steelmonks_items_grid_EedtxA": {
       "type": "steelmonks-items-grid",
       "blocks": {
+        "items_row_cPL963": {
+          "type": "items_row",
+          "settings": {
+            "title": "",
+            "item1_link": "",
+            "item2_link": "",
+            "item3_link": "",
+            "item4_link": "",
+            "cta_text": "Shop Now"
+          }
+        },
+        "items_row_iQFXyQ": {
+          "type": "items_row",
+          "settings": {
+            "title": "",
+            "item1_link": "",
+            "item2_link": "",
+            "item3_link": "",
+            "item4_link": "",
+            "cta_text": "Shop Now"
+          }
+        },
+        "items_row_GRndi4": {
+          "type": "items_row",
+          "settings": {
+            "title": "",
+            "item1_link": "",
+            "item2_link": "",
+            "item3_link": "",
+            "item4_link": "",
+            "cta_text": "Shop Now"
+          }
+        },
         "items_row_qnFrbX": {
           "type": "items_row",
-          "settings": {}
+          "settings": {
+            "title": "",
+            "item1_link": "",
+            "item2_link": "",
+            "item3_link": "",
+            "item4_link": "",
+            "cta_text": "Shop Now"
+          }
         }
       },
       "block_order": [
+        "items_row_cPL963",
+        "items_row_iQFXyQ",
+        "items_row_GRndi4",
         "items_row_qnFrbX"
       ],
       "settings": {}
+    },
+    "steelmonks_parallax_JgTRRj": {
+      "type": "steelmonks-parallax",
+      "settings": {
+        "cta": "Geschenke für Paare",
+        "cta_link": "shopify://collections/feuerwehr-geschenke",
+        "cta_style": "red",
+        "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
+        "liquid_desktop_title": "{% render 'sm-parallax-3b' %}",
+        "inverse_order": true,
+        "image": "shopify://shop_images/web-firefighter-hand-png.webp",
+        "image_position": "left",
+        "image_width": 500,
+        "text_on_banner": "",
+        "banner": "shopify://shop_images/web-firefighter-banner.webp"
+      }
     }
   },
   "order": [
@@ -276,6 +335,7 @@
     "custom_icon_grid_ypXVPY",
     "1744354885bc91bacc",
     "steelmonks_parallax_3W4JmT",
-    "steelmonks_items_grid_EedtxA"
+    "steelmonks_items_grid_EedtxA",
+    "steelmonks_parallax_JgTRRj"
   ]
 }
