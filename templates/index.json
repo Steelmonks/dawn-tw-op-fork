@@ -249,6 +249,10 @@
         "text_on_banner": "<p><strong>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</strong></p>",
         "banner": "shopify://shop_images/web-wasel_banner.webp"
       }
+    },
+    "steelmonks_items_grid_EedtxA": {
+      "type": "steelmonks-items-grid",
+      "settings": {}
     }
   },
   "order": [
@@ -262,6 +266,7 @@
     "steelmonks_horizontal_dropdowns_XDyUkz",
     "custom_icon_grid_ypXVPY",
     "1744354885bc91bacc",
-    "steelmonks_parallax_3W4JmT"
+    "steelmonks_parallax_3W4JmT",
+    "steelmonks_items_grid_EedtxA"
   ]
 }
