@@ -325,13 +325,13 @@
     "steelmonks_parallax_JgTRRj": {
       "type": "steelmonks-parallax",
       "settings": {
-        "cta": "Geschenke für Paare",
-        "cta_link": "shopify://collections/feuerwehr-geschenke",
-        "cta_style": "red",
+        "cta": "Geschenke für Handwerker",
+        "cta_link": "shopify://collections/geschenke-fur-handwerker",
+        "cta_style": "primary",
         "liquid_mobile_title": "{% render 'sm-parallax-5a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-5b' %}",
         "inverse_order": true,
-        "image": "shopify://shop_images/web-firefighter-hand-png.webp",
+        "image": "shopify://shop_images/web-handwerker_hand.webp",
         "image_position": "left",
         "image_width": 500,
         "text_on_banner": "",
