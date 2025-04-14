@@ -265,7 +265,8 @@
             "item3_link": "shopify://products/geschwungene-hausnummer-einweihungsgeschenk",
             "item4": "shopify://shop_images/H-2710-FR-Shopify-Thumbnail.webp",
             "item4_link": "shopify://products/moderne-zahl-hausnummer-einweihungsgeschenk",
-            "cta_text": "Mehr entdecken"
+            "cta_text": "Mehr entdecken",
+            "cta_link": ""
           }
         },
         "items_row_iQFXyQ": {
@@ -280,7 +281,8 @@
             "item3_link": "shopify://products/schild-parchen-vorm-baum-hochzeitsgeschenk",
             "item4": "shopify://shop_images/B-1015-Thumbnail-Master.jpg",
             "item4_link": "shopify://products/baum-des-lebens-einweihungsgeschenk",
-            "cta_text": "Mehr entdecken"
+            "cta_text": "Mehr entdecken",
+            "cta_link": ""
           }
         },
         "items_row_GRndi4": {
@@ -295,7 +297,8 @@
             "item3_link": "shopify://products/geschwungenes-monogramm-einweihungsgeschenk",
             "item4": "shopify://shop_images/M-1012-Thumbnail-Master.jpg",
             "item4_link": "shopify://products/monogramm-volle-blume",
-            "cta_text": "Mehr entdecken"
+            "cta_text": "Mehr entdecken",
+            "cta_link": ""
           }
         },
         "items_row_qnFrbX": {
@@ -310,7 +313,8 @@
             "item3_link": "shopify://products/pferdekopf",
             "item4": "shopify://shop_images/MS-5003-Shopify-Thumbnail.jpg",
             "item4_link": "shopify://products/rundes-grillschild",
-            "cta_text": "Mehr entdecken"
+            "cta_text": "Mehr entdecken",
+            "cta_link": ""
           }
         }
       },
@@ -337,6 +341,10 @@
         "text_on_banner": "",
         "banner": "shopify://shop_images/web-banner_handworkers.webp"
       }
+    },
+    "steelmonks_info_grid_DWLQBG": {
+      "type": "steelmonks-info-grid",
+      "settings": {}
     }
   },
   "order": [
@@ -352,6 +360,7 @@
     "1744354885bc91bacc",
     "steelmonks_parallax_3W4JmT",
     "steelmonks_items_grid_EedtxA",
-    "steelmonks_parallax_JgTRRj"
+    "steelmonks_parallax_JgTRRj",
+    "steelmonks_info_grid_DWLQBG"
   ]
 }
