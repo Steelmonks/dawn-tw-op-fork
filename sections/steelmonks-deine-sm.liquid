@@ -1,0 +1,89 @@
+{% schema %}
+{
+  "name": "Deine Steelmonks",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Deine"
+    },
+    {
+      "type": "text",
+      "id": "blue_text",
+      "label": "Blue Text",
+      "info": "This text will appear next to the title",
+      "default": "Steelmonks"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Deine Steelmonks",
+      "blocks": [
+        {
+          "type": "text",
+          "name": "Item",
+          "settings": {
+            "title": "Einzigartige Geschenke",
+            "text": "Geschenke die wirklich bewegen. Schilder und Anhänger mit Deinem persönlichen Wunschtext."
+          }
+        },
+        {
+          "type": "text",
+          "name": "Item",
+          "settings": {
+            "title": "Sorgenfreies Kaufen",
+            "text": "Deine bevorzugte Zahlungsmethode oder mit Klarna zahlen erst nachdem Du Dein Schild bekommen hast."
+          }
+        },
+        {
+          "type": "text",
+          "name": "Item",
+          "settings": {
+            "title": "100% Gücksgarantie",
+            "text": "100% des Geldes zurück, sogar wenn es dem Beschenkten nicht gefällt."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<h3 class='twcss-text-brandblack twcss-text-[24px] twcss-text-center twcss-font-bold twcss-my-6'>
+  {{ section.settings.title }}
+  <span class='twcss-text-brandblue'>{{ section.settings.blue_text }}</span>
+</h3>
+
+<ul class='twcss-max-w-[800px] twcss-mx-auto twcss-flex twcss-flex-col twcss-gap-6 twcss-px-8 md:twcss-px-0'>
+  {% for block in section.blocks %}
+    <li class='twcss-p-8 twcss-border-brandblue twcss-border-2 twcss-rounded-lg'>
+      <h4 class='twcss-text-brandblue twcss-text-[18px] twcss-font-bold twcss-mb-2'>
+        {{ block.settings.title }}
+      </h4>
+
+      <p>
+        {{ block.settings.text }}
+      </p>
+    </li>
+  {% endfor %}
+</ul>
