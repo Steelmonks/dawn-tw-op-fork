@@ -14,6 +14,13 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "text_LwniXk": {
+          "type": "text",
+          "settings": {
+            "heading": "Titel",
+            "subtext": "<p>Handgefertigt aus hochwertigem Stahl, sind unsere Produkte <strong>zeitlose Erinnerungsstücke</strong>.<br/><br/>Gestalte <strong>Schlüsselanhänger</strong>, <strong>Wandschilder </strong>und <strong>Zunftzeichen</strong>, um Deine Liebe und Wertschätzung auszudrücken.</p>"
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -34,20 +41,13 @@
             "heading": "Informatives",
             "menu": "informatives"
           }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Informatives",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
-          }
         }
       },
       "block_order": [
+        "text_LwniXk",
         "footer-0",
         "footer-1",
-        "link_list_PhhAza",
-        "footer-2"
+        "link_list_PhhAza"
       ],
       "settings": {
         "color_scheme": "scheme-1",
