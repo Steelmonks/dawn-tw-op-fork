@@ -464,7 +464,8 @@
         "collapsible_row_RJJUTj"
       ],
       "custom_css": [
-        "h2 {margin-top: 12px; margin-bottom: 12px;}"
+        "h2 {margin-top: 12px; margin-bottom: 12px;}",
+        "a {color: #04c;}"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
