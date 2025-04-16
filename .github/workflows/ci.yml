@@ -51,4 +51,4 @@ jobs:
           echo 'ignore:' >> .theme-check.yml
           echo '  - node_modules/**' >> .theme-check.yml
       - name: Run Theme Check
-        run: npx @shopify/theme-check
+        run: shopify theme check
