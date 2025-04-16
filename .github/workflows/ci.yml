@@ -39,6 +39,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install Ruby dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-dev
       - name: Theme Check
         uses: shopify/theme-check-action@v1
         with:
