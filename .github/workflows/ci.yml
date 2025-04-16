@@ -42,7 +42,7 @@ jobs:
       - name: Install Ruby dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y ruby-dev
+          sudo apt-get install -y ruby-dev build-essential
       - name: Theme Check
         uses: shopify/theme-check-action@v1
         with:
