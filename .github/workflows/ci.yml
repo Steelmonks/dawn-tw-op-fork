@@ -1,7 +1,25 @@
 name: CI
 on: [push]
 jobs:
-  # Tailwind removed from CI due to build time issues
+  tailwindcss-update:
+    name: Generate Tailwind CSS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Generate Tailwind CSS
+        uses: ZoeyVid/tailwindcss-update@v1.4.0
+        with:
+          input: assets/app-tailwind.css
+          output: assets/app.css
+          params: ''
+      - name: Commit & Push
+        run: |
+          git add --force assets/app.css
+          git config user.name "Steelmonks"
+          git config user.email "164031344+Steelmonks-Admin@users.noreply.github.com"
+          git diff-index --quiet HEAD || git commit -m "ci: tailwindcss-update"
+          git push
   lhci:
     name: Lighthouse
     runs-on: ubuntu-latest
