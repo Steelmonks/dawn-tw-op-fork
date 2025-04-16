@@ -376,6 +376,76 @@
         "info_grid_item_rrKbpr"
       ],
       "settings": {}
+    },
+    "steelmonks_parallax_richtext_hDBc3Q": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "image": "shopify://shop_images/web-galerie-banner.webp",
+        "title": "Galerie",
+        "link_text": "Jetzt ansehen",
+        "link": ""
+      }
+    },
+    "steelmonks_deine_sm_GPbdxk": {
+      "type": "steelmonks-deine-sm",
+      "blocks": {
+        "text_bfMTgf": {
+          "type": "text",
+          "name": "Item",
+          "settings": {
+            "title": "Einzigartige Geschenke",
+            "text": "Geschenke die wirklich bewegen. Schilder und Anhänger mit Deinem persönlichen Wunschtext."
+          }
+        },
+        "text_LjK3PG": {
+          "type": "text",
+          "name": "Item",
+          "settings": {
+            "title": "Sorgenfreies Kaufen",
+            "text": "Deine bevorzugte Zahlungsmethode oder mit Klarna zahlen erst nachdem Du Dein Schild bekommen hast."
+          }
+        },
+        "text_hNFhCd": {
+          "type": "text",
+          "name": "Item",
+          "settings": {
+            "title": "100% Gücksgarantie",
+            "text": "100% des Geldes zurück, sogar wenn es dem Beschenkten nicht gefällt."
+          }
+        }
+      },
+      "block_order": [
+        "text_bfMTgf",
+        "text_LjK3PG",
+        "text_hNFhCd"
+      ],
+      "name": "Deine Steelmonks",
+      "settings": {
+        "title": "Deine",
+        "blue_text": "Steelmonks"
+      }
+    },
+    "custom_icon_grid_h6mTRm": {
+      "type": "custom_icon_grid",
+      "settings": {
+        "show_two_items": true
+      }
+    },
+    "174478799976fe2d49": {
+      "type": "apps",
+      "blocks": {
+        "trusted_shops_reviews_and_more_trusted_stars_CUxPRy": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/trusted-stars/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trusted_shops_reviews_and_more_trusted_stars_CUxPRy"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -392,6 +462,10 @@
     "steelmonks_parallax_3W4JmT",
     "steelmonks_items_grid_EedtxA",
     "steelmonks_parallax_JgTRRj",
-    "steelmonks_info_grid_DWLQBG"
+    "steelmonks_info_grid_DWLQBG",
+    "steelmonks_parallax_richtext_hDBc3Q",
+    "steelmonks_deine_sm_GPbdxk",
+    "custom_icon_grid_h6mTRm",
+    "174478799976fe2d49"
   ]
 }
