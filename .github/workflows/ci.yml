@@ -9,6 +9,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.TAILWIND_GITHUB_TOKEN }}
+          persist-credentials: true
       - name: Generate Tailwind CSS
         uses: ZoeyVid/tailwindcss-update@v1.4.0
         with:
