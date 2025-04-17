@@ -24,7 +24,7 @@
   @apply twcss-bg-brandblue twcss-text-brandwhite;
 }
 
-/* Test change - added secrets */
+/* Test change - added secret token */
 .btn-red {
   @apply twcss-bg-brandred twcss-text-brandwhite twcss-border-2 twcss-border-brandblack;
 }
