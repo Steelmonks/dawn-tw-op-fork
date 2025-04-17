@@ -10,18 +10,43 @@ jobs:
         with:
           token: ${{ secrets.TAILWIND_GITHUB_TOKEN }}
           persist-credentials: true
+          fetch-depth: 0
+      - name: Debug Git Configuration
+        run: |
+          echo "Git user configuration:"
+          git config --list
+          echo "Current directory:"
+          pwd
+          echo "Directory contents:"
+          ls -la
+          echo "Git status:"
+          git status
       - name: Generate Tailwind CSS
         uses: ZoeyVid/tailwindcss-update@v1.4.0
         with:
           input: assets/app-tailwind.css
           output: assets/app.css
           params: ''
+      - name: Debug File Permissions
+        run: |
+          echo "File permissions after generation:"
+          ls -la assets/
+          echo "Git status after generation:"
+          git status
       - name: Commit & Push
         run: |
+          echo "Attempting to add file..."
           git add --force assets/app.css
+          echo "Git status after add:"
+          git status
           git config user.name "Steelmonks"
           git config user.email "164031344+Steelmonks-Admin@users.noreply.github.com"
+          echo "Git config after setting user:"
+          git config --list
           git diff-index --quiet HEAD || git commit -m "ci: tailwindcss-update"
+          echo "Git status after commit:"
+          git status
+          echo "Attempting to push..."
           git push
   lhci:
     name: Lighthouse
