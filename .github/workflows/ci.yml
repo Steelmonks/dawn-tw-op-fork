@@ -14,9 +14,14 @@ jobs:
       - name: Fix Git Permissions
         run: |
           echo "Fixing Git permissions..."
-          sudo chown -R $USER:$USER .
-          sudo chmod -R ugo+rwX .
-          git config --global --add safe.directory "*"
+          # Set proper ownership and permissions recursively
+          sudo chown -R runner:runner .
+          sudo chmod -R 775 .
+          # Ensure .git directory has correct permissions
+          sudo chmod -R 775 .git
+          sudo chown -R runner:runner .git
+          # Configure Git to trust the workspace
+          git config --global --add safe.directory "$(pwd)"
           echo "Git directory permissions:"
           ls -la .git
           echo "Git objects directory permissions:"
@@ -46,15 +51,14 @@ jobs:
       - name: Commit & Push
         run: |
           echo "Attempting to add file..."
-          git config core.sharedRepository 0664
+          # Configure Git user
+          git config user.name "Steelmonks"
+          git config user.email "164031344+Steelmonks-Admin@users.noreply.github.com"
+          # Add and commit changes
           git add --force assets/app.css
           echo "Git status after add:"
           git status
-          git config user.name "Steelmonks"
-          git config user.email "164031344+Steelmonks-Admin@users.noreply.github.com"
-          echo "Git config after setting user:"
-          git config --list
-          git diff-index --quiet HEAD || git commit -m "ci: tailwindcss-update"
+          git commit -m "ci: tailwindcss-update" || echo "No changes to commit"
           echo "Git status after commit:"
           git status
           echo "Attempting to push..."
