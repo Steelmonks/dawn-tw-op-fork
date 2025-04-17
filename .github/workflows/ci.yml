@@ -14,18 +14,35 @@ jobs:
       - name: Fix Git Permissions
         run: |
           echo "Fixing Git permissions..."
-          # Set proper ownership and permissions recursively
-          sudo chown -R runner:runner .
-          sudo chmod -R 775 .
-          # Ensure .git directory has correct permissions
-          sudo chmod -R 775 .git
-          sudo chown -R runner:runner .git
+          # Get the current user and group
+          CURRENT_USER=$(whoami)
+          CURRENT_GROUP=$(id -gn)
+          echo "Current user: $CURRENT_USER"
+          echo "Current group: $CURRENT_GROUP"
+
+          # Set extremely permissive permissions for the entire workspace
+          sudo chmod -R 777 .
+
+          # Ensure .git directory has full permissions
+          sudo chmod -R 777 .git
+          sudo chmod -R 777 .git/objects
+
+          # Set ownership to the current user
+          sudo chown -R $CURRENT_USER:$CURRENT_GROUP .
+          sudo chown -R $CURRENT_USER:$CURRENT_GROUP .git
+
           # Configure Git to trust the workspace
           git config --global --add safe.directory "$(pwd)"
+
+          # Debug output
+          echo "Workspace permissions:"
+          ls -la
           echo "Git directory permissions:"
           ls -la .git
           echo "Git objects directory permissions:"
           ls -la .git/objects
+          echo "Git config:"
+          git config --list
       - name: Debug Git Configuration
         run: |
           echo "Git user configuration:"
@@ -54,6 +71,11 @@ jobs:
           # Configure Git user
           git config user.name "Steelmonks"
           git config user.email "164031344+Steelmonks-Admin@users.noreply.github.com"
+
+          # Ensure permissions are still correct before commit
+          sudo chmod -R 777 .
+          sudo chmod -R 777 .git
+
           # Add and commit changes
           git add --force assets/app.css
           echo "Git status after add:"
