@@ -76,13 +76,17 @@ jobs:
           sudo chmod -R 777 .
           sudo chmod -R 777 .git
 
-          # Add and commit changes
-          git add --force assets/app.css
+          # Force add the generated CSS file
+          git add -f assets/app.css
           echo "Git status after add:"
           git status
+
+          # Create a commit with the generated file
           git commit -m "ci: tailwindcss-update" || echo "No changes to commit"
           echo "Git status after commit:"
           git status
+
+          # Push changes
           echo "Attempting to push..."
           git push
   lhci:
