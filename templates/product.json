@@ -35,6 +35,10 @@
           "type": "price",
           "settings": {}
         },
+        "trusted_shops_reviews_and_more_product_review_list_extension_ywTbWf": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/product-review-list-extension/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -109,7 +113,7 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Share"
+            "share_label": "Aktie"
           }
         }
       },
@@ -118,6 +122,7 @@
         "title",
         "caption",
         "price",
+        "trusted_shops_reviews_and_more_product_review_list_extension_ywTbWf",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
