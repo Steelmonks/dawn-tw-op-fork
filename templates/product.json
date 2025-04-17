@@ -35,6 +35,10 @@
           "type": "price",
           "settings": {}
         },
+        "trusted_shops_reviews_and_more_product_review_list_extension_ywTbWf": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/product-review-list-extension/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -109,8 +113,12 @@
         "share": {
           "type": "share",
           "settings": {
-            "share_label": "Share"
+            "share_label": "Aktie"
           }
+        },
+        "trusted_shops_reviews_and_more_trusted_stars_aNyqUW": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/trusted-stars/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
         }
       },
       "block_order": [
@@ -118,6 +126,7 @@
         "title",
         "caption",
         "price",
+        "trusted_shops_reviews_and_more_product_review_list_extension_ywTbWf",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -127,15 +136,16 @@
         "collapsible-row-2",
         "collapsible-row-3",
         "zepto_product_personalizer_product_personalizer_page_bj6dEi",
-        "share"
+        "share",
+        "trusted_shops_reviews_and_more_trusted_stars_aNyqUW"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
