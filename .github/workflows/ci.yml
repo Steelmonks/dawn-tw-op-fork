@@ -16,6 +16,7 @@ jobs:
           echo "Fixing Git permissions..."
           sudo chown -R $USER:$USER .
           sudo chmod -R ugo+rwX .
+          git config --global --add safe.directory "*"
           echo "Git directory permissions:"
           ls -la .git
           echo "Git objects directory permissions:"
