@@ -20,6 +20,8 @@ jobs:
           git config user.email "164031344+Steelmonks-Admin@users.noreply.github.com"
           git diff-index --quiet HEAD || git commit -m "ci: tailwindcss-update"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.TAILWIND_GITHUB_TOKEN }}
   lhci:
     name: Lighthouse
     runs-on: ubuntu-latest
