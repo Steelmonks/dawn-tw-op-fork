@@ -10,3 +10,6 @@ ehthumbs.db
 Thumbs.db
 node_modules
 .shopify
+
+# Generated files
+assets/app.css
