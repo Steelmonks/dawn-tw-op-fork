@@ -12,7 +12,14 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
       - name: Fix Git Permissions
-        run: sudo chmod -R ugo+rwX .
+        run: |
+          echo "Fixing Git permissions..."
+          sudo chown -R $USER:$USER .
+          sudo chmod -R ugo+rwX .
+          echo "Git directory permissions:"
+          ls -la .git
+          echo "Git objects directory permissions:"
+          ls -la .git/objects
       - name: Debug Git Configuration
         run: |
           echo "Git user configuration:"
@@ -38,6 +45,7 @@ jobs:
       - name: Commit & Push
         run: |
           echo "Attempting to add file..."
+          git config core.sharedRepository 0664
           git add --force assets/app.css
           echo "Git status after add:"
           git status
