@@ -1,0 +1,2 @@
+# Tell Git to always use the remote version of this file
+assets/app.css merge=ours 
