@@ -14,18 +14,17 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
+        "announcement_hHy47U": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Gratisversand ab €99,- 🚚",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement_hHy47U"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "",
         "show_line_separator": true,
