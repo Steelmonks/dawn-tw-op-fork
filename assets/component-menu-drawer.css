@@ -92,7 +92,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__navigation {
-  padding: 3rem 0;
+  padding: 6rem 0 3rem 0;
 }
 
 .menu-drawer__inner-submenu {
@@ -108,7 +108,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu-item {
   padding: 1.1rem 3rem;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -158,7 +158,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__close-button {
   margin-top: 1.5rem;
-  padding: 1.2rem 2.6rem 1.2rem 3rem;
+  padding: 6rem 2.6rem 1.2rem 3rem;
   text-decoration: none;
   display: flex;
   align-items: center;

@@ -44,8 +44,13 @@
                 class='mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup'
                 tabindex='-1'
               >
+                {% comment %} title {% endcomment %}
+                <h3 class='mega-menu__title'>
+                  {{ link.title | remove: highlighted_text | escape }}
+                </h3>
+
                 <ul
-                  class='mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}'
+                  class='mega-menu__list {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}'
                   role='list'
                 >
                   {%- for childlink in link.links -%}
@@ -57,44 +62,64 @@
                       {% assign highlighted_text = '--highlighted' %}
                     {% endif %}
                     <li>
-                      <a
-                        id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
-                        href='{{ childlink.url }}'
-                        class='{{ highlighted_text }} mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}'
-                        {% if childlink.current %}
-                          aria-current='page'
-                        {% endif %}
-                      >
-                        {{ childlink.title | remove: highlighted_text | escape }}
-                      </a>
                       {%- if childlink.links != blank -%}
-                        <ul class='list-unstyled' role='list'>
-                          {%- for grandchildlink in childlink.links -%}
-                            {% comment %} ! Link highlighting {% endcomment %}
-                            {% assign highlighted_text = '' %}
-                            {% if grandchildlink.title contains '--highlighted-red' %}
-                              {% assign highlighted_text = '--highlighted-red' %}
-                            {% elsif grandchildlink.title contains '--highlighted' %}
-                              {% assign highlighted_text = '--highlighted' %}
-                            {% endif %}
-                            <li>
-                              <a
-                                id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}'
-                                href='{{ grandchildlink.url }}'
-                                class='{{ highlighted_text }} mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}'
-                                {% if grandchildlink.current %}
-                                  aria-current='page'
+                        <details-disclosure>
+                          <details
+                            id='Details-HeaderMenu-{{ forloop.index }}-{{ forloop.index0 }}'
+                            class='mega-menu__submenu'
+                          >
+                            <summary
+                              id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
+                              class='{{ highlighted_text }} mega-menu__link link{% if childlink.current %} mega-menu__link--active{% endif %}'
+                              {% if childlink.current %}
+                                aria-current='page'
+                              {% endif %}
+                            >
+                              {{ childlink.title | remove: highlighted_text | escape }}
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </summary>
+                            <ul class='list-unstyled mega-menu__submenu-content' role='list'>
+                              {%- for grandchildlink in childlink.links -%}
+                                {% comment %} ! Link highlighting {% endcomment %}
+                                {% assign highlighted_text = '' %}
+                                {% if grandchildlink.title contains '--highlighted-red' %}
+                                  {% assign highlighted_text = '--highlighted-red' %}
+                                {% elsif grandchildlink.title contains '--highlighted' %}
+                                  {% assign highlighted_text = '--highlighted' %}
                                 {% endif %}
-                              >
-                                {{ grandchildlink.title | remove: highlighted_text | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
+                                <li>
+                                  <a
+                                    id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}'
+                                    href='{{ grandchildlink.url }}'
+                                    class='{{ highlighted_text }} mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}'
+                                    {% if grandchildlink.current %}
+                                      aria-current='page'
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | remove: highlighted_text | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          </details>
+                        </details-disclosure>
+                      {%- else -%}
+                        <a
+                          id='HeaderMenu-{{ link.handle }}-{{ childlink.handle }}'
+                          href='{{ childlink.url }}'
+                          class='{{ highlighted_text }} mega-menu__link link{% if childlink.current %} mega-menu__link--active{% endif %}'
+                          {% if childlink.current %}
+                            aria-current='page'
+                          {% endif %}
+                        >
+                          {{ childlink.title | remove: highlighted_text | escape }}
+                        </a>
                       {%- endif -%}
                     </li>
                   {%- endfor -%}
                 </ul>
+                {% comment %} Overlay {% endcomment %}
+                <div class='mega-menu__overlay'></div>
               </div>
             </details>
           </header-menu>

@@ -10,6 +10,14 @@ class DetailsDisclosure extends HTMLElement {
       this.onFocusOut.bind(this),
     );
     this.mainDetailsToggle.addEventListener('toggle', this.onToggle.bind(this));
+
+    // Add overlay click handler
+    const overlay = this.content.querySelector('.mega-menu__overlay');
+    if (overlay) {
+      overlay.addEventListener('click', () => {
+        this.close();
+      });
+    }
   }
 
   onFocusOut() {
@@ -42,6 +50,31 @@ class HeaderMenu extends DetailsDisclosure {
   constructor() {
     super();
     this.header = document.querySelector('.header-wrapper');
+
+    // Handle nested dropdowns
+    this.nestedDetails = this.querySelectorAll('details-disclosure');
+    this.nestedDetails.forEach((nestedDetail) => {
+      const details = nestedDetail.querySelector('details');
+      const summary = details.querySelector('summary');
+
+      // Add click event to prevent navigation when clicking on summary
+      summary.addEventListener('click', (event) => {
+        if (summary.tagName === 'SUMMARY') {
+          event.preventDefault();
+          details.hasAttribute('open')
+            ? details.removeAttribute('open')
+            : details.setAttribute('open', '');
+        }
+      });
+
+      // Add overlay click handler for nested dropdowns
+      const overlay = nestedDetail.querySelector('.mega-menu__overlay');
+      if (overlay) {
+        overlay.addEventListener('click', () => {
+          nestedDetail.close();
+        });
+      }
+    });
   }
 
   onToggle() {
