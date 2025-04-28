@@ -912,6 +912,13 @@ summary::-webkit-details-marker {
   flex-shrink: 0;
 }
 
+/* ! Custom styles for product grid items to match the old design */
+.product-grid-item {
+  border: 1px solid #090a0c;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 @media screen and (min-width: 750px) {
   .grid__item {
     width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);

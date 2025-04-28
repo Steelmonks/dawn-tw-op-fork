@@ -31,3 +31,11 @@
 .btn-red:hover {
   @apply twcss-bg-brandblack twcss-text-brandyellow twcss-border-brandyellow;
 }
+
+.mobile-only {
+  @apply twcss-block md:twcss-hidden;
+}
+
+.desktop-only {
+  @apply twcss-hidden md:twcss-block;
+}

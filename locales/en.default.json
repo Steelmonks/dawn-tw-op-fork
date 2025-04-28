@@ -55,6 +55,9 @@
       "next_slide": "Slide right",
       "previous_slide": "Slide left",
       "name": "Slider"
+    },
+    "badges": {
+      "good_choice": "Popular"
     }
   },
   "newsletter": {
@@ -217,6 +220,7 @@
   "templates": {
     "search": {
       "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "general_no_results": "No results found. Check the spelling or use a different word or phrase",
       "page": "Page",
       "products": "Products",
       "results_pages_with_count": {
@@ -284,6 +288,7 @@
     "cart": {
       "title": "Your cart",
       "caption": "Cart items",
+      "remove": "Remove",
       "remove_title": "Remove {{ title }}",
       "estimated_total": "Estimated total",
       "new_estimated_total": "New estimated total",
@@ -311,7 +316,8 @@
       "login": {
         "title": "Have an account?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
-      }
+      },
+      "item_count": "{{ count }} items in cart"
     },
     "footer": {
       "payment": "Payment methods"
@@ -372,7 +378,8 @@
       "min_error": "This item has a minimum of {{ min }}",
       "max_error": "This item has a maximum of {{ max }}",
       "step_error": "You can only add this item in increments of {{ step }}"
-    }
+    },
+    "best_seller_collection_name": "popular"
   },
   "localization": {
     "country_label": "Country/region",
