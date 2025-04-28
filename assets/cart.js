@@ -2,12 +2,54 @@ class CartRemoveButton extends HTMLElement {
   constructor() {
     super();
 
+    // Add inline styles to ensure the button is clickable
+    this.style.pointerEvents = 'auto';
+    this.style.cursor = 'pointer';
+
     this.addEventListener('click', (event) => {
       event.preventDefault();
-      const cartItems =
+      event.stopPropagation();
+
+      let cartItems =
         this.closest('cart-items') || this.closest('cart-drawer-items');
-      cartItems.updateQuantity(this.dataset.index, 0);
+
+      if (!cartItems) {
+        let parent = this.parentElement;
+        let depth = 0;
+        while (parent && depth < 10) {
+          if (
+            parent.tagName === 'CART-ITEMS' ||
+            parent.tagName === 'CART-DRAWER-ITEMS'
+          ) {
+            cartItems = parent;
+            break;
+          }
+          parent = parent.parentElement;
+          depth++;
+        }
+      }
+
+      if (!cartItems) {
+        cartItems =
+          document.querySelector('cart-items') ||
+          document.querySelector('cart-drawer-items');
+      }
+
+      if (cartItems) {
+        cartItems.updateQuantity(this.dataset.index, 0);
+      }
     });
+
+    const button = this.querySelector('button');
+    if (button) {
+      // Ensure the button itself has pointer-events enabled
+      button.style.pointerEvents = 'auto';
+      button.style.cursor = 'pointer';
+
+      button.addEventListener('click', (event) => {
+        this.dispatchEvent(new Event('click'));
+      });
+    }
   }
 }
 
@@ -278,9 +320,11 @@ class CartItems extends HTMLElement {
     const lineItemError =
       document.getElementById(`Line-item-error-${line}`) ||
       document.getElementById(`CartDrawer-LineItemError-${line}`);
-    if (lineItemError)
+    if (lineItemError) {
+      console.log('lineItemError', lineItemError);
       lineItemError.querySelector('.cart-item__error-text').textContent =
         message;
+    }
 
     this.lineItemStatusElement.setAttribute('aria-hidden', true);
 

@@ -3689,3 +3689,8 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+/* ! eTrusted Widged custom styles (hide the widget when the cart is open) */
+cart-drawer.active ~ #trustbadge-container-98e3dadd90eb493088abdc5597a70810 {
+  display: none !important;
+}
