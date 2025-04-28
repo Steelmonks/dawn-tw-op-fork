@@ -1,0 +1,43 @@
+<style>
+  .small-list {
+    padding: 2rem 0;
+  }
+
+  h3.small-list__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .small-list__items {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+  }
+
+  .small-list__item {
+    list-style: disc;
+    padding: 0.5rem 0;
+    margin-left: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+</style>
+
+<div class='small-list' {{ block.shopify_attributes }}>
+  <h3 class='small-list__title'>{{ 'products.product.feature_list_title' | t }}</h3>
+
+  <ul class='small-list__items'>
+    {% if product.metafields.custom.feature_highlight_1 != blank %}
+      <li class='small-list__item'>{{ product.metafields.custom.feature_highlight_1 }}</li>
+    {% endif %}
+
+    {% if product.metafields.custom.feature_highlight_2 != blank %}
+      <li class='small-list__item'>{{ product.metafields.custom.feature_highlight_2 }}</li>
+    {% endif %}
+
+    {% if product.metafields.custom.feature_highlight_3 != blank %}
+      <li class='small-list__item'>{{ product.metafields.custom.feature_highlight_3 }}</li>
+    {% endif %}
+  </ul>
+</div>

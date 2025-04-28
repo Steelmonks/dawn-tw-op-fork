@@ -1,0 +1,152 @@
+{%- comment -%}
+  Renders product variant options
+
+  Accepts:
+      - product: {Object} Product object
+      - option: {Object} Option object
+      - block: {Object} Block object
+      - options_threshold: {Number} Options threshold
+  Usage:
+      {% render 'product-variant-options', product: product, option: option, block: block %}
+{%- endcomment -%}
+
+{%- liquid
+  assign variants_available_array = product.variants | map: 'available'
+  assign variants_options1_array = product.variants | map: 'option1'
+  assign variants_options2_array = product.variants | map: 'option2'
+  assign variants_options3_array = product.variants | map: 'option3'
+
+  assign product_form_id = 'product-form-' | append: section.id
+
+  # custom_custom highlighted finishes declarations
+  for collection in product.collections
+    if collection.metafields.custom.highlighted_finish
+      assign highlighted_finish = collection.metafields.custom.highlighted_finish | split: '--' | first
+      assign highlighted_size = collection.metafields.custom.highlighted_finish | split: '--' | last | append: 'cm'
+      case highlighted_finish
+        when 'black'
+          assign highlighted_finish = 'Schwarz (RAL 9005)'
+        when 'white'
+          assign highlighted_finish = 'Weiß (RAL 9010)'
+        when 'anthracite'
+          assign highlighted_finish = 'Anthrazit (RAL 7016)'
+        when 'gold'
+          assign highlighted_finish = 'Gold'
+        when 'stainless'
+          assign highlighted_finish = 'Edelstahl'
+        when 'rust'
+          assign highlighted_finish = 'Cortenstahl (Rost)'
+        when 'christmas-green'
+          assign highlighted_finish = 'Weihnachts Grün'
+        when 'christmas-red'
+          assign highlighted_finish = 'Festliches Rot'
+      endcase
+    endif
+    break
+  endfor
+-%}
+
+{%- for value in option.values -%}
+  {%- liquid
+    assign option_disabled = true
+
+    assign custom_swatches = ''
+    if option.name == 't:products.product.personalizer.title_for_swatches'
+      assign custom_swatches = 'custom-swatches'
+    endif
+
+    for option1_name in variants_options1_array
+      case option.position
+        when 1
+          if variants_options1_array[forloop.index0] == value and variants_available_array[forloop.index0]
+            assign option_disabled = false
+          endif
+        when 2
+          if option1_name == product.selected_or_first_available_variant.option1 and variants_options2_array[forloop.index0] == value and variants_available_array[forloop.index0]
+            assign option_disabled = false
+          endif
+        when 3
+          if option1_name == product.selected_or_first_available_variant.option1 and variants_options2_array[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_options3_array[forloop.index0] == value and variants_available_array[forloop.index0]
+            assign option_disabled = false
+          endif
+      endcase
+    endfor
+
+    # Define swatch highlighting class
+    assign highlighting_class = ''
+    if highlighted_finish and value contains highlighted_finish
+      assign highlighting_class = 'custom-swatch-highlight'
+    endif
+
+    # Define size highlighting class
+    if highlighted_size
+      if value contains highlighted_size
+        assign highlighting_class = 'custom-size-highlight'
+      endif
+    endif
+
+    assign highlighted_option = false
+    if highlighting_class != ''
+      if value contains highlighted_size
+        for variant in product.variants
+          if variant.title contains value
+            assign highlighted_option = variant.id
+            break
+          endif
+        endfor
+      endif
+    endif
+  -%}
+
+  {% comment %} ! When the page is reloaded, the highlighted option's variant id should be added to the link so the price will update accordingly {% endcomment %}
+  {% if highlighted_option %}
+    <script>
+      if (!window.location.href.includes('{{ highlighted_option }}')) {
+        window.history.replaceState({}, document.title, '?variant=' + '{{ highlighted_option }}');
+        window.location.reload();
+      }
+    </script>
+  {%- endif -%}
+
+  {%- if forloop.length < options_threshold -%}
+    <input
+      class='product-form__variant-option'
+      type='radio'
+      name='{{ option.name }}'
+      id='{{ section.id }}-{{ option.position }}-{{ forloop.index }}'
+      value='{{ value | escape }}'
+      form='{{ product_form_id }}'
+      {% if option_disabled %}
+        class='disabled'
+      {% endif %}
+      {% if value == option.selected_value or highlighting_class != '' %}
+        checked
+      {% endif %}
+    >
+    <label
+      class='product-form__variant-label {{ custom_swatches }} {{ highlighting_class }}'
+      label-name='{{ value | escape }}'
+      for='{{ section.id }}-{{ option.position }}-{{ forloop.index }}'
+    >
+      {{- value -}}
+      {% if option_disabled %}
+        <span class='visually-hidden'>
+          {{ 'products.product.variant_sold_out_or_unavailable' | t }}
+        </span>
+      {% endif %}
+    </label>
+  {%- else -%}
+    <option
+      value='{{ value | escape }}'
+      {% if option.selected_value == value or highlighting_class != '' %}
+        selected='selected'
+      {% endif %}
+    >
+      {% if option_disabled %}
+        {{- 'products.product.value_unavailable' | t: option_value: value -}}
+      {% else %}
+        {{- value -}}
+      {% endif %}
+    </option>
+  {%- endif -%}
+{%- endfor -%}

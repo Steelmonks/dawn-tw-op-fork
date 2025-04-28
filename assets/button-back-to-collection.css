@@ -1,0 +1,61 @@
+.button-back-to-collection {
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+.button-back-to-collection__button {
+  display: block;
+  color: #fafaff;
+  background-color: #04c;
+  border: 2px solid #090a0c;
+  border-radius: 10px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+  vertical-align: middle;
+}
+.button-back-to-collection__button:hover,
+.button-back-to-collection__button:focus {
+  cursor: pointer;
+  background-color: #090a0c;
+  color: #f5ae2e;
+}
+.button-back-to-collection__button:active {
+  color: #fafaff;
+  transform: translateY(1px);
+}
+.button-back-to-collection__text {
+  text-align: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0 12px;
+}
+.button-back-to-collection__text a {
+  color: #090a0c;
+  text-underline-offset: 2px;
+  transition: all 0.3s ease;
+}
+.button-back-to-collection__text a:hover {
+  color: #04c;
+  text-decoration-color: #090a0c;
+  text-underline-offset: 4px;
+}
+.button-back-to-collection__text div {
+  color: #777;
+}

@@ -1,0 +1,86 @@
+<style>
+  .complementary-products__container {
+    --grid-columns: 12;
+  }
+  .complementary-products__container .small-product-card__container {
+    grid-column: span calc(var(--grid-columns) / 2);
+  }
+  .small-product-card__container > * + * {
+    margin-top: 1.6rem;
+  }
+
+  .small-product-card__content > * + * {
+    margin-top: 0.8rem;
+  }
+</style>
+
+<product-recommendations
+  class='no-js-hidden product__complementary-products complementary-products__container'
+  data-url='{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ products_to_show }}&intent=complementary'
+  {{ block.shopify_attributes }}
+>
+  {%- if recommendations.performed? and recommendations.products_count > 0 -%}
+    <div class='complementary-product__wrapper'>
+      <div class='accordion__item'>
+        <details>
+          <summary>
+            <h2 class='u-h6 font-2'>{{ block.settings.heading | escape }}</h2>
+            {% render 'icon-plus' %}
+            {% render 'icon-minus' %}
+          </summary>
+          <div>
+            <ul class='grid list-unstyled' role='list'>
+              {% for recommendation in recommendations.products %}
+                {% liquid
+                  if aspect_ratio != null
+                    assign aspect_ratio = aspect_ratio
+                  else
+                    assign aspect_ratio = 'natural'
+                  endif
+
+                  assign padding_bottom = 1 | divided_by: recommendation.featured_image.aspect_ratio | times: 100
+
+                  assign money_price = recommendation.price | money
+
+                  if settings.currency_code_enabled
+                    assign money_price = recommendation.price | money_with_currency
+                  endif
+
+                  if recommendation.price_varies and settings.enable_product_cards_from_price_text
+                    assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+                  endif
+                %}
+                <li class='small-product-card__container'>
+                  <a href='{{ recommendation.url }}'>
+                    <div
+                      class='media media--transparent media--{{ aspect_ratio }}'
+                      {% if aspect_ratio == 'natural' %}
+                        style='padding-bottom: {{ padding_bottom }}%;'
+                      {% endif %}
+                    >
+                      <img
+                        src='{{ recommendation.featured_image | image_url: width: 300, height: 300 }}'
+                        alt='{{ recommendation.featured_image.alt }}'
+                      >
+                    </div>
+                  </a>
+                  <div class='small-product-card__content'>
+                    <div class='small-product-card__product-title'>
+                      <a href='{{ recommendation.url }}' class='link'>
+                        {{ recommendation.title }}
+                      </a>
+                    </div>
+                    <div class='small-product-card__product-price'>
+                      <span class='visually-hidden'>{{ 'products.product.price.sale_price' | t }}</span>
+                      <span>{{ money_price }}</span>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+  {%- endif -%}
+</product-recommendations>

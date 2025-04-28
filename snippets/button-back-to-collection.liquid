@@ -1,0 +1,29 @@
+{{ 'button-back-to-collection.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign target_collection_title = 'sections.best_seller_collection_name' | t
+  assign target_collection_url = '/collections/' | append: target_collection_title
+
+  for collection in product.collections
+    if collection.metafields.custom.highlighted
+      assign target_collection_url = collection.url
+      assign target_collection_title = collection.title
+    endif
+  endfor
+%}
+<div class='button-back-to-collection'>
+  <a href='{{ target_collection_url }}' class='button-back-to-collection__button'>
+    {{- section.settings.back_to_collection_button_text_before }}
+    {{ target_collection_title }}
+    {{ section.settings.back_to_collection_button_text_after -}}
+  </a>
+  {% if section.settings.back_to_collection_button == 'button_with_text' %}
+    <div class='button-back-to-collection__text'>
+      <a href='/collections/all'>Alle Kollektionen</a>
+      <span>&#8594;</span>
+      <a href='{{ target_collection_url }}'>{{ target_collection_title }}</a>
+      <span>&#8594;</span>
+      <div>{{ product.title }}</div>
+    </div>
+  {% endif %}
+</div>

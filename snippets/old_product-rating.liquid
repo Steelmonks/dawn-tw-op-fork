@@ -1,0 +1,70 @@
+<!-- Begin eTrusted bootstrap tag -->
+<script
+  src='https://integrations.etrusted.com/applications/widget.js/v2'
+  defer
+  async
+></script>
+<!-- End eTrusted bootstrap tag -->
+<div class='reviews-wrapper'>
+  <etrusted-widget
+    data-etrusted-widget-id='wdg-7e981e7c-c798-40cb-9c30-e695d0aa36ea'
+    data-sku='{% for variant in product.variants %}{{ variant.sku }},{% endfor %}'
+  ></etrusted-widget>
+</div>
+<!-- Begin eTrusted widget tag -->
+
+{%- if product.metafields.reviews.rating.value != blank -%}
+  {{ 'component-product-rating.css' | asset_url | stylesheet_tag }}
+
+  {% liquid
+    assign rating_value = product.metafields.reviews.rating.value.rating | floor
+    assign rating_count = product.metafields.reviews.rating_count
+    assign rating_max = product.metafields.reviews.rating.value.scale_max
+  %}
+  <div class='product-rating'>
+    <div class='product-rating__wrapper'>
+      <div class='product-rating__stars'>
+        {%- liquid
+          case rating_value
+            when 1.0
+              render 'icon-star-filled'
+              render 'icon-star-empty'
+              render 'icon-star-empty'
+              render 'icon-star-empty'
+              render 'icon-star-empty'
+            when 2.0
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-empty'
+              render 'icon-star-empty'
+              render 'icon-star-empty'
+            when 3.0
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-empty'
+              render 'icon-star-empty'
+            when 4.0
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-empty'
+            when 5.0
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+              render 'icon-star-filled'
+          endcase
+        -%}
+      </div>
+      <div class='product-rating__count u-small'>
+        <span>{{ 'products.product.total_reviews' | t: count: rating_count }}</span>
+        <span class='visually-hidden'>
+          {{ 'products.product.star_reviews_info' | t: rating_value: rating_value, rating_max: rating_max }}
+        </span>
+      </div>
+    </div>
+  </div>
+{%- endif -%}

@@ -1,0 +1,303 @@
+<article class='product__media'>
+  <button
+    class='btn product__media__image-nav__button product__media__image-nav__button--previous'
+    style='display: none;'
+  >
+    &larr;
+  </button>
+  <figure class='product__media__main-image product__media__main-image--desktop'>
+    <img
+      id='productMainImage'
+      src='{{ product.featured_image | image_url: width: 750 }}'
+      alt='{{ product.title }}'
+      loading='lazy'
+      width='750'
+      height='{{ product.featured_image.height | times: 750.0 | divided_by: product.featured_image.width | round }}'
+      data-main-image
+    >
+  </figure>
+
+  <figure class='product__media__main-image product__media__main-image--mobile'>
+    <div class='mobile-carousel'>
+      <div class='mobile-carousel__container'>
+        {% for media in product.media %}
+          {% unless media.alt contains 'Kundenfoto' %}
+            {% if forloop.first %}
+              <div class='mobile-carousel__slide {% if media == product.featured_image %}active{% endif %}'>
+                <img
+                  src='{{ media | image_url: width: 750 }}'
+                  alt='{{ media.alt | escape }}'
+                  loading='lazy'
+                  width='750'
+                  height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
+                  data-main-image
+                >
+              </div>
+            {% else %}
+              <div class='mobile-carousel__slide {% if media == product.featured_image %}active{% endif %}'>
+                <img
+                  src='{{ media | image_url: width: 750 }}'
+                  alt='{{ media.alt | escape }}'
+                  loading='lazy'
+                  width='750'
+                  height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
+                >
+              </div>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+    <button class='mobile-carousel__button mobile-carousel__button--prev' aria-label='Previous slide'>&larr;</button>
+    <button class='mobile-carousel__button mobile-carousel__button--next' aria-label='Next slide'>&rarr;</button>
+  </figure>
+
+  <nav class='product__media__image-nav'>
+    {% for media in product.media %}
+      {% unless media.alt contains 'Kundenfoto' %}
+        <div class='product-media__item {% if media == product.featured_image %}active{% endif %}'>
+          {{ media | image_url: width: 125 | image_tag }}
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </nav>
+
+  <button class='btn product__media__image-nav__button product__media__image-nav__button--next'>&rarr;</button>
+
+  <script>
+    // Add scrollTopMax and scrollLeftMax to the Element prototype if not already present
+    (function (elmProto) {
+      if (!('scrollTopMax' in elmProto)) {
+        Object.defineProperties(elmProto, {
+          scrollTopMax: {
+            get() {
+              return this.scrollHeight - this.clientHeight;
+            },
+          },
+          scrollLeftMax: {
+            get() {
+              return this.scrollWidth - this.clientWidth;
+            },
+          },
+        });
+      }
+    })(Element.prototype);
+
+    // Cache DOM elements and initialize state
+    const imageNav = document.querySelector('.product__media__image-nav');
+    const imageNavItems = [...imageNav.querySelectorAll('.product-media__item')];
+    const mainImage = document.getElementById('productMainImage');
+    const previousButton = document.querySelector('.product__media__image-nav__button--previous');
+    const nextButton = document.querySelector('.product__media__image-nav__button--next');
+    const mainImageFigure = document.querySelector('.product__media__main-image > img');
+
+    // Utility functions
+    const updateMainImage = (sourceElement) => {
+      mainImage.src = sourceElement.querySelector('img').src.replace('&width=125', '&width=750');
+    };
+
+    const updateActiveItem = (newActiveItem) => {
+      imageNav.querySelector('.product-media__item.active')?.classList.remove('active');
+      newActiveItem.classList.add('active');
+      updateMainImage(newActiveItem);
+    };
+
+    const scrollToItem = (item) => {
+      imageNav.style.scrollBehavior = 'smooth';
+      const isVertical = window.innerWidth >= 1440; // Match your media query
+
+      if (isVertical) {
+        const itemOffset = item.offsetTop - imageNav.clientHeight / 2 + item.clientHeight / 2;
+        imageNav.scrollTop = itemOffset;
+      } else {
+        const itemOffset = item.offsetLeft - imageNav.clientWidth / 2 + item.clientWidth / 2;
+        imageNav.scrollLeft = itemOffset;
+      }
+
+      imageNav.style.scrollBehavior = 'auto';
+    };
+
+    // Event Handlers
+    const handleItemClick = (item) => {
+      if (!item.classList.contains('active')) {
+        updateActiveItem(item);
+        scrollToItem(item);
+      }
+    };
+
+    const handleNavButton = (direction) => {
+      const activeItem = imageNav.querySelector('.product-media__item.active');
+      const newItem =
+        direction === 'next'
+          ? activeItem.nextElementSibling || imageNavItems[0]
+          : activeItem.previousElementSibling || imageNavItems[imageNavItems.length - 1];
+
+      updateActiveItem(newItem);
+      scrollToItem(newItem);
+    };
+
+    // Drag scroll functionality
+    let isDragging = false;
+    let startX, scrollLeft;
+
+    const updateButtonVisibility = () => {
+      const isVertical = window.innerWidth >= 1440;
+
+      if (isVertical) {
+        const currentScroll = imageNav.scrollTop;
+        previousButton.style.display = currentScroll === 0 ? 'none' : 'flex';
+        nextButton.style.display = currentScroll >= imageNav.scrollTopMax ? 'none' : 'flex';
+      } else {
+        const currentScroll = imageNav.scrollLeft;
+        previousButton.style.display = currentScroll === 0 ? 'none' : 'flex';
+        nextButton.style.display = currentScroll >= imageNav.scrollLeftMax ? 'none' : 'flex';
+      }
+    };
+
+    // Event Listeners
+    imageNavItems.forEach((item) => {
+      item.addEventListener('click', () => handleItemClick(item));
+    });
+
+    previousButton.addEventListener('click', () => handleNavButton('prev'));
+    nextButton.addEventListener('click', () => handleNavButton('next'));
+
+    // Drag scroll events
+    imageNav.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      imageNav.classList.add('grabbing');
+      const isVertical = window.innerWidth >= 1440;
+
+      if (isVertical) {
+        startX = e.pageY - imageNav.offsetTop;
+        scrollLeft = imageNav.scrollTop;
+      } else {
+        startX = e.pageX - imageNav.offsetLeft;
+        scrollLeft = imageNav.scrollLeft;
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      imageNav.classList.remove('grabbing');
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+
+      const isVertical = window.innerWidth >= 1440;
+      if (isVertical) {
+        const y = e.pageY - imageNav.offsetTop;
+        const walk = (y - startX) * 1.5;
+        imageNav.scrollTop = scrollLeft - walk;
+      } else {
+        const x = e.pageX - imageNav.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        imageNav.scrollLeft = scrollLeft - walk;
+      }
+    });
+
+    imageNav.addEventListener('scroll', updateButtonVisibility);
+
+    // Initial setup
+    if (imageNav.scrollLeftMax < imageNav.clientWidth) {
+      nextButton.style.display = 'none';
+    }
+
+    // Update the maximum height/width of the image nav based on layout
+    const updateImageNavDimensions = () => {
+      const isVertical = window.innerWidth >= 1440;
+      const mainImageHeight = mainImageFigure.offsetHeight;
+      const mainImageWidth = mainImageFigure.offsetWidth;
+
+      if (isVertical) {
+        imageNav.style.maxHeight = `${mainImageHeight}px`;
+        imageNav.style.maxWidth = ''; // Reset width when vertical
+      } else {
+        imageNav.style.maxHeight = ''; // Reset height when horizontal
+        imageNav.style.maxWidth = `${mainImageWidth}px`;
+      }
+    };
+
+    // Update ResizeObserver to use new function name
+    const resizeObserver = new ResizeObserver(updateImageNavDimensions);
+    resizeObserver.observe(mainImageFigure);
+
+    // Update image load listener to use new function name
+    mainImage.addEventListener('load', updateImageNavDimensions);
+
+    // Add resize listener to update button visibility
+    window.addEventListener('resize', updateButtonVisibility);
+
+    // Update button visibility on page load
+    updateButtonVisibility();
+
+    // Mobile carousel functionality
+    const initMobileCarousel = () => {
+      const carousel = document.querySelector('.mobile-carousel__container');
+      if (!carousel) return;
+
+      const slides = [...carousel.querySelectorAll('.mobile-carousel__slide')];
+      const prevButton = document.querySelector('.mobile-carousel__button--prev');
+      const nextButton = document.querySelector('.mobile-carousel__button--next');
+
+      const updateActiveSlide = (index) => {
+        slides.forEach((slide) => slide.classList.remove('active'));
+        slides[index]?.classList.add('active');
+      };
+
+      const scrollToSlide = (index) => {
+        const slide = slides[index];
+        if (!slide) return;
+
+        slide.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center',
+        });
+        updateActiveSlide(index);
+      };
+
+      const updateButtonVisibility = () => {
+        const scrollLeft = carousel.scrollLeft;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+        prevButton.style.display = scrollLeft <= 0 ? 'none' : 'flex';
+        nextButton.style.display = scrollLeft >= maxScroll ? 'none' : 'flex';
+
+        // Update active class based on current scroll position
+        const currentIndex = getCurrentSlideIndex();
+        updateActiveSlide(currentIndex);
+      };
+
+      // Find current slide index based on scroll position
+      const getCurrentSlideIndex = () => {
+        const scrollLeft = carousel.scrollLeft;
+        const slideWidth = slides[0].offsetWidth;
+        return Math.round(scrollLeft / slideWidth);
+      };
+
+      prevButton.addEventListener('click', () => {
+        const currentIndex = getCurrentSlideIndex();
+        scrollToSlide(currentIndex - 1);
+      });
+
+      nextButton.addEventListener('click', () => {
+        const currentIndex = getCurrentSlideIndex();
+        scrollToSlide(currentIndex + 1);
+      });
+
+      // Update active slide on scroll
+      carousel.addEventListener('scroll', () => {
+        // Use requestAnimationFrame to limit updates
+        requestAnimationFrame(updateButtonVisibility);
+      });
+
+      // Initial setup
+      updateButtonVisibility();
+    };
+
+    document.addEventListener('DOMContentLoaded', initMobileCarousel);
+  </script>
+</article>

@@ -1,0 +1,406 @@
+{%- comment -%}
+  Renders product variant picker
+
+  Accepts:
+      - product: {Object} Product object
+      - block: {Object} Block object
+      - update_url: {Boolean} Whether to update URL with variant ID. Default: true (optional)
+      - options_threshold: {Number} Options threshold (optional)
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block %}
+{%- endcomment -%}
+
+{%- unless product.has_only_default_variant -%}
+  {% liquid
+    assign options_size = 0
+    assign first_option = product.options_with_values | first
+    for value in first_option.values
+      assign options_size = options_size | plus: 1
+    endfor
+  %}
+
+  {%- if options_size < options_threshold -%}
+    <variant-radios
+      id='variant-radios-{{ section.id }}'
+      class='no-js-hidden'
+      data-section='{{ section.id }}'
+      data-url='{{ product.url }}'
+      {% if update_url == false %}
+        data-update-url='false'
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {%- for option in product.options_with_values -%}
+        <fieldset class='js product-form__input product-form__input--{{ forloop.index }}'>
+          <legend class='form__label'>{{ option.name }}</legend>
+          {% render 'old_product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            options_threshold: options_threshold
+          %}
+        </fieldset>
+      {%- endfor -%}
+      <script type='application/json'>
+        {{ product.variants | json }}
+      </script>
+    </variant-radios>
+  {%- else -%}
+    <variant-selects
+      id='variant-selects-{{ section.id }}'
+      class='no-js-hidden'
+      data-section='{{ section.id }}'
+      data-url='{{ product.url }}'
+      {% if update_url == false %}
+        data-update-url='false'
+      {% endif %}
+      {{ block.shopify_attributes }}
+    >
+      {%- for option in product.options_with_values -%}
+        <label
+          class='form__label'
+          for='Option-{{ section.id }}-{{ forloop.index0 }}'
+        >
+          {{ option.name }}
+        </label>
+        <div class='select'>
+          <select
+            name='options[{{ option.name | escape }}]'
+            id='Option-{{ section.id }}-{{ forloop.index0 }}'
+            form='{{ product_form_id }}'
+            class='product-form__variant-option'
+          >
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              options_threshold: options_threshold
+            %}
+          </select>
+        </div>
+      {%- endfor -%}
+      <script type='application/json'>
+        {{ product.variants | json }}
+      </script>
+    </variant-selects>
+  {%- endif -%}
+{%- endunless -%}
+
+<noscript class='product-form__noscript-wrapper-{{ section.id }}'>
+  <div class='product-form__input{% if product.has_only_default_variant %} visually-hidden {% endif %}'>
+    <label class='form__label' for='Variants-{{ section.id }}'>
+      {{- 'products.product.product_variants' | t -}}
+    </label>
+    <div class='select'>
+      <select
+        name='id'
+        id='Variants-{{ section.id }}'
+        class='select__select product-form__variant-option'
+        form='{{ product_form_id }}'
+      >
+        {%- for variant in product.variants -%}
+          <option
+            {% if variant == product.selected_or_first_available_variant %}
+              selected='selected'
+            {% endif %}
+            {% if variant.available == false %}
+              disabled
+            {% endif %}
+            value='{{ variant.id }}'
+          >
+            {{ variant.title }}
+            - {{ variant.price | money | strip_html }}
+            {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+          </option>
+        {%- endfor -%}
+      </select>
+    </div>
+  </div>
+</noscript>
+
+{% style %}
+  /* General styles for all variants */
+  fieldset.js.product-form__input label {
+    flex-basis: calc(50% - 0.4rem);
+    margin: 0 !important;
+  }
+  .product-form__variant-label {
+    border-radius: 5px;
+    padding: 14px !important;
+
+    border: 1px solid #090a0c !important;
+
+    transition: box-shadow 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .product-form__variant-option:checked + .product-form__variant-label {
+    box-shadow: 0 0 0 2px rgba(9, 10, 12, 1);
+  }
+
+  .product-form__variant-label:hover,
+  .product-form__variant-label:focus {
+    box-shadow: 0 0 10px 2px rgba(9, 10, 12, 0.2);
+  }
+
+  @media screen and (max-width: 768px) {
+    fieldset.js.product-form__input label {
+      font-size: 12px;
+      width: 47%;
+      border-radius: 6px !important;
+    }
+  }
+
+  /***** custom_custom swatch highlighting *****/
+  /***/
+  .custom-swatch-highlight {
+    position: relative;
+    animation: box-shadow-color-with-background-moving 2s ease-in-out forwards;
+    animation-delay: 2s;
+  }
+  @keyframes box-shadow-color-with-background-moving {
+    0% {
+      background-size: 100%;
+      background-position: 40% 40%;
+    }
+    25% {
+      background-size: 125%;
+      background-position: 60% 60%;
+    }
+    50% {
+      background-size: 125%;
+      background-position: 40% 40%;
+    }
+    75% {
+      background-size: 125%;
+      background-position: 70% 30%;
+    }
+    80% {
+      box-shadow: 0 0 40px 1px rgba(245, 174, 46, 0.7);
+    }
+    100% {
+      background-size: 100%;
+      background-position: 40% 40%;
+      box-shadow: 0 0 5px 2px rgba(245, 174, 46, 0.5);
+    }
+  }
+  /***/
+
+  /***** custom_custom size highlighting *****/
+  /***/
+  .custom-size-highlight {
+    position: relative;
+
+    transition: filter 0.2s ease-in-out;
+    animation: box-shadow-color 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 2.5s;
+  }
+  @keyframes box-shadow-color {
+    0% {
+      box-shadow: unset;
+    }
+    80% {
+      box-shadow: 0 0 40px 1px rgba(245, 174, 46, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 5px 2px rgba(245, 174, 46, 0.5);
+    }
+  }
+  .custom-size-highlight:hover {
+    box-shadow: 0 0 4px 1px #f5ae2e;
+  }
+  .custom-size-highlight:before {
+    position: absolute;
+    content: '';
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: url('https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-jakob_points_down.gif?v=1731332303');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    aspect-ratio: 561 / 400;
+
+    width: 36px;
+    height: 100%;
+
+    opacity: 0;
+
+    animation: highlight-pseudo-element 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 3.5s;
+  }
+  @keyframes highlight-pseudo-element {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+  }
+  .custom-size-highlight:after {
+    position: absolute;
+    content: '✰ Bestseller ✰';
+    top: 100%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    opacity: 0;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    width: max-content;
+
+    background-color: rgba(245, 174, 46, 0.15);
+    color: #090a0c;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    padding: 4px 8px;
+    z-index: -10;
+
+    animation: fall-in 1s ease-in-out forwards;
+    animation-delay: 4s;
+  }
+  @keyframes fall-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .custom-size-highlight:before {
+      width: 30px;
+    }
+    .custom-size-highlight:after {
+      border-radius: 15px;
+    }
+  }
+  /***/
+  /***** end highlight *****/
+
+  /*** Variant textures ***/
+  /***/
+  .product-form__variant-option + .product-form__variant-label[label-name='Schwarz (RAL 9005)'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Schwarz (RAL 9005)'] {
+    background: url('https://cdn.shopify.com/s/files/1/0820/7227/3218/files/schwarz-ral-9005.png?v=1695040203');
+    color: #fff;
+    background-size: 100%;
+    background-position: 40% 40%;
+  }
+  .product-form__variant-option + .product-form__variant-label[label-name='Weiß (RAL 9010)'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Weiß (RAL 9010)'] {
+    background: url('https://cdn.shopify.com/s/files/1/0820/7227/3218/files/weiss-ral-9010.png?v=1695040203');
+    color: #000;
+    background-size: 100%;
+    background-position: 40% 40%;
+  }
+  .product-form__variant-option + .product-form__variant-label[label-name='Anthrazit (RAL 7016)'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Anthrazit (RAL 7016)'] {
+    background: url('https://cdn.shopify.com/s/files/1/0820/7227/3218/files/anthrazit-ral-7016.png?v=1695040204');
+    color: #fff;
+    background-size: 100%;
+    background-position: 40% 40%;
+  }
+  .product-form__variant-option + .product-form__variant-label[label-name='Gold'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Gold'] {
+    background: url('https://cdn.shopify.com/s/files/1/0472/6420/2901/files/Gold.webp?v=1730468454');
+    color: #fff;
+    background-size: 100%;
+    background-position: 40% 40%;
+  }
+  .product-form__variant-option + .product-form__variant-label[label-name='Edelstahl'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Edelstahl'] {
+    background: url('https://cdn.shopify.com/s/files/1/0820/7227/3218/files/edelstahl.png?v=1695119638');
+    background-size: 100%;
+    background-position: 40% 40%;
+    color: #fff;
+  }
+  .product-form__variant-option + .product-form__variant-label[label-name='Cortenstahl (Rost)'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Cortenstahl (Rost)'] {
+    background: url('https://cdn.shopify.com/s/files/1/0820/7227/3218/files/cortenstahl-rost.png?v=1695040204');
+    background-size: 100%;
+    background-position: 40% 40%;
+    color: #fff;
+  }
+  .product-form__variant-option + .product-form__variant-label[label-name='Weihnachts Grün'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Weihnachts Grün'] {
+    background: url('https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web-Christmas_Green.webp?v=1733825029');
+    background-size: 100%;
+    background-position: 40% 40%;
+    color: #fff;
+  }
+  .product-form__variant-option + .product-form__variant-label[label-name='Festliches Rot'],
+  .product-form__variant-option:checked + .product-form__variant-label[label-name='Festliches Rot'] {
+    background: url('https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Christmas_Red.webp?v=1733825045');
+    background-size: 100%;
+    background-position: 40% 40%;
+    color: #fff;
+  }
+
+  variant-selects {
+    margin: 2rem 0;
+  }
+  select.product-form__variant-option {
+    font-size: 18px;
+    padding: 0.5rem;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #090a0c;
+
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+  }
+  select.product-form__variant-option:focus {
+    outline: #0044cc80;
+  }
+
+  .product-form__variant-option:checked + .custom-swatches:not(.custom-swatch-highlight) {
+    animation: background-moving 10s ease-in-out infinite;
+  }
+
+  @keyframes background-moving {
+    0% {
+      background-size: 100%;
+      background-position: 40% 40%;
+    }
+    25% {
+      background-size: 125%;
+      background-position: 60% 60%;
+    }
+    50% {
+      background-size: 125%;
+      background-position: 40% 40%;
+    }
+    75% {
+      background-size: 125%;
+      background-position: 70% 30%;
+    }
+    100% {
+      background-size: 100%;
+      background-position: 40% 40%;
+    }
+  }
+  /***/
+  /*** end variant textures ***/
+{% endstyle %}
