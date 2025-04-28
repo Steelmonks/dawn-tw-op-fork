@@ -20,6 +20,9 @@
       "block_order": [
         "trusted_shops_reviews_and_more_trusted_stars_EwH9nD"
       ],
+      "custom_css": [
+        "#etrusted-trusted_stars_service {margin-top: 3rem;}"
+      ],
       "settings": {
         "include_margins": true
       }
