@@ -5,6 +5,10 @@
 - Run Tailwind builder with `npm run tw`
 - See live preview of theme with `shopify theme dev` (make sure Shopify CLI is installed)
 
+# Git issues
+
+- There's an unfixed issue with Git for this project. There's a Git Actions workflow set up to generate the app.css file after a commit has been pushed. This usually causes conflicts with the `app.css` file. To resolve this conflict and be able to fetch/pull the newer versions you must simply delete the `app.css` file from local and pull it from the remote branch. The `app.css` file is auto-generated from other files so it will not be a breaking change
+
 ## Translations
 
 ### This is an important outline of how the translations should be handled if you want to not use a translation app
