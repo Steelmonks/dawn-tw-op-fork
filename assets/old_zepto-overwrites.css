@@ -330,11 +330,11 @@ label:has(+ .pplr_text:focus) {
   border-bottom-right-radius: 15px;
 }
 /* 
-    .pplr_crop-modal .pplr_ex_inner::after {
-      content: 'Diese Ansicht dient nur zur Vorschau. Dein Design wird persönlich geprüft und optimal angepasst.';
-      font-size: 12px;
-      color: #999;
-    } */
+      .pplr_crop-modal .pplr_ex_inner::after {
+        content: 'Diese Ansicht dient nur zur Vorschau. Dein Design wird persönlich geprüft und optimal angepasst.';
+        font-size: 12px;
+        color: #999;
+      } */
 
 .pplr_crop-modal .pplr-btn {
   z-index: 100000000 !important;
@@ -359,26 +359,26 @@ label:has(+ .pplr_text:focus) {
   display: none;
 
   /* position: relative;
-    
-      visibility: hidden;
-      font-size: 16px;
-      font-weight: 600;
-    
-      margin: 8px 12px;
-      padding-bottom: 0 !important; */
+      
+        visibility: hidden;
+        font-size: 16px;
+        font-weight: 600;
+      
+        margin: 8px 12px;
+        padding-bottom: 0 !important; */
 }
 
 /* .pplr_crop-modal .pplr_h_title::after {
-      content: 'Personalisiere Dein Geschenk.';
-      visibility: visible;
-    
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-    
-      color: #090a0c;
-    } */
+        content: 'Personalisiere Dein Geschenk.';
+        visibility: visible;
+      
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      
+        color: #090a0c;
+      } */
 
 .pplr_crop-modal .pplr_ex_button {
   padding: 0 12px !important;
@@ -456,5 +456,8 @@ label:has(+ .pplr_text:focus) {
   width: 75px !important;
   height: unset !important;
   aspect-ratio: 1 / 1;
+}
+.pplr-btn {
+  width: 100%;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
