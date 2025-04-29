@@ -1,0 +1,216 @@
+{{ 'sm-section-product-features.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Product Features",
+  "tag": "section",
+  "class": "pf",
+  "settings": [
+    {
+      "type": "header",
+      "content": "SIGNS"
+    },
+    {
+      "type": "image_picker",
+      "id": "persistent_product_image",
+      "label": "Persistent Product Image",
+      "info": "The Ivy is the default image for signs, and some keychain for the other products."
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Button Text",
+      "default": "Shop now"
+    },
+    {
+      "type": "text",
+      "id": "materials_heading",
+      "label": "Materials Heading",
+      "default": "Choose your materials"
+    },
+    {
+      "type": "text",
+      "id": "materials_subheading",
+      "label": "Materials Subheading",
+      "default": "Make it unique with a variety of materials."
+    },
+    {
+      "type": "text",
+      "id": "quality_heading",
+      "label": "Quality Heading",
+      "default": "The best quality just for you"
+    },
+    {
+      "type": "text",
+      "id": "quality_subheading",
+      "label": "Quality Subheading",
+      "default": "Top quality materials, made to last, built to impress and carefully crafted to make the perfect gift."
+    },
+    {
+      "type": "text",
+      "id": "custom_built_subheading_1",
+      "label": "Custom Built Subheading 1",
+      "default": "Add your personal touch"
+    },
+    {
+      "type": "text",
+      "id": "custom_built_subheading_2",
+      "label": "Custom Built Subheading 2",
+      "default": "Make it the way you want it"
+    },
+    {
+      "type": "text",
+      "id": "gifting_heading",
+      "label": "Gifting Heading",
+      "default": "A personal gift they will cherish"
+    },
+    {
+      "type": "text",
+      "id": "materials_button",
+      "label": "Materials Button Text",
+      "default": "Materials"
+    },
+    {
+      "type": "text",
+      "id": "quality_button",
+      "label": "Quality Button Text",
+      "default": "Quality"
+    },
+    {
+      "type": "text",
+      "id": "custom_built_button",
+      "label": "Custom Built Button Text",
+      "default": "Custom-built"
+    },
+    {
+      "type": "text",
+      "id": "gifting_button",
+      "label": "Gifting Button Text",
+      "default": "Gifting"
+    },
+    {
+      "type": "header",
+      "content": "KEYCHAINS"
+    },
+    {
+      "type": "image_picker",
+      "id": "persistent_product_image_keychain",
+      "label": "Persistent Product Image Keychain"
+    },
+    {
+      "type": "text",
+      "id": "cta_text_keychain",
+      "label": "CTA Button Text (Keychains)",
+      "default": "Shop now"
+    },
+    {
+      "type": "text",
+      "id": "materials_heading_keychain",
+      "label": "Materials Heading (Keychains)",
+      "default": "Choose your materials"
+    },
+    {
+      "type": "text",
+      "id": "materials_subheading_keychain",
+      "label": "Materials Subheading (Keychains)",
+      "default": "Make it unique with a variety of materials."
+    },
+    {
+      "type": "text",
+      "id": "quality_heading_keychain",
+      "label": "Quality Heading (Keychains)",
+      "default": "The best quality just for you"
+    },
+    {
+      "type": "text",
+      "id": "quality_subheading_keychain",
+      "label": "Quality Subheading (Keychains)",
+      "default": "Top quality materials, made to last, built to impress and carefully crafted to make the perfect gift."
+    },
+    {
+      "type": "text",
+      "id": "custom_built_subheading_1_keychain",
+      "label": "Custom Built Subheading 1 (Keychains)",
+      "default": "Add your personal touch"
+    },
+    {
+      "type": "text",
+      "id": "custom_built_subheading_2_keychain",
+      "label": "Custom Built Subheading 2 (Keychains)",
+      "default": "Make it the way you want it"
+    },
+    {
+      "type": "text",
+      "id": "gifting_heading_keychain",
+      "label": "Gifting Heading (Keychains)",
+      "default": "A personal gift they will cherish"
+    },
+    {
+      "type": "text",
+      "id": "materials_button_keychain",
+      "label": "Materials Button Text (Keychains)",
+      "default": "Materials"
+    },
+    {
+      "type": "text",
+      "id": "quality_button_keychain",
+      "label": "Quality Button Text (Keychains)",
+      "default": "Quality"
+    },
+    {
+      "type": "text",
+      "id": "custom_built_button_keychain",
+      "label": "Custom Built Button Text (Keychains)",
+      "default": "Custom-built"
+    },
+    {
+      "type": "text",
+      "id": "gifting_button_keychain",
+      "label": "Gifting Button Text (Keychains)",
+      "default": "Gifting"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Features"
+    }
+  ]
+}
+{% endschema %}
+
+{% assign product_type = product.type %}
+
+{% if product_type contains 'Anhänger'
+  or product_type contains 'anhänger'
+  or product_type contains 'Keychain'
+  or product_type contains 'keychain'
+%}
+  {% assign type_of_product = 'keychain' %}
+  {% render 'sm-product-features-keychain' %}
+{% elsif product_type contains 'Anstecker' or product_type contains 'anstecker' %}
+  {% assign type_of_product = 'pin' %}
+  {% render 'sm-product-features-pin' %}
+{% else %}
+  {% assign type_of_product = 'sign' %}
+  {% render 'sm-product-features-sign' %}
+{% endif %}
+
+{% style %}
+  .pf__content-media-item img {
+    {% if type_of_product == 'keychain' %}
+      width: 60px;
+      height: 60px;
+    {% else %}
+      width: 40px;
+      height: 40px;
+    {% endif %}
+  }
+
+  .pf__persistent-product {
+    {% if type_of_product == 'sign' %}
+      bottom: 0;
+    {% elsif type_of_product == 'keychain' %}
+      top: 0;
+    {% endif %}
+  }
+{% endstyle %}

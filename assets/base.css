@@ -3694,3 +3694,15 @@ details-disclosure > details {
 cart-drawer.active ~ #trustbadge-container-98e3dadd90eb493088abdc5597a70810 {
   display: none !important;
 }
+
+/* * Full-width eTrusted widget Jakob background */
+#etrusted-product_review_list {
+  position: relative;
+  margin: 24px 0;
+  background: #fafaff90;
+  background-image: url('/cdn/shop/files/web-jakob_with_stars.png?v=1734011225');
+  background-blend-mode: lighten;
+  background-position: left bottom 20px;
+  background-repeat: no-repeat;
+  background-size: 500px;
+}

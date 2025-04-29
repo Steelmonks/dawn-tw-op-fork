@@ -1,0 +1,384 @@
+{% comment %} * Navbar for the product features carousel {% endcomment %}
+<nav class='pf__nav'>
+  <ul class='pf__nav-list'>
+    <li class='pf__nav-item'>
+      <button id='materials' onclick='handleNavClick(this.id)' class='pf__nav-button active'>
+        {{ section.settings.materials_button_keychain }}
+      </button>
+    </li>
+    <li class='pf__nav-item'>
+      <button id='quality' onclick='handleNavClick(this.id)' class='pf__nav-button'>
+        {{ section.settings.quality_button_keychain }}
+      </button>
+    </li>
+    <li class='pf__nav-item'>
+      <button id='custom-built' onclick='handleNavClick(this.id)' class='pf__nav-button'>
+        {{ section.settings.custom_built_button_keychain }}
+      </button>
+    </li>
+    <li class='pf__nav-item'>
+      <button id='gifting' onclick='handleNavClick(this.id)' class='pf__nav-button'>
+        {{ section.settings.gifting_button_keychain }}
+      </button>
+    </li>
+  </ul>
+</nav>
+
+{% comment %} * Slides {% endcomment %}
+<div class='pf__content-container'>
+  <div class='pf__content-slide-container' style='--translate-by: 0'>
+    <article class='pf__content pf__content--1'>
+      <h3 class='pf__content-heading'>{{ section.settings.materials_heading_keychain }}</h3>
+      <p class='pf__content-subheading'>{{ section.settings.materials_subheading_keychain }}</p>
+      <div class='pf__content-media'>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Lavander.png?v=1737642073&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Fuchsia.png?v=1737642090&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Military_green.png?v=1737642115&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Brown_leather.png?v=1737642132&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Black_leather.png?v=1737642151&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+      </div>
+
+      <div class='pf__content-media'>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Burgundy.png?v=1737642164&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/Navy_Blue.png?v=1737641998&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Blue.png?v=1737642178&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Baby_Pink.png?v=1737642191&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+        <div class='pf__content-media-item'>
+          <img
+            src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/web_Red.png?v=1737642206&width=250'
+            width='50'
+            height='50'
+            alt=''
+          >
+        </div>
+      </div>
+    </article>
+    <article class='pf__content pf__content--2'>
+      <h3 class='pf__content-heading'>{{ section.settings.quality_heading_keychain }}</h3>
+      <p class='pf__content-subheading'>
+        {{ section.settings.quality_subheading_keychain }}
+      </p>
+    </article>
+    <article class='pf__content pf__content--3'>
+      <p class='pf__content-subheading'>{{ section.settings.custom_built_subheading_1_keychain }}</p>
+      <p class='pf__content-subheading'>{{ section.settings.custom_built_subheading_2_keychain }}</p>
+    </article>
+    <article class='pf__content pf__content--4'>
+      <h3 class='pf__content-heading'>{{ section.settings.gifting_heading_keychain }}</h3>
+    </article>
+  </div>
+
+  {% comment %} * Persistent Content (across slides) {% endcomment %}
+  <figure class='pf__persistent-product' style='--persistent-product-opacity: 0; --skew-by: 0deg'>
+    {% if section.settings.persistent_product_image_keychain != blank %}
+      {{
+        section.settings.persistent_product_image_keychain
+        | image_url: width: 300
+        | image_tag: width: 300, height: '', alt: 'Customizable Product Image'
+      }}
+    {% else %}
+      {% liquid
+        assign has_png = false
+        for image in product.images
+          assign extension = image.src | split: '.' | last | downcase
+          if extension == 'png'
+            assign has_png = true
+            assign png_image = image
+            break
+          endif
+        endfor
+      %}
+
+      {% if has_png %}
+        {{ png_image | image_url: width: 300 | image_tag: width: 300, height: '', alt: 'Customizable Product Image' }}
+      {% else %}
+        <img
+          src='https://cdn.shopify.com/s/files/1/0472/6420/2901/files/Photo_Keychain.png?v=1744180834&width=500'
+          width='187'
+          height='400'
+          alt='Customizable Product Image'
+          style='width: 187px; height: 400px;'
+        >
+      {% endif %}
+    {% endif %}
+  </figure>
+  {% unless section.settings.cta_text_keychain == '' %}
+    <a href='#product-top' class='pf__persistent-cta btn'> {{ section.settings.cta_text_keychain }} </a>
+  {% endunless %}
+</div>
+
+{% style %}
+  .pf__persistent-product {
+    z-index: -1;
+    width: 187px !important;
+    height: 400px !important;
+  }
+  .pf__persistent-product::before {
+    top: 15% !important;
+    bottom: auto !important;
+    width: 80% !important;
+  }
+{% endstyle %}
+
+{% comment %} ! Keychain case {% endcomment %}
+<script>
+  // Define handleNavClick in the global scope if not already defined
+  window.handleNavClick =
+    window.handleNavClick ||
+    function (id) {
+      // The function will be initialized when DOM is loaded
+      if (typeof _handleNavClick === 'function') {
+        _handleNavClick(id);
+      }
+    };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const navButtons = document.querySelectorAll('.pf__nav-button');
+    const navButtonsContainer = document.querySelector('.pf__content-slide-container');
+    const persistentProduct = document.querySelector('.pf__persistent-product');
+    const slides = document.querySelectorAll('.pf__content');
+    let skewBy = 0;
+
+    // Only proceed if we found all required elements
+    if (!navButtons.length || !navButtonsContainer || !persistentProduct || !slides.length) {
+      console.warn('Required DOM elements not found');
+      return;
+    }
+
+    // Initialize variables and first active slide
+    let previousActiveButton = document.querySelector('.pf__nav-button.active').id;
+    let translateBy = 0;
+    const buttonIndices = {
+      materials: 0,
+      quality: 1,
+      'custom-built': 2,
+      gifting: 3,
+    };
+
+    slides[buttonIndices.materials].classList.add('active');
+    // Get the distance between two buttons to animate the slide later
+    const getButtonDistance = (fromButtonId, toButtonId) => buttonIndices[toButtonId] - buttonIndices[fromButtonId];
+
+    // Define positions for each slide using transform and left properties
+    const productPositions = {
+      mobile: {
+        materials: {
+          transform: 'scale(1) translateX(-50%) skew(var(--skew-by)) rotate3d(0, 1, 0, 0deg) translateY(0)',
+          left: '100%',
+        },
+        quality: {
+          transform: 'scale(1) translateX(-50%) skew(var(--skew-by)) rotate3d(0, 1, 0, 0deg) translateY(0)',
+          left: '0',
+        },
+        'custom-built': {
+          transform:
+            'scale(1.05) translateX(calc(-50% * (1/1.05))) skew(var(--skew-by)) rotate3d(0, 1, 0, 0deg) translateY(-40%)',
+          left: '50%',
+        },
+        gifting: {
+          transform:
+            'scale(1.25) translateX(calc(-50% * (1/1.25))) skew(var(--skew-by)) rotate3d(0, 1, 0, 360deg) translateY(0)',
+          left: '50%',
+        },
+      },
+      desktop: {
+        materials: {
+          transform: 'scale(1) translateX(0) skew(var(--skew-by)) rotate3d(0, 1, 0, 0deg)',
+          left: 'auto',
+          right: '0',
+        },
+        quality: {
+          transform: 'scale(1) translateX(100%) skew(var(--skew-by)) rotate3d(0, 1, 0, 0deg)',
+          left: 'auto',
+          right: '100%',
+        },
+        'custom-built': {
+          transform: 'scale(1.25) translateX(calc(50% * (1/1.25))) skew(var(--skew-by)) rotate3d(0, 1, 0, 0deg)',
+          left: 'auto',
+          right: '50%',
+        },
+        gifting: {
+          transform: 'scale(1.5) translateX(calc(50% * (1/1.5))) skew(var(--skew-by)) rotate3d(0, 1, 0, 0deg)',
+          left: 'auto',
+          right: '50%',
+        },
+      },
+    };
+
+    // Rename the original handleNavClick to _handleNavClick
+    window._handleNavClick = function (id) {
+      // Clear all active classes
+      navButtons.forEach((button) => button.classList.remove('active'));
+      slides.forEach((slide) => slide.classList.remove('active'));
+
+      // Toggle the active class on the clicked button and corresponding slide
+      document.getElementById(id).classList.add('active');
+      slides[buttonIndices[id]].classList.add('active');
+
+      // Change the slide and update previous active button
+      handleSlideChange(id, previousActiveButton);
+      previousActiveButton = id;
+    };
+
+    // Change the slide and animate according to the current and previous slide
+    const handleSlideChange = (currentElementId, previousElementId) => {
+      translateBy = buttonIndices[currentElementId] * -100;
+      navButtonsContainer.style.setProperty('--translate-by', `${translateBy}%`);
+      animatePersistentProduct(currentElementId, previousElementId);
+    };
+
+    // Function to animate the persistent product
+    const animatePersistentProduct = (currentElementId, previousElementId) => {
+      // Query elements inside the function to ensure they exist
+      const persistentProductElement = document.querySelector('.pf__persistent-product');
+      const persistentCtaElement = document.querySelector('.pf__persistent-cta');
+
+      // Add retry mechanism for finding elements
+      let retryCount = 0;
+      const maxRetries = 3;
+
+      function tryAnimation() {
+        const persistentProductElement = document.querySelector('.pf__persistent-product');
+        const persistentCtaElement = document.querySelector('.pf__persistent-cta');
+
+        if (persistentProductElement) {
+          // Set opacity first before other transformations
+          if (currentElementId === 'gifting') {
+            // Show the product for gifting slide
+            persistentProductElement.style.setProperty('--persistent-product-opacity', '1');
+          } else {
+            // Hide for all other slides
+            persistentProductElement.style.setProperty('--persistent-product-opacity', '0');
+          }
+
+          // Proceed with animation
+          const isDesktop = window.innerWidth >= 768;
+          const currentPos = isDesktop
+            ? productPositions.desktop[currentElementId]
+            : productPositions.mobile[currentElementId];
+
+          // Update skew logic
+          if (currentElementId === 'quality' && previousElementId === 'materials') {
+            skewBy -= 5;
+          } else if (currentElementId === 'materials' && previousElementId === 'quality') {
+            skewBy += 5;
+          }
+
+          persistentProductElement.style.setProperty('--skew-by', `${skewBy}deg`);
+
+          // Reset skew to 0 after 250ms
+          setTimeout(() => {
+            persistentProductElement.style.setProperty('--skew-by', '0deg');
+            skewBy = 0;
+          }, 250);
+
+          // Apply other transformations
+          persistentProductElement.style.transform = currentPos.transform;
+          persistentProductElement.style.left = currentPos.left;
+          if (currentPos.right !== undefined) {
+            persistentProductElement.style.right = currentPos.right;
+          }
+
+          // Only manipulate CTA if it exists
+          if (persistentCtaElement) {
+            switch (currentElementId) {
+              case 'materials':
+                persistentCtaElement.style.bottom = '0';
+                persistentProductElement.style.setProperty('--persistent-product-opacity', '0');
+                break;
+              case 'quality':
+                persistentCtaElement.style.bottom = '0';
+                persistentProductElement.style.setProperty('--persistent-product-opacity', '0');
+                break;
+              case 'gifting':
+                persistentCtaElement.style.bottom = '50%';
+                persistentProductElement.style.setProperty('--persistent-product-opacity', '1');
+                break;
+              default:
+                persistentCtaElement.style.bottom = '0';
+                persistentProductElement.style.setProperty('--persistent-product-opacity', '0');
+            }
+          }
+        } else if (retryCount < maxRetries) {
+          // Retry after a short delay
+          retryCount++;
+          setTimeout(tryAnimation, 100);
+          console.log(`Retrying to find persistent elements (attempt ${retryCount})`);
+        } else {
+          console.warn('Failed to find persistent elements after multiple attempts');
+        }
+      }
+
+      // Start the retry process
+      tryAnimation();
+    };
+
+    // Add resize listener to update positions when viewport changes
+    window.addEventListener('resize', () => {
+      handleNavClick(previousActiveButton);
+    });
+  });
+</script>
