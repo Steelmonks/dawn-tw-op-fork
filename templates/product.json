@@ -16,8 +16,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "text": "{{ product.vendor }}"
           }
         },
         "title": {
@@ -27,8 +26,7 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
+            "text": "{{ product.metafields.descriptors.subtitle.value }}"
           }
         },
         "price": {
@@ -42,19 +40,14 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
+            "options_threshold": 10
           }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "disabled": true,
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "disabled": true,
           "settings": {
+            "enable_quantity_selector": true,
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
@@ -64,56 +57,10 @@
           "disabled": true,
           "settings": {}
         },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
         "zepto_product_personalizer_product_personalizer_page_bj6dEi": {
           "type": "shopify://apps/zepto-product-personalizer/blocks/product_personalizer_page/7411210d-7b32-4c09-9455-e129e3be4729",
           "settings": {
             "product": "{{product}}"
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Aktie"
           }
         },
         "trusted_shops_reviews_and_more_trusted_stars_aNyqUW": {
@@ -128,31 +75,34 @@
         "price",
         "trusted_shops_reviews_and_more_product_review_list_extension_ywTbWf",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
         "zepto_product_personalizer_product_personalizer_page_bj6dEi",
-        "share",
         "trusted_shops_reviews_and_more_trusted_stars_aNyqUW"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "color_scheme": "",
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "enable_sticky_bar": true,
+        "enable_sticky_bar_info": false,
+        "enable_product_media_full_viewheight": false,
+        "back_to_collection_button": "none",
+        "back_to_collection_button_text_before": "",
+        "back_to_collection_button_text_after": ""
+      }
+    },
+    "sm_button_back_to_collection_ENenrt": {
+      "type": "sm-button-back-to-collection",
+      "custom_css": [
+        ".button-back-to-collection {margin: 2rem auto;}"
+      ],
+      "name": "Back to Collection",
+      "settings": {
+        "show_button": true,
+        "button_text_before": "Back to",
+        "button_text_after": "Kollektion",
+        "show_breadcrumb": true,
+        "show_all_collections": true,
+        "all_collections_text": "All Collections",
+        "separator": "→"
       }
     },
     "image-with-text": {
@@ -256,6 +206,7 @@
   },
   "order": [
     "main",
+    "sm_button_back_to_collection_ENenrt",
     "image-with-text",
     "multicolumn",
     "related-products"
