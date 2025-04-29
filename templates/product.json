@@ -105,6 +105,124 @@
         "separator": "→"
       }
     },
+    "sm_alternating_media_zDMx7c": {
+      "type": "sm-alternating-media",
+      "blocks": {
+        "alternating_media_hNRd8a": {
+          "type": "alternating_media",
+          "settings": {
+            "use_product_images": true,
+            "image_border_radius": 10,
+            "image_box_shadow_visible": true,
+            "image_max_width": 0,
+            "heading": "Ganz nach Deinem Wunsch",
+            "text": "<p>Unsere Möglichkeiten, kombiniert mit Deinem Wunschtext - so entsteht ein einzigartiges und persönliches Unikat.<br/>Nichts ist individueller als ein Artikel, der speziell für Dich angefertigt wurde.<br/><br/>Unser Motto ist: \"Nichts ist persönlicher als personalisiert.\" <br/><br/>Wir verbinden individuelle Symbolik mit Deiner persönlichen Note.</p>",
+            "use_feature_highlights": true,
+            "flex_justify_content": "start",
+            "flex_align_items": "center",
+            "heading_color": "#090a0c",
+            "text_color": "#090a0c",
+            "desktop_heading_size": 26,
+            "mobile_heading_size": 18,
+            "desktop_text_size": 16,
+            "mobile_text_size": 14,
+            "text_weight": 400,
+            "heading_weight": 700,
+            "flex_direction": "row",
+            "image_flex": 1,
+            "text_flex": 1.8,
+            "block_gap": 12,
+            "stack_on_mobile": true
+          }
+        },
+        "alternating_media_UxxYzY": {
+          "type": "alternating_media",
+          "settings": {
+            "use_product_images": true,
+            "image_border_radius": 10,
+            "image_box_shadow_visible": true,
+            "image_max_width": 0,
+            "heading": "Ein ideales Geschenk",
+            "text": "<p>Dank der robusten Verarbeitung bleibt das Schild dauerhaft geschützt und rostfrei, besonders in pulverbeschichteten Farben – eine perfekte Geschenkidee für Familien, Paare oder als Andenken für besondere Anlässe.</p>",
+            "use_feature_highlights": true,
+            "flex_justify_content": "end",
+            "flex_align_items": "center",
+            "heading_color": "#090a0c",
+            "text_color": "#090a0c",
+            "desktop_heading_size": 26,
+            "mobile_heading_size": 18,
+            "desktop_text_size": 16,
+            "mobile_text_size": 14,
+            "text_weight": 400,
+            "heading_weight": 700,
+            "flex_direction": "row",
+            "image_flex": 1,
+            "text_flex": 1.8,
+            "block_gap": 12,
+            "stack_on_mobile": true
+          }
+        },
+        "alternating_media_kRfHjT": {
+          "type": "alternating_media",
+          "settings": {
+            "use_product_images": true,
+            "image_border_radius": 10,
+            "image_box_shadow_visible": true,
+            "image_max_width": 0,
+            "heading": "Ganz nach Deinem Wunsch",
+            "text": "<p>Wähle aus mehreren Größen und Materialien, um Dein Baum des Lebens Schild an Deinen Stil anzupassen – von klassischem Stahl über Edelstahl bis hin zu echtem Edelrost (Cortenstahl).</p>",
+            "use_feature_highlights": true,
+            "flex_justify_content": "start",
+            "flex_align_items": "center",
+            "heading_color": "#090a0c",
+            "text_color": "#090a0c",
+            "desktop_heading_size": 26,
+            "mobile_heading_size": 18,
+            "desktop_text_size": 16,
+            "mobile_text_size": 14,
+            "text_weight": 400,
+            "heading_weight": 700,
+            "flex_direction": "row",
+            "image_flex": 1,
+            "text_flex": 1.8,
+            "block_gap": 12,
+            "stack_on_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "alternating_media_hNRd8a",
+        "alternating_media_UxxYzY",
+        "alternating_media_kRfHjT"
+      ],
+      "name": "Alternating Media",
+      "settings": {
+        "product_media_index_offset": 1,
+        "aspect_ratio": "1 / 1",
+        "heading": "",
+        "heading_size_mobile": 22,
+        "heading_size_desktop": 24,
+        "heading_alignment": "center",
+        "heading_weight": 700,
+        "ab_test_variant": "control"
+      }
+    },
+    "17459065389a6ee71e": {
+      "type": "apps",
+      "blocks": {
+        "trusted_shops_reviews_and_more_product_review_list_JrKwDz": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/product-review-list/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trusted_shops_reviews_and_more_product_review_list_JrKwDz"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -127,6 +245,8 @@
   "order": [
     "main",
     "sm_button_back_to_collection_ENenrt",
+    "sm_alternating_media_zDMx7c",
+    "17459065389a6ee71e",
     "related-products"
   ]
 }
