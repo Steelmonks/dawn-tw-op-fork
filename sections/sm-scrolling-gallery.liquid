@@ -531,9 +531,14 @@
       filter: brightness(0.75);
     }
 
-    .scrolling-gallery__overlay-title {
+    .scrolling-gallery__overlay-title h2 {
+        font-size: 3.6rem !important;
+        font-weight: 500 !important;
+        padding-bottom: 24px !important;
+    }
+    .scrolling-gallery__overlay-title, .scrolling-gallery__overlay-title h2 {
       text-align: center;
-      color: {{ section.settings.overlay_text_color }};
+      color: {{ section.settings.overlay_text_color }} !important;
     }
 {% endstyle %}
 
