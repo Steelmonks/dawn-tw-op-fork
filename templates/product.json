@@ -135,17 +135,17 @@
             "stack_on_mobile": true
           }
         },
-        "alternating_media_ziFceY": {
+        "alternating_media_UxxYzY": {
           "type": "alternating_media",
           "settings": {
             "use_product_images": true,
             "image_border_radius": 10,
             "image_box_shadow_visible": true,
             "image_max_width": 0,
-            "heading": "Product Details & Benefits",
-            "text": "<p>Showcase your product's key benefits with alternating layout. Images automatically flip sides for visual interest.</p>",
+            "heading": "Ein ideales Geschenk",
+            "text": "<p>Dank der robusten Verarbeitung bleibt das Schild dauerhaft geschützt und rostfrei, besonders in pulverbeschichteten Farben – eine perfekte Geschenkidee für Familien, Paare oder als Andenken für besondere Anlässe.</p>",
             "use_feature_highlights": true,
-            "flex_justify_content": "center",
+            "flex_justify_content": "start",
             "flex_align_items": "center",
             "heading_color": "#090a0c",
             "text_color": "#090a0c",
@@ -157,22 +157,22 @@
             "heading_weight": 700,
             "flex_direction": "row",
             "image_flex": 1,
-            "text_flex": 1,
+            "text_flex": 1.8,
             "block_gap": 12,
             "stack_on_mobile": true
           }
         },
-        "alternating_media_n37qjG": {
+        "alternating_media_kRfHjT": {
           "type": "alternating_media",
           "settings": {
             "use_product_images": true,
             "image_border_radius": 10,
             "image_box_shadow_visible": true,
             "image_max_width": 0,
-            "heading": "Compact Product Feature",
-            "text": "<p>A more condensed layout with smaller images, ideal for additional product details or secondary features.</p>",
+            "heading": "Ganz nach Deinem Wunsch",
+            "text": "<p>Wähle aus mehreren Größen und Materialien, um Dein Baum des Lebens Schild an Deinen Stil anzupassen – von klassischem Stahl über Edelstahl bis hin zu echtem Edelrost (Cortenstahl).</p>",
             "use_feature_highlights": true,
-            "flex_justify_content": "center",
+            "flex_justify_content": "start",
             "flex_align_items": "center",
             "heading_color": "#090a0c",
             "text_color": "#090a0c",
@@ -184,7 +184,7 @@
             "heading_weight": 700,
             "flex_direction": "row",
             "image_flex": 1,
-            "text_flex": 1,
+            "text_flex": 1.8,
             "block_gap": 12,
             "stack_on_mobile": true
           }
@@ -192,8 +192,8 @@
       },
       "block_order": [
         "alternating_media_hNRd8a",
-        "alternating_media_ziFceY",
-        "alternating_media_n37qjG"
+        "alternating_media_UxxYzY",
+        "alternating_media_kRfHjT"
       ],
       "name": "Alternating Media",
       "settings": {
