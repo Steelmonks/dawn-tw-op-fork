@@ -1,0 +1,442 @@
+{% schema %}
+{
+  "name": "Alternating Media",
+  "tag": "section",
+  "class": "alternating-media",
+  "settings": [
+    {
+      "type": "range",
+      "id": "product_media_index_offset",
+      "label": "Product Media Index Offset",
+      "info": "This is the starting index of the product image to use. If you want to start with the second image, set this to 1. If you want to start with the third image, set this to 2, etc. This is useful if you want to skip the first image, or if you want to offset the images to match other sections (so the images are different in each section).",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Media Aspect Ratio",
+      "options": [
+        { "value": "16 / 9", "label": "16 / 9 (landscape)" },
+        { "value": "5 / 4", "label": "5 / 4 (photographic)" },
+        { "value": "4 / 3", "label": "4 / 3 (photographic)" },
+        { "value": "3 / 2", "label": "3 / 2 (photographic)" },
+        { "value": "2.40 / 1", "label": "2.40 / 1 (cinematic)" },
+        { "value": "1.85 / 1", "label": "1.85 / 1 (cinematic)" },
+        { "value": "1 / 1", "label": "1 / 1 (square)" },
+        { "value": "9 / 16", "label": "9 / 16 (portrait)" },
+        { "value": "4 / 5", "label": "4 / 5 (portrait)" },
+        { "value": "3 / 4", "label": "3 / 4 (portrait)" },
+        { "value": "2 / 3", "label": "2 / 3 (portrait)" },
+        { "value": "1 / 2.40", "label": "1 / 2.40 (portrait)" },
+        { "value": "1 / 1.85", "label": "1 / 1.85 (portrait)" }
+      ],
+      "default": "16 / 9"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Default Heading"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Mobile Heading Size",
+      "min": 12,
+      "max": 92,
+      "step": 1,
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Desktop Heading Size",
+      "min": 12,
+      "max": 92,
+      "step": 1,
+      "default": 32
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_weight",
+      "label": "Heading Weight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "default": 700
+    },
+    {
+      "type": "select",
+      "id": "ab_test_variant",
+      "label": "A/B Test Variant",
+      "options": [
+        { "value": "control", "label": "Control (A)" },
+        { "value": "variant", "label": "Variant (B)" }
+      ],
+      "default": "control"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "alternating_media",
+      "name": "Alternating Media Block",
+      "settings": [
+        // ! Image Settings
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_product_images",
+          "label": "Use Product Images",
+          "info": "IMPORTANT: Uses images with 'Product Image' as the alt text.",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "image_border_radius",
+          "label": "Image Border Radius",
+          "min": 0,
+          "max": 100,
+          "default": 10
+        },
+        {
+          "type": "checkbox",
+          "id": "image_box_shadow_visible",
+          "label": "Image Box Shadow Visibility",
+          "default": true
+        },
+        {
+          "type": "number",
+          "id": "image_max_width",
+          "label": "Image Max Width (px)",
+          "placeholder": "500",
+          "default": 0
+        },
+
+        // ! Text Settings
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Block Heading",
+          "default": "Default Block Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Rich Block Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_feature_highlights",
+          "label": "Use Feature Highlights",
+          "info": "If enabled, the feature highlights will be used instead of the text. If no feature highlights are found, the text will be used as a fallback.",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "flex_justify_content",
+          "label": "Text Alignment",
+          "options": [
+            { "value": "start", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "end", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "id": "flex_align_items",
+          "label": "Text Alignment",
+          "options": [
+            { "value": "flex-start", "label": "Top" },
+            { "value": "center", "label": "Center" },
+            { "value": "flex-end", "label": "Bottom" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#090a0c"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#090a0c"
+        },
+        {
+          "type": "range",
+          "id": "desktop_heading_size",
+          "label": "Desktop Heading Size",
+          "min": 12,
+          "max": 92,
+          "step": 1,
+          "default": 26
+        },
+        {
+          "type": "range",
+          "id": "mobile_heading_size",
+          "label": "Mobile Heading Size",
+          "min": 12,
+          "max": 92,
+          "step": 1,
+          "default": 18
+        },
+        {
+          "type": "range",
+          "id": "desktop_text_size",
+          "label": "Desktop Text Size",
+          "min": 12,
+          "max": 92,
+          "step": 1,
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "mobile_text_size",
+          "label": "Mobile Text Size",
+          "min": 12,
+          "max": 92,
+          "step": 1,
+          "default": 14
+        },
+        {
+          "type": "range",
+          "id": "text_weight",
+          "label": "Text Weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "default": 400
+        },
+        {
+          "type": "range",
+          "id": "heading_weight",
+          "label": "Heading Weight",
+          "min": 100,
+          "max": 900,
+          "step": 100,
+          "default": 700
+        },
+
+        // ! Layout Settings
+        {
+          "type": "select",
+          "id": "flex_direction",
+          "label": "Flex Direction",
+          "options": [
+            { "value": "row", "label": "Row" },
+            { "value": "column", "label": "Column" }
+          ],
+          "default": "row"
+        },
+        {
+          "type": "number",
+          "id": "image_flex",
+          "label": "Image Flex",
+          "default": 1
+        },
+        {
+          "type": "number",
+          "id": "text_flex",
+          "label": "Text Flex",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "block_gap",
+          "label": "Block Gap",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "default": 12
+        },
+        {
+          "type": "checkbox",
+          "id": "stack_on_mobile",
+          "label": "Stack on mobile",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Alternating Media",
+      "blocks": [
+        {
+          "type": "alternating_media",
+          "settings": {
+            "heading": "Centered Product Showcase",
+            "text": "<p>Perfect for highlighting product features with centered alignment. Images and text are balanced side-by-side.</p>",
+            "flex_align_items": "center",
+            "flex_justify_content": "center",
+            "use_product_images": true
+          }
+        },
+        {
+          "type": "alternating_media",
+          "settings": {
+            "heading": "Product Details & Benefits",
+            "text": "<p>Showcase your product's key benefits with alternating layout. Images automatically flip sides for visual interest.</p>",
+            "flex_align_items": "center",
+            "flex_justify_content": "center",
+            "use_product_images": true
+          }
+        },
+        {
+          "type": "alternating_media",
+          "settings": {
+            "heading": "Compact Product Feature",
+            "text": "<p>A more condensed layout with smaller images, ideal for additional product details or secondary features.</p>",
+            "flex_align_items": "center",
+            "flex_justify_content": "center",
+            "use_product_images": true
+          }
+        },
+        {
+          "type": "alternating_media",
+          "settings": {
+            "heading": "Image Width Control",
+            "text": "<p>Use image_max_width to control image size, and image_border_radius for rounded corners. You can also use the image_box_shadow_visible setting to add a box shadow to the image.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% liquid
+  assign feature_highlight_title_1 = blank
+  assign feature_highlight_title_2 = blank
+  assign feature_highlight_title_3 = blank
+
+  assign feature_highlight_1 = product.metafields.custom.feature_highlight_1
+  if feature_highlight_1 contains ' | '
+    assign feature_highlight_title_1 = feature_highlight_1 | split: ' | ' | first
+    assign feature_highlight_1 = feature_highlight_1 | split: ' | ' | last
+  endif
+  assign feature_highlight_2 = product.metafields.custom.feature_highlight_2
+  if feature_highlight_2 contains ' | '
+    assign feature_highlight_title_2 = feature_highlight_2 | split: ' | ' | first
+    assign feature_highlight_2 = feature_highlight_2 | split: ' | ' | last
+  endif
+  assign feature_highlight_3 = product.metafields.custom.feature_highlight_3
+  if feature_highlight_3 contains ' | '
+    assign feature_highlight_title_3 = feature_highlight_3 | split: ' | ' | first
+    assign feature_highlight_3 = feature_highlight_3 | split: ' | ' | last
+  endif
+%}
+
+{% unless section.settings.heading == blank %}
+  <h2 class='alternating-media__heading'>{{ section.settings.heading }}</h2>
+{% endunless %}
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'alternating_media' %}
+      {% render 'sm-alternating-media',
+        block: block,
+        index: forloop.index0,
+        offset: section.settings.product_media_index_offset,
+        forloop: forloop,
+        use_feature_highlights: block.settings.use_feature_highlights,
+        feature_highlight_1: feature_highlight_1,
+        feature_highlight_title_1: feature_highlight_title_1,
+        feature_highlight_2: feature_highlight_2,
+        feature_highlight_title_2: feature_highlight_title_2,
+        feature_highlight_3: feature_highlight_3,
+        feature_highlight_title_3: feature_highlight_title_3
+      %}
+  {% endcase %}
+{% endfor %}
+
+{% style %}
+  .alternating-media {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem 24px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    .alternating-media {
+      max-width: 85%;
+    }
+  }
+  @media screen and (min-width: 2000px) {
+    .alternating-media {
+      max-width: 2000px;
+    }
+  }
+
+  .alternating-media article:nth-child(odd) .alternating-media__figure {
+    flex-direction: row-reverse !important;
+  }
+  .alternating-media article:nth-child(odd) .alternating-media__image-wrapper {
+    text-align: right;
+  }
+
+  .alternating-media__heading {
+    text-align: {{ section.settings.heading_alignment }};
+    font-weight: {{ section.settings.heading_weight }};
+    font-size: {{ section.settings.heading_size_mobile }}px;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 1000px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .alternating-media {
+      padding: 0;
+    }
+    .alternating-media__heading {
+      font-size: {{ section.settings.heading_size_desktop }}px;
+    }
+  }
+
+  /* Block Styles */
+  figure.alternating-media__figure {
+    max-width: 1400px;
+  }
+
+  .alternating-media_text {
+      display: flex;
+      flex-direction: column;
+    }
+  .alternating-media__text {
+    width: 100%;
+  }
+  .alternating-media__image {
+    width: 100%;
+    height: auto;
+
+    max-width: 600px;
+
+    aspect-ratio: {{ section.settings.aspect_ratio }};
+    object-fit: cover;
+  }
+{% endstyle %}

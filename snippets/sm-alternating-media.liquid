@@ -1,0 +1,171 @@
+{% liquid
+  assign show_text = true
+  if block.settings.heading == blank and block.settings.text == blank
+    assign show_text = false
+  endif
+
+  # Initialize image variable
+  assign image = block.settings.image
+
+  # Handle product images if enabled
+  if block.settings.use_product_images
+    # Calculate the current image index
+    assign product_image_index = index | plus: offset
+
+    # Try to find image with specific alt text pattern
+    assign alt_text_pattern = 'Wechselnde Medien Foto ' | append: product_image_index
+    assign found_image = false
+
+    for prod_image in product.images
+      if prod_image.alt contains alt_text_pattern
+        assign image = prod_image
+        assign found_image = true
+        break
+      endif
+    endfor
+
+    # Fallback to regular product images if no matching alt text found
+    unless found_image
+      assign fallback_index = product_image_index | modulo: product.images.size
+      assign image = product.images[fallback_index]
+    endunless
+  endif
+%}
+
+<article id='{{ block.id }}'>
+  {% if image != blank or block.settings.use_product_images %}
+    <figure class='alternating-media__figure'>
+      <div class='alternating-media__image-wrapper'>
+        {{ image | image_url: width: 600 | image_tag: class: 'alternating-media__image' }}
+      </div>
+      {% if show_text %}
+        <figcaption class='alternating-media__text'>
+          <h3>
+            {% if use_feature_highlights %}
+              {% case forloop.index %}
+                {% when 1 %}
+                  {% if feature_highlight_title_1 != blank %}
+                    {{ feature_highlight_title_1 }}
+                  {% else %}
+                    {{ block.settings.heading }}
+                  {% endif %}
+                {% when 2 %}
+                  {% if feature_highlight_title_2 != blank %}
+                    {{ feature_highlight_title_2 }}
+                  {% else %}
+                    {{ block.settings.heading }}
+                  {% endif %}
+                {% when 3 %}
+                  {% if feature_highlight_title_3 != blank %}
+                    {{ feature_highlight_title_3 }}
+                  {% else %}
+                    {{ block.settings.heading }}
+                  {% endif %}
+              {% endcase %}
+            {% else %}
+              {{ block.settings.heading }}
+            {% endif %}
+          </h3>
+          <p class='alternating-media__text-content'>
+            {% if use_feature_highlights %}
+              {% case forloop.index %}
+                {% when 1 %}
+                  {% if feature_highlight_1 != blank %}
+                    {{ feature_highlight_1 }}
+                  {% else %}
+                    {{ block.settings.text }}
+                  {% endif %}
+                {% when 2 %}
+                  {% if feature_highlight_2 != blank %}
+                    {{ feature_highlight_2 }}
+                  {% else %}
+                    {{ block.settings.text }}
+                  {% endif %}
+                {% when 3 %}
+                  {% if feature_highlight_3 != blank %}
+                    {{ feature_highlight_3 }}
+                  {% else %}
+                    {{ block.settings.text }}
+                  {% endif %}
+              {% endcase %}
+            {% else %}
+              {{ block.settings.text }}
+            {% endif %}
+          </p>
+        </figcaption>
+      {% endif %}
+    </figure>
+  {% else %}
+    <div class='alternating-media__text'>
+      <h3>{{ block.settings.heading }}</h3>
+      <p class='alternating-media__text-content'>
+        {{ block.settings.text }}
+      </p>
+    </div>
+  {% endif %}
+
+  {% style %}
+    /* Block Styles */
+    #{{ block.id }} .alternating-media__figure {
+      display: flex;
+      flex-direction: {{ block.settings.flex_direction }};
+      align-items: {{ block.settings.flex_align_items }};
+      gap: {{ block.settings.block_gap }}px;
+    }
+
+    #{{ block.id }} .alternating-media__figure > figcaption {
+      flex: {{ block.settings.text_flex }};
+    }
+
+    #{{ block.id }} .alternating-media__text {
+      display: flex;
+      flex-direction: column;
+      align-items: {{ block.settings.flex_justify_content }};
+    }
+
+    #{{ block.id }} .alternating-media__text h3 {
+      font-size: {{ block.settings.desktop_heading_size }}px;
+      color: {{ block.settings.heading_color }};
+      font-weight: {{ block.settings.heading_weight }};
+    }
+
+    #{{ block.id }} .alternating-media__text p {
+      font-size: {{ block.settings.desktop_text_size }}px;
+      color: {{ block.settings.text_color }};
+      font-weight: {{ block.settings.text_weight }};
+      text-align: {{ block.settings.flex_justify_content }};
+    }
+
+    #{{ block.id }} .alternating-media__image {
+      border-radius: {{ block.settings.image_border_radius }}px;
+      {% if block.settings.image_max_width > 0 %}
+        max-width: {{ block.settings.image_max_width }}px;
+      {% endif %}
+      {% if block.settings.image_box_shadow_visible %}
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      {% endif %}
+    }
+
+    #{{ block.id }} .alternating-media__figure > .alternating-media__image-wrapper {
+      flex: {{ block.settings.image_flex }};
+    }
+
+    {% if block.settings.flex_direction == 'column' %}
+      #{{ block.id }} .alternating-media__figure {
+        flex-direction: column-reverse !important;
+      }
+    {% endif %}
+
+    @media screen and (max-width: 768px) {
+      #{{ block.id }} .alternating-media__text h3 {
+        font-size: {{ block.settings.mobile_heading_size }}px;
+      }
+
+      {% if block.settings.stack_on_mobile %}
+        #{{ block.id }} .alternating-media__figure {
+          flex-direction: column !important;
+        }
+      {% endif %}
+    }
+  {% endstyle %}
+</article>
