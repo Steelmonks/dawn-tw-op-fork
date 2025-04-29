@@ -1,0 +1,100 @@
+{{ 'button-back-to-collection.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign target_collection_title = 'sections.best_seller_collection_name' | t
+  assign target_collection_url = '/collections/' | append: target_collection_title
+
+  for collection in product.collections
+    if collection.metafields.custom.highlighted
+      assign target_collection_url = collection.url
+      assign target_collection_title = collection.title
+    endif
+  endfor
+%}
+
+<div class='button-back-to-collection page-gutter'>
+  {% if section.settings.show_button %}
+    <a href='{{ target_collection_url }}' class='button-back-to-collection__button'>
+      {{- section.settings.button_text_before }}
+      {{ target_collection_title }}
+      {{ section.settings.button_text_after -}}
+    </a>
+  {% endif %}
+
+  {% if section.settings.show_breadcrumb %}
+    <div class='button-back-to-collection__text'>
+      {% if section.settings.show_all_collections %}
+        <a href='/collections/all'>{{ section.settings.all_collections_text }}</a>
+        <span>{{ section.settings.separator }}</span>
+      {% endif %}
+      <a href='{{ target_collection_url }}'>{{ target_collection_title }}</a>
+      <span>{{ section.settings.separator }}</span>
+      <div>{{ product.title }}</div>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Back to Collection",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_text_before",
+      "label": "Text before collection name",
+      "default": "Back to"
+    },
+    {
+      "type": "text",
+      "id": "button_text_after",
+      "label": "Text after collection name",
+      "default": "Kollektion"
+    },
+    {
+      "type": "header",
+      "content": "Breadcrumb Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_breadcrumb",
+      "label": "Show breadcrumb navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_all_collections",
+      "label": "Show 'All Collections' link",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "all_collections_text",
+      "label": "All collections text",
+      "default": "All Collections"
+    },
+    {
+      "type": "text",
+      "id": "separator",
+      "label": "Breadcrumb separator",
+      "default": "→"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Back to Collection"
+    }
+  ]
+}
+{% endschema %}

@@ -31,7 +31,7 @@
       {{ block.shopify_attributes }}
     >
       {%- for option in product.options_with_values -%}
-        <fieldset class='js product-form__input product-form__input--{{ forloop.index }}'>
+        <fieldset style='min-width: 100%;' class='js product-form__input product-form__input--{{ forloop.index }}'>
           <legend class='form__label'>{{ option.name }}</legend>
           {% render 'old_product-variant-options',
             product: product,
