@@ -1,0 +1,623 @@
+{% schema %}
+{
+  "name": "Scrolling Gallery",
+  "tag": "section",
+  "class": "scrolling-gallery",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "overlay_text",
+      "label": "Overlay Text",
+      "default": "<h2>Inspired by Life.</h2><p>Steelmonks</p>"
+    },
+    {
+      "type": "color",
+      "id": "overlay_text_color",
+      "label": "Overlay Text Color",
+      "default": "#fafaff"
+    },
+    {
+      "type": "color_background",
+      "id": "overlay_background_color",
+      "label": "Overlay Solid Background Color",
+      "default": "linear-gradient(to top right, #090a0c 25%, #04c)"
+    },
+    {
+      "type": "text",
+      "id": "overlay_padding",
+      "info": "Please include units. Learn more about the padding shorthand and how to use vertical and horizontal padding [here](https://cdn.shopify.com/s/files/1/0472/6420/2901/files/understanding_padding_shorthand.jpg?v=1733222829).",
+      "label": "Overlay Padding",
+      "default": "20px 20px 20px 20px"
+    },
+    {
+      "type": "color_background",
+      "id": "overlay_gradient_background_color",
+      "label": "Overlay Gradient Background Color",
+      "default": "radial-gradient(circle at center, rgba(250, 250, 255, 1) 20%, rgba(250, 250, 255, 0) 80%)"
+    },
+    {
+      "type": "select",
+      "id": "overlay_style",
+      "label": "Overlay Style",
+      "options": [
+        { "value": "1", "label": "1" },
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "range",
+      "id": "overlay_width",
+      "label": "Overlay Width (%)",
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "default": 85
+    },
+    {
+      "type": "checkbox",
+      "id": "show_box_shadow",
+      "label": "Show Box Shadow",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "box_shadow_properties",
+      "label": "Box Shadow Properties",
+      "info": "Please include units. Default is '4px 4px 6px #090a0c40' (e.g. '0 0 5px 8px #fafaff'). Learn more about box-shadow [here](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow).",
+      "default": "4px 4px 6px #090a0c40"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay_text",
+      "label": "Show Overlay Text",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Show Button",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "overlay_border_radius",
+      "label": "Overlay Border Radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "img_width",
+      "info": "Default is 250px. On desktop, the image width is 1.5x the value set here for optimal viewing.",
+      "label": "Image Max Width",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "default": 250
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row_of_images",
+      "name": "Row of Images",
+
+      "settings": [
+        {
+          "type": "header",
+          "content": "Check the box below to use custom images."
+        },
+        {
+          "type": "checkbox",
+          "id": "use_custom_images",
+          "label": "Use Custom Images",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "aspect_ratio",
+          "label": "Aspect Ratio",
+          "options": [
+            { "value": "16 / 9", "label": "16 / 9 (landscape)" },
+            { "value": "5 / 4", "label": "5 / 4 (photographic)" },
+            { "value": "4 / 3", "label": "4 / 3 (photographic)" },
+            { "value": "3 / 2", "label": "3 / 2 (photographic)" },
+            { "value": "2.40 / 1", "label": "2.40 / 1 (cinematic)" },
+            { "value": "1.85 / 1", "label": "1.85 / 1 (cinematic)" },
+            { "value": "1 / 1", "label": "1 / 1 (square)" },
+            { "value": "9 / 16", "label": "9 / 16 (portrait)" },
+            { "value": "4 / 5", "label": "4 / 5 (portrait)" },
+            { "value": "3 / 4", "label": "3 / 4 (portrait)" },
+            { "value": "2 / 3", "label": "2 / 3 (portrait)" },
+            { "value": "1 / 2.40", "label": "1 / 2.40 (portrait)" },
+            { "value": "1 / 1.85", "label": "1 / 1.85 (portrait)" }
+          ],
+          "default": "16 / 9"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Image 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "image6",
+          "label": "Image 6"
+        },
+        {
+          "type": "image_picker",
+          "id": "image7",
+          "label": "Image 7"
+        },
+        {
+          "type": "image_picker",
+          "id": "image8",
+          "label": "Image 8"
+        },
+        {
+          "type": "image_picker",
+          "id": "image9",
+          "label": "Image 9"
+        },
+        {
+          "type": "image_picker",
+          "id": "image10",
+          "label": "Image 10"
+        }
+      ]
+    },
+    {
+      "type": "inversed_row_of_images",
+      "name": "Inversed Row of Images",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Check the box below to use custom images."
+        },
+        {
+          "type": "checkbox",
+          "id": "use_custom_images",
+          "label": "Use Custom Images",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "aspect_ratio",
+          "label": "Aspect Ratio",
+          "options": [
+            { "value": "16 / 9", "label": "16 / 9 (landscape)" },
+            { "value": "5 / 4", "label": "5 / 4 (photographic)" },
+            { "value": "4 / 3", "label": "4 / 3 (photographic)" },
+            { "value": "3 / 2", "label": "3 / 2 (photographic)" },
+            { "value": "2.40 / 1", "label": "2.40 / 1 (cinematic)" },
+            { "value": "1.85 / 1", "label": "1.85 / 1 (cinematic)" },
+            { "value": "1 / 1", "label": "1 / 1 (square)" },
+            { "value": "9 / 16", "label": "9 / 16 (portrait)" },
+            { "value": "4 / 5", "label": "4 / 5 (portrait)" },
+            { "value": "3 / 4", "label": "3 / 4 (portrait)" },
+            { "value": "2 / 3", "label": "2 / 3 (portrait)" },
+            { "value": "1 / 2.40", "label": "1 / 2.40 (portrait)" },
+            { "value": "1 / 1.85", "label": "1 / 1.85 (portrait)" }
+          ],
+          "default": "16 / 9"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "image5",
+          "label": "Image 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "image6",
+          "label": "Image 6"
+        },
+        {
+          "type": "image_picker",
+          "id": "image7",
+          "label": "Image 7"
+        },
+        {
+          "type": "image_picker",
+          "id": "image8",
+          "label": "Image 8"
+        },
+        {
+          "type": "image_picker",
+          "id": "image9",
+          "label": "Image 9"
+        },
+        {
+          "type": "image_picker",
+          "id": "image10",
+          "label": "Image 10"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 5,
+  "presets": [
+    {
+      "name": "Scrolling Gallery",
+      "blocks": [
+        {
+          "type": "row_of_images",
+          "settings": {
+            "aspect_ratio": "16 / 9"
+          }
+        },
+        {
+          "type": "inversed_row_of_images",
+          "settings": {
+            "aspect_ratio": "5 / 4"
+          }
+        },
+        {
+          "type": "row_of_images",
+          "settings": {
+            "aspect_ratio": "16 / 9"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+{% liquid
+  # initialize variables
+  assign available_rows = section.blocks.size
+%}
+
+{% if available_rows > 0 %}
+  <div class='scrolling-gallery__container'>
+    {% comment %} * Rows of images {% endcomment %}
+    {% for block in section.blocks %}
+      <div class='scrolling-gallery__row scrolling-gallery__row--{{ forloop.index }} {% if block.type == 'inversed_row_of_images' %}scrolling-gallery__row--even{% else %}scrolling-gallery__row--odd{% endif %}'>
+        {% comment %} Placeholder images that will be replaced by JavaScript {% endcomment %}
+        {% for i in (1..8) %}
+          <img
+            src=''
+            alt='Vom Benutzer erstellte Bilder von Steelmonks-Kunden (Kundenfotos / UGC)'
+            width='auto'
+            height='auto'
+          >
+        {% endfor %}
+      </div>
+    {% endfor %}
+
+    {% comment %} * Overlay and text {% endcomment %}
+    <div class='scrolling-gallery__overlay'>
+      {% if section.settings.overlay_style == '4' %}
+        <div class='scrolling-gallery__overlay-paper-bg'></div>
+      {% endif %}
+      <div class='scrolling-gallery__overlay-content'>
+        {% if section.settings.show_overlay_text %}
+          <div class='scrolling-gallery__overlay-title'>
+            {{ section.settings.overlay_text }}
+          </div>
+        {% endif %}
+        {% if section.settings.show_button %}
+          <a href='#product-top' class='btn'>Shop Now</a>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if section.settings.overlay_style == '4' %}
+      <svg style='position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;'>
+        <filter id="wavy2">
+          <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"></feTurbulence>
+          <feDisplacementMap in="SourceGraphic" scale="20" />
+        </filter>
+      </svg>
+    {% endif %}
+  </div>
+{% endif %}
+
+{% style %}
+    .scrolling-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      padding: 16px 0;
+      margin: 2rem auto;
+    }
+    @media screen and (min-width: 768px) {
+      .scrolling-gallery {
+        max-width: 85%;
+      }
+      .scrolling-gallery__row img {
+        width: calc({{ section.settings.img_width }}px * 1.5);
+      }
+    }
+    @media screen and (min-width: 2000px) {
+      .scrolling-gallery {
+        max-width: 2000px;
+      }
+    }
+
+    .scrolling-gallery__container {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      position: relative;
+    }
+
+    .scrolling-gallery__overlay {
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: {{ section.settings.overlay_width }}%;
+      max-width: 768px;
+
+      {% liquid
+        # format padding for css
+        assign padding = section.settings.overlay_padding | split: ' '
+        for p in padding
+          assign p = p | append: 'px '
+        endfor
+        assign padding = padding | join: ' '
+      %}
+      {% case section.settings.overlay_style %}
+        {% when '1' %}
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: {{ section.settings.overlay_background_color }};
+          {% if section.settings.show_box_shadow %}
+            box-shadow: {{ section.settings.box_shadow_properties }};
+          {% endif %}
+          padding: {{ padding }};
+          border-radius: {{ section.settings.overlay_border_radius }}px;
+        {% when '2' %}
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 5px;
+          background: {{ section.settings.overlay_gradient_background_color }};
+        {% when '3' %}
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: {{ section.settings.overlay_background_color }};
+          padding: {{ padding }};
+          clip-path: polygon(0% 0%, 15% 5%, 85% 5%, 100% 0%, 95% 15%, 95% 85%, 100% 100%, 85% 95%, 15% 95%, 0% 100%, 5% 85%, 5% 15%);
+        {% when '4' %}
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: {{ section.settings.overlay_background_color }};
+          padding: {{ padding }};
+      {% endcase %}
+    }
+
+    .scrolling-gallery__overlay-content {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    {% if section.settings.overlay_style == '4' %}
+      .scrolling-gallery__overlay {
+        background: transparent;
+      }
+      .scrolling-gallery__overlay-paper-bg {
+        display: block !important;
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 0 60px #8a4d0f inset;
+        background: {{ section.settings.overlay_background_color }};
+        filter: url(#wavy2);
+      }
+      .scrolling-gallery__overlay::before {
+        content: '·';
+        font-size: 60px;
+        line-height: 0;
+        font-weight: 900;
+        color: #000;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+
+        width: 10px;
+        height: 10px;
+
+        background: transparent;
+      }
+      .scrolling-gallery__overlay::after {
+        content: '·';
+        font-size: 60px;
+        line-height: 0;
+        font-weight: 900;
+        color: #000;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        width: 10px;
+        height: 10px;
+
+        background: transparent;
+      }
+    {% endif %}
+
+
+    .scrolling-gallery__row {
+      display: flex;
+      gap: 4px;
+
+      white-space: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+
+      scrollbar-width: none;
+
+      height: fit-content;
+
+      box-sizing: border-box;
+    }
+    .scrolling-gallery__row::-webkit-scrollbar {
+    /*Chrome, Safari, Edge*/
+    display: none;
+  }
+    {% for block in section.blocks %}
+      .scrolling-gallery__row--{{ forloop.index }} img {
+        aspect-ratio: {{ block.settings.aspect_ratio }};
+      }
+    {% endfor %}
+
+    .scrolling-gallery__row img {
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      filter: brightness(0.75);
+    }
+
+    .scrolling-gallery__overlay-title {
+      text-align: center;
+      color: {{ section.settings.overlay_text_color }};
+    }
+{% endstyle %}
+
+<script>
+  // Add scrollTopMax and scrollLeftMax to the Element prototype if not already present
+  (function (elmProto) {
+    if (!('scrollTopMax' in elmProto)) {
+      Object.defineProperties(elmProto, {
+        scrollTopMax: {
+          get() {
+            return this.scrollHeight - this.clientHeight;
+          },
+        },
+        scrollLeftMax: {
+          get() {
+            return this.scrollWidth - this.clientWidth;
+          },
+        },
+      });
+    }
+  })(Element.prototype);
+
+  // ! Constants for scrolling animation
+  const SCROLL_SPEED = 1;
+  const SCROLL_INTERVAL = 50;
+
+  // ! Object with UGC images to randomly pick from later
+  const UGC_IMAGES_LINK = ['https://cdn.shopify.com/s/files/1/0472/6420/2901/files/ugc_', '', '.jpg'];
+
+  // * Function to handle row scrolling animation
+  const animateRow = (row, startFromEnd = false) => {
+    let isForward = !startFromEnd;
+    row.scrollLeft = startFromEnd ? row.scrollLeftMax : 0;
+
+    // * Continuously scroll the row
+    return setInterval(() => {
+      if (isForward) {
+        row.scrollLeft = Math.min(row.scrollLeft + SCROLL_SPEED, row.scrollLeftMax);
+        if (row.scrollLeft >= row.scrollLeftMax) isForward = false;
+      } else {
+        row.scrollLeft = Math.max(row.scrollLeft - SCROLL_SPEED, 0);
+        if (row.scrollLeft <= 0) isForward = true;
+      }
+    }, SCROLL_INTERVAL);
+  };
+
+  // * Initialize scrolling for even and odd rows
+  document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('.scrolling-gallery__row');
+    rows.forEach((row, index) => animateRow(row, index % 2 !== 0));
+  });
+
+  // Track used image numbers across all rows
+  const usedNumbers = new Set();
+
+  // ! Function to randomly pick images
+  const pickUGCImage = () => {
+    const links = [];
+    const numberOfRows = document.querySelectorAll('.scrolling-gallery__row').length;
+    const imagesPerRow = 8;
+    const totalImagesNeeded = numberOfRows * imagesPerRow;
+
+    // Generate distinct random numbers based on actual rows
+    while (links.length < totalImagesNeeded) {
+      const random = Math.floor(Math.random() * 78) + 1;
+
+      if (!usedNumbers.has(random)) {
+        usedNumbers.add(random);
+        links.push(UGC_IMAGES_LINK[0] + random + UGC_IMAGES_LINK[2]);
+      }
+    }
+
+    return links;
+  };
+
+  // Get all unique image links upfront
+  const allImageLinks = pickUGCImage();
+
+  document.querySelectorAll('.scrolling-gallery__row').forEach((row, rowIndex) => {
+    row.querySelectorAll('img').forEach((img, imgIndex) => {
+      // Calculate index based on row and image position
+      const linkIndex = rowIndex * 8 + imgIndex;
+      img.src = allImageLinks[linkIndex];
+      img.srcset = allImageLinks[linkIndex];
+    });
+  });
+</script>
