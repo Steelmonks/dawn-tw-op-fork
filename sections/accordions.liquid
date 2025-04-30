@@ -1,0 +1,439 @@
+{{ 'component-accordion.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign show_header = false
+
+  for block in section.blocks
+    if block.type == 'navigation'
+      assign show_header = true
+    endif
+  endfor
+
+  if section.settings.heading != blank or section.settings.subheading != blank
+    assign show_header = true
+  endif
+%}
+
+<sm-accordions class='accordions__container page-gutter padding-top-{{ section.settings.padding_top }} padding-bottom-{{ section.settings.padding_bottom }}'>
+  <div class='accordions__wrapper'>
+    {% if show_header %}
+      <div class='accordions__header text-center'>
+        {% unless section.settings.heading == blank and section.settings.subheading == blank %}
+          <div class='heading'>
+            {%- if section.settings.heading != blank -%}
+              <h2 class='u-h0'>{{ section.settings.heading }}</h2>
+            {%- endif -%}
+
+            {%- if section.settings.subheading != blank -%}
+              <div class='rte'>
+                {{ section.settings.subheading }}
+              </div>
+            {%- endif -%}
+          </div>
+        {% endunless %}
+        <ul class='navigation no-js-hidden list-unstyled'>
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'navigation' -%}
+                <li
+                  class=''
+                  data-group-target='{{ block.settings.unique_id }}'
+                  role='button'
+                  tabindex='0'
+                  {{ block.shopify_attributes }}
+                >
+                  {%- if block.settings.icon != blank -%}
+                    {{ block.settings.icon | image_url: height: 48 | image_tag }}
+                  {%- endif -%}
+
+                  {%- if block.settings.heading != blank -%}
+                    <span>
+                      {{ block.settings.heading }}
+                    </span>
+                  {%- endif -%}
+                </li>
+            {%- endcase -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    {% endif %}
+
+    <div class='accordions__accordion-items margin-align-center'>
+      {%- for block in section.blocks -%}
+        {% liquid
+          assign dataset = 'data-group-id=' | append: '"' | append: block.settings.parent | append: '"'
+        %}
+        {%- case block.type -%}
+          {%- when 'accordion' -%}
+            {% render 'accordion',
+              id: block.id,
+              dataset: dataset,
+              heading: block.settings.heading,
+              content_rte: block.settings.content,
+              content_liquid: block.settings.content_liquid,
+              featured: block.settings.featured,
+              featured_image: block.settings.featured_image,
+              featured_image_alignment: block.settings.featured_image_alignment,
+              featured_image_aspect_ratio: block.settings.featured_image_aspect_ratio,
+              featured_content_gradient: block.settings.featured_content_gradient
+            %}
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</sm-accordions>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.customElements.get('sm-accordions')) return;
+    class Accordions extends HTMLElement {
+      connectedCallback() {
+        this.tabs = [...this.querySelectorAll('.accordions__wrapper ul.navigation > li')];
+        this.accordions = [...this.querySelectorAll('.accordions__accordion-items .accordion__item')];
+
+        this.init();
+
+        this.tabs.forEach((tab) => {
+          tab.addEventListener('click', this.toggleAccordion.bind(this));
+          tab.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+              this.toggleAccordion(e);
+            }
+          });
+        });
+      }
+
+      init() {
+        const firstTab = this.tabs[0];
+        const firstTabId = firstTab.dataset.groupTarget;
+        firstTab.classList.add('active');
+
+        this.accordions.forEach((accordion) => {
+          const accordionId = accordion.dataset.groupId;
+
+          if (accordionId.includes(firstTabId)) {
+            accordion.classList.remove('visually-hidden');
+            this.addBorder(this.accordions);
+          } else {
+            accordion.classList.add('visually-hidden');
+            this.addBorder(this.accordions);
+          }
+        });
+      }
+
+      addBorder(accordions) {
+        const accordionsWithoutVisuallyHidden = accordions.filter(
+          (accordion) => !accordion.classList.contains('visually-hidden'),
+        );
+
+        accordions.forEach((accordion) => {
+          if (accordion.classList.contains('has-border-bottom')) {
+            accordion.classList.remove('has-border-bottom');
+          }
+        });
+
+        if (accordionsWithoutVisuallyHidden.length) {
+          accordionsWithoutVisuallyHidden[accordionsWithoutVisuallyHidden.length - 1].classList.add(
+            'has-border-bottom',
+          );
+        }
+      }
+
+      toggleAccordion(e) {
+        const target = e.target;
+        const targetId = target.dataset.groupTarget;
+
+        target.classList.add('active');
+        this.tabs.forEach((tab) => {
+          if (tab !== target) {
+            tab.classList.remove('active');
+          }
+        });
+
+        this.accordions.forEach((accordion) => {
+          const accordionId = accordion.dataset.groupId;
+
+          accordion.classList?.contains('has-border-bottom') && accordion.classList.remove('has-border-bottom');
+
+          if (accordionId.includes(targetId)) {
+            accordion.classList.remove('visually-hidden');
+            this.addBorder(this.accordions);
+          } else {
+            accordion.classList.add('visually-hidden');
+            this.addBorder(this.accordions);
+          }
+        });
+      }
+    }
+
+    customElements.define('sm-accordions', Accordions);
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Accordions",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.accordions.settings.heading.label",
+      "default": "Questions ? We have answers."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:sections.accordions.settings.subheading.label",
+      "default": "<p>Add a short description</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.section_padding_top.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.padding.section_padding_top.options__1.label"
+        },
+        {
+          "value": "xxl",
+          "label": "t:sections.all.padding.section_padding_top.options__2.label"
+        },
+        {
+          "value": "xxxl",
+          "label": "t:sections.all.padding.section_padding_top.options__3.label"
+        }
+      ],
+      "default": "xxxl"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.section_padding_bottom.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.padding.section_padding_bottom.options__1.label"
+        },
+        {
+          "value": "xxl",
+          "label": "t:sections.all.padding.section_padding_bottom.options__2.label"
+        },
+        {
+          "value": "xxxl",
+          "label": "t:sections.all.padding.section_padding_bottom.options__3.label"
+        }
+      ],
+      "default": "xxxl"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "navigation",
+      "name": "t:sections.accordions.blocks.navigation.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "unique_id",
+          "label": "t:sections.accordions.blocks.navigation.settings.unique_id.label",
+          "info": "t:sections.accordions.blocks.navigation.settings.unique_id.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "t:sections.accordions.blocks.navigation.settings.icon.label"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "label": "t:sections.accordions.blocks.navigation.settings.heading.label",
+          "default": "<p>Navigation heading</p>"
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "name": "t:sections.accordions.blocks.accordion.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "parent",
+          "label": "t:sections.accordions.blocks.accordion.settings.parent.label",
+          "info": "t:sections.accordions.blocks.accordion.settings.parent.info"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.accordions.blocks.accordion.settings.heading.label",
+          "default": "What is your product or service?"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "t:sections.accordions.blocks.accordion.settings.content.label",
+          "default": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>"
+        },
+        {
+          "type": "liquid",
+          "id": "content_liquid",
+          "label": "Content Liquid",
+          "info": "Liquid content will appear under the content richtext"
+        },
+        {
+          "type": "checkbox",
+          "id": "featured",
+          "label": "Featured",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "featured_image",
+          "info": "Please only use images with a 233 / 349 aspect ratio",
+          "label": "Featured image"
+        },
+        {
+          "type": "text",
+          "id": "featured_content_gradient",
+          "label": "Featured content gradient",
+          "info": "This is the gradient for the featured content (comma separated values). #090a0c,#04c,#04c,#090a0c",
+          "default": "#090a0c,#04c,#04c,#090a0c"
+        },
+        {
+          "type": "select",
+          "id": "featured_image_alignment",
+          "label": "Featured image alignment",
+          "info": "Useful if for example you have a standing person in the image and you want to align the text to the bottom",
+          "options": [
+            {
+              "value": "top",
+              "label": "Top"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "bottom",
+              "label": "Bottom"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "text",
+          "id": "featured_image_aspect_ratio",
+          "label": "Featured image aspect ratio",
+          "info": "default is 233 / 349 with the gif of Luis pointing right",
+          "default": "233 / 349"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.accordions.presets.name",
+      "blocks": [
+        {
+          "type": "navigation"
+        },
+        {
+          "type": "navigation"
+        },
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% comment %} Values:  {% endcomment %}
+{% style %}
+  .accordion__item {
+    padding: 2.4rem 53px;
+  }
+
+  .accordion__item h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .accordion__item h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .accordion__item p {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 8px;
+  }
+
+  .featured-accordion__title {
+    position: relative;
+
+    animation: gradientBackground 5s ease infinite;
+    background: linear-gradient(90deg, #090a0c 0%, #ad091f 40%, #ad091f 60%, #090a0c 100%);
+    background-size: 200% 100%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 0%;
+    }
+    35% {
+      background-position: 50% 0%;
+    }
+    55% {
+      background-position: -50% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+  .featured-accordion__title::before {
+    content: '';
+    position: absolute;
+    right: calc(100% + 4px);
+
+    aspect-ratio: 233 / 349;
+    width: 45px;
+
+    background-color: transparent;
+    background-image: url('https://cdn.shopify.com/s/files/1/0472/6420/2901/files/LuisPointingRightPixel.gif?v=1731059421');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 768px) {
+    .accordion__item {
+      padding: 1.6rem 20px;
+    }
+    .featured-accordion__title::before {
+      left: calc(100% - 45px);
+      transform: scaleX(-1) translateY(-50%);
+    }
+    .accordion__item h3 {
+      font-size: 16px;
+    }
+    .featured-accordion__title {
+      padding-left: initial;
+      padding-right: 45px;
+    }
+    .accordion__item p {
+      padding-top: 10px;
+    }
+  }
+{% endstyle %}
