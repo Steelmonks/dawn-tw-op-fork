@@ -7,6 +7,10 @@
     <meta name='theme-color' content=''>
     <link rel='canonical' href='{{ canonical_url }}'>
 
+    {% comment %} ! START: Snippet for adding a custom script to the theme {% endcomment %}
+    {% render 'steelmonks-custom-snippets' %}
+    {% comment %} ! END: Snippet for adding a custom script to the theme {% endcomment %}
+
     {%- if settings.favicon != blank -%}
       <link rel='icon' type='image/png' href='{{ settings.favicon | image_url: width: 32, height: 32 }}'>
     {%- endif -%}
@@ -305,6 +309,17 @@
   </head>
 
   <body class='gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}'>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src='https://www.googletagmanager.com/ns.html?id=GTM-MBNXHGF'
+        height='0'
+        width='0'
+        style='display:none;visibility:hidden'
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <a class='skip-to-content-link button visually-hidden' href='#MainContent'>
       {{ 'accessibility.skip_to_text' | t }}
     </a>

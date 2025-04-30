@@ -1,0 +1,166 @@
+{% schema %}
+{
+  "name": "Custom - Pin Action Goals",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Was wir erreichen wollen"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Dieser Text geht über die Aktion, was wir bewirken wollen, warum es so schade ist, das dieses Thema überhaupt ein Thema ist und wie die Aufmerksamkeit genutzt wird um dieses kritische Thema anzusprechen."
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "image1_description",
+      "label": "Image 1 Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "image2_description",
+      "label": "Image 2 Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "image3_description",
+      "label": "Image 3 Description"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Ich bin für die Aktion, weil ich das Thema sehr wichtig finde und ich finde, dass wir das Thema ansprechen müssen."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom - Pin Action Goals",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<article class="pin-action-goals">
+  <h2>{{ section.settings.heading }}</h2>
+  <p>
+    {{ section.settings.description }}
+  </p>
+  <div class="pin-action-goals__images">
+    <div class="pin-action-goals__image">
+      {% if section.settings.image1 != blank %}
+        <img
+          src="{{ section.settings.image1 | image_url: width: 750 }}"
+          alt="{{ section.settings.image1_description }}"
+          class="pin-action__image"
+        >
+      {% endif %}
+      <p>
+        {{ section.settings.image1_description }}
+      </p>
+    </div>
+    <div class="pin-action-goals__image">
+      {% if section.settings.image2 != blank %}
+        {{ section.settings.image2 | image_url: width: 750 | image_tag: loading: 'lazy', class: 'pin-action__image' }}
+      {% endif %}
+      <p>
+        {{ section.settings.image2_description }}
+      </p>
+    </div>
+    <div class="pin-action-goals__image">
+      {% if section.settings.image3 != blank %}
+        {{ section.settings.image3 | image_url: width: 750 | image_tag: loading: 'lazy', class: 'pin-action__image' }}
+      {% endif %}
+      <p>
+        {{ section.settings.image3_description }}
+      </p>
+    </div>
+  </div>
+  <blockquote class="pin-action-goals__quote">
+    <p>
+      {{ section.settings.quote }}
+    </p>
+  </blockquote>
+</article>
+
+{% style %}
+  .pin-action-goals {
+    display: grid;
+    gap: 25px;
+    place-items: center;
+    padding: 45px;
+  }
+  .pin-action-goals h2 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  .pin-action-goals p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .pin-action-goals__images {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+
+    width: 100%;
+  }
+  .pin-action-goals__image {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .pin-action-goals__image p {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .pin-action-goals__quote {
+    font-style: italic;
+  }
+
+  /* Tablet & Mobile */
+  @media (max-width: 768px) {
+    .pin-action-goals {
+      padding: 25px;
+      gap: 18px;
+    }
+    .pin-action-goals h2 {
+      font-size: 24px;
+    }
+    .pin-action-goals p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .pin-action-goals__image p {
+      font-size: 20px;
+    }
+    .pin-action-goals__images {
+      flex-direction: column;
+      gap: 18px;
+    }
+  }
+{% endstyle %}

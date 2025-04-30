@@ -1,0 +1,122 @@
+{% schema %}
+{
+  "name": "Custom - Pin Action Press",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "First Heading",
+      "default": "Press Information"
+    },
+    {
+      "type": "textarea",
+      "id": "text1",
+      "label": "First Text Content",
+      "default": "Enter your press information here."
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Second Heading",
+      "default": "Press Links"
+    },
+    {
+      "type": "textarea",
+      "id": "text2",
+      "label": "Second Text Content",
+      "default": "Enter more press information here."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom - Pin Action Press",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<article class="pin-action-press">
+  <hr>
+  <div class="pin-action-press__wrapper">
+    {% if section.settings.heading_1 != blank %}
+    <div>
+      <h3>{{ section.settings.heading_1 }}</h3>
+        <p>{{ section.settings.text1 }}</p>
+      </div>
+    </div>
+  {% endif %}
+
+    {% if section.settings.heading_2 != blank %}
+    <div>
+      <h3>{{ section.settings.heading_2 }}</h3>
+      <p>{{ section.settings.text2 }}</p>
+      </div>
+    {% endif %}
+  </div>
+  <hr>
+</article>
+
+{% style %}
+  .pin-action-press {
+    color: #fafaff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    margin: 0;
+    padding: 45px 0;
+  }
+
+  .pin-action-press__wrapper h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  .pin-action-press__wrapper p {
+    font-size: 18px;
+  }
+
+  .pin-action-press hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #090a0c;
+    height: 15px;
+    width: 100%;
+  }
+
+  .pin-action-press__wrapper {
+    width: 100%;
+
+    align-items: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    padding: 45px 90px;
+
+    background: rgb(9, 10, 12);
+    background: radial-gradient(ellipse at 0 -25%, rgba(9, 10, 12, 1) 0%, rgba(0, 68, 204, 1) 100%);
+  }
+
+  /* Tablet & Mobile */
+  @media (max-width: 768px) {
+    .pin-action-press {
+      padding: 25px 0;
+    }
+    .pin-action-press__wrapper {
+      padding: 25px;
+      gap: 45px;
+    }
+    .pin-action-press__wrapper h3 {
+      font-size: 20px;
+    }
+    .pin-action-press__wrapper p {
+      font-size: 16px;
+    }
+  }
+{% endstyle %}

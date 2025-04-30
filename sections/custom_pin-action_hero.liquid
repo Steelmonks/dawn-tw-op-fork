@@ -1,0 +1,332 @@
+{% schema %}
+{
+  "name": "Pin Action Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Pin Action Hero"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_hero_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_hero_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "description_image",
+      "label": "Description Image",
+      "info": "Optional"
+    },
+    {
+      "type": "url",
+      "id": "description_image_url",
+      "label": "Description Image URL"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_partners_desktop",
+      "label": "Desktop Partners Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_partners_mobile",
+      "label": "Mobile Partners Image"
+    },
+    {
+      "type": "url",
+      "id": "influencer_instagram_account_url1",
+      "label": "Influencer Instagram Account URL 1"
+    },
+    {
+      "type": "text",
+      "id": "influencer_instagram_account_button_text1",
+      "label": "Influencer Instagram Account Button Text 1"
+    },
+    {
+      "type": "url",
+      "id": "influencer_instagram_account_url2",
+      "label": "Influencer Instagram Account URL 2"
+    },
+    {
+      "type": "text",
+      "id": "influencer_instagram_account_button_text2",
+      "label": "Influencer Instagram Account Button Text 2"
+    },
+    {
+      "type": "url",
+      "id": "influencer_instagram_account_url3",
+      "label": "Influencer Instagram Account URL 3"
+    },
+    {
+      "type": "text",
+      "id": "influencer_instagram_account_button_text3",
+      "label": "Influencer Instagram Account Button Text 3"
+    },
+    {
+      "type": "url",
+      "id": "influencer_instagram_account_url4",
+      "label": "Influencer Instagram Account URL 4"
+    },
+    {
+      "type": "text",
+      "id": "influencer_instagram_account_button_text4",
+      "label": "Influencer Instagram Account Button Text 4"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "partner",
+      "name": "Partner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "partner_logo",
+          "label": "Partner Logo"
+        },
+        {
+          "type": "url",
+          "id": "partner_url",
+          "label": "Partner URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom - Pin Action Hero",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "partner"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<article class="pin-action-hero">
+  <h2 class="pin-action-hero__title">{{ section.settings.title }}</h2>
+  {% unless section.settings.desktop_hero_image == blank %}
+    {{
+      section.settings.desktop_hero_image
+      | image_url: width: 1000
+      | image_tag: class: 'pin-action-hero__image--desktop', loading: 'lazy'
+    }}
+  {% endunless %}
+
+  {% unless section.settings.mobile_hero_image == blank %}
+    {{
+      section.settings.mobile_hero_image
+      | image_url: width: 1000
+      | image_tag: class: 'pin-action-hero__image--mobile', loading: 'lazy'
+    }}
+  {% endunless %}
+
+  {% comment %} Add four buttons on mobile tagging the influencers' instagram accounts {% endcomment %}
+  <div class="pin-action-hero__influencers">
+    <a
+      class="pin-action__button__influencer"
+      href="{{ section.settings.influencer_instagram_account_url1 }}"
+      target="_blank"
+    >
+      {{ section.settings.influencer_instagram_account_button_text1 }}
+    </a>
+    <a
+      class="pin-action__button__influencer"
+      href="{{ section.settings.influencer_instagram_account_url2 }}"
+      target="_blank"
+    >
+      {{ section.settings.influencer_instagram_account_button_text2 }}
+    </a>
+    <a
+      class="pin-action__button__influencer"
+      href="{{ section.settings.influencer_instagram_account_url3 }}"
+      target="_blank"
+    >
+      {{ section.settings.influencer_instagram_account_button_text3 }}
+    </a>
+    <a
+      class="pin-action__button__influencer"
+      href="{{ section.settings.influencer_instagram_account_url4 }}"
+      target="_blank"
+    >
+      {{ section.settings.influencer_instagram_account_button_text4 }}
+    </a>
+  </div>
+
+  <div class="pin-action-hero__description">
+    {% unless section.settings.description_image == blank %}
+      <a href="{{ section.settings.description_image_url }}" target="_blank">
+        <div>
+          {{
+            section.settings.description_image
+            | image_url: width: 50
+            | image_tag: class: 'pin-action-hero__description-image', loading: 'lazy'
+          }}
+        </div>
+      </a>
+    {% endunless %}
+    <div>
+      {{ section.settings.description }}
+    </div>
+  </div>
+
+  <div class="pin-action-hero__partners">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'partner' %}
+          {% render 'pin-action-hero-partner', block: block %}
+      {% endcase %}
+    {% endfor %}
+  </div>
+</article>
+
+{% style %}
+  .pin-action-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pin-action-hero__title {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+
+    padding: 18px 0 0 0;
+  }
+  .pin-action-hero__description {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 1000px;
+    padding: 0 125px;
+
+    margin-top: -80px;
+  }
+  .pin-action-hero__description-image {
+    width: 180px;
+    height: auto;
+  }
+  .pin-action-hero__description p {
+    font-size: 18px;
+  }
+  .pin-action-hero__title span {
+    color: #04c;
+    display: block;
+  }
+
+  .pin-action-hero__image--desktop,
+  .pin-action-hero_partners--desktop,
+  .pin-action-hero__image--mobile,
+  .pin-action-hero_partners--mobile {
+    height: auto;
+  }
+
+  .pin-action-hero__image--mobile,
+  .pin-action-hero_partners--mobile {
+    display: none;
+  }
+
+  .pin-action-hero__image--desktop,
+  .pin-action-hero_partners--desktop {
+    display: block;
+  }
+  .pin-action-hero__influencers {
+    display: none;
+  }
+  .pin-action__button__influencer {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ad091f;
+    color: #fafaff;
+    max-width: fit-content;
+    padding: 12px 16px;
+    border: 1px solid #090a0c;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .pin-action-hero__partners {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    padding: 0 18px;
+  }
+  .pin-action-hero__partner {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pin-action-hero__partner-image {
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    .pin-action-hero__title {
+      font-size: 24px;
+      padding: 25px 0 0 0;
+    }
+    .pin-action-hero__description {
+      padding: 16px 18px 0 18px;
+      margin-top: unset;
+    }
+    .pin-action-hero__description-image {
+      width: 240px;
+    }
+    .pin-action-hero__description p {
+      font-size: 10px;
+    }
+
+    .pin-action-hero__image--desktop,
+    .pin-action-hero_partners--desktop {
+      display: none;
+    }
+
+    .pin-action-hero__image--mobile,
+    .pin-action-hero_partners--mobile {
+      display: block;
+    }
+    .pin-action-hero__influencers {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      margin-top: -40px;
+    }
+    .pin-action-hero__influencers a {
+      font-size: 10px !important;
+      font-weight: 500;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+{% endstyle %}

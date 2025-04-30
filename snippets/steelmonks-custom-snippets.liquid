@@ -1,0 +1,232 @@
+{% comment %}
+  ! Enable `Better Comments` extension to get the comment colors and see the comment blocks better.
+{% endcomment %}
+
+{% comment %} * Google Tag Manager {% endcomment %}
+<!-- Google Tag Manager -->
+<script>
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-MBNXHGF');
+</script>
+<!-- End Google Tag Manager -->
+{% comment %} * End Google Tag Manager {% endcomment %}
+
+{% comment %} ? A/B Testing Configuration {% endcomment %}
+<script>
+        {% comment %} 
+          Define a function to split users for ABn testing purposes.
+          
+          @param {object} test_type - The test_type and split percentage between users (e.g. {test_type: 'ab', split: [40, 60]} or {test_type: 'abcd', split: [20, 20, 25, 35]}). The split is optional and must add up to 100. It will default to an even split if not provided.
+          @returns - Nothing
+  
+          Will create a localStorage item with the where the key is the test_type + split and the value is the variant.
+        {% endcomment %}
+        function ABnTest(config) {
+          // Validate input
+          if (!config || !config.test_type) {
+            console.error('ABnTest: test_type is required');
+            return;
+          }
+  
+          // Check end date if provided
+          if (config.endDate) {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // Reset time to start of day
+            
+            const endDate = new Date(config.endDate);
+            if (isNaN(endDate.getTime())) {
+              console.error('ABnTest: invalid endDate format. Use yyyy-mm-dd');
+              return;
+            }
+            
+            if (today > endDate) {
+              console.warn('ABnTest: test has ended');
+              localStorage.removeItem(config.test_type);
+              return;
+            }
+          }
+  
+          // Get variants from test_type (e.g., 'abcde' -> ['a', 'b', 'c', 'd', 'e'])
+          const variants = config.test_type.split('');
+  
+          // Get or set default split
+          let split = config.split;
+          if (!split) {
+            // Create even split based on number of variants
+            const variantCount = variants.length;
+            const evenSplit = Math.floor(100 / variantCount);
+            split = Array(variantCount).fill(evenSplit);
+            // Adjust last element to account for rounding
+            split[split.length - 1] = 100 - (evenSplit * (variantCount - 1));
+          }
+  
+          // Validate split length matches variant count
+          if (split.length !== variants.length) {
+            console.error(`ABnTest: split array length (${split.length}) must match number of variants (${variants.length})`);
+            return;
+          }
+  
+          // Validate split adds up to 100
+          const totalSplit = split.reduce((a, b) => a + b, 0);
+          if (totalSplit !== 100) {
+            console.error(`ABnTest: split must add up to 100, got ${totalSplit}`);
+            return;
+          }
+  
+          // Check if user already has a variant assigned
+          const storageKey = config.test_type;
+          const existingTest = localStorage.getItem(storageKey);
+          
+          // Parse existing test if it exists
+          if (existingTest) {
+            const testData = JSON.parse(existingTest);
+            // If the splits match, use existing variant
+            if (testData.split.join('-') === split.join('-')) {
+              return;
+            }
+            // If splits don't match, we'll continue and generate a new variant
+          }
+  
+          // Generate random number between 1-100
+          const random = Math.floor(Math.random() * 100) + 1;
+  
+          // Determine variant based on split percentages
+          let currentTotal = 0;
+          let selectedVariant = variants[variants.length - 1]; // Default to last variant
+  
+          for (let i = 0; i < split.length; i++) {
+            currentTotal += split[i];
+            if (random <= currentTotal) {
+              selectedVariant = variants[i];
+              break;
+            }
+          }
+  
+          // Store the test data as JSON
+          const testData = {
+            variant: selectedVariant,
+            split: split
+          };
+          localStorage.setItem(storageKey, JSON.stringify(testData));
+        }
+  
+        {% comment %} ! Define ABn tests using the function above {% endcomment %}
+        ABnTest({ test_type: 'ab', split: [50, 50], endDate: '2025-01-31' });
+  
+        {% comment %} ! Add test class to body for CSS control, except in design mode {% endcomment %}
+        document.addEventListener('DOMContentLoaded', function () {
+          // Only run A/B test if not in design mode
+          if (!Shopify.designMode) {
+            // Get the stored test data
+            const testData = localStorage.getItem('ab');
+            if (testData) {
+              const { variant } = JSON.parse(testData);
+              // Add test class to body for CSS control
+              document.body.classList.add(`ab-test-${variant}`);
+            }
+          }
+        });
+  
+        {% comment %}
+          Handles A/B/n testing experiment tracking in GA4. Must FIRST define the tests using the ABnTest function above.
+  
+          Usage:
+          @param {string} experiment_name - The name of the experiment (e.g. 'IMG' or 'HEAD')
+          @param {string} experiment_id - Unique identifier for the experiment (e.g. section.id)
+          @param {string} test_type - The type of test being run ('ab', 'abc', 'xyz' etc) defined with the ABnTest function above
+          @param {object} additionalParams - Additional parameters to pass to the event
+          
+          Example: trackExperiment('IMG', '[[ section.id ]]', 'ab')
+          
+          With additional parameters
+          trackExperiment('IMG', 'section123', 'ab', {
+            category: 'homepage',
+            user_type: 'new',
+            custom_metric: 42
+          });
+        {% endcomment %}
+        function trackExperiment(experiment_name, experiment_id, test_type, additionalParams = {}) {
+          const testData = localStorage.getItem(test_type);
+          if (testData) {
+            const { variant } = JSON.parse(testData);
+            console.log('testData', `${experiment_name}-${experiment_id}-${variant}`);
+            const eventParams = {
+              'event': 'experience_impression',
+              'experiment_name': experiment_name,
+              'experiment_id': experiment_id,
+              'variant': variant,
+              'exp_variant_string': `${experiment_name}-${experiment_id}-${variant}`,
+              ...additionalParams
+            };
+  
+            // Push experiment data to dataLayer
+            dataLayer.push(eventParams);
+  
+            // Original GA4 event tracking
+            document.addEventListener('DOMContentLoaded', () => {
+              gtag(eventParams);
+            });
+          } else {
+            console.error(`Test of type ${test_type} not found`);
+          }
+        }
+</script>
+{% comment %} ? End A/B Testing Configuration {% endcomment %}
+
+{% comment %} ! Snippet for adding the browser name as a class to the body tag {% endcomment %}
+<script>
+  // Add browser class to body
+  document.addEventListener('DOMContentLoaded', function () {
+    const userAgent = navigator.userAgent.toLowerCase();
+    let browserName = '';
+
+    if (userAgent.includes('edge')) {
+      browserName = 'edge';
+    } else if (userAgent.includes('chrome')) {
+      browserName = 'chrome';
+    } else if (userAgent.includes('firefox')) {
+      browserName = 'firefox';
+    } else if (userAgent.includes('safari') && !userAgent.includes('chrome')) {
+      browserName = 'safari';
+    } else if (userAgent.includes('opr') || userAgent.includes('opera')) {
+      browserName = 'opera';
+    } else if (userAgent.includes('msie') || userAgent.includes('trident')) {
+      browserName = 'ie';
+    }
+
+    if (browserName) {
+      document.body.classList.add('browser-' + browserName);
+    }
+  });
+</script>
+{% comment %} ! End Snippet for adding the browser name as a class to the body tag {% endcomment %}
+
+{% comment %} * Taboola Pixel Code {% endcomment %}
+<!-- Taboola Pixel Code -->
+<script type='text/javascript'>
+  window._tfa = window._tfa || [];
+  window._tfa.push({ notify: 'event', name: 'page_view', id: 1617083 });
+  !(function (t, f, a, x) {
+    if (!document.getElementById(x)) {
+      t.async = 1;
+      t.src = a;
+      t.id = x;
+      f.parentNode.insertBefore(t, f);
+    }
+  })(
+    document.createElement('script'),
+    document.getElementsByTagName('script')[0],
+    '//cdn.taboola.com/libtrc/unip/1617083/tfa.js',
+    'tb_tfa_script',
+  );
+</script>
+<!-- End of Taboola Pixel Code -->
+{% comment %} * End Taboola Pixel Code {% endcomment %}

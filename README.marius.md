@@ -37,6 +37,11 @@
 - Try to keep the sections' texts as settings so the user can change it easily and for it to be translated by the app properly
 - Hardcoded texts will be translated, but not always. For criteria, I'm not sure, but it looks like non page-builder pages are more likely to be translated by an app than Shogun pages
 
+## AB Testing
+
+- AB testing is set up to work already
+- You can find the instructions on how to use it under the `steelmonks-custom-snippets.liquid` snippet
+
 ## Neat tricks
 
 - You can use metafields `{{ product.metafields }}` to output things conditionally `{%- if product.metafields contains "abc" %} class="blue" {% endif -%}`
