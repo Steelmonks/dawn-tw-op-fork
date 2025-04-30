@@ -220,8 +220,10 @@
       "name": "Custom - Pin Action Goals",
       "settings": {
         "heading": "Was wir erreichen wollen",
-        "description": "Dieser Text geht über die Aktion, was wir bewirken wollen, warum es so schade ist, das dieses Thema überhaupt ein Thema ist und wie die Aufmerksamkeit genutzt wird um dieses kritische Thema anzusprechen.",
+        "description": "Mit dieser Aktion \"Keine Gewalt gegen Retter\" setzen wir ein Zeichen für Respekt und Schutz unserer Einsatzkräfte.\n\nEs ist erschreckend, dass Gewalt gegen diejenigen, die täglich ihr Leben für uns riskieren, überhaupt ein Thema ist.\n\nDurch diese Kampagne schaffen wir Aufmerksamkeit und rufen die Öffentlichkeit zu einem Umdenken auf.\n\nUnser Ziel ist es, Dankbarkeit und Bewusstsein zu fördern und den Respekt für alle Retter in unserer Gesellschaft zu stärken.",
+        "image1": "shopify://shop_images/web_pin-action-violence.jpg",
         "image1_description": "",
+        "image2": "shopify://shop_images/web_pin-action-peace.jpg",
         "image2_description": "",
         "image3_description": "",
         "quote": "Ich bin für die Aktion, weil ich das Thema sehr wichtig finde und ich finde, dass wir das Thema ansprechen müssen."
