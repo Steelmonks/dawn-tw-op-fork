@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class='{% unless section.settings.enable_gutter %}page-width page-width--narrow{% endunless %} section-{{ section.id }}-padding'>
+<div class='{% if section.settings.enable_gutter %}page-width page-width--narrow{% endif %} section-{{ section.id }}-padding'>
   {% if section.settings.show_title %}
     <h1 class='main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}'>
       {{ page.title | escape }}
