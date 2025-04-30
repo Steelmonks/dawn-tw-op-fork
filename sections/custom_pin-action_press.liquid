@@ -36,21 +36,21 @@
 }
 {% endschema %}
 
-<article class="pin-action-press">
+<article class='pin-action-press'>
   <hr>
-  <div class="pin-action-press__wrapper">
+  <div class='pin-action-press__wrapper'>
     {% if section.settings.heading_1 != blank %}
-    <div>
-      <h3>{{ section.settings.heading_1 }}</h3>
+      <div>
+        <h3>{{ section.settings.heading_1 }}</h3>
         <p>{{ section.settings.text1 }}</p>
       </div>
-    </div>
-  {% endif %}
+      </div>
+    {% endif %}
 
     {% if section.settings.heading_2 != blank %}
-    <div>
-      <h3>{{ section.settings.heading_2 }}</h3>
-      <p>{{ section.settings.text2 }}</p>
+      <div>
+        <h3>{{ section.settings.heading_2 }}</h3>
+        <p>{{ section.settings.text2 }}</p>
       </div>
     {% endif %}
   </div>
@@ -71,6 +71,7 @@
   }
 
   .pin-action-press__wrapper h3 {
+    color: #fafaff;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 25px;
