@@ -72,6 +72,30 @@
     "custom_pin_action_hero_7VeMeL": {
       "type": "custom_pin-action_hero",
       "blocks": {
+        "partner_LxhwWm": {
+          "type": "partner",
+          "settings": {
+            "partner_url": ""
+          }
+        },
+        "partner_HY9TKn": {
+          "type": "partner",
+          "settings": {
+            "partner_url": ""
+          }
+        },
+        "partner_nTwiUN": {
+          "type": "partner",
+          "settings": {
+            "partner_url": ""
+          }
+        },
+        "partner_4XixHj": {
+          "type": "partner",
+          "settings": {
+            "partner_url": ""
+          }
+        },
         "partner_Mih8BW": {
           "type": "partner",
           "settings": {
@@ -80,21 +104,30 @@
         }
       },
       "block_order": [
+        "partner_LxhwWm",
+        "partner_HY9TKn",
+        "partner_nTwiUN",
+        "partner_4XixHj",
         "partner_Mih8BW"
       ],
       "name": "Custom - Pin Action Hero",
       "settings": {
         "title": "Pin Action Hero",
-        "description_image_url": "",
-        "description": "",
-        "influencer_instagram_account_url1": "",
-        "influencer_instagram_account_button_text1": "",
-        "influencer_instagram_account_url2": "",
-        "influencer_instagram_account_button_text2": "",
-        "influencer_instagram_account_url3": "",
-        "influencer_instagram_account_button_text3": "",
-        "influencer_instagram_account_url4": "",
-        "influencer_instagram_account_button_text4": ""
+        "desktop_hero_image": "shopify://shop_images/Banner-new-final-final-2.0-final-sigur.png",
+        "mobile_hero_image": "shopify://shop_images/Mobile-Banner-2.0.jpg",
+        "description_image": "shopify://shop_images/Area_1-1-2.svg",
+        "description_image_url": "https://www.area112.de/?utm_campaign=fw-event-aer_steelmonks-pins_coop_steelmonks_20241111&utm_medium=referral&utm_source=steelmonks#steelmonks",
+        "description": "<p><strong>Partner & Unterstützende</strong></p><p>Gemeinsam mit unseren Partnern und unterstützenden Organisationen können wir national ein Zeichen gegen Gewalt an Rettern setzen.</p>",
+        "hero_partners_desktop": "shopify://shop_images/Banner-logos-website.svg",
+        "hero_partners_mobile": "shopify://shop_images/mobile-version-LOGOS.svg",
+        "influencer_instagram_account_url1": "https://www.instagram.com/sina_setale/",
+        "influencer_instagram_account_button_text1": "@sina_setale",
+        "influencer_instagram_account_url2": "https://www.instagram.com/74_locke",
+        "influencer_instagram_account_button_text2": "@74_locke",
+        "influencer_instagram_account_url3": "https://www.instagram.com/jasminchen.b",
+        "influencer_instagram_account_button_text3": "@jasminchen.b",
+        "influencer_instagram_account_url4": "https://www.instagram.com/berliner.retterherz/",
+        "influencer_instagram_account_button_text4": "@berliner.retterherz"
       }
     },
     "custom_pin_action_social_media_yFqcWq": {
