@@ -191,8 +191,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Was kann ich noch tun?",
+            "content": "<p>Du kannst aktiv dazu beitragen, unsere Aktion „Keine Gewalt gegen Retter“ zu unterstützen! Trage den Pin, um ein sichtbares Zeichen gegen Gewalt an Einsatzkräften zu setzen und Solidarität zu zeigen. Teile das Video und die Beiträge unserer Partner, um das Bewusstsein weiter zu verbreiten – je mehr Menschen erreicht werden, desto stärker ist die Botschaft. Jeder Beitrag zählt!</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
