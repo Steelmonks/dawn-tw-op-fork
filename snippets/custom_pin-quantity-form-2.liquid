@@ -1,0 +1,71 @@
+<form id="pin-quantity-form2" class="pin-quantity-form">
+  <div class="pin-quantity-form__wrapper">
+    <div>
+      <button
+        type="button"
+        class="pin-quantity-control pin-quantity-down"
+        onclick="document.getElementById('pin-quantity-input2').stepDown()"
+      >
+        -
+      </button>
+      <input
+        type="number"
+        id="pin-quantity-input2"
+        class="pin-quantity-input"
+        name="quantity"
+        value="3"
+        min="1"
+        max="15000"
+      >
+      <button
+        type="button"
+        class="pin-quantity-control pin-quantity-up"
+        onclick="document.getElementById('pin-quantity-input2').stepUp()"
+      >
+        +
+      </button>
+    </div>
+    <button
+      type="submit"
+      id="pin-quantity-submit"
+      class="pin-action__button--2"
+    >
+      Bügel-Patch bestellen
+    </button>
+
+    <small class="pin-quantity-form__success pin-quantity-form__success--2" style="display: none;">
+      Super! Das hat geklappt!
+      <br>
+      <br>
+      Klicke den “Kostenlos bestellen” Knopf um in den Checkout zu kommen.
+    </small>
+  </div>
+</form>
+
+<script>
+  {% comment %} Add paid pins to cart and provide feedback {% endcomment %}
+  const pinQuantityForm2 = document.querySelector('#pin-quantity-form2');
+
+  pinQuantityForm2.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    async function addToCartAndCheckout3() {
+      try {
+        let quantity = document.querySelector('#pin-quantity-input2').value;
+        let feedback = document.querySelector('.pin-quantity-form__success--2');
+
+        await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items: [{ id: '50420942799114', quantity: quantity }] })
+        });
+
+        feedback.style.display = 'block';
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    addToCartAndCheckout3();
+  });
+</script>

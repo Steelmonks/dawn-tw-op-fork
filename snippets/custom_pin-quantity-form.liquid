@@ -1,0 +1,82 @@
+<form id="pin-quantity-form" class="pin-quantity-form">
+  <div class="pin-quantity-form__wrapper">
+    <div>
+      <button
+        type="button"
+        class="pin-quantity-control pin-quantity-down"
+        onclick="document.getElementById('pin-quantity-input').stepDown()"
+      >
+        -
+      </button>
+      <input
+        type="number"
+        id="pin-quantity-input"
+        class="pin-quantity-input"
+        name="quantity"
+        value="10"
+        min="1"
+        max="15000"
+      >
+      <button
+        type="button"
+        class="pin-quantity-control pin-quantity-up"
+        onclick="document.getElementById('pin-quantity-input').stepUp()"
+      >
+        +
+      </button>
+    </div>
+    <button
+      type="submit"
+      id="pin-quantity-submit"
+      class="pin-action__button--2"
+    >
+      Mehr Pins bestellen
+    </button>
+
+    <small class="pin-quantity-form__success pin-quantity-form__success--1" style="display: none;">
+      Super! Das hat geklappt!
+      <br>
+      <br>
+      Klicke den “Kostenlos bestellen” Knopf um in den Checkout zu kommen.
+    </small>
+  </div>
+</form>
+
+<script>
+  {% comment %} Add paid pins to cart and redirect to checkout {% endcomment %}
+  const form = document.querySelector('#pin-quantity-form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    async function addToCartAndCheckout2() {
+      try {
+        const cartResponse = await fetch('/cart.js');
+        const cart = await cartResponse.json();
+        const hasPin = cart.items.some(item => item.id === 50234404962570);
+
+        let quantity = document.querySelector('#pin-quantity-input').value;
+        let quantity2 = 0;
+
+        let feedback = document.querySelector('.pin-quantity-form__success--1');
+
+        // add free pin if user has not already added it
+        if (!hasPin) {
+          quantity2 = 1;
+        }
+
+        await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items: [{ id: '50246758367498', quantity: quantity }, { id: '50234404962570', quantity: quantity2 }] })
+        });
+
+        feedback.style.display = 'block';
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
+    addToCartAndCheckout2();
+  });
+</script>
