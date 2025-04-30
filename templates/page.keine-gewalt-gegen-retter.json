@@ -26,6 +26,150 @@
         "small_text": "Um ein Zeichen zu setzen. Nur solange der Vorrat reicht."
       }
     },
+    "accordions_AQU3ef": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_M7H4gz": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_6dCD8f": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_M7H4gz",
+        "accordion_6dCD8f"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "custom_pin_action_hero_7VeMeL": {
+      "type": "custom_pin-action_hero",
+      "blocks": {
+        "partner_Mih8BW": {
+          "type": "partner",
+          "settings": {
+            "partner_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "partner_Mih8BW"
+      ],
+      "name": "Custom - Pin Action Hero",
+      "settings": {
+        "title": "Pin Action Hero",
+        "description_image_url": "",
+        "description": "",
+        "influencer_instagram_account_url1": "",
+        "influencer_instagram_account_button_text1": "",
+        "influencer_instagram_account_url2": "",
+        "influencer_instagram_account_button_text2": "",
+        "influencer_instagram_account_url3": "",
+        "influencer_instagram_account_button_text3": "",
+        "influencer_instagram_account_url4": "",
+        "influencer_instagram_account_button_text4": ""
+      }
+    },
+    "custom_pin_action_social_media_yFqcWq": {
+      "type": "custom_pin-action_social-media",
+      "name": "Custom - Socials",
+      "settings": {
+        "heading": "Follow Us on Social Media",
+        "link": "",
+        "button_text": "Follow Us",
+        "button_image_width": 24
+      }
+    },
+    "accordions_gUhLmg": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_RDYXqm": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_VDHx7k": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_RDYXqm",
+        "accordion_VDHx7k"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "custom_pin_action_goals_jGmM8L": {
+      "type": "custom_pin-action_goals",
+      "name": "Custom - Pin Action Goals",
+      "settings": {
+        "heading": "Was wir erreichen wollen",
+        "description": "Dieser Text geht über die Aktion, was wir bewirken wollen, warum es so schade ist, das dieses Thema überhaupt ein Thema ist und wie die Aufmerksamkeit genutzt wird um dieses kritische Thema anzusprechen.",
+        "image1_description": "",
+        "image2_description": "",
+        "image3_description": "",
+        "quote": "Ich bin für die Aktion, weil ich das Thema sehr wichtig finde und ich finde, dass wir das Thema ansprechen müssen."
+      }
+    },
+    "custom_pin_action_press_W8RNpN": {
+      "type": "custom_pin-action_press",
+      "name": "Custom - Pin Action Press",
+      "settings": {
+        "heading_1": "Press Information",
+        "text1": "Enter your press information here.",
+        "heading_2": "Press Links",
+        "text2": "Enter more press information here."
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -40,6 +184,12 @@
   },
   "order": [
     "custom_pin_action_tpbXGP",
+    "accordions_AQU3ef",
+    "custom_pin_action_hero_7VeMeL",
+    "custom_pin_action_social_media_yFqcWq",
+    "accordions_gUhLmg",
+    "custom_pin_action_goals_jGmM8L",
+    "custom_pin_action_press_W8RNpN",
     "main"
   ]
 }
