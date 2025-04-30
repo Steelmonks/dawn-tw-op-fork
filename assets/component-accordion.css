@@ -56,3 +56,40 @@
 .accordion__content img {
   max-width: 100%;
 }
+
+/* ! new custom_custom */
+.accordion__item {
+  padding: 1.6rem 0;
+  border-top: solid currentColor var(--border-width);
+}
+
+.accordion__item:last-child {
+  border-bottom: solid currentColor var(--border-width);
+}
+
+.accordion__item details[open] summary {
+  margin-bottom: 2.4rem;
+}
+
+.accordion__item h3 {
+  max-width: 85%;
+}
+
+.accordion__item summary .icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.accordion__item details .icon-minus {
+  display: none;
+}
+
+.accordion__item details[open] .icon-plus {
+  display: none;
+}
+
+.accordion__item details[open] .icon-minus {
+  display: inline-block;
+}
