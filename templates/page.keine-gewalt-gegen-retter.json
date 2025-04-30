@@ -150,6 +150,7 @@
       "blocks": {
         "accordion_RDYXqm": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "parent": "",
             "heading": "Wann wird mein Anstecker ankommen?",
@@ -194,8 +195,8 @@
             "heading": "Was kann ich noch tun?",
             "content": "<p>Du kannst aktiv dazu beitragen, unsere Aktion „Keine Gewalt gegen Retter“ zu unterstützen! Trage den Pin, um ein sichtbares Zeichen gegen Gewalt an Einsatzkräften zu setzen und Solidarität zu zeigen. Teile das Video und die Beiträge unserer Partner, um das Bewusstsein weiter zu verbreiten – je mehr Menschen erreicht werden, desto stärker ist die Botschaft. Jeder Beitrag zählt!</p>",
             "content_liquid": "",
-            "featured": false,
-            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured": true,
+            "featured_content_gradient": "#090a0c,#ad091f,#ad091f,#090a0c",
             "featured_image_alignment": "center",
             "featured_image_aspect_ratio": "233 / 349"
           }
