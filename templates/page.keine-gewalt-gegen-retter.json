@@ -234,10 +234,10 @@
       "type": "custom_pin-action_press",
       "name": "Custom - Pin Action Press",
       "settings": {
-        "heading_1": "Press Information",
-        "text1": "Enter your press information here.",
-        "heading_2": "Press Links",
-        "text2": "Enter more press information here."
+        "heading_1": "",
+        "text1": "",
+        "heading_2": "Unterstützen",
+        "text2": "👉 Teile unser Video in deiner Instagram Story oder auf anderen Platformen - so können wir noch mehr Menschen erreichen.\n<br><br>\n👉 Teile die Beiträge der Influencer, die ihre Stimme für unsere Retter erheben.\n<br><br>\n👉 Bleib informiert mit dem Feuerwehr, Rettungs und Blaulicht Magazin – gemeinsam können wir ein Umdenken in der Gesellschaft bewirken."
       }
     },
     "main": {
