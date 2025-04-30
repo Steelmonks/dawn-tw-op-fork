@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_pin_action_tpbXGP": {
+      "type": "custom_pin-action",
+      "name": "Custom - Pin Action",
+      "settings": {
+        "image": "shopify://shop_images/Keine_Gewalt_gegen_Retter_Anstecker.png",
+        "heading": "Keine Gewalt gegen Retter",
+        "subheading": "",
+        "description": "<p>Wir verschenken den Pin als tragbares Zeichen, um die Botschaft zu verbreiten und das Bewusstsein zu fördern.</p>",
+        "same_image_on_desktop_and_mobile": true,
+        "cta_text": "Menschen unterstützen unsere Rettungskräfte. - Was ist mit Dir?",
+        "supporter_count": "0",
+        "button_link1": "",
+        "button_link2": "",
+        "button_text": "Kostenlos bestellen",
+        "small_text": "Um ein Zeichen zu setzen. Nur solange der Vorrat reicht."
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "enable_gutter": false,
+        "show_title": false
+      }
+    }
+  },
+  "order": [
+    "custom_pin_action_tpbXGP",
+    "main"
+  ]
+}
