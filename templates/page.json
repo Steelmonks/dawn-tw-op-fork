@@ -15,8 +15,8 @@
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28,
-        "enable_gutter": true,
-        "show_title": true
+        "enable_gutter": false,
+        "show_title": false
       }
     }
   },
