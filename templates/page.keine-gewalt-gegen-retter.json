@@ -13,6 +13,7 @@
       "type": "custom_pin-action",
       "name": "Custom - Pin Action",
       "settings": {
+        "image": "shopify://shop_images/Keine_Gewalt_gegen_Retter_Anstecker.png",
         "heading": "Keine Gewalt gegen Retter",
         "subheading": "",
         "description": "<p>Wir verschenken den Pin als tragbares Zeichen, um die Botschaft zu verbreiten und das Bewusstsein zu fördern.</p>",
