@@ -165,6 +165,32 @@
           "type": "accordion",
           "settings": {
             "parent": "",
+            "heading": "Worum geht es hier?",
+            "content": "<p>Leider kommt es immer wieder zu Übergriffen auf Einsatzkräfte wie Feuerwehrleute und Rettungsdienste – Menschen, die da sind, um Leben zu retten und Hilfe zu leisten. Ob durch verbale Angriffe oder sogar körperliche Gewalt, solche Vorfälle sind bedauerlicherweise keine Seltenheit und stellen eine große Belastung für die Betroffenen dar. Es ist erschütternd, dass diejenigen, die täglich ihr Leben riskieren, um anderen zu helfen, selbst gefährdet werden. Genau deshalb ist dieses Thema so wichtig und verdient die volle Aufmerksamkeit unserer Gesellschaft.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_xYWtBg": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "Was hat es mit dem Anstecker auf sich?",
+            "content": "<p>Der Anstecker ist ein Symbol unserer Aktion „Keine Gewalt gegen Retter.“ Er steht für Solidarität und vereint die Stimmen aller, die sich gegen Gewalt an Einsatzkräften starkmachen. Durch das Tragen des Pins zeigst Du sichtbar Deine Unterstützung und machst auf das wichtige Thema aufmerksam. Der Anstecker wird kostenlos im Rahmen der Aktion verteilt – eine kleine Geste, die Großes bewirken kann.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_BNr8FP": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
             "heading": "What is your product or service?",
             "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
             "content_liquid": "",
@@ -177,7 +203,9 @@
       },
       "block_order": [
         "accordion_RDYXqm",
-        "accordion_VDHx7k"
+        "accordion_VDHx7k",
+        "accordion_xYWtBg",
+        "accordion_BNr8FP"
       ],
       "name": "Accordions",
       "settings": {
