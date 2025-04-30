@@ -33,11 +33,11 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
-            "content_liquid": "",
-            "featured": false,
-            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "heading": "Kann ich mehr als 1 Anstecker bekommen?",
+            "content": "<p>Bei so einem wichtigem Thema verstehen wir, dass man gerne sein Umfeld mit einbeziehen möchte.<br/><br/> Wenn Du diese Aktion zusätzlich unterstützen willst und mehrere Anstecker für Dich, Deine Familie, Deine Truppe, Deine Fußballmannschaft, usw. erwerben möchtest, kannst Du hier Deine Wunschanzahl auswählen und zusätzliche Pins für den geringen Deckungsbeitrag von €0,95 /stk bestellen. <br/><br/><br/>Deinen Kostenfreien Pin erhältst Du natürlich dazu!</p>",
+            "content_liquid": "{% render 'custom_pin-quantity-form' %}",
+            "featured": true,
+            "featured_content_gradient": "#090a0c,#ad091f,#ad091f,#090a0c",
             "featured_image_alignment": "center",
             "featured_image_aspect_ratio": "233 / 349"
           }
@@ -46,11 +46,12 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
-            "content_liquid": "",
-            "featured": false,
-            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "heading": "Den passende Bügel-Patch zur Aktion",
+            "content": "<p>Setze ein klares Zeichen gegen Gewalt an unseren Rettern – einfach und stilvoll!<br/><br/><br/>Der Patch ist mit einer speziellen Bügelfläche versehen und kann leicht auf Kleidung, Taschen oder andere Textilien aufgebügelt werden.<br/><br/><br/>Zeige deine Unterstützung für Einsatzkräfte und trage dazu bei, mehr Bewusstsein für Respekt und Zusammenhalt zu schaffen. </p>",
+            "content_liquid": "{% render 'custom_pin-quantity-form-2' %}",
+            "featured": true,
+            "featured_image": "shopify://shop_images/PATCH-BE-2000-S.png",
+            "featured_content_gradient": "#090a0c,#ad091f,#ad091f,#090a0c",
             "featured_image_alignment": "center",
             "featured_image_aspect_ratio": "233 / 349"
           }
