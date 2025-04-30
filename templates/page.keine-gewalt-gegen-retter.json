@@ -152,11 +152,11 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Wann wird mein Anstecker ankommen?",
+            "content": "<p>Wir bedanken uns für die enorme Resonanz zu dieser wichtigen Aktion, wir arbeiten mit Hochdruck an der Ausführung aller Bestellungen.<br/><br/> Wir tun unser bestes und packen fleißig Anstecker. :) <br/><br/><br/>Du wirst Deinen kostenlosen Pin vorraussichtlich in der ersten Dezember Woche erhalten.<br/></p>",
             "content_liquid": "",
-            "featured": false,
-            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured": true,
+            "featured_content_gradient": "#090a0c,#ad091f,#ad091f,#090a0c",
             "featured_image_alignment": "center",
             "featured_image_aspect_ratio": "233 / 349"
           }
