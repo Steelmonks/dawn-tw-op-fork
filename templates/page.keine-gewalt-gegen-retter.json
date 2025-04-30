@@ -75,30 +75,35 @@
         "partner_LxhwWm": {
           "type": "partner",
           "settings": {
+            "partner_logo": "shopify://shop_images/web-THW_Bundesvereinigung_Logo.png",
             "partner_url": ""
           }
         },
         "partner_HY9TKn": {
           "type": "partner",
           "settings": {
+            "partner_logo": "shopify://shop_images/web-Feuerwehr_magazin.svg",
             "partner_url": ""
           }
         },
         "partner_nTwiUN": {
           "type": "partner",
           "settings": {
+            "partner_logo": "shopify://shop_images/web-rettung_magazin.svg",
             "partner_url": ""
           }
         },
         "partner_4XixHj": {
           "type": "partner",
           "settings": {
+            "partner_logo": "shopify://shop_images/web-Signet.svg",
             "partner_url": ""
           }
         },
         "partner_Mih8BW": {
           "type": "partner",
           "settings": {
+            "partner_logo": "shopify://shop_images/web-Blaulicht_Magazin_Logo.png",
             "partner_url": ""
           }
         }
