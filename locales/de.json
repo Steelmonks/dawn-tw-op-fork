@@ -548,6 +548,9 @@
       },
       "contact": {
         "address1_label": "Straße und Hausnummer"
+      },
+      "general": {
+        "pay_now_button_label": "Sorgenfrei bestellen"
       }
     }
   },
