@@ -308,7 +308,7 @@
         "title": "Hast du ein Konto?",
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Logge dich ein</a>, damit es beim Checkout schneller geht."
       },
-      "estimated_total": "Geschätzte Gesamtkosten",
+      "estimated_total": "Gesamtkosten",
       "new_estimated_total": "Neuer geschätzter Gesamtbetrag",
       "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Inkl. Zollgebühren und Steuern. Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
       "duties_and_taxes_included_shipping_at_checkout_without_policy": "Inkl. Zollgebühren und Steuern. Rabatte und Versand werden beim Checkout berechnet.",
