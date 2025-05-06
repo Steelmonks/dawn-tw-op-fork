@@ -125,12 +125,14 @@
             </h3>
             {% comment %} ! eTrusted widget {% endcomment %}
             <!-- Begin eTrusted widget tag -->
-            {% if item.sku != blank %}
-              <etrusted-widget
-                style='font-size: 14px;'
-                data-etrusted-widget-id='wdg-7e981e7c-c798-40cb-9c30-e695d0aa36ea'
-                data-sku='{%- for variant in item.product.variants -%}{{ variant.sku -}},{%- endfor -%}{% if item.sku == 'PIN-BE-2000' or item.sku == 'PIN-BE-2000X' %}PIN-BE-2000X,PIN-BE-2000{% endif %}'
-              ></etrusted-widget>
+            {% if card_product.selected_or_first_available_variant.sku != blank %}
+              <div class='twcss-mt-2'>
+                <etrusted-widget
+                  style='font-size: 14px;'
+                  data-etrusted-widget-id='wdg-7e981e7c-c798-40cb-9c30-e695d0aa36ea'
+                  data-sku='{%- for variant in card_product.variants -%}{{ variant.sku -}},{%- endfor -%}'
+                ></etrusted-widget>
+              </div>
             {% endif %}
             <!-- End eTrusted widget tag -->
           </div>
@@ -172,12 +174,14 @@
           </h3>
           {% comment %} ! eTrusted widget {% endcomment %}
           <!-- Begin eTrusted widget tag -->
-          {% if item.sku != blank %}
-            <etrusted-widget
-              style='font-size: 14px;'
-              data-etrusted-widget-id='wdg-7e981e7c-c798-40cb-9c30-e695d0aa36ea'
-              data-sku='{%- for variant in item.product.variants -%}{{ variant.sku -}},{%- endfor -%}{% if item.sku == 'PIN-BE-2000' or item.sku == 'PIN-BE-2000X' %}PIN-BE-2000X,PIN-BE-2000{% endif %}'
-            ></etrusted-widget>
+          {% if card_product.selected_or_first_available_variant.sku != blank %}
+            <div class='twcss-mt-2'>
+              <etrusted-widget
+                style='font-size: 14px;'
+                data-etrusted-widget-id='wdg-7e981e7c-c798-40cb-9c30-e695d0aa36ea'
+                data-sku='{%- for variant in card_product.variants -%}{{ variant.sku -}},{%- endfor -%}'
+              ></etrusted-widget>
+            </div>
           {% endif %}
           <!-- End eTrusted widget tag -->
           <div class='card-information'>
@@ -632,12 +636,14 @@
           </h3>
           {% comment %} ! eTrusted widget {% endcomment %}
           <!-- Begin eTrusted widget tag -->
-          {% if item.sku != blank %}
-            <etrusted-widget
-              style='font-size: 14px;'
-              data-etrusted-widget-id='wdg-7e981e7c-c798-40cb-9c30-e695d0aa36ea'
-              data-sku='{%- for variant in item.product.variants -%}{{ variant.sku -}},{%- endfor -%}{% if item.sku == 'PIN-BE-2000' or item.sku == 'PIN-BE-2000X' %}PIN-BE-2000X,PIN-BE-2000{% endif %}'
-            ></etrusted-widget>
+          {% if card_product.selected_or_first_available_variant.sku != blank %}
+            <div class='twcss-mt-2'>
+              <etrusted-widget
+                style='font-size: 14px;'
+                data-etrusted-widget-id='wdg-7e981e7c-c798-40cb-9c30-e695d0aa36ea'
+                data-sku='{%- for variant in card_product.variants -%}{{ variant.sku -}},{%- endfor -%}'
+              ></etrusted-widget>
+            </div>
           {% endif %}
           <!-- End eTrusted widget tag -->
           <div class='card-information'>
