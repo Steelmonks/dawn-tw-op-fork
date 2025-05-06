@@ -79,21 +79,21 @@
                   <h2 class='footer-block__heading inline-richtext'>{{- block.settings.heading -}}</h2>
                 {%- endif -%}
 
-                {% if block.settings.image != blank %}
-                  <img
-                    src='{{ block.settings.image | image_url: width: 200 }}'
-                    alt='{{ block.settings.image.alt | escape }}'
-                    loading='lazy'
-                    width='{{ block.settings.image.width }}'
-                    height='{{ block.settings.image.height }}'
-                  >
-                {% endif %}
-
                 {%- case block.type -%}
                   {%- when '@app' -%}
                     {% render block %}
                   {%- when 'text' -%}
                     <div class='footer-block__details-content rte'>
+                      {% if block.settings.image != blank %}
+                        <img
+                          src='{{ block.settings.image | image_url: width: 200 }}'
+                          alt='{{ block.settings.image.alt | escape }}'
+                          loading='lazy'
+                          width='{{ block.settings.image.width }}'
+                          height='{{ block.settings.image.height }}'
+                          class='twcss-h-8 twcss-w-auto twcss-mt-2'
+                        >
+                      {% endif %}
                       {{ block.settings.subtext }}
                     </div>
                   {%- when 'link_list' -%}
@@ -388,6 +388,11 @@
           "label": "t:sections.footer.blocks.text.settings.heading.label"
         },
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo"
+        },
+        {
           "type": "richtext",
           "id": "subtext",
           "default": "t:sections.footer.blocks.text.settings.subtext.default",
@@ -563,6 +568,11 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
     }
   ],
   "default": {
