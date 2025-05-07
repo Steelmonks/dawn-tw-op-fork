@@ -1,0 +1,72 @@
+<article class='twcss-flex twcss-flex-col twcss-gap-6' style='padding: {{ section.settings.padding }}px;'>
+  <h2>Häufig gestellte Fragen</h2>
+  <br>
+  {{ section.settings.content }}
+</article>
+
+<section class='twcss-flex twcss-gap-12 twcss-justify-center'>
+  <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+    {%- if section.settings.email_icon != blank -%}
+      <img
+        src='{{ section.settings.email_icon | image_url: width: 24 }}'
+        alt='{{ section.settings.email_icon.alt | escape }}'
+        width='24'
+        height='24'
+        loading='lazy'
+        class='twcss-w-6 twcss-h-6'
+      >
+    {%- endif -%}
+    <a href='mailto:info@steelmarks.com' class='twcss-text-black hover:twcss-text-gray-600'>Info@Steelmarks.com</a>
+  </div>
+  <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+    {%- if section.settings.phone_icon != blank -%}
+      <img
+        src='{{ section.settings.phone_icon | image_url: width: 24 }}'
+        alt='{{ section.settings.phone_icon.alt | escape }}'
+        width='24'
+        height='24'
+        loading='lazy'
+        class='twcss-w-6 twcss-h-6'
+      >
+    {%- endif -%}
+    <a href='tel:+49221956734222' class='twcss-text-black hover:twcss-text-gray-600'>+49.221.956.73422</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Questions Page",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Inhalt"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding",
+      "default": 24
+    },
+    {
+      "type": "image_picker",
+      "id": "email_icon",
+      "label": "E-Mail Icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "phone_icon",
+      "label": "Telefon Icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Questions Page"
+    }
+  ]
+}
+{% endschema %}
