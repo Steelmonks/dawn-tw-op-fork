@@ -20,8 +20,20 @@
         "show_title": false
       }
     },
+    "sm_contact_page_mT8tRX": {
+      "type": "sm-contact-page",
+      "disabled": true,
+      "name": "Contact Page",
+      "settings": {
+        "heading": "Wir helfen Dir gerne weiter.",
+        "description": "Hast Du Fragen zu Deiner Bestellung? Oder möchtest Du vielleicht ein Feedback hinterlassen? Fülle einfach das Formular aus und wir helfen Dir gerne weiter.",
+        "background_color": "#0044cc",
+        "padding": 40
+      }
+    },
     "sm_newsletter_page_KBL6Ln": {
       "type": "sm-newsletter-page",
+      "disabled": true,
       "name": "Newsletter Page",
       "settings": {
         "heading": "Newsletter",
@@ -31,10 +43,21 @@
         "after_form_text_2": "Wir behandeln deine Daten vertraulich.",
         "padding": 24
       }
+    },
+    "sm_questions_page_cYQ9BE": {
+      "type": "sm-questions-page",
+      "disabled": true,
+      "name": "Questions Page",
+      "settings": {
+        "content": "",
+        "padding": 40
+      }
     }
   },
   "order": [
     "main",
-    "sm_newsletter_page_KBL6Ln"
+    "sm_contact_page_mT8tRX",
+    "sm_newsletter_page_KBL6Ln",
+    "sm_questions_page_cYQ9BE"
   ]
 }
