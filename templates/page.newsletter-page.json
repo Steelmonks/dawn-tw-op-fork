@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "padding_top": 28,
@@ -18,9 +19,22 @@
         "enable_gutter": false,
         "show_title": false
       }
+    },
+    "sm_newsletter_page_zXBLKL": {
+      "type": "sm-newsletter-page",
+      "name": "Newsletter Page",
+      "settings": {
+        "heading": "Newsletter",
+        "subheading": "wir freuen uns auf Dich!",
+        "button_text": "📯 Hier kannst Du Dich anmelden",
+        "after_form_text": "Danke für dein Interesse an unserem Newsletter!",
+        "after_form_text_2": "Wir behandeln deine Daten vertraulich.",
+        "padding": 40
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "sm_newsletter_page_zXBLKL"
   ]
 }
