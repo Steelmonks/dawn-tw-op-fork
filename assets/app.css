@@ -571,16 +571,16 @@ video {
   margin-top: 0.5rem;
 }
 
-.twcss-mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .twcss-mt-4 {
   margin-top: 1rem;
 }
 
 .twcss-mt-1 {
   margin-top: 0.25rem;
+}
+
+.twcss-mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .twcss-mb-8 {
@@ -627,6 +627,10 @@ video {
   height: 2rem;
 }
 
+.twcss-h-6 {
+  height: 1.5rem;
+}
+
 .twcss-h-32 {
   height: 8rem;
 }
@@ -637,10 +641,6 @@ video {
 
 .twcss-h-20 {
   height: 5rem;
-}
-
-.twcss-h-6 {
-  height: 1.5rem;
 }
 
 .twcss-h-12 {
@@ -684,16 +684,16 @@ video {
   width: auto;
 }
 
+.twcss-w-6 {
+  width: 1.5rem;
+}
+
 .twcss-w-32 {
   width: 8rem;
 }
 
 .twcss-w-20 {
   width: 5rem;
-}
-
-.twcss-w-6 {
-  width: 1.5rem;
 }
 
 .twcss-w-12 {
@@ -792,16 +792,16 @@ video {
   gap: 0.5rem;
 }
 
-.twcss-gap-12 {
-  gap: 3rem;
-}
-
 .twcss-gap-4 {
   gap: 1rem;
 }
 
 .twcss-gap-6 {
   gap: 1.5rem;
+}
+
+.twcss-gap-12 {
+  gap: 3rem;
 }
 
 .twcss-gap-3 {
@@ -843,14 +843,14 @@ video {
   border-color: rgb(9 10 12 / var(--tw-border-opacity));
 }
 
-.twcss-bg-brandblack {
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 10 12 / var(--tw-bg-opacity));
-}
-
 .twcss-bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.twcss-bg-brandblack {
+  --tw-bg-opacity: 1;
+  background-color: rgb(9 10 12 / var(--tw-bg-opacity));
 }
 
 .twcss-bg-brandwhite {
@@ -954,24 +954,9 @@ video {
   font-size: 12px;
 }
 
-.twcss-text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .twcss-text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.twcss-text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.twcss-text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .twcss-text-sm {
@@ -982,6 +967,21 @@ video {
 .twcss-text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.twcss-text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.twcss-text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.twcss-text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .twcss-text-\[32px\] {
@@ -1154,11 +1154,6 @@ video {
   line-height: 33px;
 }
 
-.twcss-text-brandwhite {
-  --tw-text-opacity: 1;
-  color: rgb(250 250 255 / var(--tw-text-opacity));
-}
-
 .twcss-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1172,6 +1167,11 @@ video {
 .twcss-text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.twcss-text-brandwhite {
+  --tw-text-opacity: 1;
+  color: rgb(250 250 255 / var(--tw-text-opacity));
 }
 
 .twcss-text-brandblue {
