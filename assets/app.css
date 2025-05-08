@@ -631,16 +631,8 @@ video {
   height: 1.5rem;
 }
 
-.twcss-h-32 {
-  height: 8rem;
-}
-
 .twcss-h-auto {
   height: auto;
-}
-
-.twcss-h-20 {
-  height: 5rem;
 }
 
 .twcss-h-12 {
@@ -686,14 +678,6 @@ video {
 
 .twcss-w-6 {
   width: 1.5rem;
-}
-
-.twcss-w-32 {
-  width: 8rem;
-}
-
-.twcss-w-20 {
-  width: 5rem;
 }
 
 .twcss-w-12 {
