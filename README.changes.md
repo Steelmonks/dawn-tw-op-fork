@@ -48,11 +48,11 @@
 - The widget checks for SKUs using `card_product.selected_or_first_available_variant.sku`
 - All variant SKUs are included in the widget data using `{%- for variant in card_product.variants -%}{{ variant.sku -}},{%- endfor -%}`
 
-############################################ Cancellation Policy Page Section Updates
+############################################ Shipping Page Section Updates
 
 ### Changes Made:
 
-1. Refactored the `sm-cancellationpolicy-page.liquid` section for improved flexibility and maintainability.
+1. Refactored the `sm-shipping-page.liquid` section for improved flexibility and maintainability.
 2. The main heading, first paragraph, second paragraph, and images are now controlled by section settings.
 3. The info grid is now implemented using Shopify section blocks, each with:
    - An icon (image picker)
@@ -66,7 +66,7 @@
 
 ### Files Modified:
 
-- `sections/sm-cancellationpolicy-page.liquid`
+- `sections/sm-shipping-page.liquid`
 
 ### How to Use:
 
