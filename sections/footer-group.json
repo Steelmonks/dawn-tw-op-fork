@@ -17,8 +17,9 @@
         "text_LwniXk": {
           "type": "text",
           "settings": {
-            "heading": "Titel",
-            "subtext": "<p>Handgefertigt aus hochwertigem Stahl, sind unsere Produkte <strong>zeitlose Erinnerungsstücke</strong>.<br/><br/>Gestalte <strong>Schlüsselanhänger</strong>, <strong>Wandschilder </strong>und <strong>Zunftzeichen</strong>, um Deine Liebe und Wertschätzung auszudrücken.</p>"
+            "heading": "",
+            "image": "shopify://shop_images/Logo_Written_White.png",
+            "subtext": "<p><br/>Handgefertigt aus hochwertigem Stahl, sind unsere Produkte <strong>zeitlose Erinnerungsstücke</strong>.<br/><br/>Gestalte <strong>Schlüsselanhänger</strong>, <strong>Wandschilder </strong>und <strong>Zunftzeichen</strong>, um Deine Liebe und Wertschätzung auszudrücken.</p>"
           }
         },
         "footer-0": {
