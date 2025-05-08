@@ -266,7 +266,7 @@
             "item4": "shopify://shop_images/H-2710-FR-Shopify-Thumbnail.webp",
             "item4_link": "shopify://products/moderne-zahl-hausnummer-einweihungsgeschenk",
             "cta_text": "Mehr entdecken",
-            "cta_link": ""
+            "cta_link": "shopify://collections/hausschilder"
           }
         },
         "items_row_iQFXyQ": {
@@ -282,7 +282,7 @@
             "item4": "shopify://shop_images/B-1015-Thumbnail-Master.jpg",
             "item4_link": "shopify://products/baum-des-lebens-einweihungsgeschenk",
             "cta_text": "Mehr entdecken",
-            "cta_link": ""
+            "cta_link": "shopify://collections/baum-familienschilder"
           }
         },
         "items_row_GRndi4": {
@@ -298,7 +298,7 @@
             "item4": "shopify://shop_images/M-1012-Thumbnail-Master.jpg",
             "item4_link": "shopify://products/monogramm-volle-blume",
             "cta_text": "Mehr entdecken",
-            "cta_link": ""
+            "cta_link": "shopify://collections/monogramme"
           }
         },
         "items_row_qnFrbX": {
@@ -314,7 +314,7 @@
             "item4": "shopify://shop_images/MS-5003-Shopify-Thumbnail.jpg",
             "item4_link": "shopify://products/rundes-grillschild",
             "cta_text": "Mehr entdecken",
-            "cta_link": ""
+            "cta_link": "shopify://collections/beliebt"
           }
         }
       },
@@ -384,7 +384,7 @@
         "image": "shopify://shop_images/web-galerie-banner.webp",
         "title": "Galerie",
         "link_text": "Jetzt ansehen",
-        "link": ""
+        "link": "shopify://pages/fotogalerie"
       }
     },
     "steelmonks_deine_sm_GPbdxk": {
