@@ -8,12 +8,12 @@
   <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
     {%- if section.settings.email_icon != blank -%}
       <img
-        src='{{ section.settings.email_icon | image_url: width: 24 }}'
+        src='{{ section.settings.email_icon | image_url: width: 40 }}'
         alt='{{ section.settings.email_icon.alt | escape }}'
-        width='24'
-        height='24'
+        width='40'
+        height='40'
         loading='lazy'
-        class='twcss-w-6 twcss-h-6'
+        class=''
       >
     {%- endif -%}
     <a href='mailto:info@steelmarks.com' class='twcss-text-black hover:twcss-text-gray-600'>Info@Steelmarks.com</a>
@@ -21,12 +21,12 @@
   <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
     {%- if section.settings.phone_icon != blank -%}
       <img
-        src='{{ section.settings.phone_icon | image_url: width: 24 }}'
+        src='{{ section.settings.phone_icon | image_url: width: 40 }}'
         alt='{{ section.settings.phone_icon.alt | escape }}'
-        width='24'
-        height='24'
+        width='40'
+        height='40'
         loading='lazy'
-        class='twcss-w-6 twcss-h-6'
+        class=''
       >
     {%- endif -%}
     <a href='tel:+49221956734222' class='twcss-text-black hover:twcss-text-gray-600'>+49.221.956.73422</a>
