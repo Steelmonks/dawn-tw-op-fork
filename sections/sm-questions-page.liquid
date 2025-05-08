@@ -4,7 +4,7 @@
   {{ section.settings.content }}
 </article>
 
-<section class='twcss-flex twcss-gap-12 twcss-justify-center'>
+<section class='twcss-flex twcss-flex-col twcss-gap-12 twcss-justify-center md:twcss-flex-row'>
   <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
     {%- if section.settings.email_icon != blank -%}
       <img
@@ -18,7 +18,7 @@
     {%- endif -%}
     <a
       href='mailto:info@steelmarks.com'
-      class='twcss-text-black hover:twcss-text-gray-600 twcss-text-sm md:twcss-text-base'
+      class='twcss-text-black hover:twcss-text-gray-600 twcss-text-sm'
       >Info@Steelmarks.com</a
     >
   </div>
@@ -33,9 +33,7 @@
         class=''
       >
     {%- endif -%}
-    <a href='tel:+49221956734222' class='twcss-text-black hover:twcss-text-gray-600 twcss-text-sm md:twcss-text-base'
-      >+49.221.956.73422</a
-    >
+    <a href='tel:+49221956734222' class='twcss-text-black hover:twcss-text-gray-600'>+49.221.956.73422</a>
   </div>
 </section>
 
