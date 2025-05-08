@@ -12,6 +12,8 @@
       <img
         src='{{ section.settings.first_image | image_url: width: 120 }}'
         alt='{{ section.settings.heading | escape }}'
+        width='110'
+        height='110'
         class='twcss-w-32 twcss-h-32 twcss-object-contain'
         loading='lazy'
       >
@@ -22,6 +24,8 @@
     <img
       src='{{ section.settings.main_image | image_url: width: 800 }}'
       alt='{{ section.settings.main_image.alt | escape }}'
+      width='800'
+      height='auto'
       class='twcss-w-full twcss-h-auto twcss-object-contain'
       loading='lazy'
     >
@@ -37,6 +41,8 @@
           <img
             src='{{ block.settings.icon | image_url: width: 80 }}'
             alt='{{ block.settings.title | escape }}'
+            width='50'
+            height='50'
             class='twcss-mx-auto twcss-mb-2 twcss-w-20 twcss-h-20 twcss-object-contain'
             loading='lazy'
           >
@@ -77,7 +83,7 @@
     {
       "type": "image_picker",
       "id": "first_image",
-      "label": "First Image"
+      "label": "Title Image"
     },
     {
       "type": "image_picker",
