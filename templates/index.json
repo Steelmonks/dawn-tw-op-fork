@@ -30,7 +30,7 @@
             "show_collection": true,
             "use_collection_title": false,
             "title": "Für Dich",
-            "url": "",
+            "url": "shopify://collections/beliebt",
             "image": "shopify://shop_images/web-fur-dich-monogram.webp",
             "text_color": "#000000"
           }
@@ -43,7 +43,7 @@
             "show_collection": true,
             "use_collection_title": false,
             "title": "Für Familien",
-            "url": "",
+            "url": "shopify://collections/geschenke-fur-familien",
             "image": "shopify://shop_images/web-monogram-family.webp",
             "text_color": "#000000"
           }
@@ -56,7 +56,7 @@
             "show_collection": true,
             "use_collection_title": false,
             "title": "Für Paare",
-            "url": "",
+            "url": "shopify://collections/geschenke-fur-paare",
             "image": "shopify://shop_images/web-couples-hearts.webp",
             "text_color": "#000000"
           }
@@ -69,7 +69,7 @@
             "show_collection": true,
             "use_collection_title": false,
             "title": "Für Handwerker",
-            "url": "",
+            "url": "shopify://collections/geschenke-fur-handwerker",
             "image": "shopify://shop_images/web-handworkers-png.png",
             "text_color": "#000000"
           }
@@ -82,7 +82,7 @@
             "show_collection": true,
             "use_collection_title": false,
             "title": "Bäume",
-            "url": "",
+            "url": "shopify://collections/baum-familienschilder",
             "image": "shopify://shop_images/web-family-tree-baum.webp",
             "text_color": "#000000"
           }
@@ -95,7 +95,7 @@
             "show_collection": true,
             "use_collection_title": false,
             "title": "Hausschilder",
-            "url": "",
+            "url": "shopify://collections/hausschilder",
             "image": "shopify://shop_images/web-house-signs-numbers.webp",
             "text_color": "#000000"
           }
@@ -121,7 +121,7 @@
             "show_collection": true,
             "use_collection_title": false,
             "title": "Sonderanfertigungen",
-            "url": "/pages/anfragen",
+            "url": "shopify://pages/merchandise-und-produktanfrage",
             "image": "shopify://shop_images/web-custom-signs.webp",
             "text_color": "#000000"
           }
@@ -161,7 +161,7 @@
     "steelmonks_parallax_BK9w8T": {
       "type": "steelmonks-parallax",
       "settings": {
-        "cta": "Geschenke für Paare",
+        "cta": "Hausschilder",
         "cta_link": "/collections/hausschilder",
         "cta_style": "primary",
         "liquid_mobile_title": "{% render 'sm-parallax-2a' %}",
@@ -177,7 +177,7 @@
     "steelmonks_parallax_LLNJnL": {
       "type": "steelmonks-parallax",
       "settings": {
-        "cta": "Geschenke für Paare",
+        "cta": "Für die Feuerwehr",
         "cta_link": "shopify://collections/feuerwehr-geschenke",
         "cta_style": "red",
         "liquid_mobile_title": "{% render 'sm-parallax-3a' %}",
@@ -238,15 +238,15 @@
       "type": "steelmonks-parallax",
       "settings": {
         "cta": "Zur Anfrage",
-        "cta_link": "shopify://pages/dein-firmenschild",
-        "cta_style": "red",
+        "cta_link": "shopify://pages/merchandise-und-produktanfrage",
+        "cta_style": "secondary",
         "liquid_mobile_title": "{% render 'sm-parallax-4a' %}",
         "liquid_desktop_title": "{% render 'sm-parallax-4b' %}",
         "inverse_order": false,
         "image": "shopify://shop_images/web-wasel_truck.webp",
         "image_position": "center",
         "image_width": 500,
-        "text_on_banner": "<p><strong>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</strong></p>",
+        "text_on_banner": "<p><strong>Merchandising & produktanfragen</strong></p>",
         "banner": "shopify://shop_images/web-wasel_banner.webp"
       }
     },
