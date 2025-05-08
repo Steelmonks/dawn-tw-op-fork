@@ -68,8 +68,8 @@
           "type": "info_grid_item",
           "settings": {
             "icon": "shopify://shop_images/web-icon-great-support.svg",
-            "title": "",
-            "description": ""
+            "title": "<p><strong>Freundlicher Kundenservice</strong></p>",
+            "description": "Um Dir die bestmögliche Erfahrung zu liefern, bemühen wir uns, während des ganzen Bestellvorgangs an Deiner Seite zu sein."
           }
         },
         "info_grid_item_YnwAPz": {
