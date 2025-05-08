@@ -33,6 +33,7 @@
     },
     "sm_newsletter_page_KBL6Ln": {
       "type": "sm-newsletter-page",
+      "disabled": true,
       "name": "Newsletter Page",
       "settings": {
         "heading": "Newsletter",
