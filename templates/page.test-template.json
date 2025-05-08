@@ -55,14 +55,41 @@
     },
     "sm_shipping_page_AFTBtb": {
       "type": "sm-shipping-page",
-      "disabled": true,
+      "blocks": {
+        "info_grid_item_FPmXQM": {
+          "type": "info_grid_item",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        },
+        "info_grid_item_WUi6hN": {
+          "type": "info_grid_item",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        },
+        "info_grid_item_YnwAPz": {
+          "type": "info_grid_item",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "info_grid_item_FPmXQM",
+        "info_grid_item_WUi6hN",
+        "info_grid_item_YnwAPz"
+      ],
       "name": "Shipping Page",
       "settings": {
         "heading": "Versandbedingungen",
         "first_text": "wir helfen Dir gerne weiter.",
         "second_text": "Hast Du Fragen zu unserem Versand? Oder möchtest Du wissen, wie wir Deine Bestellung versenden? Hier findest Du alle Informationen. ",
         "content": "",
-        "padding": 24
+        "padding": 40
       }
     }
   },
