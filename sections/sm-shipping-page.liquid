@@ -10,7 +10,7 @@
     <!-- Image -->
     {% if section.settings.first_image != blank %}
       <img
-        src='{{ section.settings.first_image | image_url: width: 120 }}'
+        src='{{ section.settings.first_image | image_url: width: 110 }}'
         alt='{{ section.settings.heading | escape }}'
         width='110'
         height='110'
@@ -39,7 +39,7 @@
       >
         {% if block.settings.icon != blank %}
           <img
-            src='{{ block.settings.icon | image_url: width: 80 }}'
+            src='{{ block.settings.icon | image_url: width: 50 }}'
             alt='{{ block.settings.title | escape }}'
             width='50'
             height='50'
