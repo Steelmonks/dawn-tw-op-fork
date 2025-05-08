@@ -52,12 +52,25 @@
         "content": "",
         "padding": 40
       }
+    },
+    "sm_shipping_page_AFTBtb": {
+      "type": "sm-shipping-page",
+      "disabled": true,
+      "name": "Shipping Page",
+      "settings": {
+        "heading": "Versandbedingungen",
+        "first_text": "wir helfen Dir gerne weiter.",
+        "second_text": "Hast Du Fragen zu unserem Versand? Oder möchtest Du wissen, wie wir Deine Bestellung versenden? Hier findest Du alle Informationen. ",
+        "content": "",
+        "padding": 24
+      }
     }
   },
   "order": [
     "main",
     "sm_contact_page_mT8tRX",
     "sm_newsletter_page_KBL6Ln",
-    "sm_questions_page_cYQ9BE"
+    "sm_questions_page_cYQ9BE",
+    "sm_shipping_page_AFTBtb"
   ]
 }
