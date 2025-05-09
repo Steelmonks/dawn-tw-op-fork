@@ -132,6 +132,7 @@
         "feature_qiYazb",
         "feature_X9ayYh"
       ],
+      "disabled": true,
       "name": "Cancelation Page",
       "settings": {
         "heading": "Widerrufsbelehrung",
