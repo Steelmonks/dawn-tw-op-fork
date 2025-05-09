@@ -166,18 +166,14 @@
         "second_feature_T6X3M8": {
           "type": "second_feature",
           "settings": {
+            "icon": "shopify://shop_images/web-medal-icon.webp",
             "second_description": ""
           }
         },
         "second_feature_g3JrMD": {
           "type": "second_feature",
           "settings": {
-            "second_description": ""
-          }
-        },
-        "second_feature_3mAwLY": {
-          "type": "second_feature",
-          "settings": {
+            "icon": "shopify://shop_images/web-stars-icon.webp",
             "second_description": ""
           }
         }
@@ -187,8 +183,7 @@
         "feature_gt8qzM",
         "feature_dj96FP",
         "second_feature_T6X3M8",
-        "second_feature_g3JrMD",
-        "second_feature_3mAwLY"
+        "second_feature_g3JrMD"
       ],
       "name": "Warranty Page",
       "settings": {
