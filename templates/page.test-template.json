@@ -98,6 +98,45 @@
         "content": "<p>Wir versenden mit <strong>DHL</strong> innerhalb Deutschlands.</p><p>Die Bearbeitungszeit beträgt <strong>7-10 Werktage</strong>.</p><p>Die Versandzeit beträgt <strong>3-5 Werktage</strong>.</p><p>Wir können Deinen Artikel erst produzieren, wenn wir Deine Bestellung, Dein endgültiges Design und Deine Zahlung erhalten haben. </p><p> </p><p><strong>Bei Sonderanfertigungen wird der Versand individuell behandelt und zusätzlich berechnet.</strong></p><p> </p><p>(Die Bearbeitungszeiten können abhängig von den beliebten Bestellzeiten und der Anzahl der produzierten Bestellungen etwas schwanken.)</p><p> </p><p>Sollte Dich Deine Sendung verspäten können wir von unserer Seite alles tun, um etwas über den Verbleib herauszufinden. </p><p>Wenn mehr als 15 Tage seit Deiner Bestellung vergangen sind und Du Dein Schild noch nicht erhalten hast, kontaktiere uns bitte <a href=\"https://steelmonks.com/pages/kontakt\">hier</a>. (<a href=\"https://steelmonks.com/pages/kontakt\">https://steelmonks.com/pages/kontakt</a>)</p><p> </p><p>Nachforschungsaufträge dauern erfahrungsgemäß immer mindestens 2 Wochen. Vielleicht kannst Du Dich in diesem Fall untertützend auch mit Deiner Sendungsnummer an DHL wenden, manchmal liegen die Pakete dann einfach in einer Postfiliale und warten auf Abholung.<br/><br/>Wir sind Montag bis Freitag von 8.00 bis 16.00 Uhr erreichbar, schreib uns eine Email an <strong>info@steelmonks.com</strong></p><p><br/>* Bitte beachte: Wenn Du innerhalb von 2 Werktagen keine Antwort auf Deine E-Mail erhalten hast, überprüfe bitte unbedingt Deinen Spam-Ordner.</p>",
         "padding": 40
       }
+    },
+    "sm_cancelation_page_M4RLcE": {
+      "type": "sm-cancelation-page",
+      "blocks": {
+        "feature_nHtMtf": {
+          "type": "feature",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        },
+        "feature_qiYazb": {
+          "type": "feature",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        },
+        "feature_X9ayYh": {
+          "type": "feature",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_nHtMtf",
+        "feature_qiYazb",
+        "feature_X9ayYh"
+      ],
+      "name": "Cancelation Page",
+      "settings": {
+        "heading": "Widerrufsbelehrung",
+        "subheading": "wir helfen Dir gerne weiter.",
+        "description": "Hast Du Fragen zu Deiner Bestellung? Oder möchtest Du Deine Bestellung stornieren? Hier findest Du alle Informationen und unser übersichtliches Wiederrufsformular. ",
+        "padding": 40,
+        "content": "<p><strong>Widerrufsrecht</strong>sobald Deine Bestellung bei uns eingeht, versuchen wir sie so schnell wie möglich zu bearbeiten. Du hast aber das Recht, binnen <strong>24 Stunden</strong> ohne Angabe von Gründen diesen Vertrag zu widerrufen. <br/><br/>Um Dein Widerrufsrecht auszuüben, bitten wir Dich, uns (Harald Wester, Uracherstr. 3, 50739 Köln, Deutschland, Info@Steelmonks.com, Telefon: 0221630603790) mittels einer eindeutigen Erklärung (z. B. per Telefonat oder E-Mail) über Deinen Entschluss, diesen Vertrag zu widerrufen, zu informieren. <br/><br/>Zur Wahrung der Widerrufsfrist reicht es aus, dass Du die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absendest.<br/><br/><strong>Folgen des Widerrufs: </strong>Wenn Du Deinen Vertrag widerrufen hast, werden wir Deine Bestellung stornieren und Dir alle Zahlungen, die wir von Dir erhalten haben, einschließlich der Lieferkosten unverzüglich zurück erstatten. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Du bei der ursprünglichen Transaktion eingesetzt hast, es sei denn, mit Dir wurde ausdrücklich etwas Anderes vereinbart; in keinem Fall werden Dir wegen dieser Rückzahlung Entgelte berechnet. <br/><br/><strong>Das Widerrufsrecht besteht nicht mehr</strong>, sobald Deine personalisierte Ware bereits erstellt wurde, da sie individuell und maßgeblich auf Deine Wünsche und persönlichen Bedürfnisse zugeschnitten wurde. <br/>Dies bezieht sich auf personalisierte Schilder und Sonderanfertigungen.<br/><br/>Bestellungen über <strong>Artikel aus unserer Kategorie der Standard Motivschilder</strong>, können innerhalb von 10 Tagen nach Erhalt der Ware widerrufen werden. Wir bitten Dich, die Informationen in unserem Widerrufsformular auszufüllen und uns zuzusenden. <br/><br/>Desweiteren bitten wir Dich, Deine Bestellung in der Originalverpackung und ausreichend frankiert an unsere im Formular angegebene Adresse zu senden.<br/><br/>Sofort nach Erhalt Deiner Ware werden wir Dir umgehend den Betrag Deiner originalen Bestellung zurückerstatten. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Du bei der ursprünglichen Transaktion eingesetzt hast, es sei denn, mit Dir wurde ausdrücklich etwas Anderes vereinbart; in keinem Fall werden Dir wegen dieser Rückzahlung Entgelte berechnet. <br/><br/><strong>Liebe Kunden:</strong>Alle unsere Artikel werden auf Kundenwunsch individuell und persönlich erstellt. Deshalb bitten wir um Verständnis für unser rechts striktes Widerrufsrecht.<br/><br/>Wir sind Montag bis Donnerstag von 9.00 bis 16.00 Uhr und Freitag von 9.00 bis 14.00 Uhr telefonisch erreichbar unter <strong>+ 49-221-630603790.</strong>Oder schreib uns eine Email an <strong>info@steelmonks.com</strong><br/><br/>* Bitte beachte: Wenn Du innerhalb von 2 Werktagen keine Antwort auf Deine E-Mail erhalten hast, überprüfe bitte unbedingt Deinen Spam-Ordner.<br/><br/><br/></p>"
+      }
     }
   },
   "order": [
@@ -105,6 +144,7 @@
     "sm_contact_page_mT8tRX",
     "sm_newsletter_page_KBL6Ln",
     "sm_questions_page_cYQ9BE",
-    "sm_shipping_page_AFTBtb"
+    "sm_shipping_page_AFTBtb",
+    "sm_cancelation_page_M4RLcE"
   ]
 }
