@@ -1,23 +1,22 @@
 <main class='twcss-container twcss-px-8 twcss-py-12'>
   <!-- Primary Image Blocks Section -->
   <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12'>
-    {% for block in section.image_text %}
-      <div
-        style='padding: 20px;'
-        class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-4'
-      >
-        {% if block.settings.icon != blank %}
-          <img
-            src='{{ block.settings.icon | image_url: width: 100 }}'
-            alt='{{ block.settings.title | escape }}'
-            width='100'
-            height='100'
-            class='twcss-mx-auto twcss-mb-2 twcss-object-contain'
-            loading='lazy'
-          >
-        {% endif %}
-        <p class='twcss-text-base'>{{ block.settings.description }}</p>
-      </div>
+    {% for block in section.blocks %}
+      {% if block.type == 'image_text' %}
+        <div style='padding: 20px;' class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-4'>
+          {% if block.settings.icon != blank %}
+            <img
+              src='{{ block.settings.icon | image_url: width: 100 }}'
+              alt='{{ block.settings.title | escape }}'
+              width='100'
+              height='100'
+              class='twcss-mx-auto twcss-mb-2 twcss-object-contain'
+              loading='lazy'
+            >
+          {% endif %}
+          <p class='twcss-text-base'>{{ block.settings.description }}</p>
+        </div>
+      {% endif %}
     {% endfor %}
   </section>
 
@@ -26,18 +25,65 @@
     {{ section.settings.heading }}
   </h1>
 
-  <!-- Primary Alternating Text Section -->
-  <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-8'>
+  <!-- Alternating Text Block 1 -->
+  {% assign alternating_blocks = section.blocks | where: 'type', 'alternating_text' %}
+  {% if alternating_blocks.size > 0 %}
+    {% assign block = alternating_blocks[0] %}
+    <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-2 twcss-p-10'>
+      <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+        <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
+          {{ block.settings.heading1 }}
+        </h3>
+        <div class='twcss-prose'>{{ block.settings.content1 }}</div>
+      </div>
+      <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+        <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
+          {{ block.settings.heading2 }}
+        </h3>
+        <div class='twcss-prose'>{{ block.settings.content2 }}</div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Secondary Image Blocks Section -->
+  <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12'>
     {% for block in section.blocks %}
-      {% if block.type == 'alternating_text' %}
-        <div class='twcss-flex twcss-flex-col twcss-gap-4'>
-          <div class='twcss-prose'>
-            {{ block.settings.content }}
-          </div>
+      {% if block.type == 'image_text2' %}
+        <div style='padding: 20px;' class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-4'>
+          {% if block.settings.icon != blank %}
+            <img
+              src='{{ block.settings.icon | image_url: width: 100 }}'
+              alt='{{ block.settings.title | escape }}'
+              width='100'
+              height='100'
+              class='twcss-mx-auto twcss-mb-2 twcss-object-contain'
+              loading='lazy'
+            >
+          {% endif %}
+          <p class='twcss-text-base'>{{ block.settings.description }}</p>
         </div>
       {% endif %}
     {% endfor %}
-  </div>
+  </section>
+
+  <!-- Alternating Text Block 2 -->
+  {% if alternating_blocks.size > 1 %}
+    {% assign block = alternating_blocks[1] %}
+    <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-2 twcss-p-10'>
+      <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+        <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
+          {{ block.settings.heading1 }}
+        </h3>
+        <div class='twcss-prose'>{{ block.settings.content1 }}</div>
+      </div>
+      <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+        <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
+          {{ block.settings.heading2 }}
+        </h3>
+        <div class='twcss-prose'>{{ block.settings.content2 }}</div>
+      </div>
+    </section>
+  {% endif %}
 
   <!-- Contact Form Section -->
   <section class='twcss-flex twcss-flex-col twcss-gap-4 twcss-p-10 twcss-rounded-lg'>
@@ -93,13 +139,61 @@
   ],
   "blocks": [
     {
-      "type": "alternating_text",
-      "name": "Alternating Text",
+      "type": "image_text",
+      "name": "Feature Block",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Block Image"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Block Description"
+        }
+      ]
+    },
+    {
+      "type": "alternating_text",
+      "name": "Alternating Text Block",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading1",
+          "label": "First Block Heading"
+        },
+        {
           "type": "richtext",
-          "id": "content",
-          "label": "Content"
+          "id": "content1",
+          "label": "First Block Content"
+        },
+        {
+          "type": "text",
+          "id": "heading2",
+          "label": "Second Block Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "content2",
+          "label": "Second Block Content"
+        }
+      ]
+    },
+    {
+      "type": "image_text2",
+      "name": "Secondary Feature Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Block Image"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Block Description"
         }
       ]
     }
