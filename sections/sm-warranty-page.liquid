@@ -57,7 +57,7 @@
   </section>
 
   <!-- Secondary Image Blocks Section -->
-  <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12'>
+  <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-2 twcss-text-center twcss-justify-center twcss-px-8 twcss-py-12'>
     {% for block in section.blocks %}
       {% if block.type == 'image_text2' %}
         <div
@@ -79,6 +79,9 @@
       {% endif %}
     {% endfor %}
   </section>
+
+  <!-- Secondary Heading Section -->
+  <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center'>{{ section.settings.second_heading }}</h2>
 
   <!-- Alternating Text Block 2 -->
   {% if alternating_blocks.size > 1 %}
