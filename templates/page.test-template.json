@@ -193,9 +193,9 @@
           "type": "alternating_text",
           "settings": {
             "heading1": "SONDERANFERTIGUNGEN UND DESIGNÄNDERUNGEN",
-            "content1": "",
+            "content1": "<p><br/>Da Sonderanfertigungen und Designänderungen von Standardschildernindividuell nach den Wünschen der Kunden erstellt und von diesen auch freigegeben werden, sind diese Kosten sowie der Ankauf von Sonderfarben, von dieser Erstattung ausgeschlossen.</p>",
             "heading2": "UND WAS PASSIERT, WENN MEIN SCHILD BEIM VERSAND BESCHÄDIGT WURDE? ",
-            "content2": ""
+            "content2": "<p><br/>Wenn das von Dir bestellte Schild beschädigt bei Dir eintrifft, kontaktiere uns bitte umgehend, damit wir zusammen mit Dir eine gute Lösung finden können. In jedem Fall werden wir ein zufriedenstellendes Resutat für Dich anstreben.</p>"
           }
         }
       },
