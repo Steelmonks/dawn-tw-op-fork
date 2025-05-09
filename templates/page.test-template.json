@@ -165,18 +165,28 @@
             "icon": "shopify://shop_images/web-stars-icon.webp",
             "description": ""
           }
+        },
+        "alternating_text_JdEBbj": {
+          "type": "alternating_text",
+          "settings": {
+            "heading1": "SORGENFREI UND OHNE RISIKO BESTELLEN",
+            "content1": "<p><strong>Wir sind uns sicher, dass unsere Schilder Dich begeistern werden.<br/><br/></strong>Und doch wissen wir, dass es manchmal schwierig sein kann, das perfekte Geschenk zu finden oder sich selbst etwas zu gönnen.</p><p> Wir möchten, dass Du Dich bei jeder Bestellung bei Steelmonks wohl und sicher fühlst. Deshalb haben wir uns dazu entschieden, diese Garantie anzubieten.<br/><br/>Du kannst sicher sein, dass Du ein hochwertiges Produkt erhältst, das mit Leidenschaft und Sorgfalt von unserem Team hergestellt wurde.<br/><br/></p>",
+            "heading2": "UND WAS MACHE ICH, WENN MEIN GESCHENK DEM BESCHENKTEN NICHT GEFÄLLT?",
+            "content2": "<p>Bei Steelmonks steht Dein Glück an erster Stelle. Deshalb präsentieren wir unsere \"<strong>100% Glücksgarantie\"</strong>.<br/><br/>Wenn das von Dir verschenkte Schild dem Beschenkten nicht gefällt, erstatten wir Dir den vollen Kaufpreis des Schildes zurück. Denn wir möchten, dass jeder Einkauf bei Steelmonks zu 100% glücklich macht.<br/><br/>Du kannst Dich bis zu <strong>30 Tage nach Erhalt </strong>bei uns melden, und erhältst nach Zurücklieferung des Produktes, den vollen Kaufpreis des Schildes zurück -<strong> ohne Fragen, ohne Risiko.</strong></p>"
+          }
         }
       },
       "block_order": [
         "image_text_DkXPUH",
         "image_text_FNwjQU",
-        "image_text_fXfTri"
+        "image_text_fXfTri",
+        "alternating_text_JdEBbj"
       ],
       "name": "Warranty Page",
       "settings": {
         "padding": 36,
         "heading": "100% Glücksgarantie",
-        "second_heading": "",
+        "second_heading": "Es gibt soviel worum Du dir Sorgen machen kannst, um ein Geschenk nicht mehr.",
         "button_text": "📯 Neues und Besonderes..."
       }
     }
