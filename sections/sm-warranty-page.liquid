@@ -24,9 +24,11 @@
   </section>
 
   <!-- Primary Heading Section -->
-  <h1 class='twcss-w-full twcss-bg-brandblue twcss-p-5 twcss-text-center twcss-text-6xl twcss-font-bold twcss-mb-8 twcss-text-white'>
-    {{ section.settings.heading }}
-  </h1>
+  <div class='twcss-w-full twcss-bg-brandblue twcss-p-5 twcss-mb-8'>
+    <h1 class='twcss-text-6xl twcss-font-bold twcss-text-center'>
+      {{ section.settings.heading }}
+    </h1>
+  </div>
 
   <!-- Alternating Text Block 1 -->
   {% assign alternating_blocks = section.blocks | where: 'type', 'alternating_text' %}
