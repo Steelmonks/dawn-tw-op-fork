@@ -601,12 +601,12 @@ video {
   margin-right: 1rem;
 }
 
-.twcss-mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .twcss-mt-2 {
   margin-top: 0.5rem;
+}
+
+.twcss-mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .twcss-mt-4 {
@@ -798,16 +798,16 @@ video {
   gap: 2rem;
 }
 
-.twcss-gap-4 {
-  gap: 1rem;
-}
-
 .twcss-gap-2 {
   gap: 0.5rem;
 }
 
 .twcss-gap-12 {
   gap: 3rem;
+}
+
+.twcss-gap-4 {
+  gap: 1rem;
 }
 
 .twcss-gap-6 {
@@ -909,9 +909,9 @@ video {
   padding: 2rem;
 }
 
-.twcss-px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+.twcss-px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .twcss-py-12 {
@@ -919,9 +919,9 @@ video {
   padding-bottom: 3rem;
 }
 
-.twcss-px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.twcss-px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .twcss-py-8 {
@@ -960,11 +960,6 @@ video {
   text-align: center;
 }
 
-.twcss-text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
 .twcss-text-\[12px\] {
   font-size: 12px;
 }
@@ -982,6 +977,11 @@ video {
 .twcss-text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.twcss-text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .twcss-text-sm {
