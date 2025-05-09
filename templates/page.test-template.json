@@ -105,6 +105,7 @@
         "feature_nHtMtf": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/web-icon-timeclock.png",
             "title": "",
             "description": ""
           }
@@ -112,6 +113,7 @@
         "feature_qiYazb": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/web-icon-great-support.svg",
             "title": "",
             "description": ""
           }
@@ -119,6 +121,7 @@
         "feature_X9ayYh": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/web-icon-free-shipping.svg",
             "title": "",
             "description": ""
           }
