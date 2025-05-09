@@ -5,7 +5,7 @@
       {% if block.type == 'image_text' %}
         <div
           style='padding: 20px;'
-          class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-full twcss-gap-4'
+          class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-[220px] twcss-gap-4'
         >
           {% if block.settings.icon != blank %}
             <img
@@ -24,7 +24,7 @@
   </section>
 
   <!-- Primary Heading Section -->
-  <h1 class='twcss-text-4xl twcss-font-bold twcss-text-center twcss-mb-8'>
+  <h1 class='twcss-w-full twcss-bg-brandblue twcss-p-5 twcss-text-center twcss-text-6xl twcss-font-bold twcss-mb-8 twcss-text-white'>
     {{ section.settings.heading }}
   </h1>
 
@@ -62,7 +62,7 @@
       {% if block.type == 'image_text2' %}
         <div
           style='padding: 20px;'
-          class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-full twcss-gap-4'
+          class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-[150px] twcss-gap-4'
         >
           {% if block.settings.icon != blank %}
             <img
@@ -81,7 +81,7 @@
   </section>
 
   <!-- Secondary Heading Section -->
-  <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center'>{{ section.settings.second_heading }}</h2>
+  <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-mb-8'>{{ section.settings.second_heading }}</h2>
 
   <!-- Alternating Text Block 2 -->
   {% if alternating_blocks.size > 1 %}
