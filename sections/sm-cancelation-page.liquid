@@ -1,7 +1,7 @@
 <section class='twcss-flex twcss-flex-col twcss-gap-12' style='padding: {{ section.settings.padding }}px;'>
-  <h1 class='twcss-text-center twcss-text-2xl twcss-font-bold'>{{ section.settings.heading }}</h1>
-  <p class='twcss-text-center twcss-text-lg'>{{ section.settings.subheading }}</p>
-  <p class='twcss-text-center twcss-text-lg'>{{ section.settings.description }}</p>
+  <h1 class='twcss-text-center twcss-text-4xl twcss-font-bold'>{{ section.settings.heading }}</h1>
+  <p style='font-style: italic;' class='twcss-text-center twcss-text-lg'>{{ section.settings.subheading }}</p>
+  <p class='twcss-text-lg'>{{ section.settings.description }}</p>
 
   <article class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12 twcss-bg-brandblack twcss-text-brandwhite'>
     {% for block in section.blocks %}
