@@ -665,6 +665,10 @@ video {
   height: auto;
 }
 
+.twcss-h-full {
+  height: 100%;
+}
+
 .twcss-h-12 {
   height: 3rem;
 }
@@ -679,10 +683,6 @@ video {
 
 .twcss-h-\[250px\] {
   height: 250px;
-}
-
-.twcss-h-full {
-  height: 100%;
 }
 
 .twcss-max-h-fit {
