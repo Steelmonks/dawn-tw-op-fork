@@ -513,6 +513,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.twcss-container {
+  width: 100%;
+}
+
+@media (min-width: 320px) {
+  .twcss-container {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 750px) {
+  .twcss-container {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 990px) {
+  .twcss-container {
+    max-width: 990px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .twcss-container {
+    max-width: 1440px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .twcss-container {
+    max-width: 1920px;
+  }
+}
+
 .twcss-absolute {
   position: absolute;
 }
@@ -827,6 +861,11 @@ video {
 .twcss-bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.twcss-bg-brandblue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 68 204 / var(--tw-bg-opacity));
 }
 
 .twcss-bg-brandwhite {
@@ -1444,6 +1483,10 @@ video {
 
   .md\:twcss-grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:twcss-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:twcss-grid-cols-4 {
