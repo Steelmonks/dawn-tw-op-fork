@@ -1,0 +1,108 @@
+<main class='twcss-container twcss-px-8 twcss-py-12'>
+  <!-- Primary Image Blocks Section -->
+  <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12'>
+    {% for block in section.image_text %}
+      <div
+        style='padding: 20px;'
+        class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-4'
+      >
+        {% if block.settings.icon != blank %}
+          <img
+            src='{{ block.settings.icon | image_url: width: 100 }}'
+            alt='{{ block.settings.title | escape }}'
+            width='100'
+            height='100'
+            class='twcss-mx-auto twcss-mb-2 twcss-object-contain'
+            loading='lazy'
+          >
+        {% endif %}
+        <p class='twcss-text-base'>{{ block.settings.description }}</p>
+      </div>
+    {% endfor %}
+  </section>
+
+  <!-- Primary Heading Section -->
+  <h1 class='twcss-text-4xl twcss-font-bold twcss-text-center twcss-mb-8'>
+    {{ section.settings.heading }}
+  </h1>
+
+  <!-- Primary Alternating Text Section -->
+  <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-8'>
+    {% for block in section.blocks %}
+      {% if block.type == 'alternating_text' %}
+        <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+          <div class='twcss-prose'>
+            {{ block.settings.content }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Contact Form Section -->
+  <section class='twcss-flex twcss-flex-col twcss-gap-4 twcss-p-10 twcss-rounded-lg'>
+    <!-- Toggle Button -->
+    <button
+      type='button'
+      class='twcss-w-full twcss-text-left twcss-bg-white twcss-p-4 twcss-rounded-lg twcss-shadow twcss-font-bold twcss-text-lg twcss-text-brandblack twcss-border twcss-border-gray-200'
+      style='background-color: #fff !important;'
+      onclick="document.getElementById('contact-form-container').classList.toggle('twcss-hidden')"
+    >
+      {{ section.settings.button_text }}
+    </button>
+
+    <!-- Collapsible Form Container -->
+    <div
+      id='contact-form-container'
+      class='twcss-mt-4 twcss-bg-white twcss-rounded-lg twcss-shadow twcss-p-4 twcss-hidden'
+    >
+      <div class='klaviyo-form-QXQCMv'></div>
+    </div>
+  </section>
+</main>
+
+{% schema %}
+{
+  "name": "Warranty Page2",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "text",
+      "id": "second_heading",
+      "label": "Secondary Heading"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Form Toggle Button Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "alternating_text",
+      "name": "Alternating Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
