@@ -148,18 +148,21 @@
         "feature_PpFVf7": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/web-germany-flag-icon.webp",
             "description": ""
           }
         },
         "feature_xir3kK": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/web-medal-icon.webp",
             "description": ""
           }
         },
         "feature_nKcqD6": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/web-stars-icon.webp",
             "description": ""
           }
         },
