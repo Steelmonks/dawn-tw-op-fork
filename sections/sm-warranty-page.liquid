@@ -3,7 +3,10 @@
   <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12'>
     {% for block in section.blocks %}
       {% if block.type == 'image_text' %}
-        <div style='padding: 20px;' class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-4'>
+        <div
+          style='padding: 20px;'
+          class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-full twcss-gap-4'
+        >
           {% if block.settings.icon != blank %}
             <img
               src='{{ block.settings.icon | image_url: width: 100 }}'
@@ -14,7 +17,7 @@
               loading='lazy'
             >
           {% endif %}
-          <p class='twcss-text-base'>{{ block.settings.description }}</p>
+          <p class='twcss-text-lg twcss-font-bold'>{{ block.settings.description }}</p>
         </div>
       {% endif %}
     {% endfor %}
@@ -44,6 +47,14 @@
       </div>
     </section>
   {% endif %}
+
+  <!-- Blue Heading + Richtext Section -->
+  <section class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-4 twcss-py-8'>
+    <h2 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
+      {{ section.settings.blue_heading }}
+    </h2>
+    <div class='twcss-prose twcss-text-center'>{{ section.settings.blue_content }}</div>
+  </section>
 
   <!-- Secondary Image Blocks Section -->
   <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12'>
@@ -135,6 +146,16 @@
       "type": "text",
       "id": "button_text",
       "label": "Form Toggle Button Text"
+    },
+    {
+      "type": "text",
+      "id": "blue_heading",
+      "label": "Blue Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "blue_content",
+      "label": "Blue Content"
     }
   ],
   "blocks": [
