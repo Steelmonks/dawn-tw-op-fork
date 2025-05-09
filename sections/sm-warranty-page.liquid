@@ -29,12 +29,14 @@
   <!-- Primary Text Blocks Section -->
   <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-2 twcss-p-10'>
     {% for block in section.text_blocks %}
-      <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
-        {{ block.settings.heading }}
-      </h3>
-      <p class='twcss-prose'>
-        {{ block.settings.content }}
-      </p>
+      <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+        <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
+          {{ block.settings.heading }}
+        </h3>
+        <div class='twcss-prose'>
+          {{ block.settings.content }}
+        </div>
+      </div>
     {% endfor %}
   </section>
 
@@ -66,12 +68,14 @@
   <!-- Secondary Text Blocks Section -->
   <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-2 twcss-p-10'>
     {% for block in section.text_blocks2 %}
-      <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
-        {{ block.settings.heading }}
-      </h3>
-      <p class='twcss-prose'>
-        {{ block.settings.content }}
-      </p>
+      <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+        <h3 class='twcss-text-2xl twcss-font-bold twcss-text-brandblue twcss-text-center'>
+          {{ block.settings.heading }}
+        </h3>
+        <div class='twcss-prose'>
+          {{ block.settings.content }}
+        </div>
+      </div>
     {% endfor %}
   </section>
 
@@ -148,29 +152,12 @@
         {
           "type": "image_picker",
           "id": "icon",
-          "label": "Feature Icon"
+          "label": "Block Image"
         },
         {
           "type": "text",
           "id": "description",
-          "label": "Feature Description"
-        }
-      ]
-    },
-    {
-      "type": "image_text2",
-      "name": "Secondary Image Text Block",
-      "limit": 2,
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "Feature Icon"
-        },
-        {
-          "type": "text",
-          "id": "description",
-          "label": "Feature Description"
+          "label": "Block Description"
         }
       ]
     },
@@ -188,6 +175,23 @@
           "type": "richtext",
           "id": "content",
           "label": "Block Content"
+        }
+      ]
+    },
+    {
+      "type": "image_text2",
+      "name": "Secondary Image Text Block",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Block Image"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Block Description"
         }
       ]
     },
