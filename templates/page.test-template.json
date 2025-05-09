@@ -174,13 +174,39 @@
             "heading2": "UND WAS MACHE ICH, WENN MEIN GESCHENK DEM BESCHENKTEN NICHT GEFÄLLT?",
             "content2": "<p>Bei Steelmonks steht Dein Glück an erster Stelle. Deshalb präsentieren wir unsere \"<strong>100% Glücksgarantie\"</strong>.<br/><br/>Wenn das von Dir verschenkte Schild dem Beschenkten nicht gefällt, erstatten wir Dir den vollen Kaufpreis des Schildes zurück. Denn wir möchten, dass jeder Einkauf bei Steelmonks zu 100% glücklich macht.<br/><br/>Du kannst Dich bis zu <strong>30 Tage nach Erhalt </strong>bei uns melden, und erhältst nach Zurücklieferung des Produktes, den vollen Kaufpreis des Schildes zurück -<strong> ohne Fragen, ohne Risiko.</strong></p>"
           }
+        },
+        "image_text2_n6nU3Y": {
+          "type": "image_text2",
+          "settings": {
+            "icon": "shopify://shop_images/web-medal-icon.webp",
+            "description": ""
+          }
+        },
+        "image_text2_yhgALt": {
+          "type": "image_text2",
+          "settings": {
+            "icon": "shopify://shop_images/web-stars-icon.webp",
+            "description": ""
+          }
+        },
+        "alternating_text_HP3KcY": {
+          "type": "alternating_text",
+          "settings": {
+            "heading1": "SONDERANFERTIGUNGEN UND DESIGNÄNDERUNGEN",
+            "content1": "",
+            "heading2": "UND WAS PASSIERT, WENN MEIN SCHILD BEIM VERSAND BESCHÄDIGT WURDE? ",
+            "content2": ""
+          }
         }
       },
       "block_order": [
         "image_text_DkXPUH",
         "image_text_FNwjQU",
         "image_text_fXfTri",
-        "alternating_text_JdEBbj"
+        "alternating_text_JdEBbj",
+        "image_text2_n6nU3Y",
+        "image_text2_yhgALt",
+        "alternating_text_HP3KcY"
       ],
       "name": "Warranty Page",
       "settings": {
