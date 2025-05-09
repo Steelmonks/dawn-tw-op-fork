@@ -122,8 +122,8 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/web-icon-free-shipping.svg",
-            "title": "",
-            "description": ""
+            "title": "Kostenloser Ersatz",
+            "description": "Wir sind auch nur Menschen :) Es kann vorkommen, dass Dein Schild nicht genau Deiner Bestellung entspricht. In diesen Fällen kümmern wir uns natürlich schleunigst um den Ersatz."
           }
         }
       },
