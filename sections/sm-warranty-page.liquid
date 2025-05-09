@@ -8,16 +8,19 @@
           class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-full twcss-gap-4'
         >
           {% if block.settings.icon != blank %}
-            <img
-              src='{{ block.settings.icon | image_url: width: 100 }}'
-              alt='{{ block.settings.title | escape }}'
-              width='100'
-              height='100px'
-              class='twcss-mx-auto twcss-mb-2 twcss-object-contain'
-              loading='lazy'
-            >
+            <div class='twcss-h-[100px] twcss-flex twcss-items-center'>
+              <img
+                src='{{ block.settings.icon | image_url: width: 100 }}'
+                alt='{{ block.settings.title | escape }}'
+                width='100'
+                height='100'
+                class='twcss-mx-auto twcss-object-contain'
+                style='max-height: 100px;'
+                loading='lazy'
+              >
+            </div>
           {% endif %}
-          <p class='twcss-text-lg twcss-font-bold'>{{ block.settings.description }}</p>
+          <p class='twcss-text-lg'>{{ block.settings.description }}</p>
         </div>
       {% endif %}
     {% endfor %}
@@ -67,16 +70,18 @@
           class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-full twcss-gap-4'
         >
           {% if block.settings.icon != blank %}
-            <img
-              src='{{ block.settings.icon | image_url: width: 100 }}'
-              alt='{{ block.settings.title | escape }}'
-              width='100'
-              height='100px'
-              class='twcss-mx-auto twcss-mb-2 twcss-object-contain'
-              loading='lazy'
-            >
+            <div class='twcss-h-[100px] twcss-w-[100px] twcss-flex twcss-items-center twcss-justify-center'>
+              <img
+                src='{{ block.settings.icon | image_url: width: 100 }}'
+                alt='{{ block.settings.title | escape }}'
+                width='100'
+                height='100'
+                class='twcss-h-full twcss-w-full twcss-object-contain'
+                loading='lazy'
+              >
+            </div>
           {% endif %}
-          <p class='twcss-text-lg twcss-font-bold'>{{ block.settings.description }}</p>
+          <p class='twcss-text-lg'>{{ block.settings.description }}</p>
         </div>
       {% endif %}
     {% endfor %}
