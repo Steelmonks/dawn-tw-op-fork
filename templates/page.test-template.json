@@ -186,7 +186,7 @@
           "type": "image_text2",
           "settings": {
             "icon": "shopify://shop_images/web-stars-icon.webp",
-            "description": ""
+            "description": "Über 4.000+ verifizierte Bewertungen"
           }
         },
         "alternating_text_HP3KcY": {
@@ -210,7 +210,7 @@
       ],
       "name": "Warranty Page",
       "settings": {
-        "padding": 36,
+        "padding": 40,
         "heading": "100% Glücksgarantie",
         "second_heading": "Es gibt soviel worum Du dir Sorgen machen kannst, um ein Geschenk nicht mehr.",
         "button_text": "📯 Neues und Besonderes..."
