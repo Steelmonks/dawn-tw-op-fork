@@ -669,6 +669,10 @@ video {
   height: 100%;
 }
 
+.twcss-h-\[100px\] {
+  height: 100px;
+}
+
 .twcss-h-12 {
   height: 3rem;
 }
@@ -704,6 +708,10 @@ video {
 
 .twcss-w-auto {
   width: auto;
+}
+
+.twcss-w-\[100px\] {
+  width: 100px;
 }
 
 .twcss-w-12 {
