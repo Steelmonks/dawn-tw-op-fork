@@ -263,8 +263,8 @@
         "surface_nfAVpf": {
           "type": "surface",
           "settings": {
-            "image": "shopify://shop_images/C-PH-1000-PicSamples.jpg",
-            "text": "<p>test1</p>"
+            "image": "shopify://shop_images/web-icon-surface3.jpg",
+            "text": "<p>Schwarz</p><p>(RAL 9005)</p>"
           }
         },
         "surface_gBQjcf": {
