@@ -20,6 +20,16 @@
         "show_title": false
       }
     },
+    "steelmonks_parallax_richtext_wHKENx": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "image": "shopify://shop_images/web-icon-basketball.jpg",
+        "title": "",
+        "link_text": "",
+        "link": ""
+      }
+    },
     "sm_surfaces_page_fLEHeD": {
       "type": "sm-surfaces-page",
       "blocks": {
@@ -119,6 +129,7 @@
   },
   "order": [
     "main",
+    "steelmonks_parallax_richtext_wHKENx",
     "sm_surfaces_page_fLEHeD"
   ]
 }
