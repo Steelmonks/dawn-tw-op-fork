@@ -259,6 +259,34 @@
             "image": "shopify://shop_images/IMG_5548.jpg",
             "text": "test 2"
           }
+        },
+        "surface_nfAVpf": {
+          "type": "surface",
+          "settings": {
+            "image": "shopify://shop_images/C-PH-1000-PicSamples.jpg",
+            "text": "<p>test1</p>"
+          }
+        },
+        "surface_gBQjcf": {
+          "type": "surface",
+          "settings": {
+            "image": "shopify://shop_images/KPH-1009-5.jpg",
+            "text": "<p>test2</p>"
+          }
+        },
+        "surface_3EgYHJ": {
+          "type": "surface",
+          "settings": {
+            "image": "shopify://shop_images/C-PH-1000-Companion.jpg",
+            "text": "<p>test3</p>"
+          }
+        },
+        "surface_p9EF74": {
+          "type": "surface",
+          "settings": {
+            "image": "shopify://shop_images/KPH-1040-4.jpg",
+            "text": "<p>test4</p>"
+          }
         }
       },
       "block_order": [
@@ -267,7 +295,11 @@
         "first_grid_image_KfKhiw",
         "first_grid_image_9jt7Ta",
         "secondary_grid_image_1",
-        "secondary_grid_image_2"
+        "secondary_grid_image_2",
+        "surface_nfAVpf",
+        "surface_gBQjcf",
+        "surface_3EgYHJ",
+        "surface_p9EF74"
       ],
       "name": "Surfaces Page",
       "settings": {
@@ -279,7 +311,7 @@
         "content_2": "<p>- Deine Steelmonks<br/><br/></p>",
         "heading_3": "Pulverbeschichtung",
         "content_3": "<p><strong>Pulverbeschichtung </strong>ist eine Art von Beschichtung, die als frei fließendes, trockenes Pulver aufgetragen wird. Im Gegensatz zu herkömmlicher flüssiger Farbe, die über ein verdampfendes Lösungsmittel abgegeben wird, wird die Pulverbeschichtung typischerweise elektrostatisch aufgebracht und dann unter Hitze oder mit ultraviolettem Licht gehärtet.Es gibt zwei Hauptvorteile. Erstens führt die Pulverbeschichtung zu einer dicken, dichten Oberfläche von Metallprodukten, die haltbarer und langlebiger sein kann als herkömmliche Lackierungen. Zweitens ist die Pulverbeschichtung ein Einschichtlack, sodass der Prozess ziemlich schnell und einfach ist.<br/>Schwarz<br/>Unsere schwarzen Metallschilder zeichnen sich durch ihre feinstrukturierte, matte Oberfläche aus. Ihr klassisches und zeitloses Design macht sie zu einer hervorragenden Wahl für moderne sowie traditionelle Wohnräume. Die schwarze Beschichtung verleiht den Schildern auch ein ansprechendes Aussehen und eine professionelle Ausstrahlung.<br/>Anthrazit<br/>Unser Anthrazit ist eine seidenmatte Oberfläche, die in einem dunklen Grauton gehalten ist. Diese Farbe ist eine gute Wahl für moderne, minimalistische Einrichtungen und bietet einen eleganten, zeitlosen Look. Anthrazit eignet sich besonders für den Einsatz im Außenbereich, da es widerstandsfähig gegen Korrosion und Wetterbedingungen ist. Anthrazit ist eine gute Wahl für jedes Projekt, das einen klassischen und professionellen Look erfordert.<br/><br/></p>",
-        "image_1": "shopify://shop_images/web-icon-greendot.png",
+        "surfaces_header": "Unsere Oberflächen",
         "heading_4": "Edelstahl",
         "content_4": "<p>Unser Edelstahl ist ein Material, das für seine Haltbarkeit, Langlebigkeit und hygienische Eigenschaften bekannt ist. Edelstahl ist widerstandsfähig gegen Korrosion und Stöße und ist ein sehr vielseitiges Material, das in vielen verschiedenen Bereichen eingesetzt wird. Diese glänzende Oberfläche bietet eine zeitlose Eleganz, die nie aus der Mode kommt.Gebürsteter Edelstahl ist Edelstahl mit einer unidirektionalen Satinierung. Er wird hergestellt, indem er mit einer feinen Borstenbürste auf einem Riemen oder Rad poliert wird, das sich die ganze Zeit in die gleiche Richtung bewegt, und dann mit einer fettfreien Mischung oder einem mittelgroßen nicht gewebten Schleifband oder -polster erweicht wird. Es hat eine sichtbare Maserung, die eine matte Oberfläche erzeugt. Es wird aufgrund seiner Korrosionsbeständigkeit an öffentlichen Orten bzw. Im Freien eingesetzt, entwickelt aber keinen Rost und behält immer seinen schönen, silbernen Glanz.<br/><br/></p>"
       }
