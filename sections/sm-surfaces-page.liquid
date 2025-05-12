@@ -15,7 +15,7 @@
   {% endif %}
 
   <!-- Title and Text -->
-  <section class='twcss-flex twcss-flex-col twcss-gap-4 twcss-p-10 twcss-rounded-lg'>
+  <section class='twcss-flex twcss-flex-col twcss-gap-12 twcss-p-10 twcss-rounded-lg'>
     <h1 class='twcss-text-4xl twcss-font-bold twcss-text-brandblack twcss-text-center'>
       {{ section.settings.heading_1 }}
     </h1>
@@ -39,7 +39,10 @@
   </section>
 
   <!-- Couloured Container and Text -->
-  <section class='twcss-flex twcss-flex-col twcss-p-10 twcss-rounded-lg twcss-bg-brandblack twcss-text-brandwhite'>
+  <section
+    style='width: 100%'
+    class='twcss-flex twcss-flex-col twcss-p-10 twcss-rounded-lg twcss-bg-brandblack twcss-text-brandwhite'
+  >
     <div class='twcss-flex twcss-flex-col twcss-gap-4 twcss-text-brandwhite twcss-text-center'>
       <h2 class='twcss-text-4xl twcss-font-bold twcss-text-brandwhite'>{{ section.settings.heading_2 }}</h2>
       <p class='twcss-text-lg twcss-text-brandwhite'>{{ section.settings.content_2 }}</p>
@@ -48,13 +51,13 @@
 
   <!-- Text and Image Grid -->
   <section class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-4'>
-    <div class='twcss-flex twcss-flex-col twcss-gap-4 twcss-text-brandblack'>
-      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-brandblack'>
+    <div class='twcss-flex twcss-flex-col twcss-gap-12 twcss-text-brandblack'>
+      <h2 class='twcss-text-4xl twcss-font-bold twcss-text-brandblack'>
         {{ section.settings.heading_3 }}
       </h2>
       <p class='twcss-text-base twcss-text-brandblack'>{{ section.settings.content_3 }}</p>
     </div>
-    <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+    <div class='twcss-flex twcss-flex-col'>
       <img
         src='{{ section.settings.image_1 | image_url: width: 700 }}'
         alt='{{ section.settings.image_1.alt | escape }}'
@@ -79,7 +82,9 @@
             class='twcss-object-contain'
             loading='lazy'
           >
-          <p class='twcss-text-2xl twcss-text-brandblack twcss-text-center'>{{ block.settings.text }}</p>
+          <p class='twcss-text-4xl twcss-text-brandblack twcss-text-center twcss-font-bolt'>
+            {{ block.settings.text }}
+          </p>
         </div>
       {% endif %}
     {% endfor %}
