@@ -57,15 +57,26 @@
       </h2>
       <p class='twcss-text-base twcss-text-brandblack'>{{ section.settings.content_3 }}</p>
     </div>
-    <div class='twcss-flex twcss-flex-col'>
-      <img
-        src='{{ section.settings.image_1 | image_url: width: 700 }}'
-        alt='{{ section.settings.image_1.alt | escape }}'
-        width='700'
-        height='auto'
-        class='twcss-object-contain'
-        loading='lazy'
-      >
+    <div class='twcss-bg-brandblack twcss-w-[700px] twcss-p-10 twcss-rounded-lg'>
+      <h3 class='twcss-text-3xl twcss-font-bold twcss-text-brandwhite twcss-text-center twcss-mb-8'>
+        {{ section.settings.surfaces_header }}
+      </h3>
+      <div class='twcss-grid twcss-grid-cols-2 twcss-gap-8'>
+        {% for block in section.blocks %}
+          {% if block.type == 'surface' %}
+            <div class='twcss-flex twcss-flex-col twcss-items-center'>
+              <img
+                src='{{ block.settings.image | image_url: width: 300 }}'
+                alt=''
+                class='twcss-object-contain twcss-mb-2'
+                width='300'
+                height='auto'
+              >
+              <div class='twcss-text-brandwhite twcss-text-center twcss-text-lg'>{{ block.settings.text }}</div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </section>
 
@@ -149,9 +160,10 @@
       "label": "Content (Section 3)"
     },
     {
-      "type": "image_picker",
-      "id": "image_1",
-      "label": "Image (Section 3)"
+      "type": "text",
+      "id": "surfaces_header",
+      "label": "Surfaces Header",
+      "default": "Unsere Oberflächen"
     },
     {
       "type": "text",
@@ -189,6 +201,22 @@
           "type": "text",
           "id": "text",
           "label": "Image Text"
+        }
+      ]
+    },
+    {
+      "type": "surface",
+      "name": "Surface Images",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
         }
       ]
     }
