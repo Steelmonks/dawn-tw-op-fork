@@ -710,6 +710,10 @@ video {
   width: auto;
 }
 
+.twcss-w-\[700px\] {
+  width: 700px;
+}
+
 .twcss-w-\[100px\] {
   width: 100px;
 }
@@ -732,10 +736,6 @@ video {
 
 .twcss-max-w-\[80px\] {
   max-width: 80px;
-}
-
-.twcss-max-w-\[700px\] {
-  max-width: 700px;
 }
 
 .twcss-max-w-\[1600px\] {
