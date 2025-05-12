@@ -57,11 +57,11 @@
       </h2>
       <p class='twcss-text-base twcss-text-brandblack'>{{ section.settings.content_3 }}</p>
     </div>
-    <div class='twcss-bg-brandblack twcss-w-[700px] twcss-p-10 twcss-rounded-lg'>
+    <div class='twcss-bg-brandblack twcss-max-w-[700px] twcss-p-10 twcss-rounded-lg twcss-items-center'>
       <h3 class='twcss-text-3xl twcss-font-bold twcss-text-brandwhite twcss-text-center twcss-mb-8'>
         {{ section.settings.surfaces_header }}
       </h3>
-      <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-8 twcss-container'>
+      <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-8'>
         {% for block in section.blocks %}
           {% if block.type == 'surface' %}
             <div class='twcss-flex twcss-flex-col twcss-items-center'>
