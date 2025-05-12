@@ -1,9 +1,9 @@
-<section class='twcss-flex twcss-flex-col twcss-gap-12' style='padding: {{ section.settings.padding }}px;'>
+<main class='twcss-flex twcss-flex-col twcss-gap-12' style='padding: {{ section.settings.padding }}px;'>
   <h1 class='twcss-text-center twcss-text-4xl twcss-font-bold'>{{ section.settings.heading }}</h1>
   <p style='font-style: italic;' class='twcss-text-center twcss-text-lg'>{{ section.settings.subheading }}</p>
   <p class='twcss-text-lg'>{{ section.settings.description }}</p>
 
-  <article class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12 twcss-bg-brandblack twcss-text-brandwhite'>
+  <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12 twcss-bg-brandblack twcss-text-brandwhite'>
     {% for block in section.blocks %}
       <div
         style='background-color:rgba(229, 231, 235, 0.12); padding: 20px;'
@@ -23,9 +23,9 @@
         <p class='twcss-text-base twcss-text-brandwhite'>{{ block.settings.description }}</p>
       </div>
     {% endfor %}
-  </article>
+  </section>
 
-  <article class='twcss-flex twcss-flex-col twcss-gap-4 twcss-p-10 twcss-rounded-lg'>
+  <section class='twcss-flex twcss-flex-col twcss-gap-4 twcss-p-10 twcss-rounded-lg'>
     <!-- Toggle Button -->
     <button
       type='button'
@@ -44,12 +44,12 @@
       <div class='powr-form-builder' id='4dd3d542_1659935817'></div>
       <script src='https://www.powr.io/powr.js?platform=shopify' defer></script>
     </div>
-  </article>
+  </section>
 
-  <article class='twcss-flex twcss-flex-col twcss-p-10'>
+  <section class='twcss-flex twcss-flex-col twcss-p-10'>
     {{ section.settings.content }}
-  </article>
-</section>
+  </section>
+</main>
 
 {% schema %}
 {

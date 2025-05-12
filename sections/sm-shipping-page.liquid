@@ -1,4 +1,4 @@
-<section class='twcss-flex twcss-flex-col twcss-gap-12' style='padding: {{ section.settings.padding }}px;'>
+<main class='twcss-flex twcss-flex-col twcss-gap-12' style='padding: {{ section.settings.padding }}px;'>
   <!-- Flex row for heading, text, and image -->
   <div class='twcss-flex twcss-justify-center twcss-items-center twcss-gap-12'>
     <!-- Text group: heading + paragraph -->
@@ -31,7 +31,7 @@
     >
   {% endif %}
 
-  <article class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12 twcss-bg-brandblack twcss-text-brandwhite'>
+  <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8 twcss-py-12 twcss-bg-brandblack twcss-text-brandwhite'>
     {% for block in section.blocks %}
       <div
         style='background-color:rgba(229, 231, 235, 0.12); padding: 20px;'
@@ -51,12 +51,12 @@
         <p class='twcss-text-base twcss-text-brandwhite'>{{ block.settings.description }}</p>
       </div>
     {% endfor %}
-  </article>
+  </section>
 
-  <article class='twcss-flex twcss-flex-col twcss-p-10'>
+  <section class='twcss-flex twcss-flex-col twcss-p-10'>
     {{ section.settings.content }}
-  </article>
-</section>
+  </section>
+</main>
 
 {% schema %}
 {
@@ -103,7 +103,7 @@
       "step": 4,
       "unit": "px",
       "label": "Section Padding",
-      "default": 24
+      "default": 40
     }
   ],
   "blocks": [
