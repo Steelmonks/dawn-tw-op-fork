@@ -61,7 +61,7 @@
       <h3 class='twcss-text-3xl twcss-font-bold twcss-text-brandwhite twcss-text-center twcss-mb-8'>
         {{ section.settings.surfaces_header }}
       </h3>
-      <div class='twcss-grid twcss-grid-cols-2 twcss-gap-8'>
+      <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-8 twcss-container'>
         {% for block in section.blocks %}
           {% if block.type == 'surface' %}
             <div class='twcss-flex twcss-flex-col twcss-items-center'>
@@ -72,7 +72,9 @@
                 width='300'
                 height='auto'
               >
-              <div class='twcss-text-brandwhite twcss-text-center twcss-text-lg'>{{ block.settings.text }}</div>
+              <div class='twcss-text-brandwhite twcss-text-center twcss-text-lg'>
+                <p>{{ block.settings.text }}</p>
+              </div>
             </div>
           {% endif %}
         {% endfor %}
