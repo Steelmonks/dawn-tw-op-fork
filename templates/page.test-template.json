@@ -249,13 +249,15 @@
         "secondary_grid_image_1": {
           "type": "secondary_grid_image",
           "settings": {
-            "text": ""
+            "image": "shopify://shop_images/IMG_5522.jpg",
+            "text": "test 1"
           }
         },
         "secondary_grid_image_2": {
           "type": "secondary_grid_image",
           "settings": {
-            "text": ""
+            "image": "shopify://shop_images/IMG_5548.jpg",
+            "text": "test 2"
           }
         }
       },
