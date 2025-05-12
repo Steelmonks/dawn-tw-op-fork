@@ -38,14 +38,17 @@
   style='background-image: url({{ section.settings.image | image_url: width: 1920 }})'
   class='twcss-min-h-[500px] twcss-w-full twcss-bg-fixed twcss-bg-center twcss-bg-no-repeat twcss-bg-cover | twcss-flex twcss-gap-12 twcss-flex-col twcss-justify-center twcss-items-center'
 >
-  <h2 class='twcss-text-[48px] twcss-leading-[56px] twcss-text-brandwhite twcss-text-4xl twcss-text-center twcss-font-bold'>
-    {{ section.settings.title }}
-  </h2>
-
-  <a
-    href='{{ section.settings.link }}'
-    class='btn btn-primary'
-  >
-    {{ section.settings.link_text }}
-  </a>
+  {% if section.settings.title != blank %}
+    <h2 class='twcss-text-[48px] twcss-leading-[56px] twcss-text-brandwhite twcss-text-4xl twcss-text-center twcss-font-bold'>
+      {{ section.settings.title }}
+    </h2>
+  {% endif %}
+  {% if section.settings.link != blank %}
+    <a
+      href='{{ section.settings.link }}'
+      class='btn btn-primary'
+    >
+      {{ section.settings.link_text }}
+    </a>
+  {% endif %}
 </div>
