@@ -249,8 +249,8 @@
         "secondary_grid_image_1": {
           "type": "secondary_grid_image",
           "settings": {
-            "image": "shopify://shop_images/IMG_5522.jpg",
-            "text": "test 1"
+            "image": "shopify://shop_images/web-icon-surface2.jpg",
+            "text": "Edelstahl"
           }
         },
         "secondary_grid_image_2": {
