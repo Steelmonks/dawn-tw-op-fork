@@ -304,7 +304,6 @@
       "name": "Surfaces Page",
       "settings": {
         "padding": 0,
-        "main_image": "shopify://shop_images/web-icon-basketball.jpg",
         "heading_1": "Cortenstahl (Rost)",
         "content_1": "<p><strong>CorTen-Stahl</strong>ist ein besonders harter Baustahl. Das Wort „CorTen“ ist der Markenname für eine wetterbeständige Stahllegierung. Wenn dieser Stahl der Umwelt ausgesetzt wird, bildet er eine äußere Platinschicht, die ihn vor Korrosion schütztDie Hauptvorteile sind:Hohe Korrosions- und Witterungsbeständigkeit, bis zu 8-mal höher als herkömmlicher Stahl, wodurch er besonders für die bei Luftkontakt auftretende natürliche Oxidation im Freien geeignet ist und eine Schutzschicht bildet, die weiteres Rosten verhindert. Darüber hinaus verleiht diese Patina ihm eine warme, braune Farbe, deren Ton im Laufe der Jahre und je nach äußerer Umgebung variiert.Corten gilt als ein Material, das „lebendig“ ist und sich selbst automatisch schützt. Wenn die Oberflächenpatina tatsächlich beschädigt oder zerkratzt ist, oxidiert sie erneut, um einen neuen Schutz aufzubauen. Dieses Regenerationsphänomen kann mehrmals auftreten, wodurch ein konstanter Schutz aufrechterhalten wird.</p><p>Cortenstahl verhält sich genau wie guter Wein. Man benötigt einen guten Rohstoff und beste Vorraussetzungen. Die gewünschte Rostpatina entwickelt sich im Laufe der Zeit, wenn das Schild den Elementen Wasser und Sonne ausgesetzt ist. Die Patina Deines Schildes wird sich im Laufe der Zeit weiter entwickeln bis dieser Rost eine Schutzschicht bildet der den darunter liegenden Stahl bedeckt.</p><p>Unser Cortenstahl ist ein besonderes Material, das für seine rostpatinierte Oberfläche bekannt ist. Cortenstahl ist ein sehr widerstandsfähiges Material, das sich selbst vor Korrosion schützt. Durch die natürliche Oxidation im Freien bildet sich eine äußere Patina, die den Stahl vor weiterem Rosten schützt. Diese Patina verleiht dem Stahl eine warme, braune Farbe, die sich im Laufe der Zeit verändert und immer wieder regeneriert, wenn die Oberflächenpatina beschädigt oder zerkratzt wird. Cortenstahl ist zu 100% recycelbar und bietet ein unvergleichliches, lebendiges Material, das sich ständig weiterentwickelt.</p>",
         "heading_2": "Abgesehen von seinem „warmen Charakter“ ist Cortenstahl zu 100% recycelbar.",
@@ -314,6 +313,16 @@
         "surfaces_header": "Unsere Oberflächen",
         "heading_4": "Edelstahl",
         "content_4": "<p>Unser Edelstahl ist ein Material, das für seine Haltbarkeit, Langlebigkeit und hygienische Eigenschaften bekannt ist. Edelstahl ist widerstandsfähig gegen Korrosion und Stöße und ist ein sehr vielseitiges Material, das in vielen verschiedenen Bereichen eingesetzt wird. Diese glänzende Oberfläche bietet eine zeitlose Eleganz, die nie aus der Mode kommt.<br/>Gebürsteter Edelstahl ist Edelstahl mit einer unidirektionalen Satinierung. Er wird hergestellt, indem er mit einer feinen Borstenbürste auf einem Riemen oder Rad poliert wird, das sich die ganze Zeit in die gleiche Richtung bewegt, und dann mit einer fettfreien Mischung oder einem mittelgroßen nicht gewebten Schleifband oder -polster erweicht wird. Es hat eine sichtbare Maserung, die eine matte Oberfläche erzeugt. Es wird aufgrund seiner Korrosionsbeständigkeit an öffentlichen Orten bzw. Im Freien eingesetzt, entwickelt aber keinen Rost und behält immer seinen schönen, silbernen Glanz.<br/><br/></p>"
+      }
+    },
+    "steelmonks_parallax_richtext_AmjXxD": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "image": "shopify://shop_images/web-icon-basketball.jpg",
+        "title": "",
+        "link_text": "",
+        "link": ""
       }
     }
   },
@@ -325,6 +334,7 @@
     "sm_shipping_page_AFTBtb",
     "sm_cancelation_page_M4RLcE",
     "sm_warranty_page_JEr4Bj",
+    "steelmonks_parallax_richtext_AmjXxD",
     "sm_surfaces_page_W9wE9q"
   ]
 }
