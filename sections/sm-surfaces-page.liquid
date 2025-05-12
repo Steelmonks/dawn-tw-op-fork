@@ -13,42 +13,44 @@
 
   <!-- Title and Text -->
   <section class='twcss-flex twcss-flex-col twcss-gap-4 twcss-p-10 twcss-rounded-lg'>
-    <h1 class='twcss-text-4xl twcss-font-bold twcss-text-brandblack'>{{ section.settings.heading }}</h1>
-    <p class='twcss-text-base twcss-text-brandblack'>{{ section.settings.content }}</p>
+    <h1 class='twcss-text-4xl twcss-font-bold twcss-text-brandblack'>{{ section.settings.heading_1 }}</h1>
+    <p class='twcss-text-base twcss-text-brandblack'>{{ section.settings.content_1 }}</p>
   </section>
 
   <!-- First Image grid -->
   <section class='twcss-grid twcss-grid-cols-2 md:twcss-grid-cols-4'>
     {% for block in section.blocks %}
-      <img
-        src='{{ block.settings.image | image_url: width: 340 }}'
-        alt='{{ block.settings.image.alt | escape  }}'
-        width='340'
-        height='100'
-        class='twcss-object-contain'
-        loading='lazy'
-      >
+      {% if block.type == 'first_grid_image' %}
+        <img
+          src='{{ block.settings.image | image_url: width: 340 }}'
+          alt='{{ block.settings.image.alt | escape  }}'
+          width='340'
+          height='100'
+          class='twcss-object-contain'
+          loading='lazy'
+        >
+      {% endif %}
     {% endfor %}
   </section>
 
   <!-- Couloured Container and Text -->
   <section class='twcss-flex twcss-flex-col twcss-p-10 twcss-rounded-lg twcss-bg-brandblack twcss-text-brandwhite'>
     <div class='twcss-flex twcss-flex-col twcss-gap-4 twcss-text-brandwhite'>
-      <h2 class='twcss-text-4xl twcss-font-bold twcss-text-brandwhite'>{{ section.settings.heading }}</h2>
-      <p class='twcss-text-lg twcss-text-brandwhite'>{{ section.settings.content }}</p>
+      <h2 class='twcss-text-4xl twcss-font-bold twcss-text-brandwhite'>{{ section.settings.heading_2 }}</h2>
+      <p class='twcss-text-lg twcss-text-brandwhite'>{{ section.settings.content_2 }}</p>
     </div>
   </section>
 
   <!-- Text and Image Grid -->
   <section class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 twcss-gap-4'>
     <div class='twcss-flex twcss-flex-col twcss-gap-4'>
-      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-brandwhite'>{{ section.settings.heading }}</h2>
-      <p class='twcss-text-base twcss-text-brandwhite'>{{ section.settings.content }}</p>
+      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-brandwhite'>{{ section.settings.heading_3 }}</h2>
+      <p class='twcss-text-base twcss-text-brandwhite'>{{ section.settings.content_3 }}</p>
     </div>
     <div class='twcss-flex twcss-flex-col twcss-gap-4'>
       <img
-        src='{{ section.settings.image | image_url: width: 700 }}'
-        alt='{{ section.settings.image.alt | escape }}'
+        src='{{ section.settings.image_1 | image_url: width: 700 }}'
+        alt='{{ section.settings.image_1.alt | escape }}'
         width='700'
         height='auto'
         class='twcss-object-contain'
@@ -60,24 +62,26 @@
   <!-- Secondary Image Grid -->
   <section class='twcss-grid twcss-grid-cols-2 twcss-gap-4'>
     {% for block in section.blocks %}
-      <div class='twcss-flex twcss-flex-col twcss-gap-4'>
-        <img
-          src='{{ block.settings.image | image_url: width: 340 }}'
-          alt='{{ block.settings.image.alt | escape  }}'
-          width='340'
-          height='100'
-          class='twcss-object-contain'
-          loading='lazy'
-        >
-        <p class='twcss-text-2xl twcss-text-brandblack'>{{ block.settings.text }}</p>
-      </div>
+      {% if block.type == 'secondary_grid_image' %}
+        <div class='twcss-flex twcss-flex-col twcss-gap-4'>
+          <img
+            src='{{ block.settings.image | image_url: width: 340 }}'
+            alt='{{ block.settings.image.alt | escape  }}'
+            width='340'
+            height='100'
+            class='twcss-object-contain'
+            loading='lazy'
+          >
+          <p class='twcss-text-2xl twcss-text-brandblack'>{{ block.settings.text }}</p>
+        </div>
+      {% endif %}
     {% endfor %}
   </section>
 
   <!-- Secondary Title and Text -->
   <section class='twcss-flex twcss-flex-col twcss-gap-4 twcss-p-10 twcss-rounded-lg'>
-    <h2 class='twcss-text-2xl twcss-font-bold twcss-text-brandblack'>{{ section.settings.heading }}</h2>
-    <p class='twcss-text-base twcss-text-brandblack'>{{ section.settings.content }}</p>
+    <h2 class='twcss-text-2xl twcss-font-bold twcss-text-brandblack'>{{ section.settings.heading_4 }}</h2>
+    <p class='twcss-text-base twcss-text-brandblack'>{{ section.settings.content_4 }}</p>
   </section>
 </main>
 
@@ -96,30 +100,71 @@
       "default": 40
     },
     {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading"
-    },
-    {
-      "type": "richtext",
-      "id": "content",
-      "label": "Content"
-    },
-    {
       "type": "image_picker",
       "id": "main_image",
       "label": "Main Image"
     },
     {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading (Section 1)"
+    },
+    {
+      "type": "richtext",
+      "id": "content_1",
+      "label": "Content (Section 1)"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading (Section 2)"
+    },
+    {
+      "type": "richtext",
+      "id": "content_2",
+      "label": "Content (Section 2)"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Heading (Section 3)"
+    },
+    {
+      "type": "richtext",
+      "id": "content_3",
+      "label": "Content (Section 3)"
+    },
+    {
       "type": "image_picker",
-      "id": "image",
-      "label": "Grid Image"
+      "id": "image_1",
+      "label": "Image (Section 3)"
+    },
+    {
+      "type": "text",
+      "id": "heading_4",
+      "label": "Heading (Section 4)"
+    },
+    {
+      "type": "richtext",
+      "id": "content_4",
+      "label": "Content (Section 4)"
     }
   ],
   "blocks": [
     {
-      "type": "image",
-      "name": "Image",
+      "type": "first_grid_image",
+      "name": "First Grid Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    },
+    {
+      "type": "secondary_grid_image",
+      "name": "Secondary Grid Image",
       "settings": [
         {
           "type": "image_picker",
