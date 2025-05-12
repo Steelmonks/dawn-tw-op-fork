@@ -1015,14 +1015,14 @@ video {
   line-height: 2.25rem;
 }
 
-.twcss-text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .twcss-text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.twcss-text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .twcss-text-\[32px\] {
