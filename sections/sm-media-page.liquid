@@ -6,7 +6,7 @@
     <h1 class='twcss-text-center twcss-text-4xl twcss-font-bold'>
       {{ section.settings.title }}
     </h1>
-    <article class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 lg:twcss-grid-cols-3 twcss-gap-4'>
+    <article class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-gap-4'>
       <!-- Hero Image 1 -->
       <div
         style='background-image: url({{ section.settings.hero_image1 | image_url: width: 400 }})'
@@ -57,7 +57,7 @@
     </button>
     <div
       id='dropdown-1'
-      class='twcss-bg-white twcss-gap-4 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
+      class='twcss-bg-white twcss-gap-8 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
     >
       <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack'>
         {{ section.settings.button1_heading }}
@@ -97,8 +97,8 @@
           <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button1_img3_title }}</h3>
           <div class='twcss-text-base twcss-text-center'>{{ section.settings.button1_img3_richtext }}</div>
         </div>
-        <p class='twcss-text-center twcss-text-brandblack'>{{ section.settings.button1_bottom_text }}</p>
       </div>
+      <p class='twcss-text-center twcss-text-brandblack'>{{ section.settings.button1_bottom_text }}</p>
     </div>
 
     <!-- Button 2 -->
@@ -157,7 +157,7 @@
     <!-- Button 3 -->
     <button
       type='button'
-      class='twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
+      class='twcss-items-center twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
       onclick="document.getElementById('dropdown-3').classList.toggle('twcss-hidden')"
     >
       {{ section.settings.button3_text }}
