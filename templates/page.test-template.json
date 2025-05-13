@@ -365,11 +365,11 @@
         "button2_img3_title": "Fasten",
         "button2_img3_richtext": "",
         "button3_text": "Show Text",
-        "button3_richtext": "",
-        "button3_heading": "",
-        "button3_button1_text": "",
-        "button3_button2_text": "",
-        "button3_bottom_text": ""
+        "button3_richtext": "<p>testeasdasd</p>",
+        "button3_heading": "test",
+        "button3_button1_text": "test",
+        "button3_button2_text": "test",
+        "button3_bottom_text": "test"
       }
     }
   },
