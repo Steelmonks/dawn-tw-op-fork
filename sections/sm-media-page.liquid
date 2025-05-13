@@ -48,143 +48,149 @@
 
   <section class='twcss-flex twcss-flex-col twcss-gap-8 twcss-items-center'>
     <!-- Button 1 -->
-    <button
-      type='button'
-      class='twcss-w-full twcss-mx-auto twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-text-center'
-      onclick="document.getElementById('dropdown-1').classList.toggle('twcss-hidden')"
-    >
-      {{ section.settings.button1_text }}
-    </button>
-    <div
-      id='dropdown-1'
-      class='twcss-bg-white twcss-gap-8 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
-    >
-      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack twcss-mb-4'>
-        {{ section.settings.button1_heading }}
-      </h2>
-      <p class='twcss-text-lg twcss-text-center twcss-text-brandblack twcss-mb-4'>
-        {{ section.settings.button1_subheading }}
-      </p>
-      <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6 twcss-h-[600px] twcss-mb-4'>
-        <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
-          <img
-            src='{{ section.settings.button1_img1 | image_url: width: 400 }}'
-            alt='{{ section.settings.button1_img1_title | escape }}'
-            class='twcss-rounded-md twcss-mb-2'
-            width='400'
-            height='auto'
-          >
-          <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button1_img1_title }}</h3>
-          <div class='twcss-text-base twcss-text-center'>{{ section.settings.button1_img1_richtext }}</div>
+    <div class='twcss-w-full twcss-max-w-[1200px] twcss-mx-auto'>
+      <button
+        type='button'
+        class='twcss-w-full twcss-mx-auto twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-text-center'
+        onclick="document.getElementById('dropdown-1').classList.toggle('twcss-hidden')"
+      >
+        {{ section.settings.button1_text }}
+      </button>
+      <div
+        id='dropdown-1'
+        class='twcss-bg-white twcss-gap-8 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
+      >
+        <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack twcss-mb-4'>
+          {{ section.settings.button1_heading }}
+        </h2>
+        <p class='twcss-text-lg twcss-text-center twcss-text-brandblack twcss-mb-4'>
+          {{ section.settings.button1_subheading }}
+        </p>
+        <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6 twcss-h-[600px] twcss-mb-4'>
+          <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+            <img
+              src='{{ section.settings.button1_img1 | image_url: width: 400 }}'
+              alt='{{ section.settings.button1_img1_title | escape }}'
+              class='twcss-rounded-md twcss-mb-2'
+              width='400'
+              height='auto'
+            >
+            <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button1_img1_title }}</h3>
+            <div class='twcss-text-base twcss-text-center'>{{ section.settings.button1_img1_richtext }}</div>
+          </div>
+          <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+            <img
+              src='{{ section.settings.button1_img2 | image_url: width: 400 }}'
+              alt='{{ section.settings.button1_img2_title | escape }}'
+              class='twcss-rounded-md twcss-mb-2'
+              width='400'
+              height='auto'
+            >
+            <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button1_img2_title }}</h3>
+            <div class='twcss-text-base twcss-text-center'>{{ section.settings.button1_img2_richtext }}</div>
+          </div>
+          <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+            <img
+              src='{{ section.settings.button1_img3 | image_url: width: 400 }}'
+              alt='{{ section.settings.button1_img3_title | escape }}'
+              class='twcss-rounded-md twcss-mb-2'
+              width='400'
+              height='auto'
+            >
+            <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button1_img3_title }}</h3>
+            <div class='twcss-text-base twcss-text-center'>{{ section.settings.button1_img3_richtext }}</div>
+          </div>
         </div>
-        <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
-          <img
-            src='{{ section.settings.button1_img2 | image_url: width: 400 }}'
-            alt='{{ section.settings.button1_img2_title | escape }}'
-            class='twcss-rounded-md twcss-mb-2'
-            width='400'
-            height='auto'
-          >
-          <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button1_img2_title }}</h3>
-          <div class='twcss-text-base twcss-text-center'>{{ section.settings.button1_img2_richtext }}</div>
-        </div>
-        <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
-          <img
-            src='{{ section.settings.button1_img3 | image_url: width: 400 }}'
-            alt='{{ section.settings.button1_img3_title | escape }}'
-            class='twcss-rounded-md twcss-mb-2'
-            width='400'
-            height='auto'
-          >
-          <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button1_img3_title }}</h3>
-          <div class='twcss-text-base twcss-text-center'>{{ section.settings.button1_img3_richtext }}</div>
-        </div>
+        <p class='twcss-text-center twcss-text-brandblack'>{{ section.settings.button1_bottom_text }}</p>
       </div>
-      <p class='twcss-text-center twcss-text-brandblack'>{{ section.settings.button1_bottom_text }}</p>
     </div>
 
     <!-- Button 2 -->
-    <button
-      type='button'
-      class='twcss-mx-auto twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
-      onclick="document.getElementById('dropdown-2').classList.toggle('twcss-hidden')"
-    >
-      {{ section.settings.button2_text }}
-    </button>
-    <div
-      id='dropdown-2'
-      class='twcss-bg-white twcss-gap-4 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
-    >
-      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack'>
-        {{ section.settings.button2_heading }}
-      </h2>
-      <p class='twcss-text-lg twcss-text-center twcss-text-brandblack'>{{ section.settings.button2_subheading }}</p>
-      <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6 twcss-h-[600px]'>
-        <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
-          <img
-            src='{{ section.settings.button2_img1 | image_url: width: 400 }}'
-            alt='{{ section.settings.button2_img1_title | escape }}'
-            class='twcss-rounded-md twcss-mb-2'
-            width='400'
-            height='auto'
-          >
-          <h3 class='twcss-text-xl twcss-font-bold'>{{ section.settings.button2_img1_title }}</h3>
-          <div class='twcss-text-base'>{{ section.settings.button2_img1_richtext }}</div>
-        </div>
-        <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
-          <img
-            src='{{ section.settings.button2_img2 | image_url: width: 400 }}'
-            alt='{{ section.settings.button2_img2_title | escape }}'
-            class='twcss-rounded-md twcss-mb-2'
-            width='400'
-            height='auto'
-          >
-          <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button2_img2_title }}</h3>
-          <div class='twcss-text-base twcss-text-center'>{{ section.settings.button2_img2_richtext }}</div>
-        </div>
-        <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
-          <img
-            src='{{ section.settings.button2_img3 | image_url: width: 400 }}'
-            alt='{{ section.settings.button2_img3_title | escape }}'
-            class='twcss-rounded-md twcss-mb-2'
-            width='400'
-            height='auto'
-          >
-          <h3 class='twcss-text-xl twcss-font-bold'>{{ section.settings.button2_img3_title }}</h3>
-          <div class='twcss-text-base'>{{ section.settings.button2_img3_richtext }}</div>
+    <div class='twcss-w-full twcss-max-w-[1200px] twcss-mx-auto'>
+      <button
+        type='button'
+        class='twcss-mx-auto twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
+        onclick="document.getElementById('dropdown-2').classList.toggle('twcss-hidden')"
+      >
+        {{ section.settings.button2_text }}
+      </button>
+      <div
+        id='dropdown-2'
+        class='twcss-bg-white twcss-gap-4 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
+      >
+        <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack'>
+          {{ section.settings.button2_heading }}
+        </h2>
+        <p class='twcss-text-lg twcss-text-center twcss-text-brandblack'>{{ section.settings.button2_subheading }}</p>
+        <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6 twcss-h-[600px]'>
+          <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+            <img
+              src='{{ section.settings.button2_img1 | image_url: width: 400 }}'
+              alt='{{ section.settings.button2_img1_title | escape }}'
+              class='twcss-rounded-md twcss-mb-2'
+              width='400'
+              height='auto'
+            >
+            <h3 class='twcss-text-xl twcss-font-bold'>{{ section.settings.button2_img1_title }}</h3>
+            <div class='twcss-text-base'>{{ section.settings.button2_img1_richtext }}</div>
+          </div>
+          <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+            <img
+              src='{{ section.settings.button2_img2 | image_url: width: 400 }}'
+              alt='{{ section.settings.button2_img2_title | escape }}'
+              class='twcss-rounded-md twcss-mb-2'
+              width='400'
+              height='auto'
+            >
+            <h3 class='twcss-text-xl twcss-font-bold twcss-text-center'>{{ section.settings.button2_img2_title }}</h3>
+            <div class='twcss-text-base twcss-text-center'>{{ section.settings.button2_img2_richtext }}</div>
+          </div>
+          <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
+            <img
+              src='{{ section.settings.button2_img3 | image_url: width: 400 }}'
+              alt='{{ section.settings.button2_img3_title | escape }}'
+              class='twcss-rounded-md twcss-mb-2'
+              width='400'
+              height='auto'
+            >
+            <h3 class='twcss-text-xl twcss-font-bold'>{{ section.settings.button2_img3_title }}</h3>
+            <div class='twcss-text-base'>{{ section.settings.button2_img3_richtext }}</div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Button 3 -->
-    <button
-      type='button'
-      class='twcss-mx-auto twcss-items-center twcss-justify-center twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
-      onclick="document.getElementById('dropdown-3').classList.toggle('twcss-hidden')"
-    >
-      {{ section.settings.button3_text }}
-    </button>
-    <div
-      id='dropdown-3'
-      class='twcss-bg-white twcss-gap-8 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
-    >
-      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack'>
-        {{ section.settings.button3_heading }}
-      </h2>
-      <p class='twcss-text-base'>{{ section.settings.button3_richtext }}</p>
-      <a
-        href='tel:+4922195673422'
-        class='twcss-w-[120px] twcss-h-[50px] twcss-text-2xl twcss-text-center twcss-font-bold twcss-bg-brandblue twcss-text-brandwhite twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-text-yellow-500 twcss-cursor-pointer'
+    <div class='twcss-w-full twcss-max-w-[1200px] twcss-mx-auto'>
+      <button
+        type='button'
+        class='twcss-mx-auto twcss-items-center twcss-justify-center twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
+        onclick="document.getElementById('dropdown-3').classList.toggle('twcss-hidden')"
       >
-        {{ section.settings.button3_button1_text }}
-      </a>
-      <a
-        href='mailto:info@signmaker.de'
-        class='twcss-w-[120px] twcss-h-[50px] twcss-text-2xl twcss-text-center twcss-font-bold twcss-bg-brandblue twcss-text-brandwhite twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-text-yellow-500 twcss-cursor-pointer'
+        {{ section.settings.button3_text }}
+      </button>
+      <div
+        id='dropdown-3'
+        class='twcss-bg-white twcss-gap-8 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
       >
-        {{ section.settings.button3_button2_text }}
-      </a>
-      <p class='twcss-text-center twcss-text-brandblack'>{{ section.settings.button3_bottom_text }}</p>
+        <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack'>
+          {{ section.settings.button3_heading }}
+        </h2>
+        <p class='twcss-text-base'>{{ section.settings.button3_richtext }}</p>
+        <a
+          href='tel:+4922195673422'
+          class='twcss-w-[120px] twcss-h-[50px] twcss-text-2xl twcss-text-center twcss-font-bold twcss-bg-brandblue twcss-text-brandwhite twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-text-yellow-500 twcss-cursor-pointer'
+        >
+          {{ section.settings.button3_button1_text }}
+        </a>
+        <a
+          href='mailto:info@signmaker.de'
+          class='twcss-w-[120px] twcss-h-[50px] twcss-text-2xl twcss-text-center twcss-font-bold twcss-bg-brandblue twcss-text-brandwhite twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-text-yellow-500 twcss-cursor-pointer'
+        >
+          {{ section.settings.button3_button2_text }}
+        </a>
+        <p class='twcss-text-center twcss-text-brandblack'>{{ section.settings.button3_bottom_text }}</p>
+      </div>
     </div>
   </section>
 </main>
