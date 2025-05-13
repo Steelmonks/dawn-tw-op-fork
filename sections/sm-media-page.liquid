@@ -6,21 +6,44 @@
     <h1 class='twcss-text-center twcss-text-4xl twcss-font-bold'>
       {{ section.settings.title }}
     </h1>
-    <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 lg:twcss-grid-cols-3 twcss-gap-4'>
-      {% for block in section.blocks %}
-        {% if block.type == 'image' %}
-          <div
-            style='background-image: url({{ block.settings.image | image_url: width: 400 }})'
-            class='twcss-flex twcss-flex-col twcss-gap-4 twcss-items-center twcss-justify-center twcss-max-w-[400px] twcss-max-h-[400px] twcss-bg-cover twcss-bg-center twcss-bg-no-repeat twcss-p-10'
-          >
-            <h2 class='twcss-text-3xl twcss-font-bold twcss-text-center twcss-text-brandwhite'>
-              {{ block.settings.title }}
-            </h2>
-            <p class='twcss-text-lg twcss-italic twcss-text-center twcss-text-brandwhite'>{{ block.settings.text }}</p>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+    <article class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 lg:twcss-grid-cols-3 twcss-gap-4'>
+      <!-- Hero Image 1 -->
+      <div
+        style='background-image: url({{ section.settings.hero_image1 | image_url: width: 400 }})'
+        class='twcss-flex twcss-flex-col twcss-gap-4 twcss-items-center twcss-justify-center twcss-max-w-[400px] twcss-max-h-[400px] twcss-bg-cover twcss-bg-center twcss-bg-no-repeat twcss-p-10'
+      >
+        <h2 class='twcss-text-3xl twcss-font-bold twcss-text-center twcss-text-brandwhite'>
+          {{ section.settings.hero_image1_title }}
+        </h2>
+        <p class='twcss-text-lg twcss-italic twcss-text-center twcss-text-brandwhite'>
+          {{ section.settings.hero_image1_text }}
+        </p>
+      </div>
+      <!-- Hero Image 2 -->
+      <div
+        style='background-image: url({{ section.settings.hero_image2 | image_url: width: 400 }})'
+        class='twcss-flex twcss-flex-col twcss-gap-4 twcss-items-center twcss-justify-center twcss-max-w-[400px] twcss-max-h-[400px] twcss-bg-cover twcss-bg-center twcss-bg-no-repeat twcss-p-10'
+      >
+        <h2 class='twcss-text-3xl twcss-font-bold twcss-text-center twcss-text-brandwhite'>
+          {{ section.settings.hero_image2_title }}
+        </h2>
+        <p class='twcss-text-lg twcss-italic twcss-text-center twcss-text-brandwhite'>
+          {{ section.settings.hero_image2_text }}
+        </p>
+      </div>
+      <!-- Hero Image 3 -->
+      <div
+        style='background-image: url({{ section.settings.hero_image3 | image_url: width: 400 }})'
+        class='twcss-flex twcss-flex-col twcss-gap-4 twcss-items-center twcss-justify-center twcss-max-w-[400px] twcss-max-h-[400px] twcss-bg-cover twcss-bg-center twcss-bg-no-repeat twcss-p-10'
+      >
+        <h2 class='twcss-text-3xl twcss-font-bold twcss-text-center twcss-text-brandwhite'>
+          {{ section.settings.hero_image3_title }}
+        </h2>
+        <p class='twcss-text-lg twcss-italic twcss-text-center twcss-text-brandwhite'>
+          {{ section.settings.hero_image3_text }}
+        </p>
+      </div>
+    </article>
   </section>
 
   <section class='twcss-flex twcss-flex-col twcss-gap-8 twcss-items-center'>
@@ -183,6 +206,51 @@
       "id": "title",
       "label": "Title",
       "default": "Media Page"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image1",
+      "label": "Hero Image 1"
+    },
+    {
+      "type": "text",
+      "id": "hero_image1_title",
+      "label": "Hero Image 1 Title"
+    },
+    {
+      "type": "text",
+      "id": "hero_image1_text",
+      "label": "Hero Image 1 Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image2",
+      "label": "Hero Image 2"
+    },
+    {
+      "type": "text",
+      "id": "hero_image2_title",
+      "label": "Hero Image 2 Title"
+    },
+    {
+      "type": "text",
+      "id": "hero_image2_text",
+      "label": "Hero Image 2 Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image3",
+      "label": "Hero Image 3"
+    },
+    {
+      "type": "text",
+      "id": "hero_image3_title",
+      "label": "Hero Image 3 Title"
+    },
+    {
+      "type": "text",
+      "id": "hero_image3_text",
+      "label": "Hero Image 3 Text"
     },
     {
       "type": "text",
@@ -349,31 +417,6 @@
       "type": "text",
       "id": "button3_bottom_text",
       "label": "Button 3 Bottom Text"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "image",
-      "name": "Image Block",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Image Title"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text",
-          "default": "Image description"
-        }
-      ]
     }
   ],
   "presets": [
