@@ -326,39 +326,6 @@
         "heading_4": "Edelstahl",
         "content_4": "<p>Unser Edelstahl ist ein Material, das für seine Haltbarkeit, Langlebigkeit und hygienische Eigenschaften bekannt ist. Edelstahl ist widerstandsfähig gegen Korrosion und Stöße und ist ein sehr vielseitiges Material, das in vielen verschiedenen Bereichen eingesetzt wird. Diese glänzende Oberfläche bietet eine zeitlose Eleganz, die nie aus der Mode kommt.<br/>Gebürsteter Edelstahl ist Edelstahl mit einer unidirektionalen Satinierung. Er wird hergestellt, indem er mit einer feinen Borstenbürste auf einem Riemen oder Rad poliert wird, das sich die ganze Zeit in die gleiche Richtung bewegt, und dann mit einer fettfreien Mischung oder einem mittelgroßen nicht gewebten Schleifband oder -polster erweicht wird. Es hat eine sichtbare Maserung, die eine matte Oberfläche erzeugt. Es wird aufgrund seiner Korrosionsbeständigkeit an öffentlichen Orten bzw. Im Freien eingesetzt, entwickelt aber keinen Rost und behält immer seinen schönen, silbernen Glanz.<br/><br/></p>"
       }
-    },
-    "sm_media_page_JPync4": {
-      "type": "sm-media-page",
-      "name": "Media Page",
-      "settings": {
-        "section_padding": 36,
-        "title": "Media Page",
-        "button1_text": "Show Heading & Subheading",
-        "button1_heading": "How to attach your sign",
-        "button1_subheading": "Instructions and details for attaching your sign.",
-        "button1_img1_title": "bolt",
-        "button1_img1_richtext": "",
-        "button1_img2_title": "Threaded pins",
-        "button1_img2_richtext": "",
-        "button1_img3_title": "Fasten",
-        "button1_img3_richtext": "",
-        "button1_bottom_text": "",
-        "button2_text": "Show Image Grid",
-        "button2_heading": "",
-        "button2_subheading": "",
-        "button2_img1_title": "bolt",
-        "button2_img1_richtext": "",
-        "button2_img2_title": "Threaded pins",
-        "button2_img2_richtext": "",
-        "button2_img3_title": "Fasten",
-        "button2_img3_richtext": "",
-        "button3_text": "Show Text",
-        "button3_richtext": "",
-        "button3_heading": "",
-        "button3_button1_text": "",
-        "button3_button2_text": "",
-        "button3_bottom_text": ""
-      }
     }
   },
   "order": [
@@ -370,7 +337,6 @@
     "sm_cancelation_page_M4RLcE",
     "sm_warranty_page_JEr4Bj",
     "steelmonks_parallax_richtext_AmjXxD",
-    "sm_surfaces_page_W9wE9q",
-    "sm_media_page_JPync4"
+    "sm_surfaces_page_W9wE9q"
   ]
 }
