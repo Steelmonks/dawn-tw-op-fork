@@ -7,7 +7,7 @@
       {{ section.settings.title }}
     </h1>
     <div class='twcss-grid twcss-grid-cols-1 md:twcss-grid-cols-2 lg:twcss-grid-cols-3 twcss-gap-4'>
-      {% for block in section.image_blocks %}
+      {% for block in section.blocks %}
         {% if block.type == 'image' %}
           <div
             style='background-image: url({{ block.settings.image | image_url: width: 400 }})'
@@ -27,7 +27,7 @@
     <!-- Button 1 -->
     <button
       type='button'
-      class='twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
+      class='twcss-w-full twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-text-center'
       onclick="document.getElementById('dropdown-1').classList.toggle('twcss-hidden')"
     >
       {{ section.settings.button1_text }}
@@ -197,7 +197,7 @@
       "default": "How to attach your sign"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "button1_subheading",
       "label": "Button 1 Subheading",
       "default": "Instructions and details for attaching your sign."
@@ -267,7 +267,7 @@
       "label": "Button 2 Heading"
     },
     {
-      "type": "text",
+      "type": "richtext",
       "id": "button2_subheading",
       "label": "Button 2 Subheading"
     },
