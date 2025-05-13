@@ -333,8 +333,9 @@
         "image_EKF8TW": {
           "type": "image",
           "settings": {
-            "title": "Image Title",
-            "text": "Image description"
+            "image": "shopify://shop_images/IMG_4918_b6ac2d03-4616-4a40-8723-8c31f2946547.jpg",
+            "title": "Fastening",
+            "text": "You can find instructions for attaching your sign here."
           }
         },
         "image_KjJMPk": {
