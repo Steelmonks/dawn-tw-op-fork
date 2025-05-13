@@ -329,37 +329,6 @@
     },
     "sm_media_page_zVh8cy": {
       "type": "sm-media-page",
-      "blocks": {
-        "image_EKF8TW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_4918_b6ac2d03-4616-4a40-8723-8c31f2946547.jpg",
-            "title": "Befestigung",
-            "text": "Die Anleitung zur Befestigung Deines Schildes findest Du hier."
-          }
-        },
-        "image_KjJMPk": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_4921_c4211de0-09f5-491a-8969-5293d89a8130.jpg",
-            "title": "Cortenstahl",
-            "text": "Pflegeanweisungen und Rostpatina"
-          }
-        },
-        "image_ApQjtW": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_4925_bbc321e9-5c10-4bf8-a1a2-cae78624dc62.jpg",
-            "title": "Kontakt",
-            "text": "Wir sind für Dich da. Hier findest Du unsere Konaktdaten."
-          }
-        }
-      },
-      "block_order": [
-        "image_EKF8TW",
-        "image_KjJMPk",
-        "image_ApQjtW"
-      ],
       "name": "Media Page",
       "settings": {
         "section_padding": 40,
