@@ -50,7 +50,7 @@
     <!-- Button 1 -->
     <button
       type='button'
-      class='twcss-w-full twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-text-center'
+      class='twcss-w-full twcss-mx-auto twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-text-center'
       onclick="document.getElementById('dropdown-1').classList.toggle('twcss-hidden')"
     >
       {{ section.settings.button1_text }}
@@ -59,11 +59,13 @@
       id='dropdown-1'
       class='twcss-bg-white twcss-gap-8 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
     >
-      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack'>
+      <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack twcss-mb-4'>
         {{ section.settings.button1_heading }}
       </h2>
-      <p class='twcss-text-lg twcss-text-center twcss-text-brandblack'>{{ section.settings.button1_subheading }}</p>
-      <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6'>
+      <p class='twcss-text-lg twcss-text-center twcss-text-brandblack twcss-mb-4'>
+        {{ section.settings.button1_subheading }}
+      </p>
+      <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6 twcss-h-[600px] twcss-mb-4'>
         <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
           <img
             src='{{ section.settings.button1_img1 | image_url: width: 400 }}'
@@ -104,7 +106,7 @@
     <!-- Button 2 -->
     <button
       type='button'
-      class='twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
+      class='twcss-mx-auto twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
       onclick="document.getElementById('dropdown-2').classList.toggle('twcss-hidden')"
     >
       {{ section.settings.button2_text }}
@@ -117,7 +119,7 @@
         {{ section.settings.button2_heading }}
       </h2>
       <p class='twcss-text-lg twcss-text-center twcss-text-brandblack'>{{ section.settings.button2_subheading }}</p>
-      <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6'>
+      <div class='twcss-grid twcss-grid-cols-1 lg:twcss-grid-cols-3 twcss-items-center twcss-gap-6 twcss-h-[600px]'>
         <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'>
           <img
             src='{{ section.settings.button2_img1 | image_url: width: 400 }}'
@@ -157,19 +159,19 @@
     <!-- Button 3 -->
     <button
       type='button'
-      class='twcss-items-center twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
+      class='twcss-mx-auto twcss-items-center twcss-justify-center twcss-text-2xl twcss-font-bold twcss-bg-brandwhite twcss-text-brandblack twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-bg-brandblack hover:twcss-text-brandwhite twcss-cursor-pointer twcss-w-full twcss-text-center'
       onclick="document.getElementById('dropdown-3').classList.toggle('twcss-hidden')"
     >
       {{ section.settings.button3_text }}
     </button>
     <div
       id='dropdown-3'
-      class='twcss-bg-white twcss-gap-4 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
+      class='twcss-bg-white twcss-gap-8 twcss-p-6 twcss-rounded-lg twcss-shadow twcss-mt-4 twcss-w-full twcss-hidden'
     >
       <h2 class='twcss-text-2xl twcss-font-bold twcss-text-center twcss-text-brandblack'>
         {{ section.settings.button3_heading }}
       </h2>
-      <div class='twcss-text-base'>{{ section.settings.button3_richtext }}</div>
+      <p class='twcss-text-base'>{{ section.settings.button3_richtext }}</p>
       <a
         href='tel:+4922195673422'
         class='twcss-w-[120px] twcss-h-[50px] twcss-text-2xl twcss-text-center twcss-font-bold twcss-bg-brandblue twcss-text-brandwhite twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-text-yellow-500 twcss-cursor-pointer'
