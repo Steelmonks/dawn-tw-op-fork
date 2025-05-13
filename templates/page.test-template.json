@@ -341,15 +341,17 @@
         "image_KjJMPk": {
           "type": "image",
           "settings": {
-            "title": "Corten steel",
-            "text": "Care instructions and rust patina"
+            "image": "shopify://shop_images/IMG_4921_c4211de0-09f5-491a-8969-5293d89a8130.jpg",
+            "title": "Cortenstahl",
+            "text": "Pflegeanweisungen und Rostpatina"
           }
         },
         "image_ApQjtW": {
           "type": "image",
           "settings": {
-            "title": "Image Title",
-            "text": "Image description"
+            "image": "shopify://shop_images/IMG_4925_bbc321e9-5c10-4bf8-a1a2-cae78624dc62.jpg",
+            "title": "Kontakt",
+            "text": "Wir sind für Dich da. Hier findest Du unsere Konaktdaten."
           }
         }
       },
@@ -363,7 +365,7 @@
         "section_padding": 40,
         "title": "Nützliches und Hilfreiches zu Deinem Produkt",
         "button1_text": "Show Heading & Subheading",
-        "button1_heading": "How to attach your sign",
+        "button1_heading": "Befestigung",
         "button1_subheading": "Instructions and details for attaching your sign.",
         "button1_img1_title": "bolt",
         "button1_img1_richtext": "",
