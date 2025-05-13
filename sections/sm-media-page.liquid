@@ -170,18 +170,18 @@
         {{ section.settings.button3_heading }}
       </h2>
       <div class='twcss-text-base'>{{ section.settings.button3_richtext }}</div>
-      <button
+      <a
         href='tel:+4922195673422'
         class='twcss-w-[120px] twcss-h-[50px] twcss-text-2xl twcss-text-center twcss-font-bold twcss-bg-brandblue twcss-text-brandwhite twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-text-yellow-500 twcss-cursor-pointer'
       >
         {{ section.settings.button3_button1_text }}
-      </button>
-      <button
+      </a>
+      <a
         href='mailto:info@signmaker.de'
         class='twcss-w-[120px] twcss-h-[50px] twcss-text-2xl twcss-text-center twcss-font-bold twcss-bg-brandblue twcss-text-brandwhite twcss-border-2 twcss-border-brandblack twcss-px-4 twcss-py-2 twcss-rounded-md twcss-transition-all twcss-duration-300 twcss-ease-in-out hover:twcss-text-yellow-500 twcss-cursor-pointer'
       >
         {{ section.settings.button3_button2_text }}
-      </button>
+      </a>
       <p class='twcss-text-center twcss-text-brandblack'>{{ section.settings.button3_bottom_text }}</p>
     </div>
   </section>
@@ -189,7 +189,7 @@
 
 {% schema %}
 {
-  "name": "Media Page test",
+  "name": "Media Page",
   "settings": [
     {
       "type": "range",
@@ -421,7 +421,7 @@
   ],
   "presets": [
     {
-      "name": "Media Page test"
+      "name": "Media Page"
     }
   ]
 }
