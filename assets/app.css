@@ -617,12 +617,12 @@ video {
   margin-top: 0.25rem;
 }
 
-.twcss-mb-8 {
-  margin-bottom: 2rem;
-}
-
 .twcss-mb-4 {
   margin-bottom: 1rem;
+}
+
+.twcss-mb-8 {
+  margin-bottom: 2rem;
 }
 
 .twcss-mb-12 {
@@ -659,6 +659,10 @@ video {
 
 .twcss-h-8 {
   height: 2rem;
+}
+
+.twcss-h-\[600px\] {
+  height: 600px;
 }
 
 .twcss-h-\[50px\] {
