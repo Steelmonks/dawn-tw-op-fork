@@ -367,12 +367,12 @@
         "button2_img3": "shopify://shop_images/IMG_5446_917f58bb-b2d4-4ee2-8dd2-d5fc449a1c44.jpg",
         "button2_img3_title": "Pflege",
         "button2_img3_richtext": "<p>Wenn Du dem Rostprozess seinen natürlichen Lauf läßt, bleibt das Material selbst auch Jahrzehnte lang bestehen.</p><p> </p><p>Die orangegelbe Rostoptik könnte aber im Laufe der Zeit immer dunkler bis hin zu einem schwarzbraunem Rostton werden.</p>",
-        "button3_text": "Show Text",
-        "button3_richtext": "<p>testeasdasd</p>",
-        "button3_heading": "test",
-        "button3_button1_text": "test",
-        "button3_button2_text": "test",
-        "button3_bottom_text": "test"
+        "button3_text": "Kontakt",
+        "button3_richtext": "<p>Hast Du Fragen zu Deiner Bestellung? Oder möchtest Du vielleicht ein Feedback hinterlassen?</p><p>Wir freuen uns zu hören wie glücklich Du mit Deinem Schild oder Anhänger bist! :)</p><p>Wir sind Montag bis Freitags von 8.00 bis 16.00 Uhr telefonisch erreichbar unter <strong>+49 221 956 73422.</strong></p><p>Oder schreib uns eine Email an <strong>info@steelmonks.com</strong></p>",
+        "button3_heading": "So kannst Du uns erreichen",
+        "button3_button1_text": "Jetzt anrufen",
+        "button3_button2_text": "Jetzt anrufen",
+        "button3_bottom_text": "Wir sind Montag bis Freitag von 8.00 bis 16.00 Uhr für Dich da."
       }
     }
   },
