@@ -754,8 +754,8 @@ video {
   max-width: 400px;
 }
 
-.twcss-max-w-\[1200px\] {
-  max-width: 1200px;
+.twcss-max-w-2xl {
+  max-width: 42rem;
 }
 
 .twcss-max-w-\[700px\] {
