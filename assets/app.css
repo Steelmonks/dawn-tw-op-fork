@@ -661,12 +661,12 @@ video {
   height: 2rem;
 }
 
-.twcss-h-\[530px\] {
-  height: 530px;
+.twcss-h-\[550px\] {
+  height: 550px;
 }
 
-.twcss-h-\[500px\] {
-  height: 500px;
+.twcss-h-\[520px\] {
+  height: 520px;
 }
 
 .twcss-h-\[50px\] {
@@ -993,6 +993,11 @@ video {
 .twcss-py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.twcss-py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .twcss-py-8 {
