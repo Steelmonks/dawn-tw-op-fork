@@ -661,8 +661,12 @@ video {
   height: 2rem;
 }
 
-.twcss-h-\[600px\] {
-  height: 600px;
+.twcss-h-\[530px\] {
+  height: 530px;
+}
+
+.twcss-h-\[500px\] {
+  height: 500px;
 }
 
 .twcss-h-\[50px\] {
@@ -812,6 +816,10 @@ video {
 
 .twcss-grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.twcss-flex-row {
+  flex-direction: row;
 }
 
 .twcss-flex-col {
