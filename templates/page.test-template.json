@@ -329,6 +329,7 @@
     },
     "sm_media_page_HGNzTj": {
       "type": "sm-media-page",
+      "disabled": true,
       "name": "Media Page",
       "settings": {
         "section_padding": 60,
