@@ -120,7 +120,7 @@
     "product": {
       "add_to_cart": "In den Warenkorb legen",
       "description": "Beschreibung",
-      "on_sale": "Sale",
+      "on_sale": "Nur kurz!",
       "quantity": {
         "label": "Anzahl",
         "input_label": "Anzahl von {{ product }}",
