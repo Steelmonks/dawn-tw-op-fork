@@ -1,6 +1,27 @@
 <!doctype html>
 <html class='js' lang='{{ request.locale.iso_code }}'>
   <head>
+    {% comment %} ? START: Pandectes Rules {% endcomment %}
+    <script src='{{ 'pandectes-rules.js' | file_url }}'></script>
+    {% comment %} ? END: Pandectes Rules {% endcomment %}
+
+    {% comment %} * Google Tag Manager {% endcomment %}
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MBNXHGF');
+    </script>
+    <!-- End Google Tag Manager -->
+    {% comment %} * End Google Tag Manager {% endcomment %}
+
     {% comment %} ! START: Snippet for adding a custom script to the theme {% endcomment %}
     {% render 'steelmonks-custom-snippets' %}
     {% comment %} ! END: Snippet for adding a custom script to the theme {% endcomment %}
