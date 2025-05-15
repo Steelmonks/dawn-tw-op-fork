@@ -19,6 +19,14 @@
             "text": "{{ product.vendor }}"
           }
         },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_quantity_selector": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -33,23 +41,10 @@
           "type": "price",
           "settings": {}
         },
-        "trusted_shops_reviews_and_more_product_review_list_extension_ywTbWf": {
-          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/product-review-list-extension/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "options_threshold": 10
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "disabled": true,
-          "settings": {
-            "enable_quantity_selector": true,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
           }
         },
         "description": {
@@ -70,12 +65,11 @@
       },
       "block_order": [
         "vendor",
+        "buy_buttons",
         "title",
         "caption",
         "price",
-        "trusted_shops_reviews_and_more_product_review_list_extension_ywTbWf",
         "variant_picker",
-        "buy_buttons",
         "description",
         "zepto_product_personalizer_product_personalizer_page_bj6dEi",
         "trusted_shops_reviews_and_more_trusted_stars_aNyqUW"
