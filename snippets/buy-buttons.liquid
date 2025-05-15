@@ -10,12 +10,7 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<!--
-  Added pplr_add_to_cart class to ensure this container is always displayed,
-  even when the Zepto personalizer is active.
-  Added twcss-w-full class for proper width with Tailwind CSS.
--->
-<div {{ block.shopify_attributes }} class='twcss-w-full pplr_add_to_cart'>
+<div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -65,18 +60,7 @@
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
 
-        <!--
-          Added Tailwind CSS classes for sticky positioning at the bottom of the screen.
-          twcss-sticky: Makes the button stick to the viewport
-          twcss-bottom-0: Places it at the bottom of the screen
-          twcss-left-0: Aligns it to the left edge
-          twcss-w-full: Makes it full width
-          twcss-bg-white: White background
-          twcss-p-4: Adds padding
-          twcss-shadow-lg: Adds shadow for visual separation
-          twcss-z-50: Ensures it stays on top of other elements
-        -->
-        <div class='product-form__buttons twcss-sticky twcss-bottom-0 twcss-left-0 twcss-w-full twcss-bg-white twcss-p-4 twcss-shadow-lg twcss-z-50'>
+        <div class='product-form__buttons'>
           {%- liquid
             assign check_against_inventory = true
             if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -90,7 +74,7 @@
             id='ProductSubmitButton-{{ section_id }}'
             type='submit'
             name='add'
-            class='product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}'
+            class='product-form__submit button button--full-width pplr_add_to_cart {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}'
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
@@ -104,16 +88,7 @@
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                <!--
-                  Added conditional text for personalized vs. non-personalized products
-                  Shows "Jetzt Personalisieren" (Now Personalize) for personalizable products
-                  Shows regular "Add to Cart" text for non-personalizable products
-                -->
-                {%- if product.tags contains 'personalized' or product.tags contains 'personalizable' -%}
-                  {{ 'Jetzt Personalisieren' }}
-                {%- else -%}
-                  {{ 'products.product.add_to_cart' | t }}
-                {%- endif -%}
+                {{ 'products.product.add_to_cart' | t }}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
@@ -126,8 +101,7 @@
     </product-form>
   {%- else -%}
     <div class='product-form'>
-      <!-- Added the same Tailwind classes for sticky positioning to the fallback button -->
-      <div class='product-form__buttons form twcss-sticky twcss-bottom-0 twcss-left-0 twcss-w-full twcss-bg-white twcss-p-4 twcss-shadow-lg twcss-z-50'>
+      <div class='product-form__buttons form'>
         <button
           type='submit'
           name='add'
