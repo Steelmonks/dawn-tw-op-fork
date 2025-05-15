@@ -45,6 +45,7 @@
         {{ product.variants | json }}
       </script>
     </variant-radios>
+
   {%- else -%}
     <variant-selects
       id='variant-selects-{{ section.id }}'
@@ -85,6 +86,9 @@
     </variant-selects>
   {%- endif -%}
 {%- endunless -%}
+
+{% comment %} Script for variant-radios {% endcomment %}
+<script src='{{ 'variant-selects.js' | asset_url }}' defer='defer'></script>
 
 <noscript class='product-form__noscript-wrapper-{{ section.id }}'>
   <div class='product-form__input{% if product.has_only_default_variant %} visually-hidden {% endif %}'>
