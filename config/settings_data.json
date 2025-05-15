@@ -170,11 +170,6 @@
         "disabled": false,
         "settings": {}
       },
-      "12512365888938011351": {
-        "type": "shopify://apps/analyzify-ga4-ads-tracking/blocks/app-embed/69637cfd-dd6f-4511-aa97-7037cfb5515c",
-        "disabled": false,
-        "settings": {}
-      },
       "15351435345818755577": {
         "type": "shopify://apps/pandectes-gdpr/blocks/banner/58c0baa2-6cc1-480c-9ea6-38d6d559556a",
         "disabled": false,
@@ -228,6 +223,11 @@
       "17985673643287205206": {
         "type": "shopify://apps/c-edd-estimated-delivery-date/blocks/app_setting/4a0685bc-c234-45b2-8382-5ad6a8e3e3fd",
         "disabled": false,
+        "settings": {}
+      },
+      "12512365888938011351": {
+        "type": "shopify://apps/analyzify-ga4-ads-tracking/blocks/app-embed/69637cfd-dd6f-4511-aa97-7037cfb5515c",
+        "disabled": true,
         "settings": {}
       }
     },
