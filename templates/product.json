@@ -45,7 +45,6 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "enable_quantity_selector": true,
             "show_dynamic_checkout": true,
