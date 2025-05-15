@@ -12,7 +12,8 @@
  */
 .product-form__buttons {
   display: flex !important;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 2rem 0;
 }
 
 /* 
