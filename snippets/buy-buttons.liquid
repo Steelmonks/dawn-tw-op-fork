@@ -10,7 +10,12 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
-<div {{ block.shopify_attributes }}>
+<!--
+  Added pplr_add_to_cart class to ensure this container is always displayed,
+  even when the Zepto personalizer is active.
+  Added twcss-w-full class for proper width with Tailwind CSS.
+-->
+<div {{ block.shopify_attributes }} class='twcss-w-full pplr_add_to_cart'>
   {%- if product != blank -%}
     {%- liquid
       assign gift_card_recipient_feature_active = false
@@ -25,15 +30,15 @@
     -%}
 
     <product-form
-      class="product-form"
-      data-hide-errors="{{ gift_card_recipient_feature_active }}"
-      data-section-id="{{ section.id }}"
+      class='product-form'
+      data-hide-errors='{{ gift_card_recipient_feature_active }}'
+      data-section-id='{{ section.id }}'
     >
-      <div class="product-form__error-message-wrapper" role="alert" hidden>
-        <span class="svg-wrapper">
+      <div class='product-form__error-message-wrapper' role='alert' hidden>
+        <span class='svg-wrapper'>
           {{- 'icon-error.svg' | inline_asset_content -}}
         </span>
-        <span class="product-form__error-message"></span>
+        <span class='product-form__error-message'></span>
       </div>
 
       {%- form 'product',
@@ -44,23 +49,34 @@
         data-type: 'add-to-cart-form'
       -%}
         <input
-          type="hidden"
-          name="id"
-          value="{{ product.selected_or_first_available_variant.id }}"
+          type='hidden'
+          name='id'
+          value='{{ product.selected_or_first_available_variant.id }}'
           {% if product.selected_or_first_available_variant.available == false
             or quantity_rule_soldout
             or product.selected_or_first_available_variant == null
           %}
             disabled
           {% endif %}
-          class="product-variant-id"
+          class='product-variant-id'
         >
 
         {%- if gift_card_recipient_feature_active -%}
           {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
         {%- endif -%}
 
-        <div class="product-form__buttons">
+        <!--
+          Added Tailwind CSS classes for sticky positioning at the bottom of the screen.
+          twcss-sticky: Makes the button stick to the viewport
+          twcss-bottom-0: Places it at the bottom of the screen
+          twcss-left-0: Aligns it to the left edge
+          twcss-w-full: Makes it full width
+          twcss-bg-white: White background
+          twcss-p-4: Adds padding
+          twcss-shadow-lg: Adds shadow for visual separation
+          twcss-z-50: Ensures it stays on top of other elements
+        -->
+        <div class='product-form__buttons twcss-sticky twcss-bottom-0 twcss-left-0 twcss-w-full twcss-bg-white twcss-p-4 twcss-shadow-lg twcss-z-50'>
           {%- liquid
             assign check_against_inventory = true
             if product.selected_or_first_available_variant.inventory_management != 'shopify' or product.selected_or_first_available_variant.inventory_policy == 'continue'
@@ -71,10 +87,10 @@
             endif
           -%}
           <button
-            id="ProductSubmitButton-{{ section_id }}"
-            type="submit"
-            name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            id='ProductSubmitButton-{{ section_id }}'
+            type='submit'
+            name='add'
+            class='product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}'
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
@@ -88,7 +104,16 @@
               {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
+                <!--
+                  Added conditional text for personalized vs. non-personalized products
+                  Shows "Jetzt Personalisieren" (Now Personalize) for personalizable products
+                  Shows regular "Add to Cart" text for non-personalizable products
+                -->
+                {%- if product.tags contains 'personalized' or product.tags contains 'personalizable' -%}
+                  {{ 'Jetzt Personalisieren' }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
               {%- endif -%}
             </span>
             {%- render 'loading-spinner' -%}
@@ -100,12 +125,13 @@
       {%- endform -%}
     </product-form>
   {%- else -%}
-    <div class="product-form">
-      <div class="product-form__buttons form">
+    <div class='product-form'>
+      <!-- Added the same Tailwind classes for sticky positioning to the fallback button -->
+      <div class='product-form__buttons form twcss-sticky twcss-bottom-0 twcss-left-0 twcss-w-full twcss-bg-white twcss-p-4 twcss-shadow-lg twcss-z-50'>
         <button
-          type="submit"
-          name="add"
-          class="product-form__submit button button--full-width button--primary"
+          type='submit'
+          name='add'
+          class='product-form__submit button button--full-width button--primary'
           disabled
         >
           {{ 'products.product.sold_out' | t }}
@@ -122,23 +148,23 @@
     -%}
 
     <pickup-availability
-      class="product__pickup-availabilities quick-add-hidden"
+      class='product__pickup-availabilities quick-add-hidden'
       {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
         available
       {% endif %}
-      data-root-url="{{ routes.root_url }}"
-      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-      data-has-only-default-variant="{{ product.has_only_default_variant }}"
-      data-product-page-color-scheme="gradient color-{{ section.settings.color_scheme }}"
+      data-root-url='{{ routes.root_url }}'
+      data-variant-id='{{ product.selected_or_first_available_variant.id }}'
+      data-has-only-default-variant='{{ product.has_only_default_variant }}'
+      data-product-page-color-scheme='gradient color-{{ section.settings.color_scheme }}'
     >
       <template>
-        <pickup-availability-preview class="pickup-availability-preview">
-          <span class="svg-wrapper">
+        <pickup-availability-preview class='pickup-availability-preview'>
+          <span class='svg-wrapper'>
             {{- 'icon-unavailable.svg' | inline_asset_content -}}
           </span>
-          <div class="pickup-availability-info">
-            <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
-            <button class="pickup-availability-button link link--text underlined-link">
+          <div class='pickup-availability-info'>
+            <p class='caption-large'>{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+            <button class='pickup-availability-button link link--text underlined-link'>
               {{ 'products.product.pickup_availability.refresh' | t }}
             </button>
           </div>
@@ -146,6 +172,6 @@
       </template>
     </pickup-availability>
 
-    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+    <script src='{{ 'pickup-availability.js' | asset_url }}' defer='defer'></script>
   {%- endif -%}
 </div>

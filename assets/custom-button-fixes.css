@@ -1,0 +1,35 @@
+/* 
+ * Fix for add to cart button visibility 
+ * Ensures that the add to cart button is always visible even for products without Zepto personalizer
+ */
+.pplr_add_to_cart {
+  display: block !important;
+}
+
+/* 
+ * Add to cart button styles for non-personalizable products 
+ * Centers the button and ensures it's always displayed regardless of personalization status
+ */
+.product-form__buttons {
+  display: flex !important;
+  justify-content: center;
+}
+
+/* 
+ * Making sure zepto personalizer doesn't hide our add to cart buttons 
+ * Zepto may hide the product form for non-personalizable products, this ensures it stays visible
+ */
+.product-form {
+  display: block !important;
+}
+
+/* 
+ * Additional styling for the sticky cart button 
+ * Improves mobile experience with proper padding and shadow
+ */
+@media screen and (max-width: 749px) {
+  .product-form__buttons {
+    padding: 1rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
