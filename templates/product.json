@@ -96,11 +96,11 @@
       "name": "Back to Collection",
       "settings": {
         "show_button": true,
-        "button_text_before": "Back to",
+        "button_text_before": "Zurück zu",
         "button_text_after": "Kollektion",
         "show_breadcrumb": true,
         "show_all_collections": true,
-        "all_collections_text": "All Collections",
+        "all_collections_text": "Alle Kollektionen",
         "separator": "→"
       }
     },
