@@ -13,9 +13,14 @@
 {%- unless product.has_only_default_variant -%}
   {% liquid
     assign options_size = 0
-    assign first_option = product.options_with_values | first
-    for value in first_option.values
-      assign options_size = options_size | plus: 1
+    assign first_option_name = product.options | first
+    assign seen_values = ''
+    for variant in product.variants
+      assign value = variant.option1
+      unless seen_values contains value
+        assign options_size = options_size | plus: 1
+        assign seen_values = seen_values | append: value | append: ','
+      endunless
     endfor
   %}
 
@@ -30,15 +35,23 @@
       {% endif %}
       {{ block.shopify_attributes }}
     >
-      {%- for option in product.options_with_values -%}
+      {%- for option_name in product.options -%}
         <fieldset style='min-width: 100%;' class='js product-form__input product-form__input--{{ forloop.index }}'>
-          <legend class='form__label'>{{ option.name }}</legend>
-          {% render 'old_product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            options_threshold: options_threshold
-          %}
+          <legend class='form__label'>{{ option_name }}</legend>
+          {%- assign seen_values = '' -%}
+          {%- for variant in product.variants -%}
+            {%- assign value = variant.option1 -%}
+            {%- unless seen_values contains value -%}
+              <input
+                type='radio'
+                id='{{ option_name }}-{{ value }}'
+                name='options[{{ option_name | escape }}]'
+                value='{{ value | escape }}'
+              >
+              <label for='{{ option_name }}-{{ value }}'>{{ value }}</label>
+              {%- assign seen_values = seen_values | append: value | append: ',' -%}
+            {%- endunless -%}
+          {%- endfor -%}
         </fieldset>
       {%- endfor -%}
       <script type='application/json'>
@@ -57,26 +70,28 @@
       {% endif %}
       {{ block.shopify_attributes }}
     >
-      {%- for option in product.options_with_values -%}
+      {%- for option_name in product.options -%}
         <label
           class='form__label'
           for='Option-{{ section.id }}-{{ forloop.index0 }}'
         >
-          {{ option.name }}
+          {{ option_name }}
         </label>
         <div class='select'>
           <select
-            name='options[{{ option.name | escape }}]'
+            name='options[{{ option_name | escape }}]'
             id='Option-{{ section.id }}-{{ forloop.index0 }}'
             form='{{ product_form_id }}'
             class='product-form__variant-option'
           >
-            {% render 'product-variant-options',
-              product: product,
-              option: option,
-              block: block,
-              options_threshold: options_threshold
-            %}
+            {%- assign seen_values = '' -%}
+            {%- for variant in product.variants -%}
+              {%- assign value = variant.option1 -%}
+              {%- unless seen_values contains value -%}
+                <option value='{{ value | escape }}'>{{ value }}</option>
+                {%- assign seen_values = seen_values | append: value | append: ',' -%}
+              {%- endunless -%}
+            {%- endfor -%}
           </select>
         </div>
       {%- endfor -%}
