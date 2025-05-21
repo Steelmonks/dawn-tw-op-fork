@@ -858,6 +858,10 @@ video {
   gap: 0.75rem;
 }
 
+.twcss-break-all {
+  word-break: break-all;
+}
+
 .twcss-rounded-lg {
   border-radius: 0.5rem;
 }
