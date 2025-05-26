@@ -36,8 +36,6 @@ sm-accordions {
 }
 
 .accordions__wrapper ul.navigation > li {
-  border: 2px solid #222;
-  border-radius: 30px;
   min-height: 15rem;
   width: 15rem;
   cursor: pointer;
