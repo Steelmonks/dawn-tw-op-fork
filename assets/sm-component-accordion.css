@@ -29,7 +29,7 @@ sm-accordions {
 
 .accordions__wrapper ul.navigation {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 1.6rem;
   justify-content: center;
