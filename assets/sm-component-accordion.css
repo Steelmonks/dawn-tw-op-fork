@@ -29,30 +29,32 @@ sm-accordions {
 
 .accordions__wrapper ul.navigation {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1.6rem;
+  flex-direction: row;
+  gap: 2.4rem;
   justify-content: center;
   align-items: center;
 }
 
 .accordions__wrapper ul.navigation > li {
-  border: var(--border-width) solid currentColor;
+  border: 2px solid #222;
   border-radius: 30px;
   min-height: 15rem;
   width: 15rem;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
   padding: 1.6rem;
+  background: #fff;
+  transition: background 0.2s, color 0.2s, border 0.2s;
 }
+
 .accordions__wrapper ul.navigation > li.active {
-  background: var(--color-foreground);
-  color: var(--color-background);
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
 }
 
 .accordions__wrapper ul.navigation > li.active img,
