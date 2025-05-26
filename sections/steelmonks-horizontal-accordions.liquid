@@ -1,0 +1,110 @@
+{{ 'steelmonks-horizontal-accordions.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "Horizontal Accordions",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Frequently Asked Questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "Accordion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Accordion Title",
+          "default": "Accordion Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Accordion Content",
+          "default": "<p>Add your content here</p>"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid",
+          "info": "Custom liquid will be displayed underneath the accordion content"
+        },
+        {
+          "type": "liquid",
+          "id": "content_under",
+          "label": "Accordion Content Below"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Horizontal Accordions",
+      "blocks": [
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        },
+        {
+          "type": "accordion"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div class="h-accordion">
+  {% if section.settings.section_heading != blank %}
+    <h2 class="h-accordion__title">{{ section.settings.section_heading }}</h2>
+  {% endif %}
+
+  <div class="h-accordion-container">
+    {% for block in section.blocks %}
+      <div class="h-accordion-item" {{ block.shopify_attributes }}>
+        <button class="h-accordion-header">
+          {{ block.settings.title }}
+          <svg
+            class="icon-chevron"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="h-accordion-content">
+          {{ block.settings.content }}
+          {% if block.settings.custom_liquid != blank %}
+            {{ block.settings.custom_liquid }}
+          {% endif %}
+        </div>
+      </div>
+      {% if block.settings.content_under != blank %}
+        {{ block.settings.content_under }}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  const accordionHeaders = document.querySelectorAll('.h-accordion-header');
+
+  accordionHeaders.forEach((header) => {
+    header.addEventListener('click', () => {
+      // Simply toggle the clicked accordion item
+      const accordionItem = header.parentElement;
+      accordionItem.classList.toggle('active');
+    });
+  });
+</script>

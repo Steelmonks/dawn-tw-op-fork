@@ -1,0 +1,71 @@
+cama-accordions {
+  display: block;
+}
+
+.accordions__wrapper > * + * {
+  margin-top: 5.6rem;
+}
+.accordions__header {
+  margin: 0 auto;
+  max-width: 680px;
+}
+.accordions__header > * + * {
+  margin-top: 5.6rem;
+}
+
+.accordions__header .heading > * + * {
+  margin-top: 1.6rem;
+}
+
+.accordions__wrapper ul.navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordions__wrapper ul.navigation > li {
+  border: var(--border-width) solid currentColor;
+  border-radius: 30px;
+  min-height: 15rem;
+  width: 15rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.6rem;
+}
+.accordions__wrapper ul.navigation > li.active {
+  background: var(--color-foreground);
+  color: var(--color-background);
+}
+
+.accordions__wrapper ul.navigation > li.active img,
+.accordions__wrapper ul.navigation > li.active svg {
+  filter: invert(1);
+}
+
+.accordions__wrapper ul.navigation > li > * {
+  pointer-events: none;
+}
+
+.accordions__wrapper ul.navigation > li img,
+.accordions__wrapper ul.navigation > li svg {
+  height: 4.8rem;
+  width: auto;
+}
+
+.accordions__accordion-items {
+  max-width: 980px;
+}
+
+@media screen and (min-width: 60em) {
+  .accordions__wrapper ul.navigation {
+    gap: 3.2rem;
+  }
+}

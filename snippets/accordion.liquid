@@ -1,0 +1,112 @@
+{%- comment -%}
+  Renders accordion item
+
+  Accepts:
+  - id (Optional)
+  - class (Optional)
+  - dataset (Optional)
+  - heading
+  - content_type (Optional)
+  - content_rte
+  - content_liquid (Optional)
+  - featured (Optional)
+
+  Usage:
+  {% render 'accordion',
+      id: block.id,
+      heading: block.settings.heading,
+      content_type: block.settings.content_type,
+      content_rte: block.settings.content_rte,
+      content_liquid: block.settings.content_liquid,
+      featured: block.settings.featured
+  %}
+{%- endcomment -%}
+
+{%- liquid
+  case content_type
+    when 'content_rte'
+      assign content = content_rte
+    when 'content_liquid'
+      assign content = content_liquid
+    else
+      assign content = content_rte
+  endcase
+-%}
+
+{%- if heading != blank and content != blank -%}
+  <div
+    id="{{ id }}"
+    class="accordion__item {% if featured %}featured-accordion featured-accordion--{{ id }}{% endif %} {{ class }}"
+    {{ dataset }}
+    {{ block.shopify_attributes }}
+  >
+    <details>
+      <summary>
+        <h3
+          {% if featured %}
+            class="featured-accordion__title"
+          {% endif %}
+        >
+          {{ heading }}
+        </h3>
+        {% render 'icon-plus' %}
+        {% render 'icon-minus' %}
+      </summary>
+      <div>
+        <div class="rte">
+          {{ content_rte }}
+        </div>
+        {% if content_liquid != blank %}
+          {{- content_liquid -}}
+        {% endif %}
+      </div>
+    </details>
+  </div>
+
+  <style>
+    {% unless featured_content_gradient == blank %}
+    .featured-accordion--{{ id }} .featured-accordion__title {
+      {% liquid
+        assign gradient_colors = featured_content_gradient | split: ','
+        assign color_count = gradient_colors.size
+        assign spacing = 100 | divided_by: color_count
+        assign gradient = 'linear-gradient(to right'
+        for color in gradient_colors
+          assign position = forloop.index | minus: 1 | times: spacing
+          assign gradient = gradient | append: ', ' | append: color | append: ' ' | append: position | append: '%'
+        endfor
+        assign gradient = gradient | append: ')'
+      %}
+      background: {{ gradient }};
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      }
+    {% endunless %}
+    .featured-accordion--{{ id }} h3::before {
+      {% unless featured_image == blank %}
+        background-image: url('{{ featured_image | image_url }}') !important;
+      {% endunless %}
+
+      {% if featured_image_alignment == 'top' %}
+        top: 0;
+      {% elsif featured_image_alignment == 'center' %}
+        top: 50%;
+        transform: translateY(-50%);
+      {% elsif featured_image_alignment == 'bottom' %}
+        bottom: 0;
+      {% endif %}
+      }
+
+      @media (max-width: 768px) {
+        .featured-accordion--{{ id }} h3::before {
+          {% if featured_image_alignment == 'center' %}
+            top: 50%;
+            transform: translateY(-50%) scale(-1, 1);
+          {% else %}
+            transform: scale(-1, 1);
+          {% endif %}
+        }
+      }
+  </style>
+{%- endif -%}

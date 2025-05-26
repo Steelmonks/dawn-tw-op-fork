@@ -1,5 +1,5 @@
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
-{{ 'sm-component-accordion.css' | asset_url | stylesheet_tag }}
+{{ 'section-accordions.css' | asset_url | stylesheet_tag }}
 
 {% liquid
   assign show_header = false
@@ -15,39 +15,32 @@
   endif
 %}
 
-{% style %}
-  .accordions__container {
-    padding-top: {{ section.settings.padding_top }}px;
-    padding-bottom: {{ section.settings.padding_bottom }}px;
-  }
-{% endstyle %}
-
-<sm-accordions class='accordions__container page-gutter'>
-  <div class='accordions__wrapper'>
+<cama-accordions class="accordions__container page-gutter padding-top-{{ section.settings.padding_top }} padding-bottom-{{ section.settings.padding_bottom }}">
+  <div class="accordions__wrapper">
     {% if show_header %}
-      <div class='accordions__header text-center'>
+      <div class="accordions__header text-center">
         {% unless section.settings.heading == blank and section.settings.subheading == blank %}
-          <div class='heading'>
+          <div class="heading">
             {%- if section.settings.heading != blank -%}
-              <h2 class='u-h0'>{{ section.settings.heading }}</h2>
+              <h2 class="u-h0">{{ section.settings.heading }}</h2>
             {%- endif -%}
 
             {%- if section.settings.subheading != blank -%}
-              <div class='rte'>
+              <div class="rte">
                 {{ section.settings.subheading }}
               </div>
             {%- endif -%}
           </div>
         {% endunless %}
-        <ul class='navigation no-js-hidden list-unstyled'>
+        <ul class="navigation no-js-hidden list-unstyled">
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'navigation' -%}
                 <li
-                  class=''
-                  data-group-target='{{ block.settings.unique_id }}'
-                  role='button'
-                  tabindex='0'
+                  class=""
+                  data-group-target="{{ block.settings.unique_id }}"
+                  role="button"
+                  tabindex="0"
                   {{ block.shopify_attributes }}
                 >
                   {%- if block.settings.icon != blank -%}
@@ -66,14 +59,14 @@
       </div>
     {% endif %}
 
-    <div class='accordions__accordion-items margin-align-center'>
+    <div class="accordions__accordion-items margin-align-center">
       {%- for block in section.blocks -%}
         {% liquid
           assign dataset = 'data-group-id=' | append: '"' | append: block.settings.parent | append: '"'
         %}
         {%- case block.type -%}
           {%- when 'accordion' -%}
-            {% render 'sm-accordion',
+            {% render 'accordion',
               id: block.id,
               dataset: dataset,
               heading: block.settings.heading,
@@ -89,11 +82,11 @@
       {%- endfor -%}
     </div>
   </div>
-</sm-accordions>
+</cama-accordions>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    if (window.customElements.get('sm-accordions')) return;
+    if (window.customElements.get('cama-accordions')) return;
     class Accordions extends HTMLElement {
       connectedCallback() {
         this.tabs = [...this.querySelectorAll('.accordions__wrapper ul.navigation > li')];
@@ -174,93 +167,115 @@
       }
     }
 
-    customElements.define('sm-accordions', Accordions);
+    customElements.define('cama-accordions', Accordions);
   });
 </script>
 
 {% schema %}
 {
-  "name": "Accordions",
+  "name": "t:sections.accordions.name",
   "settings": [
     {
       "type": "text",
       "id": "heading",
-      "label": "Heading",
+      "label": "t:sections.accordions.settings.heading.label",
       "default": "Questions ? We have answers."
     },
     {
       "type": "richtext",
       "id": "subheading",
-      "label": "Subheading",
+      "label": "t:sections.accordions.settings.subheading.label",
       "default": "<p>Add a short description</p>"
     },
     {
       "type": "header",
-      "content": "Section padding"
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
-      "type": "range",
+      "type": "select",
       "id": "padding_top",
-      "label": "Top padding (px)",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "default": 24
+      "label": "t:sections.all.padding.section_padding_top.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.padding.section_padding_top.options__1.label"
+        },
+        {
+          "value": "xxl",
+          "label": "t:sections.all.padding.section_padding_top.options__2.label"
+        },
+        {
+          "value": "xxxl",
+          "label": "t:sections.all.padding.section_padding_top.options__3.label"
+        }
+      ],
+      "default": "xxxl"
     },
     {
-      "type": "range",
+      "type": "select",
       "id": "padding_bottom",
-      "label": "Bottom padding (px)",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "default": 24
+      "label": "t:sections.all.padding.section_padding_bottom.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:sections.all.padding.section_padding_bottom.options__1.label"
+        },
+        {
+          "value": "xxl",
+          "label": "t:sections.all.padding.section_padding_bottom.options__2.label"
+        },
+        {
+          "value": "xxxl",
+          "label": "t:sections.all.padding.section_padding_bottom.options__3.label"
+        }
+      ],
+      "default": "xxxl"
     }
   ],
   "blocks": [
     {
       "type": "navigation",
-      "name": "Navigation",
+      "name": "t:sections.accordions.blocks.navigation.name",
       "settings": [
         {
           "type": "text",
           "id": "unique_id",
-          "label": "Unique ID",
-          "info": "This ID will be used to link accordions to this navigation item"
+          "label": "t:sections.accordions.blocks.navigation.settings.unique_id.label",
+          "info": "t:sections.accordions.blocks.navigation.settings.unique_id.info"
         },
         {
           "type": "image_picker",
           "id": "icon",
-          "label": "Icon"
+          "label": "t:sections.accordions.blocks.navigation.settings.icon.label"
         },
         {
           "type": "richtext",
           "id": "heading",
-          "label": "Heading",
+          "label": "t:sections.accordions.blocks.navigation.settings.heading.label",
           "default": "<p>Navigation heading</p>"
         }
       ]
     },
     {
       "type": "accordion",
-      "name": "Accordion",
+      "name": "t:sections.accordions.blocks.accordion.name",
       "settings": [
         {
           "type": "text",
           "id": "parent",
-          "label": "Parent navigation ID",
-          "info": "Enter the unique ID of the parent navigation item"
+          "label": "t:sections.accordions.blocks.accordion.settings.parent.label",
+          "info": "t:sections.accordions.blocks.accordion.settings.parent.info"
         },
         {
           "type": "text",
           "id": "heading",
-          "label": "Heading",
+          "label": "t:sections.accordions.blocks.accordion.settings.heading.label",
           "default": "What is your product or service?"
         },
         {
           "type": "richtext",
           "id": "content",
-          "label": "Content",
+          "label": "t:sections.accordions.blocks.accordion.settings.content.label",
           "default": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>"
         },
         {
@@ -321,7 +336,7 @@
   ],
   "presets": [
     {
-      "name": "Accordions",
+      "name": "t:sections.accordions.presets.name",
       "blocks": [
         {
           "type": "navigation"
