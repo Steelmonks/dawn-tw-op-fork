@@ -26,68 +26,63 @@
 
 <sm-accordions class='accordions__container page-gutter'>
   <div class='accordions__wrapper'>
-    {% if show_header %}
-      <div class='accordions__header text-center'>
-        {% unless section.settings.heading == blank and section.settings.subheading == blank %}
-          <div class='heading'>
-            {%- if section.settings.heading != blank -%}
-              <h2 class='u-h0'>{{ section.settings.heading }}</h2>
-            {%- endif -%}
+    <div class='accordions__header text-center'>
+      {% unless section.settings.heading == blank and section.settings.subheading == blank %}
+        <div class='heading'>
+          {%- if section.settings.heading != blank -%}
+            <h2 class='u-h0'>{{ section.settings.heading }}</h2>
+          {%- endif -%}
 
-            {%- if section.settings.subheading != blank -%}
-              <div class='rte'>
-                {{ section.settings.subheading }}
-              </div>
+          {%- if section.settings.subheading != blank -%}
+            <div class='rte'>
+              {{ section.settings.subheading }}
+            </div>
+          {%- endif -%}
+        </div>
+      {% endunless %}
+    </div>
+    {% assign nav_blocks = section.blocks | where: 'type', 'navigation' %}
+    {% if nav_blocks.size > 0 %}
+      <ul class='navigation no-js-hidden list-unstyled' style='justify-content: center;'>
+        {%- for block in nav_blocks -%}
+          <li
+            class=''
+            data-group-target='{{ block.settings.unique_id }}'
+            role='button'
+            tabindex='0'
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.icon != blank -%}
+              {{ block.settings.icon | image_url: height: 48 | image_tag }}
             {%- endif -%}
-          </div>
-        {% endunless %}
-        <ul class='navigation no-js-hidden list-unstyled'>
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              {%- when 'navigation' -%}
-                <li
-                  class=''
-                  data-group-target='{{ block.settings.unique_id }}'
-                  role='button'
-                  tabindex='0'
-                  {{ block.shopify_attributes }}
-                >
-                  {%- if block.settings.icon != blank -%}
-                    {{ block.settings.icon | image_url: height: 48 | image_tag }}
-                  {%- endif -%}
-
-                  {%- if block.settings.heading != blank -%}
-                    <span>
-                      {{ block.settings.heading }}
-                    </span>
-                  {%- endif -%}
-                </li>
-            {%- endcase -%}
-          {%- endfor -%}
-        </ul>
-      </div>
+            {%- if block.settings.heading != blank -%}
+              <span>
+                {{ block.settings.heading }}
+              </span>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
     {% endif %}
-
     <div class='accordions__accordion-items margin-align-center'>
       {%- for block in section.blocks -%}
-        {% liquid
-          assign dataset = 'data-group-id=' | append: '"' | append: block.settings.parent | append: '"'
-        %}
-        {%- case block.type -%}
-          {%- when 'accordion' -%}
-            {% render 'sm-accordion',
-              id: block.id,
-              dataset: dataset,
-              heading: block.settings.heading,
-              content_rte: block.settings.content,
-              content_liquid: block.settings.content_liquid,
-              featured: block.settings.featured,
-              featured_image: block.settings.featured_image,
-              featured_image_alignment: block.settings.featured_image_alignment,
-              featured_image_aspect_ratio: block.settings.featured_image_aspect_ratio,
-              featured_content_gradient: block.settings.featured_content_gradient
-            %}
-        {%- endcase -%}
+        {% if block.type == 'accordion' %}
+          {% liquid
+            assign dataset = 'data-group-id=' | append: '"' | append: block.settings.parent | append: '"'
+          %}
+          {% render 'sm-accordion',
+            id: block.id,
+            dataset: dataset,
+            heading: block.settings.heading,
+            content_rte: block.settings.content,
+            content_liquid: block.settings.content_liquid,
+            featured: block.settings.featured,
+            featured_image: block.settings.featured_image,
+            featured_image_alignment: block.settings.featured_image_alignment,
+            featured_image_aspect_ratio: block.settings.featured_image_aspect_ratio,
+            featured_content_gradient: block.settings.featured_content_gradient
+          %}
+        {% endif %}
       {%- endfor -%}
     </div>
   </div>
