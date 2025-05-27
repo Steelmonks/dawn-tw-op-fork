@@ -389,8 +389,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Könnt ihr ein individuelles Design für mich erstellen? (Sonderanfertigungen)",
+            "content": "<p>Spezielle Unikat und Sonderprojekte sind immer aufregend. </p><p>Die unbegrenzten Möglichkeiten ziehen dabei viel Aufmerksamkeit auf sich, so müssen wir unsere Projekte selber filtern und auswählen.</p><p>Teile uns einfach Deine Vorstellungen und Ideen mit. Unser kreatives Team wird sich daran setzen, ein einzigartiges Design speziell für dich zu entwerfen.</p><p>Deine Zufriedenheit und die Verwirklichung Deiner Vision stehen bei uns an erster Stelle!</p><p>Für weitere Details besuche bitte unsere <a href=\"/pages/anfragen\" title=\"Deine Sonderanfertigung\">Sonderanfertigungen</a>.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
