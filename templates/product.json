@@ -376,8 +376,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Ich brauche einen Artikel bis zu einem bestimmten Datum. Wie kann ich das garantieren? (Versand)",
+            "content": "<p>Wir können leider kein exaktes Lieferdatum garantieren, da dies abhängig davon ist, wie DHL Dich persönlich anfährt.</p><p>Wenn Du jedoch ein Produkt bis zu einem spezifischen Datum benötigst, nimm direkt Kontakt mit uns auf, um diese Option zu besprechen und sicherzustellen, dass dein Artikel rechtzeitig bei dir eintrifft.</p><p>Am schnellsten ist der Live-Chat unten Links auf der Seite. (Einfach auf die Sprechblase klicken) Von Montag bis Freitag zwischen 8.00 und 16.00 Uhr sind wir erreichbar.</p><p>Am einfachsten geht es per E-Mail an: <a href=\"mailto:info@steelmonks.com\">info@steelmonks.com</a> </p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
