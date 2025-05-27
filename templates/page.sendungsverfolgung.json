@@ -79,8 +79,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Warum kann ich meine Sendung nicht verfolgen?",
+            "content": "<p>Manchmal dauert es ein paar Stunden, bis das Tracking aktualisiert wird. Falls dein Paket bereits länger unterwegs ist, sich das Tracking aber nicht aktualisiert, kann es sein, dass die Sendungsnummer erst beim nächsten Scan aktiviert wird. Dies ist üblich für Sendungen mit reduzierter Sendungsverfolgung. Falls es nach 24 Stunden noch immer nicht funktioniert, schreib uns einfach und wir versuchen mehr darüber herauszufinden.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
