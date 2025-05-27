@@ -482,6 +482,36 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "accordions_U48wFK": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_RFhpjn": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_RFhpjn"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_left": 24,
+        "padding_right": 24
+      }
     }
   },
   "order": [
@@ -503,6 +533,7 @@
     "steelmonks_deine_sm_GPbdxk",
     "custom_icon_grid_h6mTRm",
     "174478799976fe2d49",
-    "collapsible_content_KktWWU"
+    "collapsible_content_KktWWU",
+    "accordions_U48wFK"
   ]
 }
