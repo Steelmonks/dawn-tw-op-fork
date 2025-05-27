@@ -53,8 +53,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Meine Bestellung steckt seit mehreren Tagen am gleichen Ort fest. Was kann ich tun?",
+            "content": "<p>Das passiert manchmal, wenn ein Paket in einem Verteilerzentrum festhängt oder es sich durch den Zusteller selbst verzögert. Meistens geht es nach ein paar Tagen weiter. Manchmal fallen Pakete tatsächlich vom Band, verlieren ihr Etikett oder werden beschädigt. Das ist ärgerlich, kann aber leider vorkommen. Falls sich der Status deines Paketes länger als 3-4 Tage nicht verändert hat, schreib uns bitte eine Nachricht, damit wir eine Laufzeitbeschwerde einlegen können. Danach kann man nur noch eine Nachforschung einleiten, die aber leider oftmals 3-4 Woche dauern kann.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
