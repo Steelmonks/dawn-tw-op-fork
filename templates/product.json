@@ -363,8 +363,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Wie kann ich euch erreichen? (Kontakt)",
+            "content": "<p>Du kannst uns auf verschiedene Weisen erreichen.</p><p>Am einfachsten geht es per E-Mail an: <a href=\"mailto:info@steelmonks.com\">info@steelmonks.com</a> </p><p>Am schnellsten ist der Live-Chat unten Links auf der Seite. (Einfach auf die Sprechblase klicken) Von Montag bis Freitag zwischen 8.00 und 16.00 Uhr sind wir erreichbar.</p><p>Wir freuen uns darauf, von dir zu hören und stehen dir gerne für alle Fragen und Anliegen zur Verfügung!</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
