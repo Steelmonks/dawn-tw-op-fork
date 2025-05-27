@@ -40,8 +40,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Meine Bestellung wurde verschickt, aber ich sehe keine Updates im Tracking. Ist das korrekt?",
+            "content": "<p>Ja, das kann vorkommen! Tracking-Updates erscheinen oft erst, wenn das Paket im nächsten Verteilerzentrum gescannt wurde. Manche Sendungen wie Warenpost oder Kompaktbriefe haben auch nur eine reduzierte Sendungsverfolgung und werden nicht überall gescannt. Oft liegen sie plötzlich im Briefkasten obwohl die letzte Aktualisierung 1 Tag her ist. Bitte beachte, dass wir nach Übergabe an DHL keinen Einfluss mehr auf den Versand haben. Falls sich nach 3-4 Tagen nichts ändert, melde dich gerne bei uns und wir legen eine Laufzeitbeschwerde bei DHL ein.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
