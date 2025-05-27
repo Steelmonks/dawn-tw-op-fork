@@ -66,8 +66,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Mein Paket ist laut Tracking „zugestellt“, aber ich habe nichts bekommen.",
+            "content": "<p>Überprüfe bitte, ob es bei einem Nachbarn, Hausbewohner oder in einer Postfiliale abgegeben wurde. Falls du es dort nicht finden kannst, wende dich direkt an DHL mit deiner Sendungsnummer. Sollte es weiterhin unauffindbar sein, helfen wir dir natürlich gerne weiter. Manchmal kommt es vor, dass Sendungen als zugestellt markiert werden und tatsächlich erst am nächsten Tag ausgeliefert werden. Das scheinen Fehlmeldungen auf der DHL-Seite zu sein, auf die wir aber leider keinen Einfluss haben.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
