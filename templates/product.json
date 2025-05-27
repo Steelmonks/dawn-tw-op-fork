@@ -423,9 +423,9 @@
       ],
       "name": "Accordions",
       "settings": {
-        "heading": "Questions ? We have answers.",
-        "subheading": "<p>Add a short description</p>",
-        "padding_top": 24,
+        "heading": "",
+        "subheading": "",
+        "padding_top": 0,
         "padding_bottom": 24,
         "padding_left": 24,
         "padding_right": 24
