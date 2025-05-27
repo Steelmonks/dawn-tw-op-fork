@@ -324,8 +324,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Beschreibung",
+            "content": "<h2>Ein Geschenk mit Bedeutung</h2><h3>🌍 Das Symbol einer tiefen Verbindung</h3><p>Suchst Du nach dem idealen Geschenk, das sowohl Sinnhaftigkeit als auch Schönheit verkörpert? Der Lebensbaum ist nicht nur ein altes Symbol der kosmischen Ordnung, sondern verkörpert auch Fruchtbarkeit, Wachstum und Stärke. Mit diesem einzigartigen Geschenk zeigst Du Deinen Liebsten, dass Du ihre tiefe Verbundenheit schätzt.</p><p> </p><h3>🌳 Deine Familiengeschichte in Metall</h3><p>Unsere Bäume-Kollektion ermöglicht es Dir, den Baum des Lebens individuell zu gestalten. Egal, ob Du Deinen Familiennamen, einen besonderen Wunschtext oder ein anderes bedeutungsvolles Wort hinzufügst – dieses Kunstwerk wird in jedem Raum oder auf jeder Terrasse zum Hingucker.</p><p> </p><h3>💖 Ein Geschenk von Herzen</h3><p>Wir wissen, wie schwierig es ist, das perfekte Geschenk zu finden. Ein maßgeschneidertes Präsent sagt mehr als tausend Worte. Lass Deinen Lebensbaum ein Unikat sein, das von Herzen kommt.</p><p> </p><h3>🛠 Qualität, die überzeugt</h3><p>Jeder Lebensbaum durchläuft unsere sorgfältige Kontrolle. Dank unserer handgefertigten Produktion setzen wir neue Maßstäbe in der Metalldekoration. Mit einer durchschnittlichen Bewertung von 4,9+ Sternen, vertrauen uns Tausende zufriedene Kunden.</p><p>     </p><p>Gönne Dir selbst oder Deinen Liebsten ein Geschenk, das durch Zeit und Raum Bestand hat. Wähle heute Deinen individuellen Lebensbaum von Steelmonks.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
@@ -421,6 +421,7 @@
         "accordion_m4eEKL",
         "accordion_XJXTAx"
       ],
+      "custom_css": [],
       "name": "Accordions",
       "settings": {
         "heading": "",
