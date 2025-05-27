@@ -350,8 +350,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "Wie werden diese Schilder denn gemacht? Wie ist die Qualität? (Farben & Oberflächen)",
+            "content": "<p>Unsere Schilder und Anhänger werden mit modernsten Technologien und Maschinen hergestellt.</p><p>Der Prozess beginnt mit einer hochwertigen Stahlplatte. Mit Hilfe von präzisen Lasern werden die Designs dann direkt aus dem Metall geschnitten. Dies garantiert eine exakte Umsetzung selbst feinster Details.</p><p>Wir verwenden nur hochwertigste Materialien, wie Edelstahl und Cortenstahl, um Langlebigkeit und Beständigkeit zu gewährleisten. </p><p>Unsere zahlreichen zufriedenen Kunden und die positiven Rückmeldungen bestätigen die herausragende Qualität unserer Produkte.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
