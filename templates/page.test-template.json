@@ -521,122 +521,6 @@
         "padding_bottom": 52
       }
     },
-    "steelmonks_collection_grid_c33Bcb": {
-      "type": "steelmonks-collection-grid",
-      "blocks": {
-        "collection_BcTWVB": {
-          "type": "collection",
-          "settings": {
-            "collection": "monogramme",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Für Dich",
-            "url": "",
-            "text_color": "#000000"
-          }
-        },
-        "collection_Pt3nBT": {
-          "type": "collection",
-          "settings": {
-            "collection": "geschenke-fur-familien",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Für Familien",
-            "url": "",
-            "text_color": "#000000"
-          }
-        },
-        "collection_86jrtH": {
-          "type": "collection",
-          "settings": {
-            "collection": "geschenke-fur-paare",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Für Paare",
-            "url": "",
-            "text_color": "#000000"
-          }
-        },
-        "collection_tnLgjy": {
-          "type": "collection",
-          "settings": {
-            "collection": "geschenke-fur-handwerker",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Für Handwerker",
-            "url": "",
-            "text_color": "#000000"
-          }
-        },
-        "collection_a944wG": {
-          "type": "collection",
-          "settings": {
-            "collection": "baum-familienschilder",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Bäume",
-            "url": "",
-            "text_color": "#000000"
-          }
-        },
-        "collection_P3xGyQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "hausschilder",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Hausschilder",
-            "url": "",
-            "text_color": "#000000"
-          }
-        },
-        "collection_43RDBP": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Wappen",
-            "url": "/pages/heraldisches-wappen-aus-metall",
-            "text_color": "#000000"
-          }
-        },
-        "collection_p94kDg": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "product": "",
-            "show_collection": true,
-            "use_collection_title": false,
-            "title": "Sonderanfertigungen",
-            "url": "/pages/anfragen",
-            "text_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "collection_BcTWVB",
-        "collection_Pt3nBT",
-        "collection_86jrtH",
-        "collection_tnLgjy",
-        "collection_a944wG",
-        "collection_P3xGyQ",
-        "collection_43RDBP",
-        "collection_p94kDg"
-      ],
-      "name": "Collection Grid",
-      "settings": {
-        "title": "Beliebte Kollektionen",
-        "text_color": "#000000"
-      }
-    },
     "featured_collection_NyenqT": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -683,7 +567,6 @@
     "multirow_bRe7ze",
     "steelmonks_parallax_richtext_B3nrrY",
     "rich_text_9i9AtX",
-    "steelmonks_collection_grid_c33Bcb",
     "featured_collection_NyenqT"
   ]
 }
