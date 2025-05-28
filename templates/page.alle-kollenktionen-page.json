@@ -181,9 +181,13 @@
           "type": "items_row",
           "settings": {
             "title": "Für Pferdefreunde",
+            "item1": "shopify://shop_images/PferdePortraitSchwarz3.jpg",
             "item1_link": "",
+            "item2": "shopify://shop_images/PferdePortraitSchwarz5.jpg",
             "item2_link": "",
+            "item3": "shopify://shop_images/PINT-white-horse-Thumbnail.jpg",
             "item3_link": "",
+            "item4": "shopify://shop_images/PINT-Black-Horse-Thumbnail.jpg",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
             "cta_link": "shopify://collections/pferde-geschenke"
