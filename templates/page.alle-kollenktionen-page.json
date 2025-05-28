@@ -27,9 +27,13 @@
           "type": "items_row",
           "settings": {
             "title": "Hausschilder",
+            "item1": "shopify://shop_images/H-2801-Shopify-Thumbnail.jpg",
             "item1_link": "",
+            "item2": "shopify://shop_images/ST-1100-Shopify-Thumbnail_269b6069-aa0d-48dc-b70f-12163bfd7ea6.jpg",
             "item2_link": "",
+            "item3": "shopify://shop_images/H-2900-Shopify-Thumbnail.jpg",
             "item3_link": "",
+            "item4": "shopify://shop_images/ST-2100-Shopify-Thumbnail.jpg",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
             "cta_link": "shopify://collections/strassenschilder"
