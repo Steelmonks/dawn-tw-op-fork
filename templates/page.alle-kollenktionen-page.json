@@ -121,9 +121,13 @@
           "type": "items_row",
           "settings": {
             "title": "Baumtiere",
+            "item1": "shopify://shop_images/steelmonks-metallschild-baumtier-waschbar-schwarz-ral-9005-2.jpg",
             "item1_link": "",
+            "item2": "shopify://shop_images/steelmonks-metallschild-baumtier-specht-schwarz-ral-9005.jpg",
             "item2_link": "",
+            "item3": "shopify://shop_images/steelmonks-metallschild-baumtier-meise-schwarz-ral-9005-4.jpg",
             "item3_link": "",
+            "item4": "shopify://shop_images/steelmonks-metallschild-baumtier-neugieriges-eichhornchen-schwarz-ral-9005-5.jpg",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
             "cta_link": "shopify://collections/baumstecker"
