@@ -43,9 +43,13 @@
           "type": "items_row",
           "settings": {
             "title": "Monogramme",
+            "item1": "shopify://shop_images/M-1004-Thumbnail-Master_2a8f3d46-abe6-4b9b-a96c-60730e2ff015.jpg",
             "item1_link": "",
+            "item2": "shopify://shop_images/M-1009-Thumbnail-Master.jpg",
             "item2_link": "",
+            "item3": "shopify://shop_images/M-1008-Thumbnail-Master.jpg",
             "item3_link": "",
+            "item4": "shopify://shop_images/M-1003-thumbnail-shopify.jpg",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
             "cta_link": "shopify://collections/monogramme"
