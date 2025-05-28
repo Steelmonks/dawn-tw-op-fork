@@ -193,6 +193,7 @@
           "type": "items_row",
           "settings": {
             "title": "Für Angler",
+            "item1": "shopify://shop_images/KarpfenamHaken1.jpg",
             "item1_link": "",
             "item2_link": "",
             "item3_link": "",
