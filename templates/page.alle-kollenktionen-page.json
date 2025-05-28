@@ -75,9 +75,13 @@
           "type": "items_row",
           "settings": {
             "title": "Maritim",
+            "item1": "shopify://shop_images/steelmonks-metallschild-maritimes-schild-windrose-schwarz-ral-9005-22_5cm-2.jpg",
             "item1_link": "",
+            "item2": "shopify://shop_images/steelmonks-metallschild-maritimes-schild-windrose-schwarz-ral-9005-22_5cm-2.jpg",
             "item2_link": "",
+            "item3": "shopify://shop_images/steelmonks-metallschild-maritimes-schild-grosser-anker-schwarz-ral-9005-22_5cm-2.jpg",
             "item3_link": "",
+            "item4": "shopify://shop_images/steelmonks-metallschild-maritimes-schild-grosser-anker-schwarz-ral-9005-22_5cm.jpg",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
             "cta_link": "shopify://collections/dekoschilder-maritim"
