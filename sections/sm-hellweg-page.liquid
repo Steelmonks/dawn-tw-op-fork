@@ -1,6 +1,6 @@
 <main
   style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; padding-left: {{ section.settings.padding_left }}px; padding-right: {{ section.settings.padding_right }}px;'
-  class='twcss-flex twcss-flex-col twcss-gap-8 twcss-items-center'
+  class='twcss-flex twcss-flex-col twcss-items-center'
 >
   <!-- Image Section -->
   {% if section.settings.hellweg_lippe_image != blank %}
@@ -8,7 +8,7 @@
       <img
         src='{{ section.settings.hellweg_lippe_image | image_url: width: 1280 }}'
         alt='{{ section.settings.hellweg_lippe_image.alt | escape }}'
-        class='twcss-max-w-full twcss-h-auto twcss-rounded-lg twcss-shadow-lg'
+        class='twcss-max-w-full twcss-h-auto twcss-shadow-lg'
         width='{{ section.settings.hellweg_lippe_image.width }}'
         height='{{ section.settings.hellweg_lippe_image.height }}'
         loading='lazy'
@@ -17,10 +17,109 @@
   {% endif %}
 
   <!-- Blue Container with Centered Text -->
-  <section class='twcss-w-full twcss-bg-brandblue twcss-flex twcss-items-center twcss-justify-center twcss-py-4 twcss-mb-6'>
+  <section class='twcss-w-full twcss-bg-brandblack twcss-flex twcss-items-center twcss-justify-center twcss-py-4'>
     <span class='twcss-text-center twcss-font-bold twcss-text-brandwhite {{ section.settings.text_size }}'>
       {{ section.settings.blue_text }}
     </span>
+  </section>
+
+  <!-- Primary Image Blocks Section -->
+  <section class='twcss-grid twcss-gap-8 md:twcss-grid-cols-3 twcss-text-center twcss-px-8'>
+    {% for block in section.blocks %}
+      {% if block.type == 'image_text' %}
+        <div
+          style='padding: 20px;'
+          class='twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-h-full twcss-gap-4'
+        >
+          {% if block.settings.icon != blank %}
+            <div class='twcss-h-[100px] twcss-flex twcss-items-center'>
+              <img
+                src='{{ block.settings.icon | image_url: width: 100 }}'
+                alt='{{ block.settings.title | escape }}'
+                width='100'
+                height='100'
+                class='twcss-mx-auto twcss-object-contain'
+                style='max-height: 100px;'
+                loading='lazy'
+              >
+            </div>
+          {% endif %}
+          <p class='twcss-text-2xl twcss-font-bold'>{{ block.settings.description }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <!-- Zunft-Highlights Section -->
+  <section class='twcss-w-full twcss-bg-brandwhite twcss-rounded-xl twcss-p-6 twcss-mt-10 twcss-flex twcss-flex-col twcss-items-center twcss-shadow-lg'>
+    <h2 class='twcss-text-center twcss-text-brandblack twcss-font-bold twcss-text-4xl twcss-mb-8'>
+      {{ section.settings.highlights_heading }}
+    </h2>
+    <div class='twcss-flex twcss-flex-col md:twcss-flex-row twcss-gap-8 twcss-w-full twcss-justify-center twcss-items-center twcss-mb-8'>
+      <div
+        class='twcss-flex twcss-justify-center twcss-items-center twcss-bg-brandwhite twcss-rounded-xl twcss-shadow-md twcss-overflow-hidden'
+        style='width: 180px; height: 180px;'
+      >
+        {% if section.settings.highlight_image_1 != blank %}
+          <img
+            src='{{ section.settings.highlight_image_1 | image_url: width: 360 }}'
+            alt='Zunft Highlight 1'
+            class='twcss-object-cover twcss-w-[180px] twcss-h-[180px] md:twcss-w-[360px] md:twcss-h-[360px] twcss-rounded-lg twcss-border twcss-border-solid twcss-border-brandblack'
+            width='360'
+            height='360'
+            loading='lazy'
+          >
+        {% endif %}
+      </div>
+      <div
+        class='twcss-flex twcss-justify-center twcss-items-center twcss-bg-brandwhite twcss-rounded-xl twcss-shadow-md twcss-overflow-hidden'
+        style='width: 180px; height: 180px;'
+      >
+        {% if section.settings.highlight_image_2 != blank %}
+          <img
+            src='{{ section.settings.highlight_image_2 | image_url: width: 360 }}'
+            alt='Zunft Highlight 2'
+            class='twcss-object-cover twcss-w-[180px] twcss-h-[180px] md:twcss-w-[360px] md:twcss-h-[360px] twcss-rounded-lg twcss-border twcss-border-solid twcss-border-brandblack'
+            width='360'
+            height='360'
+            loading='lazy'
+          >
+        {% endif %}
+      </div>
+      <div
+        class='twcss-flex twcss-justify-center twcss-items-center twcss-bg-brandwhite twcss-rounded-xl twcss-shadow-md twcss-overflow-hidden'
+        style='width: 180px; height: 180px;'
+      >
+        {% if section.settings.highlight_image_3 != blank %}
+          <img
+            src='{{ section.settings.highlight_image_3 | image_url: width: 360 }}'
+            alt='Zunft Highlight 3'
+            class='twcss-object-cover twcss-w-[180px] twcss-h-[180px] md:twcss-w-[360px] md:twcss-h-[360px] twcss-rounded-lg twcss-border twcss-border-solid twcss-border-brandblack'
+            width='360'
+            height='360'
+            loading='lazy'
+          >
+        {% endif %}
+      </div>
+      <div
+        class='twcss-flex twcss-justify-center twcss-items-center twcss-bg-brandwhite twcss-rounded-xl twcss-shadow-md twcss-overflow-hidden'
+        style='width: 180px; height: 180px;'
+      >
+        {% if section.settings.highlight_image_4 != blank %}
+          <img
+            src='{{ section.settings.highlight_image_4 | image_url: width: 360 }}'
+            alt='Zunft Highlight 4'
+            class='twcss-object-cover twcss-w-[180px] twcss-h-[180px] md:twcss-w-[360px] md:twcss-h-[360px] twcss-rounded-lg twcss-border twcss-border-solid twcss-border-brandblack'
+            width='360'
+            height='360'
+            loading='lazy'
+          >
+        {% endif %}
+      </div>
+    </div>
+    <a href='https://steelmonks.com/collections/geschenke-fur-handwerker' class='btn btn-primary twcss-text-2xl'>
+      {{ section.settings.highlights_button_text }}
+    </a>
   </section>
 </main>
 
@@ -91,6 +190,56 @@
       "type": "image_picker",
       "id": "hellweg_lippe_image",
       "label": "Hellweg-Lippe Image"
+    },
+    {
+      "type": "text",
+      "id": "highlights_heading",
+      "label": "Highlights Heading",
+      "default": "Zunft-Highlights"
+    },
+    {
+      "type": "image_picker",
+      "id": "highlight_image_1",
+      "label": "Highlight Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "highlight_image_2",
+      "label": "Highlight Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "highlight_image_3",
+      "label": "Highlight Image 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "highlight_image_4",
+      "label": "Highlight Image 4"
+    },
+    {
+      "type": "text",
+      "id": "highlights_button_text",
+      "label": "Highlights Button Text",
+      "default": "Mehr entdecken"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_text",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Block Image"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Block Description"
+        }
+      ]
     }
   ],
   "presets": [

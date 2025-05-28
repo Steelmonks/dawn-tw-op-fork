@@ -1,0 +1,69 @@
+{% comment %} This section has no settings {% endcomment %}
+
+{% schema %}
+{
+  "name": "Hellweg Hero",
+  "tag": "section",
+  "class": "hellweg-hero",
+  "settings": [
+    { "type": "image_picker", "id": "hero_image_1", "label": "First Hero Image" },
+    { "type": "image_picker", "id": "hero_image_2", "label": "Second Hero Image" },
+    { "type": "image_picker", "id": "hero_image_3", "label": "Third Hero Image" },
+    { "type": "image_picker", "id": "mobile_hero_image", "label": "Mobile Hero Image" }
+  ],
+  "presets": [
+    {
+      "name": "Hellweg Hero"
+    }
+  ]
+}
+{% endschema %}
+
+<div class='twcss-flex twcss-flex-col twcss-items-center twcss-bg-brandwhite twcss-pt-20 md:twcss-pt-10'>
+  <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-8 md:twcss-flex-row md:twcss-items-end md:twcss-bg-[url(https://cdn.shopify.com/s/files/1/0472/6420/2901/files/hero-banner.webp?v=1739775054)] md:twcss-bg-contain md:twcss-bg-right md:twcss-bg-no-repeat md:twcss-w-full md:twcss-py-36'>
+    <div class='twcss-flex twcss-flex-row twcss-gap-8 twcss-w-full twcss-justify-center'>
+      <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/beliebt'>
+        <img
+          src='{{ section.settings.hero_image_1 | image_url: width: 300 }}'
+          height='140'
+          width='140'
+          class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+        >
+        <span class='btn btn-primary'>Geschenke</span>
+      </a>
+      <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/zunftzeichen'>
+        <img
+          src='{{ section.settings.hero_image_2 | image_url: width: 300 }}'
+          height='140'
+          width='140'
+          class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+        >
+        <span class='btn btn-primary'>Zunftschilder</span>
+      </a>
+      <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/anfragen'>
+        <img
+          src='{{ section.settings.hero_image_3 | image_url: width: 300 }}'
+          height='140'
+          width='140'
+          class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+        >
+        <span class='btn btn-primary'>Betriebsschilder</span>
+      </a>
+    </div>
+
+    <article class='twcss-relative md:twcss-w-[40%]'>
+      <img
+        src='{{ section.settings.mobile_hero_image | image_url: width: 600 }}'
+        width='100%'
+        height='100%'
+        class='md:twcss-hidden twcss-mb-4'
+      >
+      <a
+        href='/collections/geschenke-fur-handwerker'
+        class='btn btn-primary btn-big twcss-absolute -twcss-bottom-5 twcss-left-1/2 twcss--translate-x-1/2 md:twcss-bottom-1/4'
+      >
+        Für Handwerker
+      </a>
+    </article>
+  </div>
+</div>
