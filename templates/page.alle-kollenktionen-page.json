@@ -32,7 +32,7 @@
             "item3_link": "",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
-            "cta_link": "https://steelmonks.com/collections/strassenschilder"
+            "cta_link": "shopify://collections/strassenschilder"
           }
         },
         "items_row_cj8aJA": {
@@ -152,7 +152,7 @@
             "item3_link": "",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
-            "cta_link": ""
+            "cta_link": "shopify://collections/pferde-geschenke"
           }
         },
         "items_row_JPUWMp": {
@@ -164,7 +164,7 @@
             "item3_link": "",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
-            "cta_link": ""
+            "cta_link": "shopify://collections/angeln-geschenkideen"
           }
         }
       },
