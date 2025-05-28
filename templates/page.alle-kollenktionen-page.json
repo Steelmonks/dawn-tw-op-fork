@@ -165,9 +165,13 @@
           "type": "items_row",
           "settings": {
             "title": "Für Motorradfahrer",
+            "item1": "shopify://shop_images/Motorradliebhaber_Geschenk.png",
             "item1_link": "",
+            "item2": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-motorflugzeug-edelstahl-3.jpg",
             "item2_link": "",
+            "item3": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-motorrad-paar-edelstahl-3.jpg",
             "item3_link": "",
+            "item4": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-motocross-edelstahl.jpg",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
             "cta_link": "shopify://collections/motorrad-geschenke"
