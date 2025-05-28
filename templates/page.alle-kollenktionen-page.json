@@ -153,7 +153,9 @@
           "type": "items_row",
           "settings": {
             "title": "Für Handwerker",
+            "item1": "shopify://shop_images/web-union-handworkers.webp",
             "item1_link": "",
+            "item2": "shopify://shop_images/web-handwerker_hand.webp",
             "item2_link": "",
             "item3_link": "",
             "item4_link": "",
