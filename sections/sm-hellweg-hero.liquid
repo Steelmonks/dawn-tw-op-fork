@@ -20,37 +20,88 @@
 {% endschema %}
 
 <div class='twcss-flex twcss-flex-col twcss-items-center twcss-bg-brandwhite twcss-pt-20 md:twcss-pt-10'>
-  <div class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-8 md:twcss-flex-row md:twcss-items-end md:twcss-bg-[url(https://cdn.shopify.com/s/files/1/0472/6420/2901/files/hero-banner.webp?v=1739775054)] md:twcss-bg-contain md:twcss-bg-right md:twcss-bg-no-repeat md:twcss-w-full md:twcss-py-36'>
-    <div class='twcss-flex twcss-flex-row twcss-gap-8 twcss-w-full twcss-justify-center'>
-      <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/beliebt'>
-        <img
-          src='{{ section.settings.hero_image_1 | image_url: width: 300 }}'
-          height='140'
-          width='140'
-          class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+  <div class='twcss-w-full twcss-flex twcss-flex-col twcss-items-center twcss-gap-8 md:twcss-flex-row md:twcss-items-end md:twcss-bg-[url(https://cdn.shopify.com/s/files/1/0472/6420/2901/files/hero-banner.webp?v=1739775054)] md:twcss-bg-contain md:twcss-bg-right md:twcss-bg-no-repeat md:twcss-w-full md:twcss-py-36'>
+    <div data-hero-slider class='twcss-relative twcss-w-full'>
+      <div class='twcss-hidden md:twcss-flex twcss-flex-row twcss-gap-8 twcss-w-full twcss-justify-center'>
+        <!-- Desktop: show all 3 -->
+        <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/beliebt'>
+          <img
+            src='{{ section.settings.hero_image_1 | image_url: width: 300 }}'
+            height='140'
+            width='140'
+            class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+          >
+          <span class='btn btn-primary'>Geschenke</span>
+        </a>
+        <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/zunftzeichen'>
+          <img
+            src='{{ section.settings.hero_image_2 | image_url: width: 300 }}'
+            height='140'
+            width='140'
+            class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+          >
+          <span class='btn btn-primary'>Zunftschilder</span>
+        </a>
+        <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/anfragen'>
+          <img
+            src='{{ section.settings.hero_image_3 | image_url: width: 300 }}'
+            height='140'
+            width='140'
+            class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+          >
+          <span class='btn btn-primary'>Betriebsschilder</span>
+        </a>
+      </div>
+      <!-- Mobile: slider -->
+      <div class='twcss-flex md:twcss-hidden twcss-w-full twcss-items-center twcss-px-8'>
+        <button
+          data-hero-prev
+          class='twcss-w-10 twcss-h-10 twcss-bg-brandblue/75 twcss-rounded-full twcss-flex twcss-items-center twcss-justify-center'
         >
-        <span class='btn btn-primary'>Geschenke</span>
-      </a>
-      <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/zunftzeichen'>
-        <img
-          src='{{ section.settings.hero_image_2 | image_url: width: 300 }}'
-          height='140'
-          width='140'
-          class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
+          <span class='twcss-text-brandwhite twcss-text-xl'>&larr;</span>
+        </button>
+        <div class='twcss-flex-1 twcss-flex twcss-justify-center'>
+          <div class='twcss-relative twcss-w-full twcss-flex twcss-justify-center'>
+            <article
+              data-hero-slide
+              class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'
+              style='display: flex;'
+            >
+              <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/beliebt'>
+                <img src='{{ section.settings.hero_image_1 | image_url: width: 300 }}' height='140' width='140'>
+                <span class='btn btn-primary'>Geschenke</span>
+              </a>
+            </article>
+            <article
+              data-hero-slide
+              class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'
+              style='display: none;'
+            >
+              <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/zunftzeichen'>
+                <img src='{{ section.settings.hero_image_2 | image_url: width: 300 }}' height='140' width='140'>
+                <span class='btn btn-primary'>Zunftschilder</span>
+              </a>
+            </article>
+            <article
+              data-hero-slide
+              class='twcss-flex twcss-flex-col twcss-items-center twcss-gap-2'
+              style='display: none;'
+            >
+              <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/anfragen'>
+                <img src='{{ section.settings.hero_image_3 | image_url: width: 300 }}' height='140' width='140'>
+                <span class='btn btn-primary'>Betriebsschilder</span>
+              </a>
+            </article>
+          </div>
+        </div>
+        <button
+          data-hero-next
+          class='twcss-w-10 twcss-h-10 twcss-bg-brandblue/75 twcss-rounded-full twcss-flex twcss-items-center twcss-justify-center'
         >
-        <span class='btn btn-primary'>Zunftschilder</span>
-      </a>
-      <a class='twcss-flex twcss-flex-col twcss-gap-2 twcss-items-center' href='/collections/anfragen'>
-        <img
-          src='{{ section.settings.hero_image_3 | image_url: width: 300 }}'
-          height='140'
-          width='140'
-          class='md:twcss-w-[150px] md:twcss-h-[150px] lg:twcss-w-[250px] lg:twcss-h-[250px] md:twcss-aspect-square md:twcss-object-contain'
-        >
-        <span class='btn btn-primary'>Betriebsschilder</span>
-      </a>
+          <span class='twcss-text-brandwhite twcss-text-xl'>&rarr;</span>
+        </button>
+      </div>
     </div>
-
     <article class='twcss-relative md:twcss-w-[40%]'>
       <img
         src='{{ section.settings.mobile_hero_image | image_url: width: 600 }}'
@@ -60,10 +111,42 @@
       >
       <a
         href='/collections/geschenke-fur-handwerker'
-        class='btn btn-primary btn-big twcss-absolute -twcss-bottom-5 twcss-left-1/2 twcss--translate-x-1/2 md:twcss-bottom-1/4'
+        class='btn btn-primary twcss-absolute -twcss-bottom-5 twcss-left-1/2 twcss--translate-x-1/2 md:twcss-bottom-1/4'
       >
         Für Handwerker
       </a>
     </article>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.querySelector('[data-hero-slider]');
+    if (!slider) return;
+    const slides = slider.querySelectorAll('[data-hero-slide]');
+    const prevButton = slider.querySelector('[data-hero-prev]');
+    const nextButton = slider.querySelector('[data-hero-next]');
+    if (!slides.length || !prevButton || !nextButton) return;
+    // Hide all slides except the first one
+    slides.forEach((slide, index) => {
+      slide.style.display = index === 0 ? 'flex' : 'none';
+    });
+    let currentSlideIndex = 0;
+    function showSlide(index) {
+      slides.forEach((slide) => {
+        slide.style.display = 'none';
+      });
+      slides[index].style.display = 'flex';
+    }
+    function nextSlide() {
+      currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+      showSlide(currentSlideIndex);
+    }
+    function prevSlide() {
+      currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+      showSlide(currentSlideIndex);
+    }
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+  });
+</script>
