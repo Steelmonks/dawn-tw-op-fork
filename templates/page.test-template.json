@@ -414,156 +414,111 @@
         "link": ""
       }
     },
-    "image_with_text_AAgmcW": {
-      "type": "image-with-text",
+    "multirow_bRe7ze": {
+      "type": "multirow",
       "blocks": {
-        "heading_rgE8XL": {
-          "type": "heading",
+        "row_RM647R": {
+          "type": "row",
           "settings": {
-            "heading": "Bild mit Text",
-            "heading_size": "h1"
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
           }
         },
-        "text_MDwMr6": {
-          "type": "text",
+        "row_V84c7t": {
+          "type": "row",
           "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
             "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "text_style": "body"
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_r3tAYm": {
+          "type": "row",
+          "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_pJhhJF": {
+          "type": "row",
+          "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading_rgE8XL",
-        "text_MDwMr6"
+        "row_RM647R",
+        "row_V84c7t",
+        "row_r3tAYm",
+        "row_pJhhJF"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "height": "adapt",
+        "image_height": "medium",
         "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "image_with_text_XBKXKh": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_gjb8Yb": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bild mit Text",
-            "heading_size": "h1"
-          }
-        },
-        "text_nwjXiE": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_gjb8Yb",
-        "text_nwjXiE"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
+    "steelmonks_parallax_richtext_B3nrrY": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "",
+        "link_text": "",
+        "link": ""
       }
     },
-    "image_with_text_7C8hdt": {
-      "type": "image-with-text",
+    "rich_text_9i9AtX": {
+      "type": "rich-text",
       "blocks": {
-        "heading_gCnH4Q": {
+        "heading_D4WpMa": {
           "type": "heading",
           "settings": {
-            "heading": "Bild mit Text",
+            "heading": "Erzähle etwas über deine Marke",
             "heading_size": "h1"
           }
         },
-        "text_w76WpC": {
+        "text_3VAwek": {
           "type": "text",
           "settings": {
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "text_style": "body"
+            "text": "<p>Teile Infos über deine Marke mit deinen Kunden. Beschreibe ein Produkt, kündige etwas an oder heiße Kunden willkommen.</p>"
           }
         }
       },
       "block_order": [
-        "heading_gCnH4Q",
-        "text_w76WpC"
+        "heading_D4WpMa",
+        "text_3VAwek"
       ],
-      "name": "t:sections.image-with-text.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_MXjn6V": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_rBUiD9": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bild mit Text",
-            "heading_size": "h1"
-          }
-        },
-        "text_qj9WRX": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rBUiD9",
-        "text_qj9WRX"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-1",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -580,9 +535,8 @@
     "sm_media_page_HGNzTj",
     "image_with_text_UENLfF",
     "steelmonks_parallax_richtext_FB76R3",
-    "image_with_text_AAgmcW",
-    "image_with_text_XBKXKh",
-    "image_with_text_7C8hdt",
-    "image_with_text_MXjn6V"
+    "multirow_bRe7ze",
+    "steelmonks_parallax_richtext_B3nrrY",
+    "rich_text_9i9AtX"
   ]
 }
