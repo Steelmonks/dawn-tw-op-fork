@@ -182,8 +182,12 @@
         "items_row_eg7HCY",
         "items_row_JPUWMp"
       ],
-      "name": "Steelmonks Items Grid",
-      "settings": {}
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0
+      }
     }
   },
   "order": [
