@@ -137,9 +137,13 @@
           "type": "items_row",
           "settings": {
             "title": "Für Feuerwehr",
+            "item1": "shopify://shop_images/Kleines-Feuerwehr-Set_d0bcf79e-fe54-4f5a-8b53-b794ff4b5316.jpg",
             "item1_link": "",
+            "item2": "shopify://shop_images/Grosses-Feuerwehr-Set.jpg",
             "item2_link": "",
+            "item3": "shopify://shop_images/Feuerwehr-Cardholder-2-White-Layer-Thumbnail.jpg",
             "item3_link": "",
+            "item4": "shopify://shop_images/Feuerwehrlogo_Kartenhalter.jpg",
             "item4_link": "",
             "cta_text": "Mehr entdecken",
             "cta_link": "shopify://collections/feuerwehr-geschenke"
