@@ -1,0 +1,102 @@
+<main
+  style='padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; padding-left: {{ section.settings.padding_left }}px; padding-right: {{ section.settings.padding_right }}px;'
+  class='twcss-flex twcss-flex-col twcss-gap-8 twcss-items-center'
+>
+  <!-- Image Section -->
+  {% if section.settings.hellweg_lippe_image != blank %}
+    <div class='twcss-flex twcss-justify-center twcss-items-center twcss-w-full'>
+      <img
+        src='{{ section.settings.hellweg_lippe_image | image_url: width: 1280 }}'
+        alt='{{ section.settings.hellweg_lippe_image.alt | escape }}'
+        class='twcss-max-w-full twcss-h-auto twcss-rounded-lg twcss-shadow-lg'
+        width='{{ section.settings.hellweg_lippe_image.width }}'
+        height='{{ section.settings.hellweg_lippe_image.height }}'
+        loading='lazy'
+      >
+    </div>
+  {% endif %}
+
+  <!-- Blue Container with Centered Text -->
+  <section class='twcss-w-full twcss-bg-brandblue twcss-flex twcss-items-center twcss-justify-center twcss-py-4 twcss-mb-6'>
+    <span class='twcss-text-center twcss-font-bold twcss-text-brandwhite {{ section.settings.text_size }}'>
+      {{ section.settings.blue_text }}
+    </span>
+  </section>
+</main>
+
+{% schema %}
+{
+  "name": "Hellweg Promo Page",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Page Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Page Padding Bottom",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Page Padding Left",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Page Padding Right",
+      "default": 16
+    },
+    {
+      "type": "text",
+      "id": "blue_text",
+      "label": "Blue Container Text",
+      "default": "Exklusive 10% mit \"KH-HL10\""
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text Size",
+      "options": [
+        { "value": "twcss-text-lg", "label": "Large" },
+        { "value": "twcss-text-xl", "label": "Extra Large" },
+        { "value": "twcss-text-2xl", "label": "2XL" },
+        { "value": "twcss-text-3xl", "label": "3XL" },
+        { "value": "twcss-text-4xl", "label": "4XL" }
+      ],
+      "default": "twcss-text-2xl"
+    },
+    {
+      "type": "image_picker",
+      "id": "hellweg_lippe_image",
+      "label": "Hellweg-Lippe Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hellweg Promo Page"
+    }
+  ]
+}
+{% endschema %}
