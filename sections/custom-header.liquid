@@ -1,0 +1,45 @@
+{% schema %}
+{
+  "name": "Custom Header",
+  "tag": "section",
+  "settings": [
+    { "type": "richtext", "id": "richtext", "label": "Header Text" },
+    { "type": "text", "id": "button_text", "label": "Button Text" },
+    { "type": "url", "id": "button_link", "label": "Button Link" },
+    { "type": "image_picker", "id": "image", "label": "Header Image" }
+  ],
+  "presets": [{ "name": "Custom Header" }]
+}
+{% endschema %}
+
+<div class='twcss-w-full twcss-bg-white twcss-py-8 twcss-px-4'>
+  <div class='twcss-flex twcss-flex-col md:twcss-flex-row twcss-items-center twcss-justify-between twcss-gap-8 twcss-max-w-7xl twcss-mx-auto'>
+    <div class='twcss-flex-1 twcss-flex twcss-flex-col twcss-items-start twcss-mb-2'>
+      {% if section.settings.richtext != blank %}
+        <div class='twcss-text-left twcss-text-brandblack twcss-text-2xl md:twcss-text-4xl twcss-font-bold twcss-mb-6'>
+          {{ section.settings.richtext }}
+        </div>
+      {% endif %}
+      {% if section.settings.button_text != blank %}
+        <a
+          href='{{ section.settings.button_link }}'
+          class='twcss-inline-block twcss-bg-brandred twcss-text-white twcss-font-semibold twcss-px-8 twcss-py-4 twcss-rounded twcss-shadow-md twcss-text-lg twcss-mt-2 hover:twcss-bg-red-700 twcss-transition'
+        >
+          {{ section.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+    {% if section.settings.image != blank %}
+      <div class='twcss-flex-1 twcss-flex twcss-justify-center md:twcss-justify-end'>
+        <img
+          src='{{ section.settings.image | image_url: width: 600 }}'
+          alt=''
+          width='600'
+          height='350'
+          class='twcss-w-[380px] twcss-h-[220px] md:twcss-w-[600px] md:twcss-h-[350px] twcss-max-w-full twcss-object-contain'
+          loading='lazy'
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>

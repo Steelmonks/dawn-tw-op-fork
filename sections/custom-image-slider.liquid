@@ -1,0 +1,75 @@
+{% schema %}
+{
+  "name": "Custom Image Sliders",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "slider_block",
+      "name": "Slider Block",
+      "limit": 3,
+      "settings": [
+        { "type": "richtext", "id": "richtext", "label": "Centered Text" },
+        {
+          "type": "range",
+          "id": "slide_count",
+          "label": "Number of Slides",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 3
+        },
+        { "type": "image_picker", "id": "image_1", "label": "Image 1" },
+        { "type": "image_picker", "id": "image_2", "label": "Image 2" },
+        { "type": "image_picker", "id": "image_3", "label": "Image 3" },
+        { "type": "image_picker", "id": "image_4", "label": "Image 4" },
+        { "type": "image_picker", "id": "image_5", "label": "Image 5" },
+        { "type": "image_picker", "id": "image_6", "label": "Image 6" },
+        { "type": "image_picker", "id": "image_7", "label": "Image 7" },
+        { "type": "image_picker", "id": "image_8", "label": "Image 8" },
+        { "type": "image_picker", "id": "image_9", "label": "Image 9" },
+        { "type": "image_picker", "id": "image_10", "label": "Image 10" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Sliders",
+      "blocks": [{ "type": "slider_block" }, { "type": "slider_block" }, { "type": "slider_block" }]
+    }
+  ]
+}
+{% endschema %}
+
+<div class='twcss-w-full twcss-py-12 twcss-px-4'>
+  <div class='twcss-flex twcss-flex-col md:twcss-flex-row md:twcss-gap-8'>
+    {% for block in section.blocks %}
+      <div class='twcss-flex-1 twcss-flex twcss-flex-col twcss-items-center twcss-mb-6 twcss-w-[115px] twcss-h-[200px] md:twcss-w-[380px] md:twcss-h-[400px]'>
+        {% if block.settings.richtext != blank %}
+          <div class='twcss-text-center twcss-mb-4 twcss-font-semibold twcss-text-lg'>
+            {{ block.settings.richtext }}
+          </div>
+        {% endif %}
+        <div class='twcss-relative twcss-w-full twcss-overflow-hidden'>
+          <div class='custom-slider twcss-flex twcss-transition-all' style='scroll-behavior: smooth;'>
+            {% for i in (1..block.settings.slide_count) %}
+              {% capture image_key %}image_{{ i }}{% endcapture %}
+              {% assign image = block.settings[image_key] %}
+              {% if image != blank %}
+                <div class='twcss-flex-shrink-0 twcss-w-[115px] twcss-h-[115px] md:twcss-w-[380px] md:twcss-h-[380px] twcss-relative'>
+                  <img
+                    src='{{ image | image_url: width: 380 }}'
+                    alt=''
+                    width='380'
+                    height='380'
+                    class='twcss-w-full twcss-h-full twcss-object-cover twcss-rounded-lg'
+                    loading='lazy'
+                  >
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
