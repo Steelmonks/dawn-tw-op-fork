@@ -23,12 +23,7 @@
       {% if section.settings.button_text != blank %}
         <a
           href='{{ section.settings.button_link }}'
-          {% unless section.settings.button_link != blank %}
-            aria-disabled='true' tabindex='-1'
-            class='twcss-inline-block twcss-bg-brandred twcss-text-brandblack twcss-font-semibold twcss-px-8 twcss-py-4 twcss-rounded twcss-shadow-md twcss-text-lg twcss-mt-2 opacity-70 cursor-not-allowed'
-          {% else %}
-            class='twcss-inline-block twcss-bg-brandred twcss-text-brandblack twcss-font-semibold twcss-px-8 twcss-py-4 twcss-rounded twcss-shadow-md twcss-text-lg twcss-mt-2 hover:twcss-bg-red-700 twcss-transition'
-          {% endunless %}
+          class='twcss-inline-block twcss-bg-brandred twcss-text-brandblack twcss-text-center twcss-font-bold twcss-px-8 twcss-py-4 twcss-rounded twcss-shadow-md twcss-text-xl twcss-mt-2'
         >
           {{ section.settings.button_text }}
         </a>
