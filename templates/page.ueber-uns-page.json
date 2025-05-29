@@ -43,6 +43,7 @@
         "text_CKtdGA"
       ],
       "settings": {
+        "image": "shopify://shop_images/sm-brothers.webp",
         "height": "medium",
         "desktop_image_width": "medium",
         "layout": "text_first",
