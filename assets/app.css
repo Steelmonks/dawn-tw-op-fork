@@ -1158,6 +1158,11 @@ video {
   line-height: 2rem;
 }
 
+.twcss-text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .twcss-text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1185,11 +1190,6 @@ video {
 .twcss-text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.twcss-text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .twcss-text-3xl {
@@ -1426,14 +1426,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.twcss-transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .twcss-transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1580,11 +1572,6 @@ video {
   .desktop-only {
     display: block;
   }
-}
-
-.hover\:twcss-bg-red-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .hover\:twcss-bg-brandblack:hover {
