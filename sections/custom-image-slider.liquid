@@ -50,6 +50,13 @@
           </div>
         {% endif %}
         <div class='twcss-relative twcss-w-full twcss-overflow-hidden'>
+          <button
+            type='button'
+            class='twcss-absolute twcss-left-0 twcss-top-1/2 twcss--translate-y-1/2 twcss-bg-white twcss-rounded-full twcss-shadow twcss-z-10 twcss-p-2 twcss-text-xl twcss-border twcss-border-gray-300 hover:twcss-bg-gray-100 focus:twcss-outline-none'
+            aria-label='Previous slide'
+          >
+            &larr;
+          </button>
           <div class='custom-slider twcss-flex twcss-transition-all' style='scroll-behavior: smooth;'>
             {% for i in (1..block.settings.slide_count) %}
               {% capture image_key %}image_{{ i }}{% endcapture %}
@@ -68,6 +75,13 @@
               {% endif %}
             {% endfor %}
           </div>
+          <button
+            type='button'
+            class='twcss-absolute twcss-right-0 twcss-top-1/2 twcss--translate-y-1/2 twcss-bg-white twcss-rounded-full twcss-shadow twcss-z-10 twcss-p-2 twcss-text-xl twcss-border twcss-border-gray-300 hover:twcss-bg-gray-100 focus:twcss-outline-none'
+            aria-label='Next slide'
+          >
+            &rarr;
+          </button>
         </div>
       </div>
     {% endfor %}
