@@ -1379,14 +1379,14 @@ video {
   color: rgb(9 10 12 / var(--tw-text-opacity));
 }
 
-.twcss-text-brandwhite {
-  --tw-text-opacity: 1;
-  color: rgb(250 250 255 / var(--tw-text-opacity));
-}
-
 .twcss-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.twcss-text-brandwhite {
+  --tw-text-opacity: 1;
+  color: rgb(250 250 255 / var(--tw-text-opacity));
 }
 
 .twcss-text-black {
@@ -1592,9 +1592,9 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:twcss-text-white:hover {
+.hover\:twcss-text-brandblue:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(0 68 204 / var(--tw-text-opacity));
 }
 
 .hover\:twcss-text-brandwhite:hover {
