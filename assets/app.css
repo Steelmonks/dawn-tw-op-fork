@@ -1752,10 +1752,6 @@ video {
     align-items: flex-end;
   }
 
-  .md\:twcss-justify-end {
-    justify-content: flex-end;
-  }
-
   .md\:twcss-justify-center {
     justify-content: center;
   }
