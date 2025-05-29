@@ -20,6 +20,15 @@
         "show_title": false
       }
     },
+    "steelmonks_parallax_richtext_hXjyir": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "title": "",
+        "link_text": "",
+        "link": ""
+      }
+    },
     "image_banner_HpwD3b": {
       "type": "image-banner",
       "blocks": {
@@ -88,6 +97,7 @@
   },
   "order": [
     "main",
+    "steelmonks_parallax_richtext_hXjyir",
     "image_banner_HpwD3b",
     "featured_collection_D4kxUH"
   ]
