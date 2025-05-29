@@ -376,47 +376,6 @@
         "link": ""
       }
     },
-    "collection_list_hXr8h9": {
-      "type": "collection-list",
-      "blocks": {
-        "featured_collection_ADBXBn": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_T9Qaib": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection_Lffmew": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "featured_collection_ADBXBn",
-        "featured_collection_T9Qaib",
-        "featured_collection_Lffmew"
-      ],
-      "name": "t:sections.collection-list.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_view_all": false,
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collapsible_content_djE73R": {
       "type": "collapsible-content",
       "blocks": {
@@ -536,61 +495,6 @@
         "link": ""
       }
     },
-    "sm_scrolling_gallery_aQnjmd": {
-      "type": "sm-scrolling-gallery",
-      "blocks": {
-        "row_of_images_d8BnHH": {
-          "type": "row_of_images",
-          "settings": {
-            "use_custom_images": false,
-            "aspect_ratio": "16 / 9"
-          }
-        },
-        "inversed_row_of_images_r8bM3w": {
-          "type": "inversed_row_of_images",
-          "settings": {
-            "use_custom_images": false,
-            "aspect_ratio": "5 / 4"
-          }
-        },
-        "row_of_images_QLWRid": {
-          "type": "row_of_images",
-          "settings": {
-            "use_custom_images": false,
-            "aspect_ratio": "16 / 9"
-          }
-        },
-        "inversed_row_of_images_PX8pmr": {
-          "type": "inversed_row_of_images",
-          "settings": {
-            "use_custom_images": false,
-            "aspect_ratio": "16 / 9"
-          }
-        }
-      },
-      "block_order": [
-        "row_of_images_d8BnHH",
-        "inversed_row_of_images_r8bM3w",
-        "row_of_images_QLWRid",
-        "inversed_row_of_images_PX8pmr"
-      ],
-      "name": "Scrolling Gallery",
-      "settings": {
-        "overlay_text": "<h2>Inspired by Life.</h2><p>Steelmonks</p>",
-        "overlay_text_color": "#fafaff",
-        "overlay_background_color": "linear-gradient(45deg, rgba(9, 10, 12, 1) 25%, rgba(0, 68, 204, 1) 100%)",
-        "overlay_padding": "20px 20px 20px 20px",
-        "overlay_gradient_background_color": "radial-gradient(rgba(250, 250, 255, 1) 20%, rgba(250, 250, 255, 0) 80%)",
-        "overlay_style": "1",
-        "overlay_width": 85,
-        "show_box_shadow": true,
-        "box_shadow_properties": "4px 4px 6px #090a0c40",
-        "show_overlay_text": true,
-        "show_button": false,
-        "overlay_border_radius": 10,
-        "img_width": 250
-      }
-    },
     "1748518439a934ab4f": {
       "type": "apps",
       "blocks": {
@@ -649,12 +553,10 @@
     "sm_surfaces_page_W9wE9q",
     "sm_media_page_HGNzTj",
     "steelmonks_parallax_richtext_Ne4Mqr",
-    "collection_list_hXr8h9",
     "collapsible_content_djE73R",
     "contact_form_TUx9eb",
     "sm_scrolling_gallery_KTfKit",
     "steelmonks_parallax_richtext_V9YtDq",
-    "sm_scrolling_gallery_aQnjmd",
     "1748518439a934ab4f",
     "accordions_CqtVYW"
   ]
