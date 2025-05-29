@@ -496,24 +496,24 @@
         "padding_bottom": 36
       }
     },
-    "sm_scrolling_gallery_PgwUkY": {
+    "sm_scrolling_gallery_KTfKit": {
       "type": "sm-scrolling-gallery",
       "blocks": {
-        "row_of_images_NyMKDR": {
+        "row_of_images_FrGkxK": {
           "type": "row_of_images",
           "settings": {
             "use_custom_images": false,
             "aspect_ratio": "16 / 9"
           }
         },
-        "inversed_row_of_images_ihc9Yp": {
+        "inversed_row_of_images_Kwtjyk": {
           "type": "inversed_row_of_images",
           "settings": {
             "use_custom_images": false,
             "aspect_ratio": "5 / 4"
           }
         },
-        "row_of_images_LyeDDk": {
+        "row_of_images_8PQ7rY": {
           "type": "row_of_images",
           "settings": {
             "use_custom_images": false,
@@ -522,34 +522,25 @@
         }
       },
       "block_order": [
-        "row_of_images_NyMKDR",
-        "inversed_row_of_images_ihc9Yp",
-        "row_of_images_LyeDDk"
+        "row_of_images_FrGkxK",
+        "inversed_row_of_images_Kwtjyk",
+        "row_of_images_8PQ7rY"
       ],
       "name": "Scrolling Gallery",
       "settings": {
         "overlay_text": "<p><strong>Design Highlights</strong></p>",
         "overlay_text_color": "#fafaff",
-        "overlay_background_color": "",
+        "overlay_background_color": "linear-gradient(45deg, rgba(9, 10, 12, 1) 25%, rgba(0, 68, 204, 1) 100%)",
         "overlay_padding": "20px 20px 20px 20px",
         "overlay_gradient_background_color": "radial-gradient(rgba(250, 250, 255, 1) 20%, rgba(250, 250, 255, 0) 80%)",
         "overlay_style": "1",
-        "overlay_width": 10,
-        "show_box_shadow": false,
+        "overlay_width": 85,
+        "show_box_shadow": true,
         "box_shadow_properties": "4px 4px 6px #090a0c40",
-        "show_overlay_text": false,
+        "show_overlay_text": true,
         "show_button": false,
         "overlay_border_radius": 10,
         "img_width": 250
-      }
-    },
-    "steelmonks_parallax_richtext_XneG6a": {
-      "type": "steelmonks-parallax-richtext",
-      "name": "Parallax Rich Text",
-      "settings": {
-        "title": "Galerie",
-        "link_text": "Jetzt ansehen",
-        "link": ""
       }
     },
     "sm_scrolling_gallery_aQnjmd": {
@@ -690,8 +681,7 @@
     "collection_list_hXr8h9",
     "collapsible_content_djE73R",
     "contact_form_TUx9eb",
-    "sm_scrolling_gallery_PgwUkY",
-    "steelmonks_parallax_richtext_XneG6a",
+    "sm_scrolling_gallery_KTfKit",
     "sm_scrolling_gallery_aQnjmd",
     "1748518439a934ab4f",
     "accordions_CqtVYW"
