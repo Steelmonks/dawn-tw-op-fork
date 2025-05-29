@@ -1790,10 +1790,6 @@ video {
     flex-direction: column;
   }
 
-  .md\:twcss-flex-wrap {
-    flex-wrap: wrap;
-  }
-
   .md\:twcss-items-end {
     align-items: flex-end;
   }
@@ -1873,6 +1869,10 @@ video {
 }
 
 @media (min-width: 990px) {
+  .lg\:twcss-flex {
+    display: flex;
+  }
+
   .lg\:twcss-h-\[250px\] {
     height: 250px;
   }
@@ -1883,5 +1883,9 @@ video {
 
   .lg\:twcss-grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:twcss-flex-wrap {
+    flex-wrap: wrap;
   }
 }
