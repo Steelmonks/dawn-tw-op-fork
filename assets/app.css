@@ -547,6 +547,10 @@ video {
   }
 }
 
+.twcss-pointer-events-none {
+  pointer-events: none;
+}
+
 .twcss-absolute {
   position: absolute;
 }
@@ -724,6 +728,10 @@ video {
 .twcss-max-h-fit {
   max-height: -moz-fit-content;
   max-height: fit-content;
+}
+
+.twcss-min-h-\[400px\] {
+  min-height: 400px;
 }
 
 .twcss-min-h-\[500px\] {
@@ -957,10 +965,6 @@ video {
 .twcss-bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.twcss-bg-transparent {
-  background-color: transparent;
 }
 
 .twcss-bg-brandwhite {
