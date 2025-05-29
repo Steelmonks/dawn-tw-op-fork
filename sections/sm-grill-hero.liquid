@@ -34,7 +34,7 @@
 }
 {% endschema %}
 
-<div class='twcss-w-full twcss-overflow-hidden twcss-min-h-[400px]'>
+<div class='twcss-w-full twcss-overflow-hidden md:twcss-min-h-[400px]'>
   {% if section.settings.foreground_image != blank %}
     <div
       class='twcss-flex twcss-justify-center twcss-items-end twcss-pt-12 md:twcss-pt-24 twcss-bg-fixed twcss-bg-center twcss-bg-cover'
@@ -44,6 +44,7 @@
         src='{{ section.settings.foreground_image | image_url: width: 1920 }}'
         alt=''
         width='1920'
+        height='600'
         class='twcss-max-w-full twcss-h-auto'
         loading='lazy'
       >
