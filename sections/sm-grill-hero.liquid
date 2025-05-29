@@ -35,7 +35,6 @@
 {% endschema %}
 
 <div class='twcss-relative twcss-w-full twcss-overflow-hidden'>
-  {# Parallax background image #}
   {% if section.settings.parallax_image != blank %}
     <div
       class='twcss-absolute twcss-inset-0 twcss-w-full twcss-h-full twcss-bg-fixed twcss-bg-center twcss-bg-cover twcss-z-0'
@@ -43,22 +42,28 @@
     ></div>
   {% endif %}
 
-  {# Foreground image #}
   {% if section.settings.foreground_image != blank %}
     <div class='twcss-relative twcss-z-10 twcss-flex twcss-justify-center twcss-items-end twcss-pt-12 md:twcss-pt-24'>
       <img
-        src='{{ section.settings.foreground_image | image_url: width: 900 }}'
+        src='{{ section.settings.foreground_image | image_url: width: 1920 }}'
         alt=''
+        width='1920'
+        height='600'
         class='twcss-max-w-full twcss-h-auto twcss-drop-shadow-xl'
         loading='lazy'
       >
     </div>
   {% endif %}
 
-  {# Richtext below both images #}
   {% assign align = section.settings.text_alignment | default: 'center' %}
+  {% assign align_class = 'twcss-text-center' %}
+  {% if align == 'left' %}
+    {% assign align_class = 'twcss-text-left' %}
+  {% elsif align == 'right' %}
+    {% assign align_class = 'twcss-text-right' %}
+  {% endif %}
   <div class='twcss-relative twcss-z-20 twcss-w-full twcss-py-8 twcss-px-4 twcss-bg-transparent'>
-    <div class='twcss-font-bold twcss-text-4xl twcss-text-brandblack twcss-max-w-5xl twcss-mx-auto twcss-text-{{ align }}'>
+    <div class='twcss-font-bold twcss-text-4xl twcss-text-brandblack twcss-max-w-5xl twcss-mx-auto {{ align_class }}'>
       {{ section.settings.richtext }}
     </div>
   </div>
