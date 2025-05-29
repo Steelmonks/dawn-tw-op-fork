@@ -543,6 +543,15 @@
         "img_width": 250
       }
     },
+    "steelmonks_parallax_richtext_V9YtDq": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "title": "Galerie",
+        "link_text": "Jetzt ansehen",
+        "link": ""
+      }
+    },
     "sm_scrolling_gallery_aQnjmd": {
       "type": "sm-scrolling-gallery",
       "blocks": {
@@ -660,6 +669,7 @@
     "collapsible_content_djE73R",
     "contact_form_TUx9eb",
     "sm_scrolling_gallery_KTfKit",
+    "steelmonks_parallax_richtext_V9YtDq",
     "sm_scrolling_gallery_aQnjmd",
     "1748518439a934ab4f",
     "accordions_CqtVYW"
