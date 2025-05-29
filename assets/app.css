@@ -1790,6 +1790,10 @@ video {
     flex-direction: column;
   }
 
+  .md\:twcss-flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .md\:twcss-items-end {
     align-items: flex-end;
   }
