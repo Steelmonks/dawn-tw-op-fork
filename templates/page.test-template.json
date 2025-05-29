@@ -452,22 +452,12 @@
             "row_content": "",
             "page": ""
           }
-        },
-        "collapsible_row_RXnqRB": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Einklappbare Reihe",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "collapsible_row_qb9kWL",
         "collapsible_row_NVFnpK",
-        "collapsible_row_P6GHNY",
-        "collapsible_row_RXnqRB"
+        "collapsible_row_P6GHNY"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
