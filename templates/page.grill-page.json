@@ -24,45 +24,10 @@
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
       "settings": {
+        "image": "shopify://shop_images/sm-grill.webp",
         "title": "",
         "link_text": "",
         "link": ""
-      }
-    },
-    "image_banner_HpwD3b": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_b9Hca6": {
-          "type": "heading",
-          "settings": {
-            "heading": "Bild-Banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_WNyWpE": {
-          "type": "text",
-          "settings": {
-            "text": "Stelle Kunden Details zu Banner-Bildern oder Inhalt auf der Vorlage zur Verfügung.",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_b9Hca6",
-        "text_WNyWpE"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "desktop_content_position": "bottom-right",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
       }
     },
     "featured_collection_D4kxUH": {
@@ -98,7 +63,6 @@
   "order": [
     "main",
     "steelmonks_parallax_richtext_hXjyir",
-    "image_banner_HpwD3b",
     "featured_collection_D4kxUH"
   ]
 }
