@@ -1,0 +1,65 @@
+{% schema %}
+{
+  "name": "Grill Hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "parallax_image",
+      "label": "Parallax Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "foreground_image",
+      "label": "Foreground Image"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Richtext Content"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "center"
+    }
+  ],
+  "presets": [{ "name": "Grill Hero" }]
+}
+{% endschema %}
+
+<div class='twcss-relative twcss-w-full twcss-overflow-hidden'>
+  {# Parallax background image #}
+  {% if section.settings.parallax_image != blank %}
+    <div
+      class='twcss-absolute twcss-inset-0 twcss-w-full twcss-h-full twcss-bg-fixed twcss-bg-center twcss-bg-cover twcss-z-0'
+      style="background-image: url('{{ section.settings.parallax_image | image_url: width: 1920 }}');"
+    ></div>
+  {% endif %}
+
+  {# Foreground image #}
+  {% if section.settings.foreground_image != blank %}
+    <div class='twcss-relative twcss-z-10 twcss-flex twcss-justify-center twcss-items-end twcss-pt-12 md:twcss-pt-24'>
+      <img
+        src='{{ section.settings.foreground_image | image_url: width: 900 }}'
+        alt=''
+        class='twcss-max-w-full twcss-h-auto twcss-drop-shadow-xl'
+        loading='lazy'
+      >
+    </div>
+  {% endif %}
+
+  {# Richtext below both images #}
+  {% assign align = section.settings.text_alignment | default: 'center' %}
+  <div class='twcss-relative twcss-z-20 twcss-w-full twcss-py-8 twcss-px-4 twcss-bg-transparent'>
+    <div class='twcss-font-bold twcss-text-4xl twcss-text-brandblack twcss-max-w-5xl twcss-mx-auto twcss-text-{{ align }}'>
+      {{ section.settings.richtext }}
+    </div>
+  </div>
+</div>
