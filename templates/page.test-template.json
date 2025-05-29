@@ -616,33 +616,6 @@
     "accordions_CqtVYW": {
       "type": "accordions",
       "blocks": {
-        "navigation_m4YhhT": {
-          "type": "navigation",
-          "settings": {
-            "unique_id": "",
-            "heading": "<p>Navigation heading</p>"
-          }
-        },
-        "navigation_RXC3xd": {
-          "type": "navigation",
-          "settings": {
-            "unique_id": "",
-            "heading": "<p>Navigation heading</p>"
-          }
-        },
-        "accordion_BrPbna": {
-          "type": "accordion",
-          "settings": {
-            "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
-            "content_liquid": "",
-            "featured": false,
-            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
-            "featured_image_alignment": "center",
-            "featured_image_aspect_ratio": "233 / 349"
-          }
-        },
         "accordion_eMAkix": {
           "type": "accordion",
           "settings": {
@@ -658,17 +631,14 @@
         }
       },
       "block_order": [
-        "navigation_m4YhhT",
-        "navigation_RXC3xd",
-        "accordion_BrPbna",
         "accordion_eMAkix"
       ],
       "name": "Accordions",
       "settings": {
-        "heading": "Questions ? We have answers.",
-        "subheading": "<p>Add a short description</p>",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "heading": "",
+        "subheading": "",
+        "padding_top": 0,
+        "padding_bottom": 40,
         "padding_left": 24,
         "padding_right": 24
       }
