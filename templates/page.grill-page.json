@@ -31,12 +31,11 @@
     },
     "sm_grill_hero_faXHk9": {
       "type": "sm-grill-hero",
-      "name": "Grill Hero",
       "settings": {
         "parallax_image": "shopify://shop_images/sm-monks.webp",
         "foreground_image": "shopify://shop_images/sm-grill.webp",
         "richtext": "<p><strong>Das perfekte Geschenk</strong></p><p><strong>für einen Grillliebhaber.</strong></p>",
-        "text_alignment": "center"
+        "text_alignment": "right"
       }
     },
     "1748515428ef26383f": {
