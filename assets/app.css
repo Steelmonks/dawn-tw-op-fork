@@ -547,6 +547,10 @@ video {
   }
 }
 
+.twcss-pointer-events-auto {
+  pointer-events: auto;
+}
+
 .twcss-absolute {
   position: absolute;
 }
@@ -562,16 +566,17 @@ video {
   left: 0px;
 }
 
-.twcss-left-3 {
-  left: 0.75rem;
-}
-
-.twcss-top-1\/2 {
+.twcss-inset-y-1\/2 {
   top: 50%;
+  bottom: 50%;
 }
 
-.twcss-right-3 {
-  right: 0.75rem;
+.twcss-left-6 {
+  left: 1.5rem;
+}
+
+.twcss-right-6 {
+  right: 1.5rem;
 }
 
 .-twcss-bottom-5 {
@@ -580,6 +585,10 @@ video {
 
 .twcss-left-1\/2 {
   left: 50%;
+}
+
+.twcss-top-1\/2 {
+  top: 50%;
 }
 
 .twcss-left-0 {
