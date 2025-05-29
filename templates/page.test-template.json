@@ -566,12 +566,20 @@
             "use_custom_images": false,
             "aspect_ratio": "16 / 9"
           }
+        },
+        "inversed_row_of_images_PX8pmr": {
+          "type": "inversed_row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
         }
       },
       "block_order": [
         "row_of_images_d8BnHH",
         "inversed_row_of_images_r8bM3w",
-        "row_of_images_QLWRid"
+        "row_of_images_QLWRid",
+        "inversed_row_of_images_PX8pmr"
       ],
       "name": "Scrolling Gallery",
       "settings": {
