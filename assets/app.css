@@ -714,6 +714,10 @@ video {
   max-height: fit-content;
 }
 
+.twcss-min-h-\[400px\] {
+  min-height: 400px;
+}
+
 .twcss-min-h-\[500px\] {
   min-height: 500px;
 }
@@ -1618,10 +1622,6 @@ video {
 
   .md\:twcss-h-\[500px\] {
     height: 500px;
-  }
-
-  .md\:twcss-min-h-\[400px\] {
-    min-height: 400px;
   }
 
   .md\:twcss-w-\[120px\] {
