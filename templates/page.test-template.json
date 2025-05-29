@@ -366,6 +366,313 @@
         "button3_button2_text": "Email schicken",
         "button3_bottom_text": "Wir sind Montag bis Freitag von 8.00 bis 16.00 Uhr für Dich da."
       }
+    },
+    "steelmonks_parallax_FPwTGg": {
+      "type": "steelmonks-parallax",
+      "name": "Parallax",
+      "settings": {
+        "cta": "Geschenke für Paare",
+        "cta_link": "",
+        "cta_style": "primary",
+        "liquid_mobile_title": "",
+        "liquid_desktop_title": "",
+        "inverse_order": false,
+        "image_position": "center",
+        "image_width": 500,
+        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>"
+      }
+    },
+    "collection_list_hXr8h9": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_ADBXBn": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_T9Qaib": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_Lffmew": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_ADBXBn",
+        "featured_collection_T9Qaib",
+        "featured_collection_Lffmew"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_djE73R": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_qb9kWL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_NVFnpK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_P6GHNY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_RXnqRB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Einklappbare Reihe",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_qb9kWL",
+        "collapsible_row_NVFnpK",
+        "collapsible_row_P6GHNY",
+        "collapsible_row_RXnqRB"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Einklappbarer Inhalt",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_TUx9eb": {
+      "type": "contact-form",
+      "name": "t:sections.contact-form.presets.name",
+      "settings": {
+        "heading": "Kontaktformular",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "sm_scrolling_gallery_PgwUkY": {
+      "type": "sm-scrolling-gallery",
+      "blocks": {
+        "row_of_images_NyMKDR": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        },
+        "inversed_row_of_images_ihc9Yp": {
+          "type": "inversed_row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "5 / 4"
+          }
+        },
+        "row_of_images_LyeDDk": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        }
+      },
+      "block_order": [
+        "row_of_images_NyMKDR",
+        "inversed_row_of_images_ihc9Yp",
+        "row_of_images_LyeDDk"
+      ],
+      "name": "Scrolling Gallery",
+      "settings": {
+        "overlay_text": "",
+        "overlay_text_color": "#fafaff",
+        "overlay_background_color": "",
+        "overlay_padding": "20px 20px 20px 20px",
+        "overlay_gradient_background_color": "radial-gradient(rgba(250, 250, 255, 1) 20%, rgba(250, 250, 255, 0) 80%)",
+        "overlay_style": "1",
+        "overlay_width": 10,
+        "show_box_shadow": false,
+        "box_shadow_properties": "4px 4px 6px #090a0c40",
+        "show_overlay_text": false,
+        "show_button": false,
+        "overlay_border_radius": 10,
+        "img_width": 250
+      }
+    },
+    "steelmonks_parallax_richtext_XneG6a": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "title": "Galerie",
+        "link_text": "Jetzt ansehen",
+        "link": ""
+      }
+    },
+    "sm_scrolling_gallery_aQnjmd": {
+      "type": "sm-scrolling-gallery",
+      "blocks": {
+        "row_of_images_d8BnHH": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        },
+        "inversed_row_of_images_r8bM3w": {
+          "type": "inversed_row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "5 / 4"
+          }
+        },
+        "row_of_images_QLWRid": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        }
+      },
+      "block_order": [
+        "row_of_images_d8BnHH",
+        "inversed_row_of_images_r8bM3w",
+        "row_of_images_QLWRid"
+      ],
+      "name": "Scrolling Gallery",
+      "settings": {
+        "overlay_text": "<h2>Inspired by Life.</h2><p>Steelmonks</p>",
+        "overlay_text_color": "#fafaff",
+        "overlay_background_color": "linear-gradient(45deg, rgba(9, 10, 12, 1) 25%, rgba(0, 68, 204, 1) 100%)",
+        "overlay_padding": "20px 20px 20px 20px",
+        "overlay_gradient_background_color": "radial-gradient(rgba(250, 250, 255, 1) 20%, rgba(250, 250, 255, 0) 80%)",
+        "overlay_style": "1",
+        "overlay_width": 85,
+        "show_box_shadow": true,
+        "box_shadow_properties": "4px 4px 6px #090a0c40",
+        "show_overlay_text": true,
+        "show_button": false,
+        "overlay_border_radius": 10,
+        "img_width": 250
+      }
+    },
+    "1748518439a934ab4f": {
+      "type": "apps",
+      "blocks": {
+        "trusted_shops_reviews_and_more_trusted_stars_azyHLM": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/trusted-stars/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trusted_shops_reviews_and_more_trusted_stars_azyHLM"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "accordions_CqtVYW": {
+      "type": "accordions",
+      "blocks": {
+        "navigation_m4YhhT": {
+          "type": "navigation",
+          "settings": {
+            "unique_id": "",
+            "heading": "<p>Navigation heading</p>"
+          }
+        },
+        "navigation_RXC3xd": {
+          "type": "navigation",
+          "settings": {
+            "unique_id": "",
+            "heading": "<p>Navigation heading</p>"
+          }
+        },
+        "accordion_BrPbna": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_eMAkix": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "navigation_m4YhhT",
+        "navigation_RXC3xd",
+        "accordion_BrPbna",
+        "accordion_eMAkix"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "Questions ? We have answers.",
+        "subheading": "<p>Add a short description</p>",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_left": 24,
+        "padding_right": 24
+      }
     }
   },
   "order": [
@@ -378,6 +685,15 @@
     "sm_warranty_page_JEr4Bj",
     "steelmonks_parallax_richtext_AmjXxD",
     "sm_surfaces_page_W9wE9q",
-    "sm_media_page_HGNzTj"
+    "sm_media_page_HGNzTj",
+    "steelmonks_parallax_FPwTGg",
+    "collection_list_hXr8h9",
+    "collapsible_content_djE73R",
+    "contact_form_TUx9eb",
+    "sm_scrolling_gallery_PgwUkY",
+    "steelmonks_parallax_richtext_XneG6a",
+    "sm_scrolling_gallery_aQnjmd",
+    "1748518439a934ab4f",
+    "accordions_CqtVYW"
   ]
 }
