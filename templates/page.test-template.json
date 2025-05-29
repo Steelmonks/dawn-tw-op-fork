@@ -371,15 +371,15 @@
       "type": "steelmonks-parallax",
       "name": "Parallax",
       "settings": {
-        "cta": "Geschenke für Paare",
+        "cta": "Zur Anfrage",
         "cta_link": "",
         "cta_style": "primary",
         "liquid_mobile_title": "",
-        "liquid_desktop_title": "",
+        "liquid_desktop_title": "Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung",
         "inverse_order": false,
         "image_position": "center",
         "image_width": 500,
-        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>"
+        "text_on_banner": "<p><strong>Von Deinem Logo, zu</strong></p><p><strong>einem Kunstwerk</strong></p><p><strong>aus Stahl</strong></p>"
       }
     },
     "collection_list_hXr8h9": {
