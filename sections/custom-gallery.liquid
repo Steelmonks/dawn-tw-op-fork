@@ -32,49 +32,55 @@
     </div>
   {% endif %}
 
-  <div class='twcss-flex twcss-flex-col'>
+  {%- comment -%}
+    Collect all images from all blocks for mobile grid
+  {%- endcomment -%}
+  {% assign all_images = '' %}
+  {% for block in section.blocks %}
+    {% for i in (1..4) %}
+      {% capture image_key %}image_{{ i }}{% endcapture %}
+      {% assign image = block.settings[image_key] %}
+      {% if image != blank %}
+        {% assign all_images = all_images | append: image | append: ',' %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% assign all_images_array = all_images | split: ',' %}
+
+  <!-- Mobile: single grid of all images -->
+  <div class='twcss-grid twcss-grid-cols-2 twcss-gap-0 md:twcss-hidden'>
+    {% for image in all_images_array %}
+      {% if image != '' %}
+        <img
+          src='{{ image | image_url: width: 340 }}'
+          alt=''
+          width='340'
+          height='340'
+          class='twcss-w-[200px] twcss-h-[200px] twcss-object-cover twcss-m-0 twcss-p-0'
+          loading='lazy'
+        >
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Desktop: rows as before -->
+  <div class='twcss-hidden md:twcss-flex md:twcss-flex-col'>
     {% for block in section.blocks %}
-      <div class='twcss-flex twcss-flex-wrap twcss-justify-center twcss-items-center twcss-m-0 twcss-p-0'>
-        {% if block.settings.image_1 != blank %}
-          <img
-            src='{{ block.settings.image_1 | image_url: width: 340 }}'
-            alt=''
-            width='340'
-            height='340'
-            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-            loading='lazy'
-          >
-        {% endif %}
-        {% if block.settings.image_2 != blank %}
-          <img
-            src='{{ block.settings.image_2 | image_url: width: 340 }}'
-            alt=''
-            width='340'
-            height='340'
-            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-            loading='lazy'
-          >
-        {% endif %}
-        {% if block.settings.image_3 != blank %}
-          <img
-            src='{{ block.settings.image_3 | image_url: width: 340 }}'
-            alt=''
-            width='340'
-            height='340'
-            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-            loading='lazy'
-          >
-        {% endif %}
-        {% if block.settings.image_4 != blank %}
-          <img
-            src='{{ block.settings.image_4 | image_url: width: 340 }}'
-            alt=''
-            width='340'
-            height='340'
-            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-            loading='lazy'
-          >
-        {% endif %}
+      <div class='md:twcss-flex md:twcss-flex-row md:twcss-items-center md:twcss-mb-0 md:twcss-p-0'>
+        {% for i in (1..4) %}
+          {% capture image_key %}image_{{ i }}{% endcapture %}
+          {% assign image = block.settings[image_key] %}
+          {% if image != blank %}
+            <img
+              src='{{ image | image_url: width: 340 }}'
+              alt=''
+              width='340'
+              height='340'
+              class='md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
+              loading='lazy'
+            >
+          {% endif %}
+        {% endfor %}
       </div>
     {% endfor %}
   </div>
