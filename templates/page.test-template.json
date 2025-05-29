@@ -367,19 +367,13 @@
         "button3_bottom_text": "Wir sind Montag bis Freitag von 8.00 bis 16.00 Uhr für Dich da."
       }
     },
-    "steelmonks_parallax_FPwTGg": {
-      "type": "steelmonks-parallax",
-      "name": "Parallax",
+    "steelmonks_parallax_richtext_Ne4Mqr": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
       "settings": {
-        "cta": "Zur Anfrage",
-        "cta_link": "",
-        "cta_style": "primary",
-        "liquid_mobile_title": "",
-        "liquid_desktop_title": "Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung",
-        "inverse_order": false,
-        "image_position": "center",
-        "image_width": 500,
-        "text_on_banner": "<p><strong>Von Deinem Logo, zu</strong></p><p><strong>einem Kunstwerk</strong></p><p><strong>aus Stahl</strong></p>"
+        "title": "Galerie",
+        "link_text": "Jetzt ansehen",
+        "link": ""
       }
     },
     "collection_list_hXr8h9": {
@@ -654,7 +648,7 @@
     "steelmonks_parallax_richtext_AmjXxD",
     "sm_surfaces_page_W9wE9q",
     "sm_media_page_HGNzTj",
-    "steelmonks_parallax_FPwTGg",
+    "steelmonks_parallax_richtext_Ne4Mqr",
     "collection_list_hXr8h9",
     "collapsible_content_djE73R",
     "contact_form_TUx9eb",
