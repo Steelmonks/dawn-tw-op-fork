@@ -910,16 +910,16 @@ video {
   justify-content: space-between;
 }
 
-.twcss-gap-12 {
-  gap: 3rem;
-}
-
 .twcss-gap-8 {
   gap: 2rem;
 }
 
 .twcss-gap-2 {
   gap: 0.5rem;
+}
+
+.twcss-gap-12 {
+  gap: 3rem;
 }
 
 .twcss-gap-4 {
