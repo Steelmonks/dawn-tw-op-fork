@@ -63,8 +63,9 @@
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
       "settings": {
-        "title": "Galerie",
-        "link_text": "Jetzt ansehen",
+        "image": "shopify://shop_images/sm-monks.webp",
+        "title": "",
+        "link_text": "",
         "link": ""
       }
     },
@@ -74,6 +75,7 @@
         "row_44XjCg": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/sm-statuete.webp",
             "caption": "",
             "heading": "<strong>Tradition und Innovation</strong>",
             "text": "<p>Schau dir unseren Mönch hier an, der es sich vor seinem Computer gemütlich gemacht hat. Aber weißt du was das Beste ist? <br/><br/>Er nutzt sein tech-savviness nicht nur, um spirituelle Texte zu schreiben, sondern auch, um atemberaubende Kunstwerke zu erschaffen. </p><p> </p><p>Das ist genau das, was Steelmonks ausmacht: die Verbindung von altem Wissen und modernster Technologie.<br/>(Den Mönch haben wir mit KI erstellt)</p>",
@@ -84,6 +86,7 @@
         "row_yJdkgh": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/sm-sign.webp",
             "caption": "",
             "heading": "<strong>Einzigartig und Ästhetisch</strong>",
             "text": "<p>Wir kombinieren handgefertigte Technik mit einzigartigen Designs, um dir ein Produkt zu bieten, das nicht nur einzigartig, sondern auch ästhetisch ansprechend ist.<br/><br/>Schau dir das Bild an und lass dich von unserer Kreativität inspirieren!</p>",
@@ -94,6 +97,7 @@
         "row_iW6JDi": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/sm-workshop.webp",
             "caption": "",
             "heading": "<strong>Wie ein Phoenix aus der \"Flut.\"</strong>",
             "text": "<p>Nach dem Jahr 2021 sind wir gewappnet für alle Herausforderungen!</p><p>Am 14. Juli wurde unsere komplette Steelmonks Produktion durch die Flutkatastrophe zerstört. Der Schock war groß, aber der Aufbauwille war größer! Wir haben die Gelegenheit genutzt, uns zu verbessern und zu vergrößern.</p>",
@@ -104,6 +108,7 @@
         "row_LVjgkr": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/sm-factory.webp",
             "caption": "",
             "heading": "<strong>Das Abenteuer geht weiter.</strong>",
             "text": "<p>Wir sind stolz auf unsere neuen Maschinen, zwei brandneuen 3 KW Laser und tolle neue Kollegen. </p><p>Anstelle des individuellen Erfolgs steht die Freude zu designen und die Ergebnisse mit Menschen zu teilen, die ähnlich empfinden.</p><p>It´s Sign Time!</p>",
@@ -139,8 +144,9 @@
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
       "settings": {
-        "title": "Galerie",
-        "link_text": "Jetzt ansehen",
+        "image": "shopify://shop_images/sm-team.webp",
+        "title": "",
+        "link_text": "",
         "link": ""
       }
     },
