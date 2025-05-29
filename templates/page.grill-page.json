@@ -20,15 +20,6 @@
         "show_title": false
       }
     },
-    "steelmonks_parallax_richtext_hXjyir": {
-      "type": "steelmonks-parallax-richtext",
-      "settings": {
-        "image": "shopify://shop_images/sm-grill.webp",
-        "title": "",
-        "link_text": "",
-        "link": ""
-      }
-    },
     "sm_grill_hero_faXHk9": {
       "type": "sm-grill-hero",
       "settings": {
@@ -84,7 +75,6 @@
   },
   "order": [
     "main",
-    "steelmonks_parallax_richtext_hXjyir",
     "sm_grill_hero_faXHk9",
     "1748515428ef26383f",
     "featured_collection_D4kxUH"
