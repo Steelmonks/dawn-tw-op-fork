@@ -528,7 +528,7 @@
       ],
       "name": "Scrolling Gallery",
       "settings": {
-        "overlay_text": "",
+        "overlay_text": "<p><strong>Design Highlights</strong></p>",
         "overlay_text_color": "#fafaff",
         "overlay_background_color": "",
         "overlay_padding": "20px 20px 20px 20px",
