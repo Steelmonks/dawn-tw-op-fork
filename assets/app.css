@@ -1770,12 +1770,12 @@ video {
     max-width: none;
   }
 
-  .md\:twcss-grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .md\:twcss-grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:twcss-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:twcss-grid-cols-2 {
@@ -1875,6 +1875,10 @@ video {
 
   .lg\:twcss-w-\[250px\] {
     width: 250px;
+  }
+
+  .lg\:twcss-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:twcss-grid-cols-3 {

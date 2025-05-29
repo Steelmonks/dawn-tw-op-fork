@@ -57,13 +57,26 @@
             "image_3": "shopify://shop_images/sm-brothers-png.png",
             "image_4": "shopify://shop_images/sm-brothers-png.png"
           }
+        },
+        "image_row_NEckLH": {
+          "type": "image_row",
+          "settings": {
+            "image_1": "shopify://shop_images/icon-tumbnail-grill-bbq.webp"
+          }
+        },
+        "image_row_zKqJLC": {
+          "type": "image_row",
+          "settings": {
+            "image_1": "shopify://shop_images/icon-tumbnail-zippo.webp"
+          }
         }
       },
       "block_order": [
         "image_row_tBkAWM",
-        "image_row_EAxdiL"
+        "image_row_EAxdiL",
+        "image_row_NEckLH",
+        "image_row_zKqJLC"
       ],
-      "name": "Custom Gallery",
       "settings": {
         "richtext": ""
       }
