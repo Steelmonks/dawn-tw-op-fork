@@ -32,52 +32,50 @@
     </div>
   {% endif %}
 
-  <div class='twcss-grid twcss-grid-cols-2 md:twcss-grid-cols-3'>
-    <div class='lg:twcss-flex lg:twcss-flex-wrap'>
-      {% for block in section.blocks %}
-        <div class='twcss-flex twcss-flex-wrap twcss-justify-center twcss-items-center twcss-m-0 twcss-p-0'>
-          {% if block.settings.image_1 != blank %}
-            <img
-              src='{{ block.settings.image_1 | image_url: width: 340 }}'
-              alt=''
-              width='340'
-              height='340'
-              class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-              loading='lazy'
-            >
-          {% endif %}
-          {% if block.settings.image_2 != blank %}
-            <img
-              src='{{ block.settings.image_2 | image_url: width: 340 }}'
-              alt=''
-              width='340'
-              height='340'
-              class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-              loading='lazy'
-            >
-          {% endif %}
-          {% if block.settings.image_3 != blank %}
-            <img
-              src='{{ block.settings.image_3 | image_url: width: 340 }}'
-              alt=''
-              width='340'
-              height='340'
-              class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-              loading='lazy'
-            >
-          {% endif %}
-          {% if block.settings.image_4 != blank %}
-            <img
-              src='{{ block.settings.image_4 | image_url: width: 340 }}'
-              alt=''
-              width='340'
-              height='340'
-              class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
-              loading='lazy'
-            >
-          {% endif %}
-        </div>
-      {% endfor %}
-    </div>
+  <div class='twcss-grid twcss-grid-cols-2 md:twcss-grid-cols-3 lg:twcss-grid-cols-4'>
+    {% for block in section.blocks %}
+      <div class='twcss-flex twcss-flex-wrap twcss-justify-center twcss-items-center twcss-m-0 twcss-p-0'>
+        {% if block.settings.image_1 != blank %}
+          <img
+            src='{{ block.settings.image_1 | image_url: width: 340 }}'
+            alt=''
+            width='340'
+            height='340'
+            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
+            loading='lazy'
+          >
+        {% endif %}
+        {% if block.settings.image_2 != blank %}
+          <img
+            src='{{ block.settings.image_2 | image_url: width: 340 }}'
+            alt=''
+            width='340'
+            height='340'
+            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
+            loading='lazy'
+          >
+        {% endif %}
+        {% if block.settings.image_3 != blank %}
+          <img
+            src='{{ block.settings.image_3 | image_url: width: 340 }}'
+            alt=''
+            width='340'
+            height='340'
+            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
+            loading='lazy'
+          >
+        {% endif %}
+        {% if block.settings.image_4 != blank %}
+          <img
+            src='{{ block.settings.image_4 | image_url: width: 340 }}'
+            alt=''
+            width='340'
+            height='340'
+            class='twcss-w-[200px] twcss-h-[200px] md:twcss-w-[340px] md:twcss-h-[340px] twcss-object-cover twcss-m-0 twcss-p-0'
+            loading='lazy'
+          >
+        {% endif %}
+      </div>
+    {% endfor %}
   </div>
 </div>
