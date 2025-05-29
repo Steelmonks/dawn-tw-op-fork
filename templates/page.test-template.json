@@ -369,11 +369,20 @@
     },
     "steelmonks_parallax_richtext_Ne4Mqr": {
       "type": "steelmonks-parallax-richtext",
-      "name": "Parallax Rich Text",
       "settings": {
         "title": "Galerie",
         "link_text": "Jetzt ansehen",
         "link": ""
+      }
+    },
+    "custom_header_rTtgCU": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "<p>test</p>",
+        "button_text": "testasdasd",
+        "button_link": "shopify://blogs/steelmonks-de",
+        "image": "shopify://shop_images/sm-monks.webp"
       }
     },
     "collapsible_content_djE73R": {
@@ -412,7 +421,6 @@
         "collapsible_row_NVFnpK",
         "collapsible_row_P6GHNY"
       ],
-      "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
         "heading": "Einklappbarer Inhalt",
@@ -430,7 +438,6 @@
     },
     "contact_form_TUx9eb": {
       "type": "contact-form",
-      "name": "t:sections.contact-form.presets.name",
       "settings": {
         "heading": "Kontaktformular",
         "heading_size": "h1",
@@ -469,7 +476,6 @@
         "inversed_row_of_images_Kwtjyk",
         "row_of_images_8PQ7rY"
       ],
-      "name": "Scrolling Gallery",
       "settings": {
         "overlay_text": "<p><strong>Design Highlights</strong></p>",
         "overlay_text_color": "#fafaff",
@@ -488,7 +494,6 @@
     },
     "steelmonks_parallax_richtext_V9YtDq": {
       "type": "steelmonks-parallax-richtext",
-      "name": "Parallax Rich Text",
       "settings": {
         "title": "Galerie",
         "link_text": "Jetzt ansehen",
@@ -530,7 +535,6 @@
       "block_order": [
         "accordion_eMAkix"
       ],
-      "name": "Accordions",
       "settings": {
         "heading": "",
         "subheading": "",
@@ -553,6 +557,7 @@
     "sm_surfaces_page_W9wE9q",
     "sm_media_page_HGNzTj",
     "steelmonks_parallax_richtext_Ne4Mqr",
+    "custom_header_rTtgCU",
     "collapsible_content_djE73R",
     "contact_form_TUx9eb",
     "sm_scrolling_gallery_KTfKit",
