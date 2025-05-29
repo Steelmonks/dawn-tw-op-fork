@@ -87,3 +87,29 @@
     {% endfor %}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // For each slider block
+    document.querySelectorAll('.custom-slider').forEach(function (slider) {
+      const prevBtn = slider.parentElement.querySelector('button[aria-label="Previous slide"]');
+      const nextBtn = slider.parentElement.querySelector('button[aria-label="Next slide"]');
+      const slide = slider.querySelector('div');
+      // Amount to scroll: width of one image (responsive)
+      let scrollAmount = slider.querySelector('img')?.clientWidth || 115;
+      // Update scrollAmount on resize
+      function updateScrollAmount() {
+        scrollAmount = slider.querySelector('img')?.clientWidth || 115;
+      }
+      window.addEventListener('resize', updateScrollAmount);
+      // Scroll left
+      prevBtn?.addEventListener('click', function () {
+        slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+      // Scroll right
+      nextBtn?.addEventListener('click', function () {
+        slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    });
+  });
+</script>
