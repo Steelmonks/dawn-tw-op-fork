@@ -1371,14 +1371,14 @@ video {
   color: rgb(9 10 12 / var(--tw-text-opacity));
 }
 
-.twcss-text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .twcss-text-brandwhite {
   --tw-text-opacity: 1;
   color: rgb(250 250 255 / var(--tw-text-opacity));
+}
+
+.twcss-text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .twcss-text-black {
