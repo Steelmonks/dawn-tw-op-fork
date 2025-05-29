@@ -20,23 +20,13 @@
         "show_title": false
       }
     },
-    "steelmonks_parallax_richtext_hXjyir": {
-      "type": "steelmonks-parallax-richtext",
-      "settings": {
-        "image": "shopify://shop_images/sm-grill.webp",
-        "title": "",
-        "link_text": "",
-        "link": ""
-      }
-    },
     "sm_grill_hero_faXHk9": {
       "type": "sm-grill-hero",
-      "name": "Grill Hero",
       "settings": {
-        "parallax_image": "shopify://shop_images/sm-monks.webp",
+        "parallax_image": "shopify://shop_images/Was_ist_die_gesuendeste_Art_zu_Grillen.jpg",
         "foreground_image": "shopify://shop_images/sm-grill.webp",
         "richtext": "<p><strong>Das perfekte Geschenk</strong></p><p><strong>für einen Grillliebhaber.</strong></p>",
-        "text_alignment": "center"
+        "text_alignment": "right"
       }
     },
     "1748515428ef26383f": {
@@ -85,7 +75,6 @@
   },
   "order": [
     "main",
-    "steelmonks_parallax_richtext_hXjyir",
     "sm_grill_hero_faXHk9",
     "1748515428ef26383f",
     "featured_collection_D4kxUH"

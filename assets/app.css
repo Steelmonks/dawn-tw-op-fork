@@ -1092,6 +1092,10 @@ video {
   text-align: center;
 }
 
+.twcss-text-right {
+  text-align: right;
+}
+
 .twcss-text-\[12px\] {
   font-size: 12px;
 }
