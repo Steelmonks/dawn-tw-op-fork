@@ -22,7 +22,6 @@
     },
     "steelmonks_parallax_richtext_hXjyir": {
       "type": "steelmonks-parallax-richtext",
-      "name": "Parallax Rich Text",
       "settings": {
         "image": "shopify://shop_images/sm-grill.webp",
         "title": "",
@@ -30,9 +29,33 @@
         "link": ""
       }
     },
+    "sm_grill_hero_faXHk9": {
+      "type": "sm-grill-hero",
+      "name": "Grill Hero",
+      "settings": {
+        "parallax_image": "shopify://shop_images/sm-monks.webp",
+        "foreground_image": "shopify://shop_images/sm-grill.webp",
+        "richtext": "<p><strong>Das perfekte Geschenk</strong></p><p><strong>für einen Grillliebhaber.</strong></p>",
+        "text_alignment": "center"
+      }
+    },
+    "1748515428ef26383f": {
+      "type": "apps",
+      "blocks": {
+        "trusted_shops_reviews_and_more_trusted_stars_eGj7cx": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/trusted-stars/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trusted_shops_reviews_and_more_trusted_stars_eGj7cx"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "featured_collection_D4kxUH": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "title": "Grillgeschenke",
         "heading_size": "h1",
@@ -58,26 +81,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1748515428ef26383f": {
-      "type": "apps",
-      "blocks": {
-        "trusted_shops_reviews_and_more_trusted_stars_eGj7cx": {
-          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/trusted-stars/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "trusted_shops_reviews_and_more_trusted_stars_eGj7cx"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
     "steelmonks_parallax_richtext_hXjyir",
+    "sm_grill_hero_faXHk9",
     "1748515428ef26383f",
     "featured_collection_D4kxUH"
   ]
