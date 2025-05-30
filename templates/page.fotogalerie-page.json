@@ -47,7 +47,8 @@
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/Firmenlogo.png"
           }
         },
         "slider_block_x9n4b9": {
@@ -61,7 +62,8 @@
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/Firmenschild.png"
           }
         }
       },
