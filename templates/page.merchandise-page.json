@@ -252,7 +252,14 @@
           "type": "slider_block",
           "settings": {
             "richtext": "<h1>Kunden & Partner</h1>",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/sm-part1.webp",
+            "image_2": "shopify://shop_images/sm-part2.webp",
+            "image_3": "shopify://shop_images/sm-part3.webp",
+            "image_4": "shopify://shop_images/sm-part4.webp",
+            "image_5": "shopify://shop_images/sm-part5.webp",
+            "image_6": "shopify://shop_images/sm-part6.webp",
+            "image_7": "shopify://shop_images/sm-part7.webp"
           }
         },
         "slider_block_p7M9eU": {
