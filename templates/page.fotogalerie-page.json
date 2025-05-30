@@ -91,7 +91,7 @@
             "caption": "",
             "heading": "<strong>Privatkunden</strong>",
             "text": "",
-            "button_label": "Privatkunden",
+            "button_label": "Mehr entdecken",
             "button_link": "shopify://pages/anfragen"
           }
         },
@@ -101,7 +101,7 @@
             "caption": "",
             "heading": "Firmenkunden",
             "text": "",
-            "button_label": "Firmenkunden",
+            "button_label": "Mehr entdecken",
             "button_link": "shopify://pages/dein-firmenschild"
           }
         },
@@ -111,7 +111,7 @@
             "caption": "",
             "heading": "Wappen",
             "text": "",
-            "button_label": "Wappen",
+            "button_label": "Mehr entdecken",
             "button_link": "shopify://pages/heraldisches-wappen-aus-metall"
           }
         }
