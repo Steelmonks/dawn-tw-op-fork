@@ -112,8 +112,8 @@
       ],
       "name": "Accordions",
       "settings": {
-        "heading": "Questions ? We have answers.",
-        "subheading": "",
+        "heading": "",
+        "subheading": "<h1><br/>Questions ? We have answers.<br/></h1>",
         "padding_top": 24,
         "padding_bottom": 24,
         "padding_left": 24,
