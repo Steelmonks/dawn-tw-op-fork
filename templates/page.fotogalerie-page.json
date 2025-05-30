@@ -88,6 +88,7 @@
         "row_wHmt8D": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/web-custom-signs.webp",
             "caption": "",
             "heading": "<strong>Privatkunden</strong>",
             "text": "",
@@ -98,6 +99,7 @@
         "row_fzj9L6": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/Firmenschild.png",
             "caption": "",
             "heading": "Firmenkunden",
             "text": "",
@@ -108,6 +110,7 @@
         "row_9aXC7f": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/web-wappen-coat-of-arms.webp",
             "caption": "",
             "heading": "Wappen",
             "text": "",
