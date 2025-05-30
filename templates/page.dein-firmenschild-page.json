@@ -57,7 +57,10 @@
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/Gallery_Image_Custom_Metall_FirmenSchild.jpg",
+            "image_2": "shopify://shop_images/KU-1041-03-2.jpg",
+            "image_3": "shopify://shop_images/KU-1044-03.jpg"
           }
         },
         "slider_block_ftDgdk": {
@@ -65,7 +68,8 @@
           "settings": {
             "richtext": "",
             "slide_count": 3,
-            "image_1": "shopify://shop_images/Firmenschild.png"
+            "image_1": "shopify://shop_images/Firmenschild.png",
+            "image_2": "shopify://shop_images/hellweg-image.webp"
           }
         }
       },
