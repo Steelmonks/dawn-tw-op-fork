@@ -214,71 +214,51 @@
         "link": ""
       }
     },
-    "custom_gallery_M9GEwk": {
+    "custom_gallery_nPaKq6": {
       "type": "custom-gallery",
       "blocks": {
-        "image_row_Xkdiab": {
+        "image_row_hNxq87": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/Firmenschild.png",
+            "image_2": "shopify://shop_images/Firmenlogo.png",
+            "image_3": "shopify://shop_images/Gallery_Image_Custom_Metall_FirmenSchild.jpg",
+            "image_4": "shopify://shop_images/Erstelle_jetzt_Dein_Wappen.png"
+          }
         },
-        "image_row_zn6Dym": {
+        "image_row_wjRBU8": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/Wappen1_copy.jpg",
+            "image_2": "shopify://shop_images/Was_ist_ein_Wappen.png",
+            "image_3": "shopify://shop_images/Darf_man_ein_Wappen_verwenden.png",
+            "image_4": "shopify://shop_images/Wappen_1_Moeller.jpg"
+          }
         },
-        "image_row_LFgEBY": {
+        "image_row_mWDxzP": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/Wappen1.jpg",
+            "image_2": "shopify://shop_images/Wappen3.jpg",
+            "image_3": "shopify://shop_images/Wappen2.jpg",
+            "image_4": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm-7.jpg"
+          }
         },
-        "image_row_bKMmCM": {
+        "image_row_H66xTF": {
           "type": "image_row",
-          "settings": {}
-        },
-        "image_row_VTjzc3": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_gr6YUe": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_kKM4rJ": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_JqKxyF": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_F4NzNR": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_FPCefJ": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_VyrAdB": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_MXLVkJ": {
-          "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/pinu-1002-Photoroom.jpg",
+            "image_2": "shopify://shop_images/PIN-FREIZEIT-1000Single-min_clipped_rev_1-Photoroom.jpg",
+            "image_3": "shopify://shop_images/PIN-FREIZEIT-1000Thumbnail-min_f66a2721-b53e-4553-968c-1e1ec4b1e1ae.jpg",
+            "image_4": "shopify://shop_images/PIN-FEUER-1000-SET-2.jpg"
+          }
         }
       },
       "block_order": [
-        "image_row_Xkdiab",
-        "image_row_zn6Dym",
-        "image_row_LFgEBY",
-        "image_row_bKMmCM",
-        "image_row_VTjzc3",
-        "image_row_gr6YUe",
-        "image_row_kKM4rJ",
-        "image_row_JqKxyF",
-        "image_row_F4NzNR",
-        "image_row_FPCefJ",
-        "image_row_VyrAdB",
-        "image_row_MXLVkJ"
+        "image_row_hNxq87",
+        "image_row_wjRBU8",
+        "image_row_mWDxzP",
+        "image_row_H66xTF"
       ],
       "name": "Custom Gallery",
       "settings": {
@@ -325,7 +305,7 @@
     "1748614557bd1b673a",
     "sm_scrolling_gallery_rCpCah",
     "steelmonks_parallax_richtext_4UFHhE",
-    "custom_gallery_M9GEwk",
+    "custom_gallery_nPaKq6",
     "accordions_higAa3"
   ]
 }
