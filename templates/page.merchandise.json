@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "padding_top": 28,
@@ -18,9 +19,110 @@
         "enable_gutter": false,
         "show_title": false
       }
+    },
+    "accordions_hdyH3p": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_UmaQYK": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_9BQFrG": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_eXVdXD": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_AUnqHC": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_jdFiYj": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_CkJadr": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_UmaQYK",
+        "accordion_9BQFrG",
+        "accordion_eXVdXD",
+        "accordion_AUnqHC",
+        "accordion_jdFiYj",
+        "accordion_CkJadr"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "Questions ? We have answers.",
+        "subheading": "",
+        "padding_top": 61,
+        "padding_bottom": 24,
+        "padding_left": 24,
+        "padding_right": 24
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "accordions_hdyH3p"
   ]
 }
