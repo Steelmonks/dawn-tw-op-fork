@@ -74,20 +74,6 @@
     "accordions_xqfj73": {
       "type": "accordions",
       "blocks": {
-        "navigation_mJ9ag8": {
-          "type": "navigation",
-          "settings": {
-            "unique_id": "",
-            "heading": "<p>Navigation heading</p>"
-          }
-        },
-        "navigation_46H79h": {
-          "type": "navigation",
-          "settings": {
-            "unique_id": "",
-            "heading": "<p>Navigation heading</p>"
-          }
-        },
         "accordion_MtgiMJ": {
           "type": "accordion",
           "settings": {
@@ -113,13 +99,25 @@
             "featured_image_alignment": "center",
             "featured_image_aspect_ratio": "233 / 349"
           }
+        },
+        "accordion_4nPrz3": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
         }
       },
       "block_order": [
-        "navigation_mJ9ag8",
-        "navigation_46H79h",
         "accordion_MtgiMJ",
-        "accordion_KrDGdr"
+        "accordion_KrDGdr",
+        "accordion_4nPrz3"
       ],
       "name": "Accordions",
       "settings": {
