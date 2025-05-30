@@ -196,6 +196,7 @@
         "row_dhAJrE": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/sm-palma1.webp",
             "caption": "",
             "heading": "<strong>JML 4-Schichtiges Wappen</strong>",
             "text": "<p><br/>Gold, Corten, Edelstahl und nochmal Corten.<br/>80cm x 75cm<br/><br/></p>",
@@ -206,6 +207,7 @@
         "row_WDUmX9": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/sm-palma2.webp",
             "caption": "",
             "heading": "<strong>Brothers in Arms</strong>",
             "text": "<p><br/>Schwarz Pulverbeschichtet.<br/>120cm x 80cm<br/><br/></p>",
@@ -216,6 +218,7 @@
         "row_QccDxt": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/sm-palma3.webp",
             "caption": "",
             "heading": "<strong>Palma de Mallorca Wappen</strong>",
             "text": "<p><br/>Zwei Schichten, Anthrazit auf Edelstahl.<br/>150cm x 150cm<br/><br/></p>",
