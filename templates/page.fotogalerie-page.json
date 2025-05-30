@@ -203,16 +203,6 @@
             "button_link": ""
           }
         },
-        "row_QNXezk": {
-          "type": "row",
-          "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": ""
-          }
-        },
         "row_WDUmX9": {
           "type": "row",
           "settings": {
@@ -220,16 +210,6 @@
             "heading": "<strong>Brothers in Arms</strong>",
             "text": "<p><br/>Schwarz Pulverbeschichtet.<br/>120cm x 80cm<br/><br/></p>",
             "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_fag4LY": {
-          "type": "row",
-          "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "button_label": "Schaltflächenbeschriftung",
             "button_link": ""
           }
         },
@@ -242,36 +222,12 @@
             "button_label": "",
             "button_link": ""
           }
-        },
-        "row_RjTiUC": {
-          "type": "row",
-          "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": ""
-          }
-        },
-        "row_AnptUW": {
-          "type": "row",
-          "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "button_label": "Schaltflächenbeschriftung",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
         "row_dhAJrE",
-        "row_QNXezk",
         "row_WDUmX9",
-        "row_fag4LY",
-        "row_QccDxt",
-        "row_RjTiUC",
-        "row_AnptUW"
+        "row_QccDxt"
       ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
