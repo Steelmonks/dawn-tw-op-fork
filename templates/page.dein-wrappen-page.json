@@ -261,11 +261,26 @@
         "image_row_zn6Dym": {
           "type": "image_row",
           "settings": {}
+        },
+        "image_row_ew37ei": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_YmEnXD": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_qCpEgB": {
+          "type": "image_row",
+          "settings": {}
         }
       },
       "block_order": [
         "image_row_Xkdiab",
-        "image_row_zn6Dym"
+        "image_row_zn6Dym",
+        "image_row_ew37ei",
+        "image_row_YmEnXD",
+        "image_row_qCpEgB"
       ],
       "name": "Custom Gallery",
       "settings": {
