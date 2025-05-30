@@ -102,7 +102,7 @@
             "heading": "Firmenkunden",
             "text": "",
             "button_label": "Firmenkunden",
-            "button_link": ""
+            "button_link": "shopify://pages/dein-firmenschild"
           }
         },
         "row_9aXC7f": {
@@ -112,7 +112,7 @@
             "heading": "Wappen",
             "text": "",
             "button_label": "Wappen",
-            "button_link": ""
+            "button_link": "shopify://pages/heraldisches-wappen-aus-metall"
           }
         }
       },
