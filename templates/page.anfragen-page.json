@@ -200,49 +200,13 @@
         "img_width": 250
       }
     },
-    "multirow_3UzQJr": {
-      "type": "multirow",
-      "blocks": {
-        "row_mzGJ69": {
-          "type": "row",
-          "settings": {
-            "caption": "",
-            "heading": "Reihe",
-            "text": "",
-            "button_label": "Ansehen",
-            "button_link": ""
-          }
-        },
-        "row_jj9YMY": {
-          "type": "row",
-          "settings": {
-            "caption": "",
-            "heading": "Reihe",
-            "text": "",
-            "button_label": "Ansehen",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_mzGJ69",
-        "row_jj9YMY"
-      ],
-      "name": "t:sections.multirow.presets.name",
+    "steelmonks_parallax_richtext_zeCNX9": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
       "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "",
+        "link_text": "",
+        "link": ""
       }
     },
     "custom_gallery_M9GEwk": {
@@ -355,7 +319,7 @@
     "accordions_xqfj73",
     "1748612781c5e7b771",
     "sm_scrolling_gallery_rCpCah",
-    "multirow_3UzQJr",
+    "steelmonks_parallax_richtext_zeCNX9",
     "custom_gallery_M9GEwk",
     "accordions_higAa3"
   ]
