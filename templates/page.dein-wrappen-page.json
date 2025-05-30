@@ -163,8 +163,12 @@
         "row_of_images_4tKMKr": {
           "type": "row_of_images",
           "settings": {
-            "use_custom_images": false,
-            "aspect_ratio": "16 / 9"
+            "use_custom_images": true,
+            "aspect_ratio": "16 / 9",
+            "image1": "shopify://shop_images/Industriemeister-Metall.jpg",
+            "image2": "shopify://shop_images/Zunftzeichen-Metallbauer.jpg",
+            "image3": "shopify://shop_images/Industriemeister_Metall_Schluesselanhaenger.png",
+            "image4": "shopify://shop_images/Metallbauer_Schluesselanhaenger.png"
           }
         },
         "inversed_row_of_images_47gPRR": {
