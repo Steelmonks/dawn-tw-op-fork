@@ -225,7 +225,7 @@
         "slider_block_MpFbjk": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<h1>Kunden & Partner</h1>",
             "slide_count": 3
           }
         },
