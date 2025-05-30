@@ -28,10 +28,10 @@
         "cta_link": "",
         "cta_style": "primary",
         "liquid_mobile_title": "",
-        "liquid_desktop_title": "<h1>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</h1>",
-        "inverse_order": false,
+        "liquid_desktop_title": "<h1><strong>Deine Geschichte,</strong></h1><h1><strong>verewigt.</strong></h1>",
+        "inverse_order": true,
         "image": "shopify://shop_images/sm-train.webp",
-        "image_position": "right",
+        "image_position": "center",
         "image_width": 500,
         "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
         "banner": "shopify://shop_images/sm-party.webp"
