@@ -82,14 +82,60 @@
       "name": "Custom Image Sliders",
       "settings": {}
     },
-    "custom_liquid_LV4NU9": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "multirow_cp9WDr": {
+      "type": "multirow",
+      "blocks": {
+        "row_wHmt8D": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Privatkunden</strong>",
+            "text": "",
+            "button_label": "Privatkunden",
+            "button_link": ""
+          }
+        },
+        "row_fzj9L6": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Firmenkunden",
+            "text": "",
+            "button_label": "Firmenkunden",
+            "button_link": ""
+          }
+        },
+        "row_9aXC7f": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Wappen",
+            "text": "",
+            "button_label": "Wappen",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_wHmt8D",
+        "row_fzj9L6",
+        "row_9aXC7f"
+      ],
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "sm_scrolling_gallery_rCpCah": {
@@ -255,7 +301,7 @@
     "steelmonks_parallax_richtext_jtfCdy",
     "custom_header_6z9xdt",
     "custom_image_slider_cdg8ep",
-    "custom_liquid_LV4NU9",
+    "multirow_cp9WDr",
     "sm_scrolling_gallery_rCpCah",
     "custom_gallery_M9GEwk",
     "multirow_NcEGpL"
