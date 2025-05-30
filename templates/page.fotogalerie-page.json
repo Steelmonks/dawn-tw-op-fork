@@ -224,10 +224,10 @@
         "row_WDUmX9": {
           "type": "row",
           "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "button_label": "Schaltflächenbeschriftung",
+            "caption": "",
+            "heading": "<strong>Brothers in Arms</strong>",
+            "text": "<p><br/>Schwarz Pulverbeschichtet.<br/>120cm x 80cm<br/><br/></p>",
+            "button_label": "",
             "button_link": ""
           }
         },
@@ -244,10 +244,10 @@
         "row_QccDxt": {
           "type": "row",
           "settings": {
-            "caption": "Bildtext",
-            "heading": "Reihe",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
-            "button_label": "Schaltflächenbeschriftung",
+            "caption": "",
+            "heading": "<strong>Palma de Mallorca Wappen</strong>",
+            "text": "<p><br/>Zwei Schichten, Anthrazit auf Edelstahl.<br/>150cm x 150cm<br/><br/></p>",
+            "button_label": "",
             "button_link": ""
           }
         },
