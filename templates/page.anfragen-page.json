@@ -41,8 +41,9 @@
       "name": "Custom Header",
       "settings": {
         "richtext": "<p><strong>Von Deiner Idee, zu </strong></p><p><strong>einem Kunstwerk</strong></p><p><strong>aus Stahl.</strong></p>",
-        "button_text": "Zur Aafrage",
-        "button_link": ""
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/web-custom-signs.webp"
       }
     },
     "custom_image_slider_cdg8ep": {
