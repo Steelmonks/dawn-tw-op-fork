@@ -305,7 +305,7 @@
       ],
       "name": "Custom Gallery",
       "settings": {
-        "richtext": ""
+        "richtext": "<h1><strong>Galerie</strong></h1>"
       }
     },
     "accordions_higAa3": {
