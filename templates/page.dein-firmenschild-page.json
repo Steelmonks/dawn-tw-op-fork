@@ -35,7 +35,7 @@
       "name": "Custom Header",
       "settings": {
         "richtext": "<p>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</p>",
-        "button_text": "Zur Aufrage",
+        "button_text": "",
         "button_link": "",
         "image": "shopify://shop_images/sm-train.webp"
       }
