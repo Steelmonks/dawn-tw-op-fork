@@ -26,7 +26,7 @@
       "settings": {
         "cta": "Zur Afrage",
         "cta_link": "",
-        "cta_style": "red",
+        "cta_style": "primary",
         "liquid_mobile_title": "",
         "liquid_desktop_title": "<h1>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</h1>",
         "inverse_order": false,
