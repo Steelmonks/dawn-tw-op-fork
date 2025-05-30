@@ -160,8 +160,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "1. Erste Anfrage",
+            "content": "<p>Der Prozess beginnt mit <strong>der Anfrage</strong> und den Informationen, die ihr uns zur Verfügung stellt.</p><p> </p><p>Unser Anfrageformular findet ihr <span style=\"text-decoration:underline\">unter diesen 3 Schritten.</span> </p><p>Dort kannst Du ein Foto von Deiner Idee, eine fertige Datei und ein Kommentar zu einem eigenen, neuen Design abgeben.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
@@ -173,8 +173,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "2. Unser Angebot",
+            "content": "<p>Wenn uns Deine Wünsche klar sind, erstellen wir Dir ein unverbindliches Angebot.</p><p> </p><p>Die Versandkosten sind größenabhängig und werden individuell berechnet.</p><p> </p><p><span style=\"text-decoration:underline\">Sonderanfertigungen sind von Angeboten und Rabatten ausgeschlossen.</span></p><p> </p><p>Der <strong>Preis</strong> berechnet sich <strong>abhängig der Komplexität</strong> des Designs, <strong>der Qualität,</strong> <strong>der Vorlage</strong> und <strong>der Größe</strong> des Schildes.</p><p> </p><p>Nachdem Du das Angebot mit Deiner Zahlung bestätigt hast, beginnt der nächste Schritt.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
@@ -186,8 +186,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "3. Die Zusammenarbeit",
+            "content": "<p>Zusammen erstellen wir dann ein Design, das genau Deinen Vorstellungen entspricht.</p><p> </p><p>Bis zu<strong> 3 Revisionen</strong> sind im Preis inbegriffen.</p><p> </p><p><span style=\"text-decoration:underline\">Erst mit Deiner Bestätigung beginnen wir mit der Produktion.</span></p><p> </p><p>Das Schild wird innerhalb unserer kurzen Bearbeitungszeit von 7-10 Werktagen hergestellt und an Dich versandt.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
@@ -203,7 +203,7 @@
       ],
       "name": "Accordions",
       "settings": {
-        "heading": "Questions ? We have answers.",
+        "heading": "In 3 einfachen Schritten zu euren Produkten und Kollektionen.",
         "subheading": "",
         "padding_top": 24,
         "padding_bottom": 24,
