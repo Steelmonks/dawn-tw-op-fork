@@ -24,8 +24,9 @@
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
       "settings": {
-        "title": "Galerie",
-        "link_text": "Jetzt ansehen",
+        "image": "shopify://shop_images/sm-party.webp",
+        "title": "Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung",
+        "link_text": "",
         "link": ""
       }
     },
