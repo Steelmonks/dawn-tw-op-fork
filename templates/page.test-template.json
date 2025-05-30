@@ -20,67 +20,6 @@
         "show_title": false
       }
     },
-    "steelmonks_parallax_richtext_Ne4Mqr": {
-      "type": "steelmonks-parallax-richtext",
-      "settings": {
-        "title": "Galerie",
-        "link_text": "Jetzt ansehen",
-        "link": ""
-      }
-    },
-    "custom_header_rTtgCU": {
-      "type": "custom-header",
-      "settings": {
-        "richtext": "<p>test</p>",
-        "button_text": "testasdasd",
-        "button_link": "shopify://blogs/steelmonks-de",
-        "image": "shopify://shop_images/sm-monks.webp"
-      }
-    },
-    "custom_gallery_HxRwQ9": {
-      "type": "custom-gallery",
-      "blocks": {
-        "image_row_tBkAWM": {
-          "type": "image_row",
-          "settings": {
-            "image_1": "shopify://shop_images/sm-monks.webp",
-            "image_2": "shopify://shop_images/sm-monks.webp",
-            "image_3": "shopify://shop_images/sm-monks.webp",
-            "image_4": "shopify://shop_images/sm-monks.webp"
-          }
-        },
-        "image_row_EAxdiL": {
-          "type": "image_row",
-          "settings": {
-            "image_1": "shopify://shop_images/sm-brothers-png.png",
-            "image_2": "shopify://shop_images/sm-brothers-png.png",
-            "image_3": "shopify://shop_images/sm-brothers-png.png",
-            "image_4": "shopify://shop_images/sm-brothers-png.png"
-          }
-        },
-        "image_row_NEckLH": {
-          "type": "image_row",
-          "settings": {
-            "image_1": "shopify://shop_images/icon-tumbnail-grill-bbq.webp"
-          }
-        },
-        "image_row_zKqJLC": {
-          "type": "image_row",
-          "settings": {
-            "image_1": "shopify://shop_images/icon-tumbnail-zippo.webp"
-          }
-        }
-      },
-      "block_order": [
-        "image_row_tBkAWM",
-        "image_row_EAxdiL",
-        "image_row_NEckLH",
-        "image_row_zKqJLC"
-      ],
-      "settings": {
-        "richtext": ""
-      }
-    },
     "custom_image_slider_Uj6a6g": {
       "type": "custom-image-slider",
       "blocks": {
@@ -98,14 +37,18 @@
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/sm-workshop.webp",
+            "image_2": "shopify://shop_images/icon-tumbnail-grill-bbq.webp"
           }
         },
         "slider_block_DaCXxh": {
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/sm-factory.webp",
+            "image_2": "shopify://shop_images/sm-team.webp"
           }
         }
       },
@@ -278,9 +221,6 @@
   },
   "order": [
     "main",
-    "steelmonks_parallax_richtext_Ne4Mqr",
-    "custom_header_rTtgCU",
-    "custom_gallery_HxRwQ9",
     "custom_image_slider_Uj6a6g",
     "collapsible_content_djE73R",
     "contact_form_TUx9eb",
