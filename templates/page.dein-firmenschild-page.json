@@ -20,6 +20,23 @@
         "show_title": false
       }
     },
+    "steelmonks_parallax_9ghURN": {
+      "type": "steelmonks-parallax",
+      "name": "Parallax",
+      "settings": {
+        "cta": "Zur Afrage",
+        "cta_link": "",
+        "cta_style": "red",
+        "liquid_mobile_title": "<p>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</p>",
+        "liquid_desktop_title": "",
+        "inverse_order": false,
+        "image": "shopify://shop_images/sm-train.webp",
+        "image_position": "right",
+        "image_width": 500,
+        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
+        "banner": "shopify://shop_images/sm-party.webp"
+      }
+    },
     "steelmonks_parallax_richtext_4pXMQx": {
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
@@ -309,6 +326,7 @@
   },
   "order": [
     "main",
+    "steelmonks_parallax_9ghURN",
     "steelmonks_parallax_richtext_4pXMQx",
     "custom_header_W4hxnw",
     "custom_image_slider_cdg8ep",
