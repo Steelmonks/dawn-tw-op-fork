@@ -20,21 +20,24 @@
         "show_title": false
       }
     },
-    "steelmonks_parallax_9ghURN": {
-      "type": "steelmonks-parallax",
-      "name": "Parallax",
+    "steelmonks_parallax_richtext_4pXMQx": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
       "settings": {
-        "cta": "Zur Afrage",
-        "cta_link": "",
-        "cta_style": "red",
-        "liquid_mobile_title": "",
-        "liquid_desktop_title": "<h1>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</h1>",
-        "inverse_order": false,
-        "image": "shopify://shop_images/sm-train.webp",
-        "image_position": "right",
-        "image_width": 500,
-        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
-        "banner": "shopify://shop_images/sm-party.webp"
+        "image": "shopify://shop_images/sm-party.webp",
+        "title": "Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung",
+        "link_text": "",
+        "link": ""
+      }
+    },
+    "custom_header_W4hxnw": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "<p>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</p>",
+        "button_text": "Zur Aufrage",
+        "button_link": "",
+        "image": "shopify://shop_images/sm-train.webp"
       }
     },
     "custom_image_slider_cdg8ep": {
@@ -306,7 +309,8 @@
   },
   "order": [
     "main",
-    "steelmonks_parallax_9ghURN",
+    "steelmonks_parallax_richtext_4pXMQx",
+    "custom_header_W4hxnw",
     "custom_image_slider_cdg8ep",
     "accordions_xqfj73",
     "1748614557bd1b673a",
