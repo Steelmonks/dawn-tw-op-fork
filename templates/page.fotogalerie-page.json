@@ -1,0 +1,311 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "enable_gutter": false,
+        "show_title": false
+      }
+    },
+    "steelmonks_parallax_9ghURN": {
+      "type": "steelmonks-parallax",
+      "name": "Parallax",
+      "settings": {
+        "cta": "Zur Afrage",
+        "cta_link": "",
+        "cta_style": "red",
+        "liquid_mobile_title": "",
+        "liquid_desktop_title": "<p><strong>Von Deiner Idee, zu einem</strong></p><h1><strong>Kunstwerk aus Stahl</strong></h1>",
+        "inverse_order": false,
+        "image": "shopify://shop_images/sm-train.webp",
+        "image_position": "center",
+        "image_width": 500,
+        "text_on_banner": "<p><strong>Zeit zu zeigen was wir können...</strong></p>",
+        "banner": "shopify://shop_images/sm-party.webp"
+      }
+    },
+    "custom_image_slider_cdg8ep": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "slider_block_y7KFx7": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        },
+        "slider_block_x9n4b9": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        },
+        "slider_block_q7JdAT": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_y7KFx7",
+        "slider_block_x9n4b9",
+        "slider_block_q7JdAT"
+      ],
+      "name": "Custom Image Sliders",
+      "settings": {}
+    },
+    "custom_liquid_LV4NU9": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "sm_scrolling_gallery_rCpCah": {
+      "type": "sm-scrolling-gallery",
+      "blocks": {
+        "row_of_images_4tKMKr": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        },
+        "inversed_row_of_images_47gPRR": {
+          "type": "inversed_row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "5 / 4"
+          }
+        },
+        "row_of_images_qChH6z": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        }
+      },
+      "block_order": [
+        "row_of_images_4tKMKr",
+        "inversed_row_of_images_47gPRR",
+        "row_of_images_qChH6z"
+      ],
+      "name": "Scrolling Gallery",
+      "settings": {
+        "overlay_text": "<p><strong>Design Highlights</strong></p>",
+        "overlay_text_color": "#fafaff",
+        "overlay_background_color": "linear-gradient(45deg, rgba(9, 10, 12, 1) 25%, rgba(0, 68, 204, 1) 100%)",
+        "overlay_padding": "20px 20px 20px 20px",
+        "overlay_gradient_background_color": "radial-gradient(rgba(250, 250, 255, 1) 20%, rgba(250, 250, 255, 0) 80%)",
+        "overlay_style": "1",
+        "overlay_width": 85,
+        "show_box_shadow": true,
+        "box_shadow_properties": "4px 4px 6px #090a0c40",
+        "show_overlay_text": true,
+        "show_button": false,
+        "overlay_border_radius": 10,
+        "img_width": 250
+      }
+    },
+    "custom_gallery_M9GEwk": {
+      "type": "custom-gallery",
+      "blocks": {
+        "image_row_Xkdiab": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_zn6Dym": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_LFgEBY": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_bKMmCM": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_VTjzc3": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_gr6YUe": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_kKM4rJ": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_JqKxyF": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_F4NzNR": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_FPCefJ": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_VyrAdB": {
+          "type": "image_row",
+          "settings": {}
+        },
+        "image_row_MXLVkJ": {
+          "type": "image_row",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_row_Xkdiab",
+        "image_row_zn6Dym",
+        "image_row_LFgEBY",
+        "image_row_bKMmCM",
+        "image_row_VTjzc3",
+        "image_row_gr6YUe",
+        "image_row_kKM4rJ",
+        "image_row_JqKxyF",
+        "image_row_F4NzNR",
+        "image_row_FPCefJ",
+        "image_row_VyrAdB",
+        "image_row_MXLVkJ"
+      ],
+      "name": "Custom Gallery",
+      "settings": {
+        "richtext": "<h1><strong>Galerie</strong></h1>"
+      }
+    },
+    "multirow_NcEGpL": {
+      "type": "multirow",
+      "blocks": {
+        "row_dhAJrE": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>JML 4-Schichtiges Wappen</strong>",
+            "text": "<p><br/>Gold, Corten, Edelstahl und nochmal Corten.<br/>80cm x 75cm<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_QNXezk": {
+          "type": "row",
+          "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_WDUmX9": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Brothers in Arms</strong>",
+            "text": "<p><br/>Schwarz Pulverbeschichtet.<br/>120cm x 80cm<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_fag4LY": {
+          "type": "row",
+          "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_QccDxt": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "<strong>Palma de Mallorca Wappen</strong>",
+            "text": "<p><br/>Zwei Schichten, Anthrazit auf Edelstahl.<br/>150cm x 150cm<br/><br/></p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_RjTiUC": {
+          "type": "row",
+          "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        },
+        "row_AnptUW": {
+          "type": "row",
+          "settings": {
+            "caption": "Bildtext",
+            "heading": "Reihe",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "button_label": "Schaltflächenbeschriftung",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_dhAJrE",
+        "row_QNXezk",
+        "row_WDUmX9",
+        "row_fag4LY",
+        "row_QccDxt",
+        "row_RjTiUC",
+        "row_AnptUW"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "steelmonks_parallax_9ghURN",
+    "custom_image_slider_cdg8ep",
+    "custom_liquid_LV4NU9",
+    "sm_scrolling_gallery_rCpCah",
+    "custom_gallery_M9GEwk",
+    "multirow_NcEGpL"
+  ]
+}

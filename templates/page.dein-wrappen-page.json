@@ -26,15 +26,15 @@
       "settings": {
         "cta": "Zur Afrage",
         "cta_link": "",
-        "cta_style": "red",
+        "cta_style": "primary",
         "liquid_mobile_title": "",
-        "liquid_desktop_title": "<h1>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</h1>",
+        "liquid_desktop_title": "<h1><strong>Deine Geschichte,</strong></h1><h1><strong>verewigt.</strong></h1>",
         "inverse_order": false,
         "image": "shopify://shop_images/sm-train.webp",
-        "image_position": "right",
+        "image_position": "center",
         "image_width": 500,
-        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
-        "banner": "shopify://shop_images/sm-party.webp"
+        "text_on_banner": "<p><strong>Ein Erbstück des 21. Jahrhunderts.</strong></p><p> </p>",
+        "banner": "shopify://shop_images/web-galerie-banner.webp"
       }
     },
     "custom_image_slider_cdg8ep": {
@@ -103,8 +103,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "3. Dein Firmenschild",
-            "content": "<p>Zusammen erstellen wir dann ein Design, das genau Deinen Vorstellungen entspricht.</p><p> </p><p>Bis zu<strong> 3 Revisionen</strong> sind im Preis inbegriffen.</p><p> </p><p><span style=\"text-decoration:underline\">Erst mit Deiner Bestätigung beginnen wir mit der Produktion.</span></p><p> </p><p>Das Schild wird innerhalb unserer kurzen Bearbeitungszeit von 7-10 Werktagen hergestellt und an Dich versandt.</p>",
+            "heading": "3. Dein Wappen",
+            "content": "<p>Zusammen erstellen wir dann ein Design, das genau Deinen Vorstellungen entspricht.</p><p> </p><p>Bis zu<strong> 3 Revisionen</strong> sind im Preis inbegriffen.</p><p> </p><p><span style=\"text-decoration:underline\">Erst mit Deiner Bestätigung beginnen wir mit der Produktion.</span></p><p> </p><p>Dein Wappen wird innerhalb unserer kurzen Bearbeitungszeit von 7-10 Werktagen hergestellt und an Dich versandt.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
@@ -120,7 +120,7 @@
       ],
       "name": "Accordions",
       "settings": {
-        "heading": "In 3 Schrittenzu Deinem Firmenschild",
+        "heading": "In 3 Schrittenzu Deinem Wappen",
         "subheading": "",
         "padding_top": 24,
         "padding_bottom": 24,
@@ -128,18 +128,18 @@
         "padding_right": 24
       }
     },
-    "1748614557bd1b673a": {
+    "1748612781c5e7b771": {
       "type": "apps",
       "blocks": {
-        "powr_form_builder_app_block_RQieJP": {
+        "powr_form_builder_app_block_JqiTCU": {
           "type": "shopify://apps/powr-form-builder/blocks/app-block/1412fe37-d89c-4706-a797-6e2b53cb4a69",
           "settings": {
-            "app_id": "6ead4166_1659000100"
+            "app_id": "5b796b54_1651088308"
           }
         }
       },
       "block_order": [
-        "powr_form_builder_app_block_RQieJP"
+        "powr_form_builder_app_block_JqiTCU"
       ],
       "settings": {
         "include_margins": true
@@ -192,14 +192,49 @@
         "img_width": 250
       }
     },
-    "steelmonks_parallax_richtext_4UFHhE": {
-      "type": "steelmonks-parallax-richtext",
-      "name": "Parallax Rich Text",
+    "multirow_3UzQJr": {
+      "type": "multirow",
+      "blocks": {
+        "row_mzGJ69": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Reihe",
+            "text": "",
+            "button_label": "Ansehen",
+            "button_link": ""
+          }
+        },
+        "row_jj9YMY": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Reihe",
+            "text": "",
+            "button_label": "Ansehen",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_mzGJ69",
+        "row_jj9YMY"
+      ],
+      "name": "t:sections.multirow.presets.name",
       "settings": {
-        "image": "shopify://shop_images/sm-matecup2022.webp",
-        "title": "",
-        "link_text": "",
-        "link": ""
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "custom_gallery_M9GEwk": {
@@ -280,8 +315,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "Firmenschilder von Steelmonks",
-            "content": "<h1>Individuelle Firmenschilder für Dein Unternehmen</h1><p> </p><p>Willkommen bei Steelmonks, Deinem Partner für individuelle Metallarbeiten für den professionellen Bedarf. Wir verwirklichen jede Geschäftsidee mit Präzision und Kreativität.</p><p>Von repräsentativen Firmenschildern bis hin zu einzigartigen Designelementen für Deine Geschäftsräume – unser Angebot kennt keine Grenzen. Unsere Produkte entstehen aus hochwertigem Edelstahl und robustem Cortenstahl. Sie begeistern nicht nur durch ihre Ästhetik, sondern überzeugen auch durch langanhaltende Haltbarkeit.</p><p> </p><h2>Farbvielfalt für Deine Markenidentität</h2><p> </p><p>Farben spielen eine entscheidende Rolle in der visuellen Kommunikation. Deshalb bieten wir eine umfangreiche Farbpalette an, um Deine Firmenfarben präzise zu treffen.</p><p> </p><p>Wir bieten eine umfangreiche Farbpalette an, um Deine Firmenfarben präzise zu treffen. Schwarz, Weiß, Gold und Anthrazit gehören zu unseren Standardfarben. Egal, ob Du diskrete Eleganz bevorzugst oder eine lebendige Ausstrahlung suchst. Wir verwirklichen Deine Ideen in jedem gewünschten RAL-Farbton.</p><p> </p><h2>Der Weg zu Deinem Firmenschild</h2><p> </p><p>Alles beginnt mit Deiner Idee. Mit unserem Anfragenformular für Geschäftskunden sammeln wir alle nötigen Informationen, um Dein Projekt anzugehen. So können wir Durch Dein ausgefülltes Formular und beigefügten Dateien Dein Projekt präzise planen und umsetzen.</p><p> </p><p>Nachdem wir Deine Anfrage erhalten haben, erstellen wir einen unverbindlichen Kostenvoranschlag. Mit Deiner Zustimmung beginnt unser Designteam mit der Ausarbeitung Deines individuellen Entwurfs. Dabei stehen wir in ständigem Austausch mit Dir, um sicherzustellen, dass das Ergebnis Deinen Vorstellungen entspricht.</p><p> </p><h2>Einblicke in den Herstellungsprozess</h2><p> </p><p>Sobald Du mit unserem Designvorschlag einverstanden bist, leiten wir die Fertigung Deiner Firmenkreation ein. Unsere Lasermaschine schneidet Dein digitales Design präzise aus Stahl aus, um Deine Unternehmensvision detailgetreu in Metall zu verewigen.</p><p> </p><p>Für mehrschichtige Firmenschilder führen wir diesen Ausschneideprozess so oft wie nötig durch. Bei Farbwünschen versehen wir Dein Schild mit einer Pulverbeschichtung und Wettergrundierung, um seine Langlebigkeit und Wetterfestigkeit sicherzustellen.</p><p> </p><p>Unser <a href=\"https://steelmonks.com/products/unsichtbares-befestigungsset-bolzen-und-gewindestifte?_pos=1&_psq=uns&_ss=e&_v=1.0\" target=\"_blank\">unsichtbares Befestigungssystem</a> ermöglicht eine einfache Montage an die Wand. Die Bolzen an der Rückseite des Schildes und die mitgelieferten Gewindestifte machen die Montage Deines Schildes sehr leicht. Sie ist unkompliziert, und Euer Firmenschild erhält durch den 8 mm Wandabstand einen beeindruckenden Schwebeeffekt.</p><p> </p><h2>Vom Konzept zur Realität</h2><p> </p><p>Sobald wir Deine Freigabe erhalten haben, starten wir mit der Produktion Deiner individuellen Stahlkreation. Unsere Technik verwandelt Dein Design mit maximaler Genauigkeit in ein Metallprodukt. Dieses Produkt besticht nicht nur visuell, sondern spiegelt auch die Werte und Professionalität Deines Unternehmens wider.</p><p> </p><p>Unser innovatives Befestigungssystem ermöglicht eine einfache Montage Deiner Sonderanfertigung. Es erzeugt einen schwebenden Effekt, der das Werk effektvoll präsentiert.</p><p> </p><h2>Einzigartigkeit und Qualität für Dein Unternehmen</h2><p> </p><p>Bei Steelmonks verstehen wir die Bedeutung von Einzigartigkeit und hochwertiger Verarbeitung – besonders im Geschäftsumfeld. Gemeinsam mit Dir möchten wir beeindruckende Metallarbeiten schaffen, die Deine Marke repräsentieren und langfristig begeistern.</p><p> </p><p>Bist Du bereit, Deine Geschäftsräume mit individuellen Metallschildern aufzuwerten?</p><p> </p><p>Kontaktiere uns heute und entdecke, wie wir Deine geschäftliche Vision in Metall verwirklichen können. Unsere <a href=\"https://steelmonks.com/pages/fotogalerie\" target=\"_blank\">Fotogalerie</a> gibt Dir einen ersten Einblick in die Möglichkeiten und die Qualität unserer Arbeiten. Deine Ideen sind bei uns in den besten Händen.</p>",
+            "heading": "Ein Wappen von Steelmonks",
+            "content": "<h1>Der Weg zu Deinem Familienwappen</h1><p> </p><p>Viele suchen in unserer digitalen, schnellen Zeit nach Verbindung zu ihren Wurzeln und Traditionen. Sie suchen nach bedeutungsvollen Wegen, um ihr Erbe und ihre Geschichte zu ehren.</p><p>Ein Familienwappen bietet eine solche Möglichkeit, ein bleibendes Symbol Deiner familiären Geschichte und Werte zu schaffen. Doch was beinhaltet dieser Prozess, und was musst Du wissen, um Dein eigenes Familienwappen zu etablieren? Dieser Blogbeitrag wird die Mystik rund um das Thema Wappen entwirren und Dir einen klaren Wegweiser bieten.</p><p> </p><h2>Was ist der Unterschied zwischen Wappen und Familienwappen?</h2><p> </p><p>Zunächst ist es wichtig, den Unterschied zwischen allgemeinen Wappen und spezifischen Familienwappen zu verstehen.</p><p> </p><p>Ein <strong>Wappen</strong> ist ein einzigartiges Design, das als Erkennungszeichen dient. Historisch wurde es verwendet, um Individuen, Familien, Staaten oder Organisationen zu repräsentieren. Ein <strong>Familienwappen</strong> hingegen ist speziell einer Familie zugeordnet und wird oft von Generation zu Generation weitergegeben. Es symbolisiert die Geschichte, die Ehre und die Werte einer Familie in visueller Form.</p><p> </p><h2>Wie viel kostet es, ein Familienwappen zu erstellen?</h2><p> </p><p>In unserer digital dominierten, schnelllebigen Welt streben viele nach einer tieferen Verbindung zu ihren Wurzeln und einzigartigen Familientraditionen.</p><p>Sie wünschen sich Wege, ihr kulturelles Erbe und ihre Geschichte zu bewahren und zu ehren. Die Recherche und Registrierung eines existierenden Familienwappens kann mitunter geringe Gebühren nach sich ziehen. Ein neues Wappendesign kann, abhängig von Komplexität und Aufwand, schnell mehrere Hundert bis Tausend Euro kosten. Investieren in einen erfahrenen Heraldiker zahlt sich aus, um ein ästhetisch und symbolisch stimmiges Wappen zu erhalten.</p><p> </p><h2>Warum sollte eine Familie ein Wappen haben?</h2><p> </p><p>Ein Familienwappen zu besitzen, geht weit über den bloßen ästhetischen Wert hinaus. Es ist ein kraftvolles Symbol, das Zusammengehörigkeit, Stolz und die Anerkennung der eigenen Wurzeln und Errungenschaften ausdrückt. Ein Wappen verbindet Generationen und spiegelt die Geschichte und Werte Deiner Familie wider.</p><p> </p><h2>Wie komme ich an mein Familienwappen?</h2><p> </p><p><strong>Forschung:</strong> Der erste Schritt ist die Recherche, ob Deine Familie bereits ein Wappen besitzt. Historische Register, Bibliotheken und Online-Datenbanken sind hierfür gute Anlaufstellen.</p><p><strong>Design:</strong> Solltest Du kein existierendes Wappen finden, besteht die Möglichkeit, ein neues zu entwerfen. Achte auf traditionelle heraldische Prinzipien. Konsultiere einen Heraldiker für ein authentisches Design.</p><p><strong>Registrierung:</strong> Registriere Dein Wappen offiziell, um Authentizität und Einzigartigkeit zu sichern.</p><p><strong>Feiern:</strong> Schließlich solltest Du Dein Familienwappen mit Stolz präsentieren und feiern. Integriere Dein Wappen kreativ ins Familienleben – digital, auf Schmuck oder als Deko.</p><p> </p><h2>Steelmonks: Dein Partner für Familienwappen aus Stahl</h2><p> </p><p>Bei Steelmonks verstehen wir die Bedeutung von Tradition und familiärem Erbe. Träumst Du davon, Dein Wappen oder Familienwappen stilvoll zu Hause zu präsentieren? Steelmonks ist der ideale Partner für Dich. Wir helfen Dir, Dein Erbe nicht nur zu bewahren, sondern auch eindrucksvoll zur Schau zu stellen.</p><p> </p><p>Unser spezialisiertes Know-how ermöglicht es uns, Dein Familienwappen aus hochwertigem Stahl zu fertigen. Ein dauerhaftes Symbol für Stärke, das über Generationen Bestand hat.</p><p> </p><p><strong>Starte Dein Wappenprojekt ganz einfach</strong>: Nutze unser <a href=\"https://steelmonks.com/pages/dein-wappen\" target=\"_blank\">Formular</a> und füge eine Datei oder ein Bild Deines Wappens bei. Nach Eingang Deiner Anfrage erhältst Du von uns einen unverbindlichen Kostenvoranschlag. Sobald für Dich alles passt, beginnen wir mit der digitalen Ausarbeitung Deines Wappens. Diesen Entwurf senden wir Dir zu und erst nach Deiner vollständigen Zustimmung leiten wir die Produktion ein.</p><p> </p><p>Unser Team legt großen Wert auf individuelle Gestaltungsmöglichkeiten. Wir gestalten Dein Wappen digital, achten dabei auf Farben und Motive und können es mehrschichtig anfertigen. So können wir Deine Vorstellungen genau umsetzen und ein Unikat erschaffen, das Deine Familie würdigt.</p><p> </p><p>Mit Steelmonks schaffst Du Dein Familienwappen aus Stahl – künstlerisch wertvoll und dauerhaft.</p><p>Ein Familienwappen stärkt die Verbindung zur Vergangenheit und schafft ein dauerhaftes Erbe für die Zukunft. Durch gezielte Schritte erschaffst Du ein ehrenvolles Familiensymbol mit einer Geschichte, die Generationen überdauert.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
@@ -309,9 +344,9 @@
     "steelmonks_parallax_9ghURN",
     "custom_image_slider_cdg8ep",
     "accordions_xqfj73",
-    "1748614557bd1b673a",
+    "1748612781c5e7b771",
     "sm_scrolling_gallery_rCpCah",
-    "steelmonks_parallax_richtext_4UFHhE",
+    "multirow_3UzQJr",
     "custom_gallery_M9GEwk",
     "accordions_higAa3"
   ]

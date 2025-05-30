@@ -1,0 +1,282 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28,
+        "enable_gutter": false,
+        "show_title": false
+      }
+    },
+    "accordions_hdyH3p": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_UmaQYK": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "Eigenes Merchandise",
+            "content": "<p>Unter Merchandise verstehen sich Produkte für Deine, ihre und eure Firma die wir für euch produzieren.<br/><br/>Speziell angefertigt, potentiell von uns direkt an den Kunden versandt, entsprechend unserer hohen Qualitätsstandarts.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_9BQFrG": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "Was ist möglich?",
+            "content": "<p>Merchandise das wir erstellen können beinhaltet, aber ist nicht begrenzt auf:</p><p> </p><p>Halsketten</p><p>Anhänger</p><p>Kartenhalter</p><p>Wandschilder</p><p>Visitenkarten (Stahl)</p><p>Wappen</p><p>Zigarrenhalter</p><p>Einzigartiges</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_eXVdXD": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "Produkte für Großkunden",
+            "content": "<p>Für den eigenen und weiterverkauf eignen sich speziell für euch entwickelte Produkte die ihr mit Staffelpreisen, leicht kaufen und dann selber vermarkten könnt.</p><p>Eine Mindestabnahmemenge ist notwendig die entsprechend der Komplexität des Projektes ist.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_AUnqHC": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "Was ist möglich?",
+            "content": "<p>Mit unserem eigenen Team von Designern und \"Creatives\" ist der Produktentwicklung keine Grenzen gesetzt. Wir können dazu eure Wünsche in hohen Stückzahlen produzieren. </p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_jdFiYj": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "Partnerschaften und Lizensen",
+            "content": "<p>Steelmonks steht durch viele Partnerschaften an der Spitze der Industrie, nicht nur als Produzent sondern als eigene Marke mit einer hohen Sozialen Reichweite, Tausended Täglichen Webseitenbesuchern und Hunderten Bestellungen.</p><p>Als Partner, geniessen sowohl ihr als auch wir die Vorteile die damit einhergehen.</p><p>Las uns zusammen weiter wachsen!</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_CkJadr": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "Welche Vorteile gibt es?",
+            "content": "<p>Provision, Kommission, usw. Werden individuell vereinbart und mit einem Handschlag und Vertrag gefestigt. </p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_UmaQYK",
+        "accordion_9BQFrG",
+        "accordion_eXVdXD",
+        "accordion_AUnqHC",
+        "accordion_jdFiYj",
+        "accordion_CkJadr"
+      ],
+      "custom_css": [],
+      "name": "Accordions",
+      "settings": {
+        "heading": "",
+        "subheading": "<h1><br/><strong>Merchandise aus Stahl.</strong><br/></h1>",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_left": 24,
+        "padding_right": 24
+      }
+    },
+    "custom_image_slider_ANjYDm": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "slider_block_gqPrrh": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "<h3>Projekte & Serien</h3>",
+            "slide_count": 3
+          }
+        },
+        "slider_block_9XatD4": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "<h3>Merchandise & Produkte</h3>",
+            "slide_count": 3
+          }
+        },
+        "slider_block_iriDyP": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "<h3>Jubiläumsgeschenke</h3>",
+            "slide_count": 3
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_gqPrrh",
+        "slider_block_9XatD4",
+        "slider_block_iriDyP"
+      ],
+      "name": "Custom Image Sliders",
+      "settings": {}
+    },
+    "accordions_WmkYtb": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_6QkWAC": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "1. Erste Anfrage",
+            "content": "<p>Der Prozess beginnt mit <strong>der Anfrage</strong> und den Informationen, die ihr uns zur Verfügung stellt.</p><p> </p><p>Unser Anfrageformular findet ihr <span style=\"text-decoration:underline\">unter diesen 3 Schritten.</span> </p><p>Dort kannst Du ein Foto von Deiner Idee, eine fertige Datei und ein Kommentar zu einem eigenen, neuen Design abgeben.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_gFQW9P": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "2. Unser Angebot",
+            "content": "<p>Wenn uns Deine Wünsche klar sind, erstellen wir Dir ein unverbindliches Angebot.</p><p> </p><p>Die Versandkosten sind größenabhängig und werden individuell berechnet.</p><p> </p><p><span style=\"text-decoration:underline\">Sonderanfertigungen sind von Angeboten und Rabatten ausgeschlossen.</span></p><p> </p><p>Der <strong>Preis</strong> berechnet sich <strong>abhängig der Komplexität</strong> des Designs, <strong>der Qualität,</strong> <strong>der Vorlage</strong> und <strong>der Größe</strong> des Schildes.</p><p> </p><p>Nachdem Du das Angebot mit Deiner Zahlung bestätigt hast, beginnt der nächste Schritt.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_ieRM7R": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "3. Die Zusammenarbeit",
+            "content": "<p>Zusammen erstellen wir dann ein Design, das genau Deinen Vorstellungen entspricht.</p><p> </p><p>Bis zu<strong> 3 Revisionen</strong> sind im Preis inbegriffen.</p><p> </p><p><span style=\"text-decoration:underline\">Erst mit Deiner Bestätigung beginnen wir mit der Produktion.</span></p><p> </p><p>Das Schild wird innerhalb unserer kurzen Bearbeitungszeit von 7-10 Werktagen hergestellt und an Dich versandt.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_6QkWAC",
+        "accordion_gFQW9P",
+        "accordion_ieRM7R"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "In 3 einfachen Schritten zu euren Produkten und Kollektionen.",
+        "subheading": "",
+        "padding_top": 24,
+        "padding_bottom": 60,
+        "padding_left": 24,
+        "padding_right": 24
+      }
+    },
+    "17486173103c8358e8": {
+      "type": "apps",
+      "blocks": {
+        "powr_form_builder_app_block_hyUifD": {
+          "type": "shopify://apps/powr-form-builder/blocks/app-block/1412fe37-d89c-4706-a797-6e2b53cb4a69",
+          "settings": {
+            "app_id": "c59428bf_1740733967"
+          }
+        }
+      },
+      "block_order": [
+        "powr_form_builder_app_block_hyUifD"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_image_slider_rMw9cr": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "slider_block_dnBwAA": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        },
+        "slider_block_MpFbjk": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "<h1>Kunden & Partner</h1>",
+            "slide_count": 3
+          }
+        },
+        "slider_block_p7M9eU": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_dnBwAA",
+        "slider_block_MpFbjk",
+        "slider_block_p7M9eU"
+      ],
+      "name": "Custom Image Sliders",
+      "settings": {}
+    },
+    "custom_gallery_gfc8PN": {
+      "type": "custom-gallery",
+      "name": "Custom Gallery",
+      "settings": {
+        "richtext": "<h1>Galerie</h1>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "accordions_hdyH3p",
+    "custom_image_slider_ANjYDm",
+    "accordions_WmkYtb",
+    "17486173103c8358e8",
+    "custom_image_slider_rMw9cr",
+    "custom_gallery_gfc8PN"
+  ]
+}
