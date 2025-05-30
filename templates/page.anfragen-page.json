@@ -205,6 +205,7 @@
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
       "settings": {
+        "image": "shopify://shop_images/Sonderanfertigung_Banner.jpg",
         "title": "",
         "link_text": "",
         "link": ""
