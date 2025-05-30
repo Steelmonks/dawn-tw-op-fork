@@ -1412,10 +1412,6 @@ video {
   opacity: 0;
 }
 
-.twcss-opacity-25 {
-  opacity: 0.25;
-}
-
 .twcss-shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -1865,6 +1861,11 @@ video {
   .md\:twcss-text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .md\:twcss-text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
