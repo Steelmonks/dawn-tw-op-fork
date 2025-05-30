@@ -5,7 +5,7 @@
   class='twcss-items-center twcss-bg-fixed twcss-relative twcss-w-full twcss-h-[250px] md:twcss-h-[300px] twcss-bg-cover twcss-bg-center twcss-brightness-120'
 >
   {% comment %} overlay {% endcomment %}
-  <div style='display: block;' class='twcss-absolute twcss-inset-0 twcss-bg-brandwhite twcss-opacity-25'></div>
+  <div style='display: block;' class='twcss-absolute twcss-inset-0'></div>
   <div class='twcss-text-center twcss-w-full twcss-text-brandwhite twcss-text-4xl md:twcss-text-6xl'>
     {{ section.settings.text_on_banner }}
   </div>
@@ -17,7 +17,9 @@
   class='twcss-relative twcss-w-full twcss-flex twcss-justify-between twcss-max-w-[1600px] twcss-mb-12'
 >
   {% unless section.settings.inverse_order %}
-    {{ section.settings.liquid_desktop_title }}
+    <span class='twcss-text-center twcss-font-semibold twcss-text-black twcss-text-2xl md:twcss-text-3xl twcss-px-4 twcss-py-2'>
+      {{ section.settings.liquid_desktop_title }}
+    </span>
   {% endunless %}
 
   <a
@@ -38,7 +40,9 @@
   </a>
 
   {% if section.settings.inverse_order %}
-    {{ section.settings.liquid_desktop_title }}
+    <span class='twcss-text-center twcss-font-semibold twcss-text-black twcss-text-2xl md:twcss-text-3xl twcss-px-4 twcss-py-2'>
+      {{ section.settings.liquid_desktop_title }}
+    </span>
   {% endif %}
 </div>
 
@@ -76,12 +80,12 @@
       "default": "primary"
     },
     {
-      "type": "liquid",
+      "type": "richtext",
       "id": "liquid_mobile_title",
       "label": "Mobile Title"
     },
     {
-      "type": "liquid",
+      "type": "richtext",
       "id": "liquid_desktop_title",
       "label": "Desktop Title"
     },
