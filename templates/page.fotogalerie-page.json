@@ -58,7 +58,10 @@
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/steelmonks-metallschild-motivschild-untrennbares-parchen-schwarz-ral-9005-22_5cm_ed2ca5f9-af5c-4e17-a020-e7927b4801d9.jpg",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-sternzeichen-schild-tarot-karte-schild-schwarz-ral-9005-22_5cm-7.jpg",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-sternzeichen-schild-tarot-karte-schild-schwarz-ral-9005-22_5cm-4.jpg"
           }
         },
         "slider_block_q7JdAT": {
