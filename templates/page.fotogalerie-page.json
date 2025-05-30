@@ -68,7 +68,9 @@
           "settings": {
             "richtext": "",
             "slide_count": 3,
-            "image_1": "shopify://shop_images/Firmenschild.png"
+            "image_1": "shopify://shop_images/Firmenschild.png",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-motivschild-zwei-herzen-schwarz-ral-9005-22_5cm-2.webp",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-motivschild-unendliche-namen-schwarz-ral-9005-22_5cm_3aa3a94b-1a1c-442c-b0e8-0e8da320e569.jpg"
           }
         }
       },
