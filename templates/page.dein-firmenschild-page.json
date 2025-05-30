@@ -34,9 +34,10 @@
       "type": "custom-header",
       "name": "Custom Header",
       "settings": {
-        "richtext": "",
-        "button_text": "",
-        "button_link": ""
+        "richtext": "<p><strong>Von Deinem Logo, zu</strong></p><p><strong>einem Kunstwerk</strong></p><p><strong>aus Stahl</strong></p>",
+        "button_text": "Zur Anfrage",
+        "button_link": "",
+        "image": "shopify://shop_images/sm-train.webp"
       }
     },
     "custom_image_slider_cdg8ep": {
