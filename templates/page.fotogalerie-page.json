@@ -37,6 +37,26 @@
         "banner": "shopify://shop_images/sm-party.webp"
       }
     },
+    "steelmonks_parallax_richtext_jtfCdy": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "image": "shopify://shop_images/web-wasel_banner.webp",
+        "title": "Zeit zu zeigen was wir können...",
+        "link_text": "",
+        "link": ""
+      }
+    },
+    "custom_header_6z9xdt": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "<p><strong>Von Deiner Idee, zu einem</strong></p><h1><strong>Kunstwerk aus Stahl</strong></h1>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/sm-train.webp"
+      }
+    },
     "custom_image_slider_cdg8ep": {
       "type": "custom-image-slider",
       "blocks": {
@@ -302,6 +322,8 @@
   "order": [
     "main",
     "steelmonks_parallax_9ghURN",
+    "steelmonks_parallax_richtext_jtfCdy",
+    "custom_header_6z9xdt",
     "custom_image_slider_cdg8ep",
     "custom_liquid_LV4NU9",
     "sm_scrolling_gallery_rCpCah",
