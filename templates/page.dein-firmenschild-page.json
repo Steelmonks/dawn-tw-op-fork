@@ -32,7 +32,7 @@
         "inverse_order": false,
         "image": "shopify://shop_images/sm-train.webp",
         "image_position": "right",
-        "image_width": 500,
+        "image_width": 200,
         "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
         "banner": "shopify://shop_images/sm-party.webp"
       }
