@@ -179,8 +179,9 @@
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
       "settings": {
-        "title": "Galerie",
-        "link_text": "Jetzt ansehen",
+        "image": "shopify://shop_images/sm-matecup2022.webp",
+        "title": "",
+        "link_text": "",
         "link": ""
       }
     },
