@@ -20,21 +20,28 @@
         "show_title": false
       }
     },
-    "steelmonks_parallax_9ghURN": {
-      "type": "steelmonks-parallax",
-      "name": "Parallax",
+    "video_dqxW3D": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
       "settings": {
-        "cta": "Zur Afrage",
-        "cta_link": "",
-        "cta_style": "primary",
-        "liquid_mobile_title": "",
-        "liquid_desktop_title": "<h1><strong>Deine Geschichte,</strong></h1><h1><strong>verewigt.</strong></h1>",
-        "inverse_order": false,
-        "image": "shopify://shop_images/sm-train.webp",
-        "image_position": "center",
-        "image_width": 500,
-        "text_on_banner": "<p><strong>Ein Erbstück des 21. Jahrhunderts.</strong></p><p> </p>",
-        "banner": "shopify://shop_images/web-galerie-banner.webp"
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https://www.youtube.com/watch?v=cIkAe41mPgQ&t=2s",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_header_k3pLfc": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "<p><strong>Von Deiner Idee, zu </strong></p><p><strong>einem Kunstwerk</strong></p><p><strong>aus Stahl.</strong></p>",
+        "button_text": "Zur Aafrage",
+        "button_link": ""
       }
     },
     "custom_image_slider_cdg8ep": {
@@ -341,7 +348,8 @@
   },
   "order": [
     "main",
-    "steelmonks_parallax_9ghURN",
+    "video_dqxW3D",
+    "custom_header_k3pLfc",
     "custom_image_slider_cdg8ep",
     "accordions_xqfj73",
     "1748612781c5e7b771",
