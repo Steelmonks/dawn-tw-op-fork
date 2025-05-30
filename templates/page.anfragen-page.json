@@ -210,71 +210,51 @@
         "link": ""
       }
     },
-    "custom_gallery_M9GEwk": {
+    "custom_gallery_PjymMw": {
       "type": "custom-gallery",
       "blocks": {
-        "image_row_Xkdiab": {
+        "image_row_V9cfJj": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm-4.jpg",
+            "image_2": "shopify://shop_images/Wappen1_copy.jpg",
+            "image_3": "shopify://shop_images/Wappen18_copy.jpg",
+            "image_4": "shopify://shop_images/Was_ist_ein_Wappen.png"
+          }
         },
-        "image_row_zn6Dym": {
+        "image_row_RECFMh": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/web-wappen-coat-of-arms.webp",
+            "image_2": "shopify://shop_images/Erstelle_jetzt_Dein_Wappen.png",
+            "image_3": "shopify://shop_images/Darf_man_ein_Wappen_verwenden.png",
+            "image_4": "shopify://shop_images/Wappen1.jpg"
+          }
         },
-        "image_row_LFgEBY": {
+        "image_row_yPF36a": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/Wappen3.jpg",
+            "image_2": "shopify://shop_images/Wappen2.jpg",
+            "image_3": "shopify://shop_images/Wappen_1_Moeller.jpg",
+            "image_4": "shopify://shop_images/Wappen-Schild.jpg"
+          }
         },
-        "image_row_bKMmCM": {
+        "image_row_MaMyTR": {
           "type": "image_row",
-          "settings": {}
-        },
-        "image_row_VTjzc3": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_gr6YUe": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_kKM4rJ": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_JqKxyF": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_F4NzNR": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_FPCefJ": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_VyrAdB": {
-          "type": "image_row",
-          "settings": {}
-        },
-        "image_row_MXLVkJ": {
-          "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm-9.jpg",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm.jpg",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-wappen-modernes-wappen-schwarz-auf-weiss-55cm.jpg",
+            "image_4": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm-7.jpg"
+          }
         }
       },
       "block_order": [
-        "image_row_Xkdiab",
-        "image_row_zn6Dym",
-        "image_row_LFgEBY",
-        "image_row_bKMmCM",
-        "image_row_VTjzc3",
-        "image_row_gr6YUe",
-        "image_row_kKM4rJ",
-        "image_row_JqKxyF",
-        "image_row_F4NzNR",
-        "image_row_FPCefJ",
-        "image_row_VyrAdB",
-        "image_row_MXLVkJ"
+        "image_row_V9cfJj",
+        "image_row_RECFMh",
+        "image_row_yPF36a",
+        "image_row_MaMyTR"
       ],
       "name": "Custom Gallery",
       "settings": {
@@ -321,7 +301,7 @@
     "1748612781c5e7b771",
     "sm_scrolling_gallery_rCpCah",
     "steelmonks_parallax_richtext_zeCNX9",
-    "custom_gallery_M9GEwk",
+    "custom_gallery_PjymMw",
     "accordions_higAa3"
   ]
 }
