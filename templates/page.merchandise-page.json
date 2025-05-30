@@ -127,21 +127,21 @@
         "slider_block_gqPrrh": {
           "type": "slider_block",
           "settings": {
-            "richtext": "<p>Projekte & Serien</p>",
+            "richtext": "<h3>Projekte & Serien</h3>",
             "slide_count": 3
           }
         },
         "slider_block_9XatD4": {
           "type": "slider_block",
           "settings": {
-            "richtext": "<p>Merchandise & Produkte</p>",
+            "richtext": "<h3>Merchandise & Produkte</h3>",
             "slide_count": 3
           }
         },
         "slider_block_iriDyP": {
           "type": "slider_block",
           "settings": {
-            "richtext": "<p>Jubiläumsgeschenke</p>",
+            "richtext": "<h3>Jubiläumsgeschenke</h3>",
             "slide_count": 3
           }
         }
