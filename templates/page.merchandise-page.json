@@ -252,7 +252,7 @@
           "type": "slider_block",
           "settings": {
             "richtext": "<h1>Kunden & Partner</h1>",
-            "slide_count": 3,
+            "slide_count": 7,
             "image_1": "shopify://shop_images/sm-part1.webp",
             "image_2": "shopify://shop_images/sm-part2.webp",
             "image_3": "shopify://shop_images/sm-part3.webp",
