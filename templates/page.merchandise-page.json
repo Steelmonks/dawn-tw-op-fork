@@ -128,14 +128,20 @@
           "type": "slider_block",
           "settings": {
             "richtext": "<h3>Projekte & Serien</h3>",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/ZBE-1000-Hand.jpg",
+            "image_2": "shopify://shop_images/ZBE-1001-Box.jpg",
+            "image_3": "shopify://shop_images/ZBE-4000-Personalizing.jpg"
           }
         },
         "slider_block_9XatD4": {
           "type": "slider_block",
           "settings": {
             "richtext": "<h3>Merchandise & Produkte</h3>",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/icon-tumbnail-cardholder.webp",
+            "image_2": "shopify://shop_images/ZBE-4000-gift.jpg",
+            "image_3": "shopify://shop_images/ZBE-1001-Lighting.jpg"
           }
         },
         "slider_block_iriDyP": {
