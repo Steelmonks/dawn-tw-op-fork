@@ -19,9 +19,221 @@
         "enable_gutter": false,
         "show_title": false
       }
+    },
+    "steelmonks_parallax_richtext_D96eEL": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "title": "Galerie",
+        "link_text": "Jetzt ansehen",
+        "link": ""
+      }
+    },
+    "custom_header_7YiVqn": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "custom_image_slider_cdg8ep": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "slider_block_y7KFx7": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        },
+        "slider_block_x9n4b9": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        },
+        "slider_block_q7JdAT": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 3
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_y7KFx7",
+        "slider_block_x9n4b9",
+        "slider_block_q7JdAT"
+      ],
+      "name": "Custom Image Sliders",
+      "settings": {}
+    },
+    "accordions_xqfj73": {
+      "type": "accordions",
+      "blocks": {
+        "navigation_mJ9ag8": {
+          "type": "navigation",
+          "settings": {
+            "unique_id": "",
+            "heading": "<p>Navigation heading</p>"
+          }
+        },
+        "navigation_46H79h": {
+          "type": "navigation",
+          "settings": {
+            "unique_id": "",
+            "heading": "<p>Navigation heading</p>"
+          }
+        },
+        "accordion_MtgiMJ": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        },
+        "accordion_KrDGdr": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "navigation_mJ9ag8",
+        "navigation_46H79h",
+        "accordion_MtgiMJ",
+        "accordion_KrDGdr"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "Questions ? We have answers.",
+        "subheading": "<p>Add a short description</p>",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_left": 24,
+        "padding_right": 24
+      }
+    },
+    "sm_scrolling_gallery_rCpCah": {
+      "type": "sm-scrolling-gallery",
+      "blocks": {
+        "row_of_images_4tKMKr": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        },
+        "inversed_row_of_images_47gPRR": {
+          "type": "inversed_row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "5 / 4"
+          }
+        },
+        "row_of_images_qChH6z": {
+          "type": "row_of_images",
+          "settings": {
+            "use_custom_images": false,
+            "aspect_ratio": "16 / 9"
+          }
+        }
+      },
+      "block_order": [
+        "row_of_images_4tKMKr",
+        "inversed_row_of_images_47gPRR",
+        "row_of_images_qChH6z"
+      ],
+      "name": "Scrolling Gallery",
+      "settings": {
+        "overlay_text": "<h2>Inspired by Life.</h2><p>Steelmonks</p>",
+        "overlay_text_color": "#fafaff",
+        "overlay_background_color": "linear-gradient(45deg, rgba(9, 10, 12, 1) 25%, rgba(0, 68, 204, 1) 100%)",
+        "overlay_padding": "20px 20px 20px 20px",
+        "overlay_gradient_background_color": "radial-gradient(rgba(250, 250, 255, 1) 20%, rgba(250, 250, 255, 0) 80%)",
+        "overlay_style": "1",
+        "overlay_width": 85,
+        "show_box_shadow": true,
+        "box_shadow_properties": "4px 4px 6px #090a0c40",
+        "show_overlay_text": true,
+        "show_button": false,
+        "overlay_border_radius": 10,
+        "img_width": 250
+      }
+    },
+    "steelmonks_parallax_richtext_4UFHhE": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "title": "Galerie",
+        "link_text": "Jetzt ansehen",
+        "link": ""
+      }
+    },
+    "custom_gallery_M9GEwk": {
+      "type": "custom-gallery",
+      "name": "Custom Gallery",
+      "settings": {
+        "richtext": ""
+      }
+    },
+    "accordions_higAa3": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_AF9AxH": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_AF9AxH"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "Questions ? We have answers.",
+        "subheading": "<p>Add a short description</p>",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_left": 24,
+        "padding_right": 24
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "steelmonks_parallax_richtext_D96eEL",
+    "custom_header_7YiVqn",
+    "custom_image_slider_cdg8ep",
+    "accordions_xqfj73",
+    "sm_scrolling_gallery_rCpCah",
+    "steelmonks_parallax_richtext_4UFHhE",
+    "custom_gallery_M9GEwk",
+    "accordions_higAa3"
   ]
 }
