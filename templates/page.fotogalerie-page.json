@@ -20,23 +20,6 @@
         "show_title": false
       }
     },
-    "steelmonks_parallax_9ghURN": {
-      "type": "steelmonks-parallax",
-      "name": "Parallax",
-      "settings": {
-        "cta": "Zur Afrage",
-        "cta_link": "",
-        "cta_style": "red",
-        "liquid_mobile_title": "",
-        "liquid_desktop_title": "<p><strong>Von Deiner Idee, zu einem</strong></p><h1><strong>Kunstwerk aus Stahl</strong></h1>",
-        "inverse_order": false,
-        "image": "shopify://shop_images/sm-train.webp",
-        "image_position": "center",
-        "image_width": 500,
-        "text_on_banner": "<p><strong>Zeit zu zeigen was wir können...</strong></p>",
-        "banner": "shopify://shop_images/sm-party.webp"
-      }
-    },
     "steelmonks_parallax_richtext_jtfCdy": {
       "type": "steelmonks-parallax-richtext",
       "name": "Parallax Rich Text",
@@ -321,7 +304,6 @@
   },
   "order": [
     "main",
-    "steelmonks_parallax_9ghURN",
     "steelmonks_parallax_richtext_jtfCdy",
     "custom_header_6z9xdt",
     "custom_image_slider_cdg8ep",
