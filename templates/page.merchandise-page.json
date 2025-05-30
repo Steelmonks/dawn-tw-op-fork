@@ -110,6 +110,7 @@
         "accordion_jdFiYj",
         "accordion_CkJadr"
       ],
+      "custom_css": [],
       "name": "Accordions",
       "settings": {
         "heading": "",
@@ -126,21 +127,21 @@
         "slider_block_gqPrrh": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<p>Projekte & Serien</p>",
             "slide_count": 3
           }
         },
         "slider_block_9XatD4": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<p>Merchandise & Produkte</p>",
             "slide_count": 3
           }
         },
         "slider_block_iriDyP": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<p>Jubiläumsgeschenke</p>",
             "slide_count": 3
           }
         }
