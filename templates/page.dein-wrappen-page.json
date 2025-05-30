@@ -210,8 +210,9 @@
         "row_mzGJ69": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm.jpg",
             "caption": "",
-            "heading": "Reihe",
+            "heading": "<strong>Familienwappen</strong>",
             "text": "",
             "button_label": "Ansehen",
             "button_link": ""
@@ -220,8 +221,9 @@
         "row_jj9YMY": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/steelmonks-metallschild-wappen-modernes-wappen-schwarz-auf-weiss-55cm.jpg",
             "caption": "",
-            "heading": "Reihe",
+            "heading": "<strong>Modernes Wappen</strong>",
             "text": "",
             "button_label": "Ansehen",
             "button_link": ""
