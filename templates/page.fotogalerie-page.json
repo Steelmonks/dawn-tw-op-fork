@@ -28,12 +28,12 @@
         "cta_link": "",
         "cta_style": "red",
         "liquid_mobile_title": "",
-        "liquid_desktop_title": "<h1>Von Deinem Logo, zu<br/>einem Kunstwerk<br/>aus Stahl</h1>",
+        "liquid_desktop_title": "<p><strong>Von Deiner Idee, zu einem</strong></p><h1><strong>Kunstwerk aus Stahl</strong></h1>",
         "inverse_order": false,
         "image": "shopify://shop_images/sm-train.webp",
-        "image_position": "right",
+        "image_position": "center",
         "image_width": 500,
-        "text_on_banner": "<p>Jubiläumsgeschenke, Firmenschilder und Objektbeschilderung</p>",
+        "text_on_banner": "<p><strong>Zeit zu zeigen was wir können...</strong></p>",
         "banner": "shopify://shop_images/sm-party.webp"
       }
     },
