@@ -77,8 +77,8 @@
           "type": "accordion",
           "settings": {
             "parent": "",
-            "heading": "What is your product or service?",
-            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "heading": "1. Erste Anfrage",
+            "content": "<p>Der Prozess beginnt mit <strong>Deiner Anfrage</strong> und den Informationen, die Du uns zur Verfügung stellst.</p><p> </p><p>Unser Anfrageformular findest Du <span style=\"text-decoration:underline\">unter diesen 3 Schritten.</span> Dort kannst Du ein Foto von Deiner Idee, eine fertige Datei und ein Kommentar zu einem eigenen, neuen Design abgeben.</p>",
             "content_liquid": "",
             "featured": false,
             "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
