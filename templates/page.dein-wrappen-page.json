@@ -256,19 +256,39 @@
       "blocks": {
         "image_row_Xkdiab": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/web-wappen-coat-of-arms.webp",
+            "image_2": "shopify://shop_images/Wappen1_copy.jpg",
+            "image_3": "shopify://shop_images/Wappen18_copy.jpg",
+            "image_4": "shopify://shop_images/Was_ist_ein_Wappen.png"
+          }
         },
         "image_row_zn6Dym": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/Was_ist_der_Unterschied_zwischen_Wappen_und_Familienwappen.jpg",
+            "image_2": "shopify://shop_images/Erstelle_jetzt_Dein_Wappen.png",
+            "image_3": "shopify://shop_images/Darf_man_ein_Wappen_verwenden.png",
+            "image_4": "shopify://shop_images/Wappen1.jpg"
+          }
         },
         "image_row_ew37ei": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/Wappen3.jpg",
+            "image_2": "shopify://shop_images/Wappen2.jpg",
+            "image_3": "shopify://shop_images/Wappen_1_Moeller.jpg",
+            "image_4": "shopify://shop_images/Wappen-Schild.jpg"
+          }
         },
         "image_row_YmEnXD": {
           "type": "image_row",
-          "settings": {}
+          "settings": {
+            "image_1": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm-9.jpg",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm.jpg",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-wappen-modernes-wappen-schwarz-auf-weiss-55cm.jpg",
+            "image_4": "shopify://shop_images/steelmonks-metallschild-wappen-familienwappen-edelstahl-auf-schwarz-55cm-7.jpg"
+          }
         }
       },
       "block_order": [
