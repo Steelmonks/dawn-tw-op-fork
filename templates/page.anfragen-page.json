@@ -40,7 +40,7 @@
       "type": "custom-header",
       "name": "Custom Header",
       "settings": {
-        "richtext": "<p><strong>Von Deiner Idee, zu </strong></p><p><strong>einem Kunstwerk</strong></p><p><strong>aus Stahl.</strong></p>",
+        "richtext": "<h1><strong>Von Deiner Idee, zu </strong></h1><h1><strong>einem Kunstwerk</strong></h1><h1><strong>aus Stahl.</strong></h1>",
         "button_text": "",
         "button_link": "",
         "image": "shopify://shop_images/web-custom-signs.webp"
@@ -53,14 +53,20 @@
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/sm-sign.webp",
+            "image_2": "shopify://shop_images/Was_ist_ein_Wappen.png",
+            "image_3": "shopify://shop_images/Wappen1_copy.jpg"
           }
         },
         "slider_block_x9n4b9": {
           "type": "slider_block",
           "settings": {
             "richtext": "",
-            "slide_count": 3
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/web-custom-signs.webp",
+            "image_2": "shopify://shop_images/Feuerwehr-Signet.jpg",
+            "image_3": "shopify://shop_images/web-house-signs-numbers.webp"
           }
         },
         "slider_block_q7JdAT": {
