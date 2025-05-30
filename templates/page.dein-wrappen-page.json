@@ -20,21 +20,24 @@
         "show_title": false
       }
     },
-    "steelmonks_parallax_9ghURN": {
-      "type": "steelmonks-parallax",
-      "name": "Parallax",
+    "steelmonks_parallax_richtext_VMLJpK": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
       "settings": {
-        "cta": "Zur Afrage",
-        "cta_link": "",
-        "cta_style": "primary",
-        "liquid_mobile_title": "",
-        "liquid_desktop_title": "<h1><strong>Deine Geschichte,</strong></h1><h1><strong>verewigt.</strong></h1>",
-        "inverse_order": false,
-        "image": "shopify://shop_images/sm-train.webp",
-        "image_position": "center",
-        "image_width": 500,
-        "text_on_banner": "<p><strong>Ein Erbstück des 21. Jahrhunderts.</strong></p><p> </p>",
-        "banner": "shopify://shop_images/web-galerie-banner.webp"
+        "image": "shopify://shop_images/sm-sign.webp",
+        "title": "Ein Erbstück des 21. Jahrhunderts.",
+        "link_text": "",
+        "link": ""
+      }
+    },
+    "custom_header_tJEQcY": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "<h1><strong>Deine Geschichte,</strong></h1><h1><strong>verewigt.</strong></h1>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/sm-train.webp"
       }
     },
     "custom_image_slider_cdg8ep": {
@@ -341,7 +344,8 @@
   },
   "order": [
     "main",
-    "steelmonks_parallax_9ghURN",
+    "steelmonks_parallax_richtext_VMLJpK",
+    "custom_header_tJEQcY",
     "custom_image_slider_cdg8ep",
     "accordions_xqfj73",
     "1748612781c5e7b771",
