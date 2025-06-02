@@ -21,6 +21,7 @@
     },
     "steelmonks_parallax_richtext_AfjdHr": {
       "type": "steelmonks-parallax-richtext",
+      "disabled": true,
       "custom_css": [],
       "name": "Parallax Rich Text",
       "settings": {
@@ -36,7 +37,8 @@
       "settings": {
         "richtext": "<p><br/>Verwandle Deine Nachbarschaft,mit unübertroffenen Qualität<br/><br/></p>",
         "button_text": "Jetzt entdecken",
-        "button_link": ""
+        "button_link": "",
+        "image": "shopify://shop_images/sm-emaille-hero.webp"
       }
     },
     "custom_image_slider_pUyjkC": {
