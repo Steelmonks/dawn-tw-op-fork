@@ -21,24 +21,15 @@
     },
     "steelmonks_parallax_richtext_AfjdHr": {
       "type": "steelmonks-parallax-richtext",
-      "disabled": true,
-      "custom_css": [],
+      "custom_css": [
+        "div h2 {text-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);}"
+      ],
       "name": "Parallax Rich Text",
       "settings": {
         "image": "shopify://shop_images/sm-emaille-hero.webp",
-        "title": "",
+        "title": "Verwandle Deine Nachbarschaft,mit unübertroffenen Qualität",
         "link_text": "",
         "link": ""
-      }
-    },
-    "custom_header_cJtQCK": {
-      "type": "custom-header",
-      "name": "Custom Header",
-      "settings": {
-        "richtext": "<p><br/>Verwandle Deine Nachbarschaft,mit unübertroffenen Qualität<br/><br/></p>",
-        "button_text": "Jetzt entdecken",
-        "button_link": "",
-        "image": "shopify://shop_images/sm-emaille-hero.webp"
       }
     },
     "custom_image_slider_pUyjkC": {
@@ -222,7 +213,6 @@
     "shogun-helper",
     "shogun-above",
     "steelmonks_parallax_richtext_AfjdHr",
-    "custom_header_cJtQCK",
     "custom_image_slider_pUyjkC",
     "multicolumn_ghD73g",
     "17458178119bf2149e",
