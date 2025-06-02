@@ -21,7 +21,9 @@
     },
     "steelmonks_parallax_richtext_AfjdHr": {
       "type": "steelmonks-parallax-richtext",
-      "custom_css": [],
+      "custom_css": [
+        ".image{max-height: 1000px;}"
+      ],
       "name": "Parallax Rich Text",
       "settings": {
         "image": "shopify://shop_images/sm-emaille-hero.webp",
