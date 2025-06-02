@@ -22,7 +22,7 @@
     "steelmonks_parallax_richtext_AfjdHr": {
       "type": "steelmonks-parallax-richtext",
       "custom_css": [
-        ".image{max-height: 1000px;}"
+        "div {background-position: top center !important;}"
       ],
       "name": "Parallax Rich Text",
       "settings": {
