@@ -9,6 +9,112 @@
  */
 {
   "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "steelmonks_parallax_richtext_AfjdHr": {
+      "type": "steelmonks-parallax-richtext",
+      "name": "Parallax Rich Text",
+      "settings": {
+        "title": "Verwandle Deine Nachbarschaft,mit unübertroffenen Qualität",
+        "link_text": "Jetzt entdecken",
+        "link": ""
+      }
+    },
+    "custom_image_slider_pUyjkC": {
+      "type": "custom-image-slider",
+      "blocks": {
+        "slider_block_V8BdAV": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 5
+          }
+        },
+        "slider_block_UDcNAU": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 5
+          }
+        },
+        "slider_block_DXxYHp": {
+          "type": "slider_block",
+          "settings": {
+            "richtext": "",
+            "slide_count": 5
+          }
+        }
+      },
+      "block_order": [
+        "slider_block_V8BdAV",
+        "slider_block_UDcNAU",
+        "slider_block_DXxYHp"
+      ],
+      "name": "Custom Image Sliders",
+      "settings": {}
+    },
+    "multicolumn_ghD73g": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_V9WewA": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zmqr9d": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RAV7fR": {
+          "type": "column",
+          "settings": {
+            "title": "Spalte",
+            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_V9WewA",
+        "column_zmqr9d",
+        "column_RAV7fR"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Mit mehreren Spalten",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Schaltflächenbeschriftung",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "17458178119bf2149e": {
       "type": "apps",
       "blocks": {
@@ -27,8 +133,39 @@
         "include_margins": true
       }
     },
+    "accordions_dTrBJt": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_D6qpmT": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_D6qpmT"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "padding_top": 24,
+        "padding_bottom": 24,
+        "padding_left": 24,
+        "padding_right": 24
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
@@ -37,6 +174,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -56,27 +194,25 @@
         "enable_search": true
       }
     },
-    "shogun-above": {
-      "type": "shogun-above",
-      "settings": {}
-    },
     "shogun-below": {
       "type": "shogun-below",
-      "settings": {}
-    },
-    "shogun-helper": {
-      "type": "shogun-helper",
+      "disabled": true,
       "settings": {}
     },
     "shogun-optimizer": {
       "type": "shogun-optimizer",
+      "disabled": true,
       "settings": {}
     }
   },
   "order": [
     "shogun-helper",
     "shogun-above",
+    "steelmonks_parallax_richtext_AfjdHr",
+    "custom_image_slider_pUyjkC",
+    "multicolumn_ghD73g",
     "17458178119bf2149e",
+    "accordions_dTrBJt",
     "banner",
     "product-grid",
     "shogun-below",
