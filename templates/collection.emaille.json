@@ -25,9 +25,18 @@
       "name": "Parallax Rich Text",
       "settings": {
         "image": "shopify://shop_images/sm-emaille-hero.webp",
-        "title": "Verwandle Deine Nachbarschaft,mit unübertroffenen Qualität",
-        "link_text": "Jetzt entdecken",
+        "title": "",
+        "link_text": "",
         "link": ""
+      }
+    },
+    "custom_header_cJtQCK": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "<p><br/>Verwandle Deine Nachbarschaft,mit unübertroffenen Qualität<br/><br/></p>",
+        "button_text": "Jetzt entdecken",
+        "button_link": ""
       }
     },
     "custom_image_slider_pUyjkC": {
@@ -211,6 +220,7 @@
     "shogun-helper",
     "shogun-above",
     "steelmonks_parallax_richtext_AfjdHr",
+    "custom_header_cJtQCK",
     "custom_image_slider_pUyjkC",
     "multicolumn_ghD73g",
     "17458178119bf2149e",
