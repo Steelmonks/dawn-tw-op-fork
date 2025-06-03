@@ -36,21 +36,30 @@
           "type": "slider_block",
           "settings": {
             "richtext": "<h2>Emaille Straßenschild</h2>",
-            "slide_count": 5
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/hausschild_mit_strassennamen.png",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-strassenschild-modernes-zunft-hausschild-schwarz-ral-9005-30cm-5.jpg",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-strassenschild-klassisches-zunft-hausschild-schwarz-ral-9005-30cm-8.jpg"
           }
         },
         "slider_block_UDcNAU": {
           "type": "slider_block",
           "settings": {
             "richtext": "<h2>Emaille Hausnummer</h2>",
-            "slide_count": 5
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/Emaille_Hausnummer.png",
+            "image_2": "shopify://shop_images/Hausnummer_Holzfassade.jpg",
+            "image_3": "shopify://shop_images/moderne_Hausnummer.jpg"
           }
         },
         "slider_block_DXxYHp": {
           "type": "slider_block",
           "settings": {
             "richtext": "<h2>\"Wiener Norm\" Emaille Hausschild</h2>",
-            "slide_count": 5
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/Hausschild.jpg",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-strassenschild-klassisches-zunft-hausschild-schwarz-ral-9005-30cm-2.jpg",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-strassenschild-klassisches-zunft-hausschild-schwarz-ral-9005-30cm-3.jpg"
           }
         }
       },
