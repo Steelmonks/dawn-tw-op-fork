@@ -9,6 +9,33 @@
  */
 {
   "sections": {
+    "shogun-helper": {
+      "type": "shogun-helper",
+      "disabled": true,
+      "settings": {}
+    },
+    "shogun-above": {
+      "type": "shogun-above",
+      "disabled": true,
+      "settings": {}
+    },
+    "sm_grill_hero_JEyxgB": {
+      "type": "sm-grill-hero",
+      "name": "Grill Hero",
+      "settings": {
+        "richtext": "",
+        "text_alignment": "center"
+      }
+    },
+    "custom_header_Mp9HKW": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
     "17458178119bf2149e": {
       "type": "apps",
       "blocks": {
@@ -29,6 +56,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
@@ -56,30 +84,73 @@
         "enable_search": true
       }
     },
-    "shogun-above": {
-      "type": "shogun-above",
-      "settings": {}
-    },
     "shogun-below": {
       "type": "shogun-below",
-      "settings": {}
-    },
-    "shogun-helper": {
-      "type": "shogun-helper",
+      "disabled": true,
       "settings": {}
     },
     "shogun-optimizer": {
       "type": "shogun-optimizer",
+      "disabled": true,
       "settings": {}
+    },
+    "1748939636340fa12c": {
+      "type": "apps",
+      "blocks": {
+        "trusted_shops_reviews_and_more_trusted_stars_qbXqpk": {
+          "type": "shopify://apps/trusted-shops-reviews-and-more/blocks/trusted-stars/2ae4ab38-7eb9-4d62-abe3-d4a5f27cbef2",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trusted_shops_reviews_and_more_trusted_stars_qbXqpk"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "accordions_8JABj6": {
+      "type": "accordions",
+      "blocks": {
+        "accordion_aiPqBR": {
+          "type": "accordion",
+          "settings": {
+            "parent": "",
+            "heading": "What is your product or service?",
+            "content": "<p>Use this section to provide a brief description of your product or service. Highlight the key features, benefits, and what makes it unique.</p>",
+            "content_liquid": "",
+            "featured": false,
+            "featured_content_gradient": "#090a0c,#04c,#04c,#090a0c",
+            "featured_image_alignment": "center",
+            "featured_image_aspect_ratio": "233 / 349"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_aiPqBR"
+      ],
+      "name": "Accordions",
+      "settings": {
+        "heading": "",
+        "subheading": "",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_left": 24,
+        "padding_right": 24
+      }
     }
   },
   "order": [
     "shogun-helper",
     "shogun-above",
+    "sm_grill_hero_JEyxgB",
+    "custom_header_Mp9HKW",
     "17458178119bf2149e",
     "banner",
     "product-grid",
     "shogun-below",
-    "shogun-optimizer"
+    "shogun-optimizer",
+    "1748939636340fa12c",
+    "accordions_8JABj6"
   ]
 }
