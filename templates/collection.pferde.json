@@ -22,7 +22,7 @@
     "sm_grill_hero_HBXCim": {
       "type": "sm-grill-hero",
       "custom_css": [
-        "div img {padding-top: 350px}"
+        "div img {padding-top: 350px;}"
       ],
       "settings": {
         "parallax_image": "shopify://shop_images/pfedefreunde.webp",
@@ -59,6 +59,35 @@
         "include_margins": true
       }
     },
+    "featured_collection_87LmCi": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "pferde-geschenke",
+        "products_to_show": 20,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "disabled": true,
@@ -70,6 +99,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -151,6 +181,7 @@
     "sm_grill_hero_HBXCim",
     "custom_header_zNMTga",
     "17458178119bf2149e",
+    "featured_collection_87LmCi",
     "banner",
     "product-grid",
     "shogun-below",
