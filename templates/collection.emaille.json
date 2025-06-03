@@ -35,21 +35,21 @@
         "slider_block_V8BdAV": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<h2>Emaille Straßenschild</h2>",
             "slide_count": 5
           }
         },
         "slider_block_UDcNAU": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<h2>Emaille Hausnummer</h2>",
             "slide_count": 5
           }
         },
         "slider_block_DXxYHp": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<h2>\"Wiener Norm\" Emaille Hausschild</h2>",
             "slide_count": 5
           }
         }
