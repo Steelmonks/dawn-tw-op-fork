@@ -21,7 +21,9 @@
     },
     "sm_grill_hero_JEyxgB": {
       "type": "sm-grill-hero",
-      "custom_css": [],
+      "custom_css": [
+        "div img {padding-top: 500px;}"
+      ],
       "name": "Grill Hero",
       "settings": {
         "parallax_image": "shopify://shop_images/strassenschilder.webp",
