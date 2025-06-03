@@ -21,11 +21,24 @@
     },
     "sm_grill_hero_HBXCim": {
       "type": "sm-grill-hero",
+      "custom_css": [
+        "div img {width: 500px;justify-content: flex-start !important;}"
+      ],
       "settings": {
-        "parallax_image": "shopify://shop_images/Was_ist_die_gesuendeste_Art_zu_Grillen.jpg",
-        "foreground_image": "shopify://shop_images/sm-grill2.webp",
-        "richtext": "<p><strong>Das perfekte Geschenk</strong></p><p><strong>für einen Grillliebhaber.</strong></p>",
+        "parallax_image": "shopify://shop_images/pfedefreunde.webp",
+        "foreground_image": "shopify://shop_images/pfedefreunde-hand.webp",
+        "richtext": "",
         "text_alignment": "center"
+      }
+    },
+    "custom_header_zNMTga": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "richtext": "<p><strong>Schilder und Schlüsselanhänger</strong></p><p><strong>für Pferdefreunde</strong></p>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/pfedefreunde-hand.webp"
       }
     },
     "17458178119bf2149e": {
@@ -136,6 +149,7 @@
     "shogun-helper",
     "shogun-above",
     "sm_grill_hero_HBXCim",
+    "custom_header_zNMTga",
     "17458178119bf2149e",
     "banner",
     "product-grid",
