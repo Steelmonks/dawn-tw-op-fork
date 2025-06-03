@@ -19,17 +19,14 @@
       "disabled": true,
       "settings": {}
     },
-    "steelmonks_parallax_richtext_AfjdHr": {
-      "type": "steelmonks-parallax-richtext",
-      "custom_css": [
-        "div h2 {text-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);}"
-      ],
-      "name": "Parallax Rich Text",
+    "custom_header_iW4b7X": {
+      "type": "custom-header",
+      "name": "Custom Header",
       "settings": {
-        "image": "shopify://shop_images/sm-emaille-hero.webp",
-        "title": "Verwandle Deine Nachbarschaft,mit unübertroffenen Qualität",
-        "link_text": "",
-        "link": ""
+        "richtext": "<p><strong>Verwandle Deine Nachbarschaft,</strong></p><h4><strong>mit unübertroffenen Qualität</strong></h4>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/sm-emaille-hero.webp"
       }
     },
     "custom_image_slider_pUyjkC": {
@@ -38,22 +35,31 @@
         "slider_block_V8BdAV": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
-            "slide_count": 5
+            "richtext": "<h2>Emaille Straßenschild</h2>",
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/hausschild_mit_strassennamen.png",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-strassenschild-modernes-zunft-hausschild-schwarz-ral-9005-30cm-5.jpg",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-strassenschild-klassisches-zunft-hausschild-schwarz-ral-9005-30cm-8.jpg"
           }
         },
         "slider_block_UDcNAU": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
-            "slide_count": 5
+            "richtext": "<h2>Emaille Hausnummer</h2>",
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/Emaille_Hausnummer.png",
+            "image_2": "shopify://shop_images/Hausnummer_Holzfassade.jpg",
+            "image_3": "shopify://shop_images/moderne_Hausnummer.jpg"
           }
         },
         "slider_block_DXxYHp": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
-            "slide_count": 5
+            "richtext": "<h2>\"Wiener Norm\" Emaille Hausschild</h2>",
+            "slide_count": 3,
+            "image_1": "shopify://shop_images/Hausschild.jpg",
+            "image_2": "shopify://shop_images/steelmonks-metallschild-strassenschild-klassisches-zunft-hausschild-schwarz-ral-9005-30cm-2.jpg",
+            "image_3": "shopify://shop_images/steelmonks-metallschild-strassenschild-klassisches-zunft-hausschild-schwarz-ral-9005-30cm-3.jpg"
           }
         }
       },
@@ -68,20 +74,22 @@
     "multicolumn_ghD73g": {
       "type": "multicolumn",
       "blocks": {
-        "column_V9WewA": {
+        "column_zmqr9d": {
           "type": "column",
           "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "image": "shopify://shop_images/after.png",
+            "title": "4-Fache Pulverbeschichtung",
+            "text": "<p>Der moderne Prozess der Pulverbeschichtung. Wetterfeste Grundierung, dann glänzendes Blau, Solides Weiß und anschliessend Klarlack.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_zmqr9d": {
+        "column_V9WewA": {
           "type": "column",
           "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "image": "shopify://shop_images/IMG_7308.jpg",
+            "title": "Witterungsbeständig",
+            "text": "<p>Unsere Qualität spricht für sich selber und der ausführliche Prozess führt zu einem wetterfesten und langlebigerem Produkt.</p>",
             "link_label": "",
             "link": ""
           }
@@ -89,16 +97,17 @@
         "column_RAV7fR": {
           "type": "column",
           "settings": {
-            "title": "Spalte",
-            "text": "<p>Kombiniere Text mit einem Bild, um den Fokus auf dein Produkt, deine Kollektion oder deinen Blog-Beitrag zu richten. Du kannst außerdem weitere Details über die Verfügbarkeit oder den Stil und sogar eine Bewertung hinzufügen.</p>",
+            "image": "shopify://shop_images/Shopify-thumbnail.jpg",
+            "title": "Mehr als ein Hausschild",
+            "text": "<p>Unsere Emaille-Technik bei Deinem neuen Hausschild. Damit stehst Du ab und das für ein leben lang. Emaille ist immer \"in\".</p>",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_V9WewA",
         "column_zmqr9d",
+        "column_V9WewA",
         "column_RAV7fR"
       ],
       "name": "t:sections.multicolumn.presets.name",
@@ -161,8 +170,8 @@
       "settings": {
         "heading": "",
         "subheading": "",
-        "padding_top": 24,
-        "padding_bottom": 24,
+        "padding_top": 0,
+        "padding_bottom": 40,
         "padding_left": 24,
         "padding_right": 24
       }
@@ -212,7 +221,7 @@
   "order": [
     "shogun-helper",
     "shogun-above",
-    "steelmonks_parallax_richtext_AfjdHr",
+    "custom_header_iW4b7X",
     "custom_image_slider_pUyjkC",
     "multicolumn_ghD73g",
     "17458178119bf2149e",
