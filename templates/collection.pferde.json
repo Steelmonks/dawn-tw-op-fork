@@ -22,7 +22,7 @@
     "sm_grill_hero_HBXCim": {
       "type": "sm-grill-hero",
       "custom_css": [
-        "div img {padding-top: 350px;}"
+        "div img {padding-top: 500px;}"
       ],
       "settings": {
         "parallax_image": "shopify://shop_images/pfedefreunde.webp",
