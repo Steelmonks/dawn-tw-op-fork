@@ -1042,10 +1042,6 @@ video {
   background-size: cover;
 }
 
-.twcss-bg-fixed {
-  background-attachment: fixed;
-}
-
 .twcss-bg-center {
   background-position: center;
 }
