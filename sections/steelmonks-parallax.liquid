@@ -13,7 +13,7 @@
 
 {% comment %} clickable image and button {% endcomment %}
 <div
-  style='{% if section.settings.image_position != "left" %}margin-left: auto; margin-right: auto;{% endif %}  background-image: url("{{ section.settings.banner | image_url }}");'
+  style='{% if section.settings.image_position != "left" %}margin-left: auto; margin-right: auto;{% endif %} {% if section.settings.text_on_banner != blank %}margin-top: -100px;{% endif %}'
   class='twcss-relative twcss-w-full twcss-flex twcss-justify-between twcss-max-w-[1600px] twcss-mb-12'
 >
   {% unless section.settings.inverse_order %}
