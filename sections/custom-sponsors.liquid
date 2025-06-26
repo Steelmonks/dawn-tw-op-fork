@@ -1,0 +1,91 @@
+{% schema %}
+{
+  "name": "Custom Sponsors Slider",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Sponsor Image" }
+      ]
+    }
+  ],
+  "max_blocks": 7,
+  "presets": [
+    { "name": "Custom Sponsors Slider", "blocks": [ { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" }, { "type": "image" } ] }
+  ]
+}
+{% endschema %}
+
+<div class="twcss-w-full twcss-flex twcss-justify-center twcss-items-center twcss-py-12 twcss-bg-transparent">
+  <div class="twcss-relative twcss-w-full twcss-max-w-3xl twcss-mx-auto">
+    <button
+      type="button"
+      class="twcss-absolute twcss-left-2 twcss-top-1/2 twcss--translate-y-1/2 twcss-rounded-full twcss-z-10 twcss-p-2 twcss-bg-black twcss-bg-opacity-70 twcss-text-white twcss-flex twcss-items-center twcss-justify-center twcss-transition-all twcss-drop-shadow-lg"
+      aria-label="Previous slide"
+    >
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="sponsors-slider twcss-flex twcss-transition-all" style="scroll-behavior: smooth;">
+      {% for block in section.blocks %}
+        {% assign image = block.settings.image %}
+        {% if image != blank %}
+          <div class="twcss-flex-shrink-0 twcss-w-full twcss-aspect-square twcss-max-w-xl twcss-relative twcss-bg-transparent">
+            <img
+              src="{{ image | image_url: width: 800 }}"
+              alt=""
+              width="800"
+              height="800"
+              class="twcss-w-full twcss-h-full twcss-object-contain twcss-rounded-lg"
+              loading="lazy"
+            >
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <button
+      type="button"
+      class="twcss-absolute twcss-right-2 twcss-top-1/2 twcss--translate-y-1/2 twcss-rounded-full twcss-z-10 twcss-p-2 twcss-bg-black twcss-bg-opacity-70 twcss-text-white twcss-flex twcss-items-center twcss-justify-center twcss-transition-all twcss-drop-shadow-lg"
+      aria-label="Next slide"
+    >
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.sponsors-slider').forEach(function (slider) {
+      const slides = slider.querySelectorAll('div');
+      const prevButton = slider.parentElement.querySelector('button[aria-label="Previous slide"]');
+      const nextButton = slider.parentElement.querySelector('button[aria-label="Next slide"]');
+      if (!slides.length || !prevButton || !nextButton) return;
+      slides.forEach((slide, index) => {
+        slide.style.display = index === 0 ? 'flex' : 'none';
+      });
+      let currentSlideIndex = 0;
+      function showSlide(index) {
+        slides.forEach((slide) => {
+          slide.style.display = 'none';
+        });
+        slides[index].style.display = 'flex';
+      }
+      function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+      }
+      function prevSlide() {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
+      }
+      nextButton.addEventListener('click', nextSlide);
+      prevButton.addEventListener('click', prevSlide);
+    });
+  });
+</script>
