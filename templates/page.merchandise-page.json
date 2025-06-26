@@ -327,6 +327,9 @@
         "image_row_CNV64d",
         "image_row_fAFEKf"
       ],
+      "custom_css": [
+        "div {max-width: 1600px;}"
+      ],
       "name": "Custom Gallery",
       "settings": {
         "richtext": "<h1>Galerie</h1>"
