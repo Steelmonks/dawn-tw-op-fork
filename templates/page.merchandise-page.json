@@ -276,7 +276,6 @@
         "slider_block_p7M9eU"
       ],
       "custom_css": [
-        ".custom-slider {min-height: 200px;}",
         "button {background: rgba(42, 123, 155, 0.7); border-radius: 9999px; width: 26px; height: 26px; padding: 0; margin-right: -16px; margin-left: -16px;}"
       ],
       "name": "Custom Image Sliders",
