@@ -127,7 +127,7 @@
         "slider_block_gqPrrh": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<h3>Projekte & Serien</h3>",
             "slide_count": 3,
             "image_1": "shopify://shop_images/ZBE-1000-Hand.jpg",
             "image_2": "shopify://shop_images/ZBE-1001-Box.jpg",
@@ -137,7 +137,7 @@
         "slider_block_9XatD4": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<h3>Merchandise & Produkte</h3>",
             "slide_count": 3,
             "image_1": "shopify://shop_images/icon-tumbnail-cardholder.webp",
             "image_2": "shopify://shop_images/ZBE-4000-gift.jpg",
@@ -147,7 +147,7 @@
         "slider_block_iriDyP": {
           "type": "slider_block",
           "settings": {
-            "richtext": "",
+            "richtext": "<h3>Jubiläumsgeschenke</h3>",
             "slide_count": 3,
             "image_1": "shopify://shop_images/IMG_5614.jpg",
             "image_2": "shopify://shop_images/IMG_5609.jpg",
