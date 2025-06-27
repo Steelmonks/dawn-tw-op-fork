@@ -190,4 +190,18 @@
     outline: none !important;
     outline-offset: 0 !important;
   }
+  
+  /* Prevent mobile tap highlight */
+  .custom-slider button {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  /* Ensure buttons maintain their intended styling */
+  .custom-slider button:focus,
+  .custom-slider button:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 </style>
