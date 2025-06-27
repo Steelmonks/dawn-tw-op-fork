@@ -547,10 +547,6 @@ video {
   }
 }
 
-.twcss-pointer-events-auto {
-  pointer-events: auto;
-}
-
 .twcss-absolute {
   position: absolute;
 }
@@ -889,6 +885,16 @@ video {
 
 .twcss-cursor-pointer {
   cursor: pointer;
+}
+
+.twcss-touch-manipulation {
+  touch-action: manipulation;
+}
+
+.twcss-select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .twcss-list-none {
