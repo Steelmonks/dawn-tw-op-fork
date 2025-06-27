@@ -52,7 +52,7 @@
         <div class='twcss-relative twcss-w-full twcss-overflow-hidden'>
           <button
             type='button'
-            class='twcss-absolute twcss-left-6 twcss-inset-y-1/2 twcss--translate-y-1/2 twcss-rounded-full twcss-z-10 twcss-p-3 twcss-text-2xl twcss-text-white twcss-flex twcss-items-center twcss-justify-center twcss-transition-all twcss-pointer-events-auto focus:twcss-outline-none focus:twcss-ring-0 active:twcss-outline-none active:twcss-ring-0 twcss-drop-shadow-lg hover:twcss-outline-none hover:twcss-ring-0'
+            class='twcss-absolute twcss-left-6 twcss-inset-y-1/2 twcss--translate-y-1/2 twcss-rounded-full twcss-z-10 twcss-p-3 twcss-text-2xl twcss-text-white twcss-flex twcss-items-center twcss-justify-center twcss-transition-all focus:twcss-outline-none focus:twcss-ring-0 active:twcss-outline-none active:twcss-ring-0 twcss-drop-shadow-lg hover:twcss-outline-none hover:twcss-ring-0 twcss-select-none twcss-touch-manipulation'
             aria-label='Previous slide'
           >
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@
           </div>
           <button
             type='button'
-            class='twcss-absolute twcss-right-6 twcss-inset-y-1/2 twcss--translate-y-1/2 twcss-rounded-full twcss-z-10 twcss-p-3 twcss-text-2xl twcss-text-white twcss-flex twcss-items-center twcss-justify-center twcss-transition-all twcss-pointer-events-auto focus:twcss-outline-none focus:twcss-ring-0 active:twcss-outline-none active:twcss-ring-0 twcss-drop-shadow-lg hover:twcss-outline-none hover:twcss-ring-0'
+            class='twcss-absolute twcss-right-6 twcss-inset-y-1/2 twcss--translate-y-1/2 twcss-rounded-full twcss-z-10 twcss-p-3 twcss-text-2xl twcss-text-white twcss-flex twcss-items-center twcss-justify-center twcss-transition-all focus:twcss-outline-none focus:twcss-ring-0 active:twcss-outline-none active:twcss-ring-0 twcss-drop-shadow-lg hover:twcss-outline-none hover:twcss-ring-0 twcss-select-none twcss-touch-manipulation'
             aria-label='Next slide'
           >
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,82 +126,12 @@
 </script>
 
 <style>
-  /* Target all possible button states and variations */
-  .custom-slider button,
-  .custom-slider button:focus,
-  .custom-slider button:hover,
-  .custom-slider button:active,
-  .custom-slider button:focus-visible,
-  .custom-slider button:focus-within,
-  .custom-slider button:visited,
-  .custom-slider button:link {
-    outline: none !important;
-    outline-offset: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: rgba(59, 130, 246, 0.7) !important;
-    -webkit-tap-highlight-color: transparent !important;
-    -webkit-focus-ring-color: transparent !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
-    -webkit-user-select: none !important;
-    user-select: none !important;
-    -webkit-touch-callout: none !important;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    text-decoration: none !important;
-  }
-  
-  .custom-slider button svg {
-    pointer-events: none;
-  }
-  
-  /* Target the specific button elements more directly */
-  .custom-slider button[aria-label="Previous slide"],
-  .custom-slider button[aria-label="Next slide"] {
-    outline: none !important;
-    outline-offset: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: rgba(59, 130, 246, 0.7) !important;
-  }
-  
-  .custom-slider button[aria-label="Previous slide"]:focus,
-  .custom-slider button[aria-label="Previous slide"]:hover,
-  .custom-slider button[aria-label="Previous slide"]:active,
-  .custom-slider button[aria-label="Next slide"]:focus,
-  .custom-slider button[aria-label="Next slide"]:hover,
-  .custom-slider button[aria-label="Next slide"]:active {
-    outline: none !important;
-    outline-offset: 0 !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: rgba(59, 130, 246, 0.8) !important;
-  }
-  
   /* Additional global button reset */
-  button:focus {
-    outline: none !important;
-    outline-offset: 0 !important;
-  }
-  
-  /* Target any element with the custom-slider class */
-  .custom-slider *:focus {
-    outline: none !important;
-    outline-offset: 0 !important;
-  }
-  
-  /* Prevent mobile tap highlight */
-  .custom-slider button {
+  {% comment %} button {
     -webkit-tap-highlight-color: transparent !important;
     -webkit-user-select: none !important;
     user-select: none !important;
-  }
-  
-  /* Ensure buttons maintain their intended styling */
-  .custom-slider button:focus,
-  .custom-slider button:active {
     outline: none !important;
     box-shadow: none !important;
-  }
+  } {% endcomment %}
 </style>
