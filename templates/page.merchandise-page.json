@@ -221,21 +221,14 @@
         "padding_right": 24
       }
     },
-    "17486173103c8358e8": {
-      "type": "apps",
-      "blocks": {
-        "powr_form_builder_app_block_hyUifD": {
-          "type": "shopify://apps/powr-form-builder/blocks/app-block/1412fe37-d89c-4706-a797-6e2b53cb4a69",
-          "settings": {
-            "app_id": "c59428bf_1740733967"
-          }
-        }
-      },
-      "block_order": [
-        "powr_form_builder_app_block_hyUifD"
-      ],
+    "custom_liquid_f94awL": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "include_margins": true
+        "custom_liquid": "<div class=\"powr-form-builder\" id=\"c59428bf_1740733967\"></div><script src=\"https://www.powr.io/powr.js?platform=shopify\"></script>",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "custom_image_slider_rMw9cr": {
@@ -276,8 +269,9 @@
         "slider_block_p7M9eU"
       ],
       "custom_css": [
-        "img {background: lightgray;}",
-        "button {width: 40px; height: 40px; margin-right: -20px; margin-left: -20px;}"
+        "div {background: black;}",
+        "button {width: 40px; height: 40px; margin-right: -20px; margin-left: -20px;}",
+        "h1 {color: white;}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
@@ -340,7 +334,7 @@
     "accordions_hdyH3p",
     "custom_image_slider_ANjYDm",
     "accordions_WmkYtb",
-    "17486173103c8358e8",
+    "custom_liquid_f94awL",
     "custom_image_slider_rMw9cr",
     "custom_gallery_gfc8PN"
   ]
