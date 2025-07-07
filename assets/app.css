@@ -603,6 +603,10 @@ video {
   z-index: 10;
 }
 
+.twcss-m-auto {
+  margin: auto;
+}
+
 .twcss-m-0 {
   margin: 0px;
 }
@@ -1748,6 +1752,10 @@ video {
     height: 500px;
   }
 
+  .md\:twcss-w-\[1200px\] {
+    width: 1200px;
+  }
+
   .md\:twcss-w-\[340px\] {
     width: 340px;
   }
@@ -1886,10 +1894,6 @@ video {
 @media (min-width: 990px) {
   .lg\:twcss-h-\[250px\] {
     height: 250px;
-  }
-
-  .lg\:twcss-w-\[1200px\] {
-    width: 1200px;
   }
 
   .lg\:twcss-w-\[250px\] {
