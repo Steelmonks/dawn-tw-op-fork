@@ -1,0 +1,129 @@
+{% comment %} Custom Accordion Section with 6 accordions, 2 visible at a time, hardcoded logic, no blocks {% endcomment %}
+
+<div class="custom-accordion-section">
+  <div class="custom-accordion-title">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+  <div class="custom-accordion-wrapper">
+    <button class="custom-accordion-arrow left" aria-label="Previous">&#x25C0;</button>
+    <div class="custom-accordion-items">
+      {% for i in (1..6) %}
+        <div class="custom-accordion-item" data-index="{{ i }}">
+          <div class="custom-accordion-heading">{{ section.settings["accordion_" | append: i | append: "_heading"] }}</div>
+          <div class="custom-accordion-content">{{ section.settings["accordion_" | append: i | append: "_content"] }}</div>
+        </div>
+      {% endfor %}
+    </div>
+    <button class="custom-accordion-arrow right" aria-label="Next">&#x25B6;</button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Accordion",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "header",
+      "content": "Accordion 1"
+    },
+    {
+      "type": "text",
+      "id": "accordion_1_heading",
+      "label": "Accordion 1 Heading",
+      "default": "Accordion 1 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "accordion_1_content",
+      "label": "Accordion 1 Content",
+      "default": "Accordion 1 content goes here."
+    },
+    {
+      "type": "header",
+      "content": "Accordion 2"
+    },
+    {
+      "type": "text",
+      "id": "accordion_2_heading",
+      "label": "Accordion 2 Heading",
+      "default": "Accordion 2 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "accordion_2_content",
+      "label": "Accordion 2 Content",
+      "default": "Accordion 2 content goes here."
+    },
+    {
+      "type": "header",
+      "content": "Accordion 3"
+    },
+    {
+      "type": "text",
+      "id": "accordion_3_heading",
+      "label": "Accordion 3 Heading",
+      "default": "Accordion 3 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "accordion_3_content",
+      "label": "Accordion 3 Content",
+      "default": "Accordion 3 content goes here."
+    },
+    {
+      "type": "header",
+      "content": "Accordion 4"
+    },
+    {
+      "type": "text",
+      "id": "accordion_4_heading",
+      "label": "Accordion 4 Heading",
+      "default": "Accordion 4 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "accordion_4_content",
+      "label": "Accordion 4 Content",
+      "default": "Accordion 4 content goes here."
+    },
+    {
+      "type": "header",
+      "content": "Accordion 5"
+    },
+    {
+      "type": "text",
+      "id": "accordion_5_heading",
+      "label": "Accordion 5 Heading",
+      "default": "Accordion 5 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "accordion_5_content",
+      "label": "Accordion 5 Content",
+      "default": "Accordion 5 content goes here."
+    },
+    {
+      "type": "header",
+      "content": "Accordion 6"
+    },
+    {
+      "type": "text",
+      "id": "accordion_6_heading",
+      "label": "Accordion 6 Heading",
+      "default": "Accordion 6 Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "accordion_6_content",
+      "label": "Accordion 6 Content",
+      "default": "Accordion 6 content goes here."
+    }
+  ]
+}
+{% endschema %}
