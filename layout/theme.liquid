@@ -433,5 +433,15 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src='{{ 'cart-drawer.js' | asset_url }}' defer='defer'></script>
     {%- endif -%}
+
+    {% if template.name =='collection' %}
+<h1 style="display:none">{{collection.title}}</h1>
+{% endif %}
+
+    {% if template.name =='page' %}
+<h1 style="display:none">{{page.title}}</h1>
+{% endif %}
+
+
   </body>
 </html>
