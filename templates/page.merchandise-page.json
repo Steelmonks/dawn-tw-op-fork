@@ -110,7 +110,9 @@
         "accordion_jdFiYj",
         "accordion_CkJadr"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "h1 {color: blue;}"
+      ],
       "name": "Accordions",
       "settings": {
         "heading": "",
@@ -211,6 +213,7 @@
         "accordion_gFQW9P",
         "accordion_ieRM7R"
       ],
+      "custom_css": [],
       "name": "Accordions",
       "settings": {
         "heading": "In 3 einfachen Schritten zu euren Produkten und Kollektionen.",
