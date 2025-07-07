@@ -33,12 +33,12 @@
         "accordion_2_content": "Merchandise das wir erstellen können beinhaltet, aber ist nicht begrenzt auf: HalskettenAnhängerKartenhalterWandschilderVisitenkarten (Stahl)WappenZigarrenhalterEinzigartiges",
         "accordion_3_heading": "Produkte für Großkunden",
         "accordion_3_content": "Für den eigenen und weiterverkauf eignen sich speziell für euch entwickelte Produkte die ihr mit Staffelpreisen, leicht kaufen und dann selber vermarkten könnt.Eine Mindestabnahmemenge ist notwendig die entsprechend der Komplexität des Projektes ist.",
-        "accordion_4_heading": "Accordion 4 Heading",
-        "accordion_4_content": "Accordion 4 content goes here.",
-        "accordion_5_heading": "Accordion 5 Heading",
-        "accordion_5_content": "Accordion 5 content goes here.",
-        "accordion_6_heading": "Accordion 6 Heading",
-        "accordion_6_content": "Accordion 6 content goes here."
+        "accordion_4_heading": "Was ist möglich?",
+        "accordion_4_content": "Mit unserem eigenen Team von Designern und \"Creatives\" ist der Produktentwicklung keine Grenzen gesetzt. Wir können dazu eure Wünsche in hohen Stückzahlen produzieren. ",
+        "accordion_5_heading": "Partnerschaften und Lizensen",
+        "accordion_5_content": "Steelmonks steht durch viele Partnerschaften an der Spitze der Industrie, nicht nur als Produzent sondern als eigene Marke mit einer hohen Sozialen Reichweite, Tausended Täglichen Webseitenbesuchern und Hunderten Bestellungen.Als Partner, geniessen sowohl ihr als auch wir die Vorteile die damit einhergehen.Las uns zusammen weiter wachsen!",
+        "accordion_6_heading": "Welche Vorteile gibt es?",
+        "accordion_6_content": "Provision, Kommission, usw. Werden individuell vereinbart und mit einem Handschlag und Vertrag gefestigt."
       }
     },
     "accordions_hdyH3p": {
@@ -131,6 +131,7 @@
         "accordion_jdFiYj",
         "accordion_CkJadr"
       ],
+      "disabled": true,
       "custom_css": [
         "h1 {color: blue;}"
       ],
