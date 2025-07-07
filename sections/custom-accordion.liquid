@@ -1,6 +1,6 @@
 {% comment %} Custom Accordion Section with 6 accordions, 2 visible at a time, hardcoded logic, no blocks, Tailwind CSS with twcss- prefix used, padding applied via inline style for dynamic values, now using <details> and <summary> for dropdown behavior {% endcomment %}
 
-<div class="custom-accordion-section twcss-w-full lg:twcss-w-[1200px] twcss-flex twcss-flex-col twcss-items-center twcss-justify-center" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+<div class="custom-accordion-section twcss-w-full md:twcss-w-[1200px] twcss-flex twcss-flex-col twcss-items-center twcss-justify-center twcss-m-auto" style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
   <div class="custom-accordion-title twcss-mb-6">
     <h2 class="twcss-text-brandblue twcss-text-2xl twcss-font-bold twcss-text-center">{{ section.settings.title }}</h2>
   </div>
@@ -14,6 +14,7 @@
           <summary class="custom-accordion-heading twcss-font-semibold twcss-text-lg twcss-flex twcss-items-center twcss-justify-between">
             {{ section.settings[heading_key] }}
             <!-- Optionally add plus/minus icons here -->
+        
           </summary>
           <div class="custom-accordion-content twcss-text-gray-700 twcss-mt-2">
             {{ section.settings[content_key] }}
