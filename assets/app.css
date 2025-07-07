@@ -1377,6 +1377,11 @@ video {
   line-height: 33px;
 }
 
+.twcss-text-brandblue {
+  --tw-text-opacity: 1;
+  color: rgb(0 68 204 / var(--tw-text-opacity));
+}
+
 .twcss-text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -1400,11 +1405,6 @@ video {
 .twcss-text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.twcss-text-brandblue {
-  --tw-text-opacity: 1;
-  color: rgb(0 68 204 / var(--tw-text-opacity));
 }
 
 .twcss-text-brandred {
@@ -1886,6 +1886,10 @@ video {
 @media (min-width: 990px) {
   .lg\:twcss-h-\[250px\] {
     height: 250px;
+  }
+
+  .lg\:twcss-w-\[1200px\] {
+    width: 1200px;
   }
 
   .lg\:twcss-w-\[250px\] {
