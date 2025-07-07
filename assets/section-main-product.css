@@ -365,9 +365,6 @@ a.product__text {
   margin-bottom: 1.2rem;
 }
 
-.product-form__buttons .product-form__submit {
-  max-width: 44rem;
-}
 
 .product--no-media .product__info-container > modal-opener {
   display: block;
