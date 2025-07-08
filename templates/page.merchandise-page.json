@@ -185,7 +185,7 @@
         "slider_block_iriDyP"
       ],
       "custom_css": [
-        "div {background: linear-gradient(180deg, #0070f3 0%, #003366 100%);}"
+        "section {background: linear-gradient(180deg, #0070f3 0%, #003366 100%);}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
