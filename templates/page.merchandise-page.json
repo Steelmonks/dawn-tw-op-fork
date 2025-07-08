@@ -240,7 +240,8 @@
       ],
       "custom_css": [
         "sm-accordions {background: linear-gradient(180deg, #003366 0%, #001a33 100%); color: white !important;}",
-        "h2 {color: white !important;}"
+        "h2 {color: white !important;}",
+        "h3 {color: white !important;}"
       ],
       "name": "Accordions",
       "settings": {
