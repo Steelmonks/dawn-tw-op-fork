@@ -807,10 +807,6 @@ video {
   width: 80%;
 }
 
-.twcss-max-w-2xl {
-  max-width: 42rem;
-}
-
 .twcss-max-w-3xl {
   max-width: 48rem;
 }
@@ -1750,10 +1746,6 @@ video {
 
   .md\:twcss-h-\[500px\] {
     height: 500px;
-  }
-
-  .md\:twcss-w-\[1200px\] {
-    width: 1200px;
   }
 
   .md\:twcss-w-\[340px\] {
