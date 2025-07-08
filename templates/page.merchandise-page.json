@@ -22,7 +22,6 @@
     },
     "custom_accordion_Fzjgbx": {
       "type": "custom-accordion",
-      "disabled": true,
       "name": "Custom Accordion",
       "settings": {
         "title": "Merchandise aus Stahl.",
@@ -132,6 +131,7 @@
         "accordion_jdFiYj",
         "accordion_CkJadr"
       ],
+      "disabled": true,
       "custom_css": [
         "h1 {color: blue;}"
       ],
