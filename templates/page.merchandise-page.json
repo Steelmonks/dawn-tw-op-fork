@@ -239,7 +239,7 @@
         "accordion_ieRM7R"
       ],
       "custom_css": [
-        "sm-accordions {background: linear-gradient(180deg, #08090A 0%, #0050FF 100%); color: white !important;}",
+        "sm-accordions {background: linear-gradient(180deg, #08090a 0%, #0050ff 100%); color: white !important;}",
         "h2 {color: white !important;}",
         "h3 {color: white !important;}"
       ],
@@ -256,7 +256,7 @@
     "custom_liquid_f94awL": {
       "type": "custom-liquid",
       "custom_css": [
-        "div {background: linear-gradient(180deg, #001a33 0%, #000000 100%);}"
+        "div {background: linear-gradient(180deg, #0044CC 0%, #08090A 100%);}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
