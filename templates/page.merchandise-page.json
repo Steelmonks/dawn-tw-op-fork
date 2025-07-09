@@ -256,7 +256,7 @@
     "custom_liquid_f94awL": {
       "type": "custom-liquid",
       "custom_css": [
-        "div {background: linear-gradient(180deg, #0044CC 0%, #08090A 100%);}"
+        "div {background: linear-gradient(180deg, #0050FF 0%, #08090a 100%);}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
