@@ -307,7 +307,8 @@
       "custom_css": [
         "div {background: black;}",
         "button {width: 40px; height: 40px; margin-right: -20px; margin-left: -20px;}",
-        "h1 {color: white;}"
+        "h1 {color: white;}",
+        "img {width: 595px;}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
