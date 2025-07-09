@@ -186,7 +186,7 @@
       ],
       "custom_css": [
         "section {background-image: url(\"https://cdn.shopify.com/s/files/1/0472/6420/2901/files/merchandise-bg.webp?v=1752059148\"); background-size: cover;}",
-        "h3 {padding:5px 20px; background: white;}"
+        "h3 {padding: 5px 20px; background: white;}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
