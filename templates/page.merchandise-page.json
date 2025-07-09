@@ -239,7 +239,7 @@
         "accordion_ieRM7R"
       ],
       "custom_css": [
-        "sm-accordions {background: linear-gradient(180deg, #003366 0%, #001a33 100%); color: white !important;}",
+        "sm-accordions {background: linear-gradient(180deg, #08090A 0%, #0050FF 100%); color: white !important;}",
         "h2 {color: white !important;}",
         "h3 {color: white !important;}"
       ],
