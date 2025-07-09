@@ -185,7 +185,7 @@
         "slider_block_iriDyP"
       ],
       "custom_css": [
-        "section {background: linear-gradient(180deg, #0070f3 0%, #003366 100%);}"
+        "section {background-image: url(\"https://cdn.shopify.com/s/files/1/0472/6420/2901/files/merchandise-bg.webp?v=1752059148\"); background-size: cover;}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
