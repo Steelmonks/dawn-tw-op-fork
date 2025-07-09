@@ -185,7 +185,8 @@
         "slider_block_iriDyP"
       ],
       "custom_css": [
-        "section {background-image: url(\"https://cdn.shopify.com/s/files/1/0472/6420/2901/files/merchandise-bg.webp?v=1752059148\"); background-size: cover;}"
+        "section {background-image: url(\"https://cdn.shopify.com/s/files/1/0472/6420/2901/files/merchandise-bg.webp?v=1752059148\"); background-size: cover;}",
+        "h3 {color: #0044CC;}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
@@ -256,7 +257,7 @@
     "custom_liquid_f94awL": {
       "type": "custom-liquid",
       "custom_css": [
-        "div {background: linear-gradient(180deg, #0050FF 0%, #08090a 100%);}"
+        "div {background: linear-gradient(180deg, #0050ff 0%, #08090a 100%);}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
