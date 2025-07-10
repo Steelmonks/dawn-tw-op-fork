@@ -79,6 +79,14 @@
           {% assign share_url = request.origin | append: article.url %}
           {% render 'share-button', block: block, share_link: share_url %}
         </div>
+      {%- when 'excerpt' -%}
+        {%- if article.excerpt.size > 0 -%}
+          <div class="twcss-mb-4 page-width page-width--narrow">
+            <p class="twcss-text-xl twcss-text-gray-700">
+              {{ article.excerpt | strip_html }}
+            </p>
+          </div>
+        {%- endif -%}
     {%- endcase -%}
   {%- endfor -%}
 
@@ -377,6 +385,11 @@
           "content": "t:sections.main-article.blocks.share.settings.title_info.content"
         }
       ]
+    },
+    {
+      "type": "excerpt",
+      "name": "Excerpt",
+      "limit": 1
     }
   ]
 }
