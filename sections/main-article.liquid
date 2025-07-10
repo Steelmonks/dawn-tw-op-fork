@@ -89,15 +89,15 @@
         {%- endif -%}
       {%- when 'back-to-blog' -%}
         <div class="twcss-flex twcss-flex-col twcss-items-center twcss-mb-8 page-width page-width--narrow">
-          <a href="{{ blog.url }}" class="twcss-inline-flex twcss-items-center twcss-gap-2 twcss-bg-blue-900 twcss-text-white twcss-px-6 twcss-py-3 twcss-rounded-full twcss-font-semibold twcss-shadow-md twcss-transition twcss-duration-200 hover:twcss-bg-blue-800 twcss-no-underline twcss-text-lg button-back-to-collection__button animate-arrow twcss-mb-2">
+          <a href="{{ blog.url }}" class="btn btn-primary twcss-inline-flex twcss-items-center twcss-gap-2 twcss-bg-brandblue twcss-text-white twcss-px-6 twcss-py-3 twcss-rounded-xl twcss-font-semibold twcss-shadow-md twcss-border-2 twcss-border-[#090a0c] twcss-transition twcss-duration-200 hover:twcss-bg-[#090a0c] hover:twcss-text-[#f5ae2e] hover:twcss-border-[#090a0c] twcss-no-underline twcss-text-lg button-back-to-collection__button animate-arrow twcss-mb-2 twcss-p-4">
             <span class="twcss-m-auto">
               {{ 'blogs.article.back_to_blog' | t: title: blog.title | escape }}
             </span>
           </a>
           <nav class="button-back-to-collection__text twcss-text-center twcss-flex twcss-flex-wrap twcss-items-center twcss-justify-center twcss-gap-2 twcss-px-3 twcss-text-base twcss-mt-2">
-            <a href="/blogs" class="twcss-text-black twcss-no-underline hover:twcss-text-blue-900 twcss-transition-all twcss-duration-300 hover:twcss-underline-offset-4">Blogs</a>
+            <a href="/blogs" class="twcss-text-black twcss-no-underline twcss-transition-all twcss-duration-300 hover:twcss-text-brandblue">Blogs</a>
             <span class="twcss-text-gray-400">→</span>
-            <a href="{{ blog.url }}" class="twcss-text-black twcss-no-underline hover:twcss-text-blue-900 twcss-transition-all twcss-duration-300 hover:twcss-underline-offset-4">{{ blog.title }}</a>
+            <a href="{{ blog.url }}" class="twcss-text-black twcss-no-underline twcss-transition-all twcss-duration-300 hover:twcss-text-brandblue">{{ blog.title }}</a>
             <span class="twcss-text-gray-400">→</span>
             <div class="twcss-text-gray-400">{{ article.title }}</div>
           </nav>
