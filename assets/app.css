@@ -1178,6 +1178,11 @@ video {
   font-size: 12px;
 }
 
+.twcss-text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .twcss-text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1196,11 +1201,6 @@ video {
 .twcss-text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.twcss-text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .twcss-text-3xl {
