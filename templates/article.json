@@ -25,11 +25,19 @@
             "blog_show_author": false
           }
         },
+        "excerpt_WrWAn9": {
+          "type": "excerpt",
+          "settings": {}
+        },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Teilen"
           }
+        },
+        "back_to_blog_HGtVpt": {
+          "type": "back-to-blog",
+          "settings": {}
         },
         "content": {
           "type": "content",
@@ -39,7 +47,9 @@
       "block_order": [
         "featured_image",
         "title",
+        "excerpt_WrWAn9",
         "share",
+        "back_to_blog_HGtVpt",
         "content"
       ],
       "settings": {}
