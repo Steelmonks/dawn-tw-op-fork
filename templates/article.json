@@ -35,12 +35,12 @@
             "share_label": "Teilen"
           }
         },
-        "back_to_blog_HGtVpt": {
-          "type": "back-to-blog",
-          "settings": {}
-        },
         "content": {
           "type": "content",
+          "settings": {}
+        },
+        "back_to_blog_HGtVpt": {
+          "type": "back-to-blog",
           "settings": {}
         }
       },
@@ -49,8 +49,8 @@
         "title",
         "excerpt_WrWAn9",
         "share",
-        "back_to_blog_HGtVpt",
-        "content"
+        "content",
+        "back_to_blog_HGtVpt"
       ],
       "settings": {}
     }
