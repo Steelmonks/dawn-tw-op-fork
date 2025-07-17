@@ -337,10 +337,10 @@
         "image_row_CNV64d": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/KBE-2006-Hand-1.jpg",
-            "image_2": "shopify://shop_images/KBE-1000-Hand.jpg",
-            "image_3": "shopify://shop_images/CBE-1000-Hand.jpg",
-            "image_4": "shopify://shop_images/ZBE-1001-Hand.jpg"
+            "image_1": "shopify://shop_images/merchandise-3.jpg",
+            "image_2": "shopify://shop_images/merchandise-7.jpg",
+            "image_3": "shopify://shop_images/merchandise-11.jpg",
+            "image_4": "shopify://shop_images/merchandise-15.jpg"
           }
         },
         "image_row_fAFEKf": {
