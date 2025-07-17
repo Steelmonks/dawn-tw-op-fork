@@ -370,6 +370,54 @@
       "settings": {
         "richtext": "<h1>Galerie</h1>"
       }
+    },
+    "custom_partners_PPtUwA": {
+      "type": "custom-partners",
+      "blocks": {
+        "image_acqPEn": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_AQTtyd": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_YKGfJp": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_t8jLPd": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_tNwfMW": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_wLb4yH": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_Hnyjaa": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_acqPEn",
+        "image_AQTtyd",
+        "image_YKGfJp",
+        "image_t8jLPd",
+        "image_tNwfMW",
+        "image_wLb4yH",
+        "image_Hnyjaa"
+      ],
+      "name": "Partners Slider",
+      "settings": {
+        "title": "Kunden & Partner",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     }
   },
   "order": [
@@ -380,6 +428,7 @@
     "accordions_WmkYtb",
     "custom_liquid_f94awL",
     "custom_image_slider_rMw9cr",
-    "custom_gallery_gfc8PN"
+    "custom_gallery_gfc8PN",
+    "custom_partners_PPtUwA"
   ]
 }
