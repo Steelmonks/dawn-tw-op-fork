@@ -426,7 +426,9 @@
         "image_wLb4yH",
         "image_Hnyjaa"
       ],
-      "custom_css": [],
+      "custom_css": [
+        "section {background: black;}"
+      ],
       "name": "Partners Slider",
       "settings": {
         "title": "Kunden & Partner",
