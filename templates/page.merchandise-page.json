@@ -426,10 +426,11 @@
         "image_wLb4yH",
         "image_Hnyjaa"
       ],
+      "custom_css": [],
       "name": "Partners Slider",
       "settings": {
         "title": "Kunden & Partner",
-        "padding_top": 32,
+        "padding_top": 100,
         "padding_bottom": 32
       }
     }
