@@ -346,10 +346,10 @@
         "image_row_fAFEKf": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-5.jpg",
-            "image_2": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-4.jpg",
-            "image_3": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-2.jpg",
-            "image_4": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl.jpg"
+            "image_1": "shopify://shop_images/merchandise-4.jpg",
+            "image_2": "shopify://shop_images/merchandise-8.jpg",
+            "image_3": "shopify://shop_images/merchandise-16.jpg",
+            "image_4": "shopify://shop_images/merchandise-20.webp"
           }
         }
       },
