@@ -319,37 +319,37 @@
         "image_row_VNQVVB": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/web-handwerker_hand.webp",
-            "image_2": "shopify://shop_images/web-firefighter-hand-png.webp",
-            "image_3": "shopify://shop_images/KBE-1000-Hand_b49d0003-bd86-42e3-8395-bcc5d6414f0e.jpg",
-            "image_4": "shopify://shop_images/KBE-2002-Hand.jpg"
+            "image_1": "shopify://shop_images/merchandise-1.jpg",
+            "image_2": "shopify://shop_images/merchandise-5.jpg",
+            "image_3": "shopify://shop_images/merchandise-9.jpg",
+            "image_4": "shopify://shop_images/merchandise-13.jpg"
           }
         },
         "image_row_WExRM9": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/KBE-2003-Hand.jpg",
-            "image_2": "shopify://shop_images/KBE-2007-Hand.jpg",
-            "image_3": "shopify://shop_images/KBE-2006-Hand.jpg",
-            "image_4": "shopify://shop_images/KBE-2006-Hand.jpg"
+            "image_1": "shopify://shop_images/merchandise-2.jpg",
+            "image_2": "shopify://shop_images/merchandise-6.jpg",
+            "image_3": "shopify://shop_images/merchandise-10.jpg",
+            "image_4": "shopify://shop_images/merchandise-14.jpg"
           }
         },
         "image_row_CNV64d": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/KBE-2006-Hand-1.jpg",
-            "image_2": "shopify://shop_images/KBE-1000-Hand.jpg",
-            "image_3": "shopify://shop_images/CBE-1000-Hand.jpg",
-            "image_4": "shopify://shop_images/ZBE-1001-Hand.jpg"
+            "image_1": "shopify://shop_images/merchandise-3.jpg",
+            "image_2": "shopify://shop_images/merchandise-7.jpg",
+            "image_3": "shopify://shop_images/merchandise-11.jpg",
+            "image_4": "shopify://shop_images/merchandise-15.jpg"
           }
         },
         "image_row_fAFEKf": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-5.jpg",
-            "image_2": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-4.jpg",
-            "image_3": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-2.jpg",
-            "image_4": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl.jpg"
+            "image_1": "shopify://shop_images/merchandise-4.jpg",
+            "image_2": "shopify://shop_images/merchandise-8.jpg",
+            "image_3": "shopify://shop_images/merchandise-12.jpg",
+            "image_4": "shopify://shop_images/merchandise-16.jpg"
           }
         }
       },
