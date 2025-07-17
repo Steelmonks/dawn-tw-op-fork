@@ -267,6 +267,71 @@
         "padding_bottom": 20
       }
     },
+    "custom_partners_PPtUwA": {
+      "type": "custom-partners",
+      "blocks": {
+        "image_acqPEn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part1.webp"
+          }
+        },
+        "image_AQTtyd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part2.webp"
+          }
+        },
+        "image_YKGfJp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part3.webp"
+          }
+        },
+        "image_t8jLPd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part4.webp"
+          }
+        },
+        "image_tNwfMW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part5.webp"
+          }
+        },
+        "image_wLb4yH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part6.webp"
+          }
+        },
+        "image_Hnyjaa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part7.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_acqPEn",
+        "image_AQTtyd",
+        "image_YKGfJp",
+        "image_t8jLPd",
+        "image_tNwfMW",
+        "image_wLb4yH",
+        "image_Hnyjaa"
+      ],
+      "custom_css": [
+        "section {background: black;}"
+      ],
+      "name": "Partners Slider",
+      "settings": {
+        "title": "Kunden & Partner",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "custom_image_slider_rMw9cr": {
       "type": "custom-image-slider",
       "blocks": {
@@ -304,6 +369,7 @@
         "slider_block_MpFbjk",
         "slider_block_p7M9eU"
       ],
+      "disabled": true,
       "custom_css": [
         "div {background: black;}",
         "button {width: 40px; height: 40px; margin-right: -20px; margin-left: -20px;}",
@@ -379,6 +445,7 @@
     "custom_image_slider_ANjYDm",
     "accordions_WmkYtb",
     "custom_liquid_f94awL",
+    "custom_partners_PPtUwA",
     "custom_image_slider_rMw9cr",
     "custom_gallery_gfc8PN"
   ]
