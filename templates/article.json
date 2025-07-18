@@ -18,17 +18,18 @@
         },
         "hero_side_by_side_rjhEgM": {
           "type": "hero_side_by_side",
-          "disabled": true,
           "settings": {}
         },
         "featured_image": {
           "type": "featured_image",
+          "disabled": true,
           "settings": {
             "image_height": "adapt"
           }
         },
         "title": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "blog_show_date": false,
             "blog_show_author": false
@@ -36,6 +37,7 @@
         },
         "excerpt_WrWAn9": {
           "type": "excerpt",
+          "disabled": true,
           "settings": {}
         },
         "share": {
