@@ -112,6 +112,37 @@
             <div class="twcss-text-gray-400">{{ article.title }}</div>
           </nav>
         </div>
+      {%- when 'hero_side_by_side' -%}
+        <div class="twcss-w-full twcss-bg-[#f8ede7] twcss-py-8">
+          <div class="twcss-max-w-7xl twcss-mx-auto twcss-flex twcss-flex-col lg:twcss-flex-row twcss-gap-12 twcss-items-start twcss-justify-between twcss-px-4">
+            <!-- Left: Title and Excerpt -->
+            <div class="twcss-flex-1 twcss-flex twcss-flex-col twcss-gap-6 twcss-justify-center">
+              <h1 class="twcss-text-brandblack twcss-text-4xl md:twcss-text-6xl twcss-font-bold twcss-mb-6">{{ article.title | escape }}</h1>
+              {%- if article.excerpt.size > 0 -%}
+                <div class="twcss-mb-4">
+                  <p class="twcss-text-xl twcss-text-gray-700">
+                    {{ article.excerpt | strip_html }}
+                  </p>
+                </div>
+              {%- endif -%}
+            </div>
+            <!-- Right: Featured Image -->
+            <div class="twcss-w-full lg:twcss-w-[600px] twcss-flex-shrink-0 twcss-mx-auto twcss-mb-8 lg:twcss-mb-0">
+              {%- if article.image -%}
+                <div class="twcss-w-full twcss-h-auto twcss-bg-black twcss-flex twcss-items-center twcss-justify-center twcss-rounded-lg twcss-overflow-hidden">
+                  <img
+                    src="{{ article.image | image_url: width: 900 }}"
+                    alt="{{ article.image.alt | escape }}"
+                    class="twcss-w-full twcss-h-auto twcss-object-cover"
+                    loading="eager"
+                    width="900"
+                    height="600"
+                  >
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
     {%- endcase -%}
   {%- endfor -%}
 
@@ -433,6 +464,11 @@
     {
       "type": "custom_breadcrumbs",
       "name": "Breadcrumbs",
+      "limit": 1
+    },
+    {
+      "type": "hero_side_by_side",
+      "name": "Hero Side by Side",
       "limit": 1
     }
   ]
