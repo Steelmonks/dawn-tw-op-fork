@@ -113,10 +113,10 @@
           </nav>
         </div>
       {%- when 'hero_side_by_side' -%}
-        <div class="twcss-w-full twcss-bg-[#f8ede7] twcss-py-8">
-          <div class="twcss-max-w-7xl twcss-mx-auto twcss-flex twcss-flex-col md:twcss-flex-row twcss-gap-12 twcss-items-start twcss-justify-between twcss-px-4">
+        <div class="twcss-py-8">
+          <div class="twcss-max-w-7xl twcss-mx-auto twcss-flex twcss-flex-col md:twcss-flex-row twcss-gap-6 twcss-items-start twcss-justify-between">
             <!-- Left: Title and Excerpt -->
-            <div class="twcss-flex-1 twcss-flex twcss-flex-col twcss-justify-center twcss-h-full twcss-min-h-[400px]">
+            <div class="twcss-flex-1 twcss-flex twcss-flex-col twcss-justify-center twcss-h-full twcss-min-h-[600px]">
               <div class="twcss-flex-1 twcss-flex twcss-flex-col twcss-justify-center twcss-h-full">
                 <h1 class="twcss-text-brandblack twcss-text-4xl md:twcss-text-6xl twcss-font-bold twcss-mb-6">{{ article.title | escape }}</h1>
                 {%- if article.excerpt.size > 0 -%}
@@ -129,15 +129,15 @@
               </div>
             </div>
             <!-- Right: Featured Image -->
-            <div class="twcss-w-full lg:twcss-w-[600px] twcss-flex-shrink-0 twcss-mx-auto twcss-mb-8 lg:twcss-mb-0 twcss-flex twcss-items-center">
+            <div class="twcss-mx-auto twcss-mb-4 twcss-flex twcss-items-center">
               {%- if article.image -%}
-                <div class="twcss-w-full twcss-h-auto twcss-bg-black twcss-flex twcss-items-center twcss-justify-center twcss-rounded-lg twcss-overflow-hidden">
+                <div class="twcss-h-auto twcss-bg-black twcss-flex twcss-items-center twcss-justify-center twcss-rounded-lg twcss-overflow-hidden">
                   <img
-                    src="{{ article.image | image_url: width: 900 }}"
+                    src="{{ article.image | image_url: width: 600 }}"
                     alt="{{ article.image.alt | escape }}"
                     class="twcss-w-full twcss-h-auto twcss-object-cover"
                     loading="eager"
-                    width="900"
+                    width="600"
                     height="600"
                   >
                 </div>
