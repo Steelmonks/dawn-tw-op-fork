@@ -18,6 +18,10 @@
             "image_height": "adapt"
           }
         },
+        "custom_breadcrumbs_NE6dqX": {
+          "type": "custom_breadcrumbs",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -46,6 +50,7 @@
       },
       "block_order": [
         "featured_image",
+        "custom_breadcrumbs_NE6dqX",
         "title",
         "excerpt_WrWAn9",
         "share",
