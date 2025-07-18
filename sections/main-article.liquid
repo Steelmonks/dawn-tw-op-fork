@@ -102,17 +102,17 @@
             <div class="twcss-text-gray-400">{{ article.title }}</div>
           </nav>
         </div>
+      {%- when 'custom_breadcrumbs' -%}
+        <div class="twcss-flex twcss-flex-col twcss-items-center twcss-mb-8 page-width page-width--narrow">
+          <nav class="button-back-to-collection__text twcss-text-center twcss-flex twcss-flex-wrap twcss-items-center twcss-justify-center twcss-gap-2 twcss-px-3 twcss-text-base twcss-mt-2">
+            <a href="/blogs" class="twcss-text-black twcss-no-underline twcss-transition-all twcss-duration-300 hover:twcss-text-brandblue">Blogs</a>
+            <span class="twcss-text-gray-400">→</span>
+            <a href="{{ blog.url }}" class="twcss-text-black twcss-no-underline twcss-transition-all twcss-duration-300 hover:twcss-text-brandblue">{{ blog.title }}</a>
+            <span class="twcss-text-gray-400">→</span>
+            <div class="twcss-text-gray-400">{{ article.title }}</div>
+          </nav>
+        </div>
     {%- endcase -%}
-  {%- when 'custom_breadcrumbs' -%}
-    <div class="twcss-flex twcss-flex-col twcss-items-center twcss-mb-8 page-width page-width--narrow">
-      <nav class="button-back-to-collection__text twcss-text-center twcss-flex twcss-flex-wrap twcss-items-center twcss-justify-center twcss-gap-2 twcss-px-3 twcss-text-base twcss-mt-2">
-        <a href="/blogs" class="twcss-text-black twcss-no-underline twcss-transition-all twcss-duration-300 hover:twcss-text-brandblue">Blogs</a>
-        <span class="twcss-text-gray-400">→</span>
-        <a href="{{ blog.url }}" class="twcss-text-black twcss-no-underline twcss-transition-all twcss-duration-300 hover:twcss-text-brandblue">{{ blog.title }}</a>
-        <span class="twcss-text-gray-400">→</span>
-        <div class="twcss-text-gray-400">{{ article.title }}</div>
-      </nav>
-    </div>
   {%- endfor -%}
 
   {%- assign has_back_to_blog_block = false -%}
