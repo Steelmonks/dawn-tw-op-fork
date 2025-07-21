@@ -1,5 +1,13 @@
 {{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
 
+<style>
+  @media (max-width: 767px) {
+    .mobile-hidden {
+      display: none !important;
+    }
+  }
+</style>
+
 <article class="article-template">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -120,7 +128,7 @@
               <div class="twcss-flex-1 twcss-flex twcss-flex-col twcss-justify-center twcss-h-full">
                 <h1 class="twcss-text-brandblack twcss-text-4xl md:twcss-text-6xl twcss-font-bold twcss-mb-6">{{ article.title | escape }}</h1>
                 {%- if article.excerpt.size > 0 -%}
-                  <div class="twcss-mb-4 twcss-hidden md:twcss-block">
+                  <div class="twcss-mb-4 mobile-hidden">
                     <p class="twcss-text-xl twcss-text-gray-700">
                       {{ article.excerpt | strip_html }}
                     </p>
