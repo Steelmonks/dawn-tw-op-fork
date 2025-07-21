@@ -20,6 +20,27 @@
         "show_title": false
       }
     },
+    "custom_accordion_Fzjgbx": {
+      "type": "custom-accordion",
+      "name": "Custom Accordion",
+      "settings": {
+        "title": "Merchandise aus Stahl.",
+        "padding_top": 64,
+        "padding_bottom": 32,
+        "accordion_1_heading": "Eigenes Merchandise",
+        "accordion_1_content": "Unter Merchandise verstehen sich Produkte für Deine, ihre und eure Firma die wir für euch produzieren.Speziell angefertigt, potentiell von uns direkt an den Kunden versandt, entsprechend unserer hohen Qualitätsstandarts.",
+        "accordion_2_heading": "Was ist möglich?",
+        "accordion_2_content": "Merchandise das wir erstellen können beinhaltet, aber ist nicht begrenzt auf: HalskettenAnhängerKartenhalterWandschilderVisitenkarten (Stahl)WappenZigarrenhalterEinzigartiges",
+        "accordion_3_heading": "Produkte für Großkunden",
+        "accordion_3_content": "Für den eigenen und weiterverkauf eignen sich speziell für euch entwickelte Produkte die ihr mit Staffelpreisen, leicht kaufen und dann selber vermarkten könnt.Eine Mindestabnahmemenge ist notwendig die entsprechend der Komplexität des Projektes ist.",
+        "accordion_4_heading": "Was ist möglich?",
+        "accordion_4_content": "Mit unserem eigenen Team von Designern und \"Creatives\" ist der Produktentwicklung keine Grenzen gesetzt. Wir können dazu eure Wünsche in hohen Stückzahlen produzieren. ",
+        "accordion_5_heading": "Partnerschaften und Lizensen",
+        "accordion_5_content": "Steelmonks steht durch viele Partnerschaften an der Spitze der Industrie, nicht nur als Produzent sondern als eigene Marke mit einer hohen Sozialen Reichweite, Tausended Täglichen Webseitenbesuchern und Hunderten Bestellungen.Als Partner, geniessen sowohl ihr als auch wir die Vorteile die damit einhergehen.Las uns zusammen weiter wachsen!",
+        "accordion_6_heading": "Welche Vorteile gibt es?",
+        "accordion_6_content": "Provision, Kommission, usw. Werden individuell vereinbart und mit einem Handschlag und Vertrag gefestigt."
+      }
+    },
     "accordions_hdyH3p": {
       "type": "accordions",
       "blocks": {
@@ -110,7 +131,10 @@
         "accordion_jdFiYj",
         "accordion_CkJadr"
       ],
-      "custom_css": [],
+      "disabled": true,
+      "custom_css": [
+        "h1 {color: blue;}"
+      ],
       "name": "Accordions",
       "settings": {
         "heading": "",
@@ -159,6 +183,10 @@
         "slider_block_gqPrrh",
         "slider_block_9XatD4",
         "slider_block_iriDyP"
+      ],
+      "custom_css": [
+        "section {background-image: url(\"https://cdn.shopify.com/s/files/1/0472/6420/2901/files/merchandise-bg.webp?v=1752059148\"); background-size: cover;}",
+        "h3 {padding: 3px 12px; background: white; border-radius: 5px;}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
@@ -211,24 +239,95 @@
         "accordion_gFQW9P",
         "accordion_ieRM7R"
       ],
+      "custom_css": [
+        "sm-accordions {background: linear-gradient(180deg, #08090a 0%, #0050ff 100%); color: white !important;}",
+        "h2 {color: white !important;}",
+        "h3 {color: white !important;}"
+      ],
       "name": "Accordions",
       "settings": {
         "heading": "In 3 einfachen Schritten zu euren Produkten und Kollektionen.",
         "subheading": "",
-        "padding_top": 24,
-        "padding_bottom": 60,
-        "padding_left": 24,
-        "padding_right": 24
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0
       }
     },
     "custom_liquid_f94awL": {
       "type": "custom-liquid",
+      "custom_css": [
+        "div {background: linear-gradient(180deg, #0050ff 0%, #08090a 100%);}"
+      ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"powr-form-builder\" id=\"c59428bf_1740733967\"></div><script src=\"https://www.powr.io/powr.js?platform=shopify\"></script>",
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "custom_partners_PPtUwA": {
+      "type": "custom-partners",
+      "blocks": {
+        "image_acqPEn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part1.webp"
+          }
+        },
+        "image_AQTtyd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part2.webp"
+          }
+        },
+        "image_YKGfJp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part3.webp"
+          }
+        },
+        "image_t8jLPd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part4.webp"
+          }
+        },
+        "image_tNwfMW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part5.webp"
+          }
+        },
+        "image_wLb4yH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part6.webp"
+          }
+        },
+        "image_Hnyjaa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sm-part7.webp"
+          }
+        }
+      },
+      "block_order": [
+        "image_acqPEn",
+        "image_AQTtyd",
+        "image_YKGfJp",
+        "image_t8jLPd",
+        "image_tNwfMW",
+        "image_wLb4yH",
+        "image_Hnyjaa"
+      ],
+      "custom_css": [],
+      "name": "Partners Slider",
+      "settings": {
+        "title": "Kunden & Partner",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "custom_image_slider_rMw9cr": {
@@ -268,10 +367,12 @@
         "slider_block_MpFbjk",
         "slider_block_p7M9eU"
       ],
+      "disabled": true,
       "custom_css": [
         "div {background: black;}",
         "button {width: 40px; height: 40px; margin-right: -20px; margin-left: -20px;}",
-        "h1 {color: white;}"
+        "h1 {color: white;}",
+        "img {padding: 20px;}"
       ],
       "name": "Custom Image Sliders",
       "settings": {}
@@ -282,37 +383,41 @@
         "image_row_VNQVVB": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/web-handwerker_hand.webp",
-            "image_2": "shopify://shop_images/web-firefighter-hand-png.webp",
-            "image_3": "shopify://shop_images/KBE-1000-Hand_b49d0003-bd86-42e3-8395-bcc5d6414f0e.jpg",
-            "image_4": "shopify://shop_images/KBE-2002-Hand.jpg"
+            "image_1": "shopify://shop_images/merchandise-1.jpg",
+            "image_2": "shopify://shop_images/merchandise-5.jpg",
+            "image_3": "shopify://shop_images/merchandise-9.jpg",
+            "image_4": "shopify://shop_images/merchandise-13.jpg",
+            "image_5": "shopify://shop_images/merchandise-17.webp"
           }
         },
         "image_row_WExRM9": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/KBE-2003-Hand.jpg",
-            "image_2": "shopify://shop_images/KBE-2007-Hand.jpg",
-            "image_3": "shopify://shop_images/KBE-2006-Hand.jpg",
-            "image_4": "shopify://shop_images/KBE-2006-Hand.jpg"
+            "image_1": "shopify://shop_images/merchandise-2.jpg",
+            "image_2": "shopify://shop_images/merchandise-6.jpg",
+            "image_3": "shopify://shop_images/merchandise-10.jpg",
+            "image_4": "shopify://shop_images/merchandise-14.jpg",
+            "image_5": "shopify://shop_images/merchandise-18.webp"
           }
         },
         "image_row_CNV64d": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/KBE-2006-Hand-1.jpg",
-            "image_2": "shopify://shop_images/KBE-1000-Hand.jpg",
-            "image_3": "shopify://shop_images/CBE-1000-Hand.jpg",
-            "image_4": "shopify://shop_images/ZBE-1001-Hand.jpg"
+            "image_1": "shopify://shop_images/merchandise-3.jpg",
+            "image_2": "shopify://shop_images/merchandise-7.jpg",
+            "image_3": "shopify://shop_images/merchandise-11.jpg",
+            "image_4": "shopify://shop_images/merchandise-15.jpg",
+            "image_5": "shopify://shop_images/merchandise-19.webp"
           }
         },
         "image_row_fAFEKf": {
           "type": "image_row",
           "settings": {
-            "image_1": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-5.jpg",
-            "image_2": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-4.jpg",
-            "image_3": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl-2.jpg",
-            "image_4": "shopify://shop_images/steelmonks-metallschild-sport-freizeit-anhanger-handball-edelstahl.jpg"
+            "image_1": "shopify://shop_images/merchandise-4.jpg",
+            "image_2": "shopify://shop_images/merchandise-8.jpg",
+            "image_3": "shopify://shop_images/merchandise-12.jpg",
+            "image_4": "shopify://shop_images/merchandise-16.jpg",
+            "image_5": "shopify://shop_images/merchandise-20.webp"
           }
         }
       },
@@ -333,10 +438,12 @@
   },
   "order": [
     "main",
+    "custom_accordion_Fzjgbx",
     "accordions_hdyH3p",
     "custom_image_slider_ANjYDm",
     "accordions_WmkYtb",
     "custom_liquid_f94awL",
+    "custom_partners_PPtUwA",
     "custom_image_slider_rMw9cr",
     "custom_gallery_gfc8PN"
   ]

@@ -15,14 +15,20 @@
 
 .article-template__hero-small {
   height: 11rem;
+  max-width: 50%;
+  margin: auto;
 }
 
 .article-template__hero-medium {
   height: 22rem;
+  max-width: 80%;
+  margin: auto;
 }
 
 .article-template__hero-large {
   height: 33rem;
+  max-width: 100%;
+  margin: auto;
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
