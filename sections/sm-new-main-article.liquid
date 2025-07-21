@@ -412,94 +412,18 @@
   "tag": "section",
   "class": "section",
   "blocks": [
-    {
-      "type": "@app"
-    },
-    {
-      "type": "featured_image",
-      "name": "Featured Image",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "select",
-          "id": "image_height",
-          "options": [
-            { "value": "adapt", "label": "Adapt" },
-            { "value": "small", "label": "Small" },
-            { "value": "medium", "label": "Medium" },
-            { "value": "large", "label": "Large" }
-          ],
-          "default": "adapt",
-          "label": "Image Height",
-          "info": "Choose the image height."
-        }
-      ]
-    },
-    {
-      "type": "title",
-      "name": "Title",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "checkbox",
-          "id": "blog_show_date",
-          "default": true,
-          "label": "Show Date"
-        },
-        {
-          "type": "checkbox",
-          "id": "blog_show_author",
-          "default": false,
-          "label": "Show Author"
-        }
-      ]
-    },
-    {
-      "type": "content",
-      "name": "Content",
-      "limit": 1
-    },
-    {
-      "type": "share",
-      "name": "Share",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "share_label",
-          "label": "Share Label",
-          "default": "Share this article"
-        },
-        {
-          "type": "paragraph",
-          "content": "Share button info."
-        },
-        {
-          "type": "paragraph",
-          "content": "Title info."
-        }
-      ]
-    },
-    {
-      "type": "excerpt",
-      "name": "Excerpt",
-      "limit": 1
-    },
-    {
-      "type": "back-to-blog",
-      "name": "Back to Blog Button",
-      "limit": 1
-    },
-    {
-      "type": "custom_breadcrumbs",
-      "name": "Breadcrumbs",
-      "limit": 1
-    },
-    {
-      "type": "hero_side_by_side",
-      "name": "Hero Side by Side",
-      "limit": 1
-    }
+    { "type": "@app" },
+    { "type": "featured_image", "name": "Featured Image", "limit": 1, "settings": [ { "type": "select", "id": "image_height", "options": [ { "value": "adapt", "label": "Adapt" }, { "value": "small", "label": "Small" }, { "value": "medium", "label": "Medium" }, { "value": "large", "label": "Large" } ], "default": "adapt", "label": "Image Height", "info": "Choose the image height." } ] },
+    { "type": "title", "name": "Title", "limit": 1, "settings": [ { "type": "checkbox", "id": "blog_show_date", "default": true, "label": "Show Date" }, { "type": "checkbox", "id": "blog_show_author", "default": false, "label": "Show Author" } ] },
+    { "type": "content", "name": "Content", "limit": 1 },
+    { "type": "share", "name": "Share", "limit": 1, "settings": [ { "type": "text", "id": "share_label", "label": "Share Label", "default": "Share this article" }, { "type": "paragraph", "content": "Share button info." }, { "type": "paragraph", "content": "Title info." } ] },
+    { "type": "excerpt", "name": "Excerpt", "limit": 1 },
+    { "type": "back-to-blog", "name": "Back to Blog Button", "limit": 1 },
+    { "type": "custom_breadcrumbs", "name": "Breadcrumbs", "limit": 1 },
+    { "type": "hero_side_by_side", "name": "Hero Side by Side", "limit": 1 }
+  ],
+  "presets": [
+    { "name": "SM New Main Article" }
   ]
 }
 {% endschema %}
