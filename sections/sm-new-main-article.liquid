@@ -423,7 +423,16 @@
     { "type": "hero_side_by_side", "name": "Hero Side by Side", "limit": 1 }
   ],
   "presets": [
-    { "name": "SM New Main Article" }
+    {
+      "name": "SM New Main Article",
+      "blocks": [
+        { "type": "custom_breadcrumbs" },
+        { "type": "hero_side_by_side" },
+        { "type": "content" },
+        { "type": "back-to-blog" },
+        { "type": "share" }
+      ]
+    }
   ]
 }
 {% endschema %}
