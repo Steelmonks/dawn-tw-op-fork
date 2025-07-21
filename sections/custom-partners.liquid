@@ -64,7 +64,7 @@
         {% for block in images %}
           {% if block.settings.image != blank %}
             <div class="partner-slide twcss-flex-shrink-0 twcss-w-full twcss-flex twcss-justify-center twcss-items-center" style="display: none;">
-              <img src="{{ block.settings.image | image_url: width: 500 }}" alt="" width="500" height="300" class="twcss-object-contain twcss-max-h-[300px] twcss-max-w-[500px] twcss-mx-auto" loading="lazy">
+              <img src="{{ block.settings.image | image_url: width: 710 }}" alt="" width="710" height="380" class="twcss-object-contain twcss-max-h-[380px] twcss-max-w-[710px] twcss-mx-auto" loading="eager" style="border: 0; vertical-align: middle;">
             </div>
           {% endif %}
         {% endfor %}
