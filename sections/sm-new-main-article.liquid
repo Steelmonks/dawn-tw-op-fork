@@ -1,15 +1,29 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
 <style>
   /* General article layout */
   .sm-article-template {
     font-family: inherit;
     margin: 0 auto;
     max-width: 900px;
-    padding: 24px 16px;
+    padding: 0 16px;
     background: #fff;
     color: #222;
   }
   .sm-article-header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     text-align: left;
   }
   .sm-article-title {
@@ -17,6 +31,7 @@
     font-weight: bold;
     margin-bottom: 12px;
     color: #222;
+    line-height: 1.2;
   }
   .sm-article-meta {
     font-size: 1rem;
@@ -26,15 +41,22 @@
   .sm-article-content {
     font-size: 1.1rem;
     line-height: 1.7;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+  }
+  .sm-article-content > *:first-child {
+    margin-top: 0;
+  }
+  .sm-article-content > *:last-child {
+    margin-bottom: 0;
   }
   .sm-article-excerpt {
     font-size: 1.2rem;
     color: #555;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    line-height: 1.6;
   }
   .sm-article-hero-container {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     width: 100%;
     overflow: hidden;
     border-radius: 12px;
@@ -51,10 +73,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 32px;
+    margin: 24px 0;
   }
   .sm-article-back {
-    margin: 32px 0;
+    margin: 24px 0;
     text-align: center;
   }
   .sm-article-back a {
@@ -71,7 +93,7 @@
     background: #0d1333;
   }
   .sm-article-breadcrumbs {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     font-size: 1rem;
     color: #888;
     display: flex;
@@ -88,7 +110,7 @@
     color: #f5ae2e;
   }
   .sm-article-comments {
-    margin-top: 48px;
+    margin-top: 32px;
     background: #fafafa;
     border-radius: 8px;
     padding: 24px;
@@ -101,15 +123,65 @@
   .sm-article-comment:last-child {
     border-bottom: none;
   }
+  .sm-hero-side-by-side {
+    margin: 24px 0;
+  }
+  .sm-hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sm-hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .sm-hero-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sm-hero-image-wrapper {
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+  }
+  .sm-hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .sm-hero-container {
+      flex-direction: row;
+      gap: 48px;
+    }
+    .sm-hero-text {
+      text-align: left;
+    }
+  }
+  
   .sm-mobile-hidden {
     display: block;
   }
   @media (max-width: 767px) {
     .sm-article-template {
-      padding: 12px 4px;
+      padding: 0 12px;
     }
     .sm-article-title {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
     .sm-mobile-hidden {
       display: none !important;
@@ -117,16 +189,16 @@
   }
 </style>
 
-<article class="sm-article-template">
+<article class="sm-article-template section-{{ section.id }}-padding">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
-        <div>
+        <div {{ block.shopify_attributes }}>
           {% render block %}
         </div>
       {%- when 'featured_image' -%}
         {%- if article.image -%}
-          <div class="sm-article-hero-container">
+          <div class="sm-article-hero-container" {{ block.shopify_attributes }}>
             <img
               srcset="
                 {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
@@ -149,42 +221,42 @@
           </div>
         {%- endif -%}
       {%- when 'title' -%}
-        <header class="sm-article-header">
-          <h2 class="sm-article-title">{{ article.title | escape }}</h2>
+        <header class="sm-article-header" {{ block.shopify_attributes }}>
+          <h1 class="sm-article-title">{{ article.title | escape }}</h1>
           {%- if block.settings.blog_show_date -%}
-            <span class="sm-article-meta">
+            <div class="sm-article-meta">
               {{- article.published_at | time_tag: format: 'date' -}}
-            </span>
+            </div>
           {%- endif -%}
           {%- if block.settings.blog_show_author -%}
-            <span class="sm-article-meta">
+            <div class="sm-article-meta">
               <span>{{ article.author }}</span>
-            </span>
+            </div>
           {%- endif -%}
         </header>
       {%- when 'content' -%}
-        <div class="sm-article-content">
+        <div class="sm-article-content" {{ block.shopify_attributes }}>
           {{ article.content }}
         </div>
       {%- when 'share' -%}
-        <div class="sm-article-share">
+        <div class="sm-article-share" {{ block.shopify_attributes }}>
           {% assign share_url = request.origin | append: article.url %}
           {% render 'share-button', block: block, share_link: share_url %}
         </div>
       {%- when 'excerpt' -%}
         {%- if article.excerpt.size > 0 -%}
-          <div class="sm-article-excerpt">
+          <div class="sm-article-excerpt" {{ block.shopify_attributes }}>
             <p>{{ article.excerpt | strip_html }}</p>
           </div>
         {%- endif -%}
       {%- when 'back-to-blog' -%}
-        <div class="sm-article-back">
+        <div class="sm-article-back" {{ block.shopify_attributes }}>
           <a href="{{ blog.url }}">
             {{ 'blogs.article.back_to_blog' | t: title: blog.title | escape }}
           </a>
         </div>
       {%- when 'custom_breadcrumbs' -%}
-        <nav class="sm-article-breadcrumbs">
+        <nav class="sm-article-breadcrumbs" {{ block.shopify_attributes }}>
           <a href="/blogs">Blogs</a>
           <span>→</span>
           <a href="{{ blog.url }}">{{ blog.title }}</a>
@@ -192,34 +264,29 @@
           <span>{{ article.title }}</span>
         </nav>
       {%- when 'hero_side_by_side' -%}
-        <div style="padding: 32px 0;">
-          <div style="display: flex; flex-direction: column; gap: 24px; align-items: flex-start; justify-content: space-between; max-width: 1200px; margin: 0 auto; flex-wrap: wrap;">
-            <!-- Left: Title and Excerpt -->
-            <div style="flex: 1 1 300px; min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
-              <div style="flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center;">
-                <h1 style="font-size: 2.2rem; font-weight: bold; margin-bottom: 18px; color: #222;">{{ article.title | escape }}</h1>
-                {%- if article.excerpt.size > 0 -%}
-                  <div class="sm-article-excerpt sm-mobile-hidden">
-                    <p>{{ article.excerpt | strip_html }}</p>
-                  </div>
-                {%- endif -%}
-              </div>
-            </div>
-            <!-- Right: Featured Image -->
-            <div style="margin: 0 auto 16px auto; display: flex; align-items: center;">
-              {%- if article.image -%}
-                <div style="height: auto; background: #000; display: flex; align-items: center; justify-content: center; border-radius: 12px; overflow: hidden;">
-                  <img
-                    src="{{ article.image | image_url: width: 600 }}"
-                    alt="{{ article.image.alt | escape }}"
-                    style="width: 100%; height: auto; object-fit: cover; border-radius: 12px;"
-                    loading="eager"
-                    width="600"
-                    height="600"
-                  >
+        <div class="sm-hero-side-by-side" {{ block.shopify_attributes }}>
+          <div class="sm-hero-container">
+            <div class="sm-hero-text">
+              <h1 class="sm-article-title">{{ article.title | escape }}</h1>
+              {%- if article.excerpt.size > 0 -%}
+                <div class="sm-article-excerpt sm-mobile-hidden">
+                  <p>{{ article.excerpt | strip_html }}</p>
                 </div>
               {%- endif -%}
             </div>
+            {%- if article.image -%}
+              <div class="sm-hero-image">
+                <div class="sm-hero-image-wrapper">
+                  <img
+                    src="{{ article.image | image_url: width: 600 }}"
+                    alt="{{ article.image.alt | escape }}"
+                    loading="eager"
+                    width="600"
+                    height="400"
+                  >
+                </div>
+              </div>
+            {%- endif -%}
           </div>
         </div>
     {%- endcase -%}
@@ -411,6 +478,28 @@
   "name": "sm-new-main-article",
   "tag": "section",
   "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
   "blocks": [
     { "type": "@app" },
     { "type": "featured_image", "name": "Featured Image", "limit": 1, "settings": [ { "type": "select", "id": "image_height", "options": [ { "value": "adapt", "label": "Adapt" }, { "value": "small", "label": "Small" }, { "value": "medium", "label": "Medium" }, { "value": "large", "label": "Large" } ], "default": "adapt", "label": "Image Height", "info": "Choose the image height." } ] },

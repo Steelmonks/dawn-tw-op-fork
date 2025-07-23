@@ -20,30 +20,29 @@
   <figure class='product__media__main-image product__media__main-image--mobile'>
     <div class='mobile-carousel'>
       <div class='mobile-carousel__container'>
+        {%- assign featured_image_id = product.featured_image.id -%}
+        <!-- First slide: always the featured image -->
+        <div class='mobile-carousel__slide active'>
+          <img
+            src='{{ product.featured_image | image_url: width: 750 }}'
+            alt='{{ product.featured_image.alt | escape }}'
+            loading='lazy'
+            width='750'
+            height='{{ product.featured_image.height | times: 750.0 | divided_by: product.featured_image.width | round }}'
+          >
+        </div>
+        <!-- Then all other images except the featured image -->
         {% for media in product.media %}
-          {% unless media.alt contains 'Kundenfoto' %}
-            {% if forloop.first %}
-              <div class='mobile-carousel__slide {% if media == product.featured_image %}active{% endif %}'>
-                <img
-                  src='{{ media | image_url: width: 750 }}'
-                  alt='{{ media.alt | escape }}'
-                  loading='lazy'
-                  width='750'
-                  height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
-                  data-main-image
-                >
-              </div>
-            {% else %}
-              <div class='mobile-carousel__slide {% if media == product.featured_image %}active{% endif %}'>
-                <img
-                  src='{{ media | image_url: width: 750 }}'
-                  alt='{{ media.alt | escape }}'
-                  loading='lazy'
-                  width='750'
-                  height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
-                >
-              </div>
-            {% endif %}
+          {% unless media.alt contains 'Kundenfoto' or media.id == featured_image_id %}
+            <div class='mobile-carousel__slide'>
+              <img
+                src='{{ media | image_url: width: 750 }}'
+                alt='{{ media.alt | escape }}'
+                loading='lazy'
+                width='750'
+                height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
+              >
+            </div>
           {% endunless %}
         {% endfor %}
       </div>
@@ -274,8 +273,32 @@
       // Find current slide index based on scroll position
       const getCurrentSlideIndex = () => {
         const scrollLeft = carousel.scrollLeft;
-        const slideWidth = slides[0].offsetWidth;
+        const slideWidth = slides[0]?.offsetWidth || 0;
+        if (slideWidth === 0) return 0;
         return Math.round(scrollLeft / slideWidth);
+      };
+
+      // Reset carousel to first slide
+      const resetCarousel = () => {
+        if (slides.length === 0) return;
+        
+        // Temporarily disable smooth scrolling
+        const originalBehavior = carousel.style.scrollBehavior;
+        carousel.style.scrollBehavior = 'auto';
+        
+        // Force scroll to beginning
+        carousel.scrollLeft = 0;
+        
+        // Set first slide as active
+        slides.forEach((slide) => slide.classList.remove('active'));
+        slides[0].classList.add('active');
+        
+        // Restore scroll behavior after a short delay
+        setTimeout(() => {
+          carousel.style.scrollBehavior = originalBehavior;
+        }, 100);
+        
+        updateButtonVisibility();
       };
 
       prevButton.addEventListener('click', () => {
@@ -294,11 +317,31 @@
         requestAnimationFrame(updateButtonVisibility);
       });
 
-      // Initial setup
-      updateButtonVisibility();
+      // Initial setup and reset on multiple events to handle browser behavior
+      resetCarousel();
+      
+      // Reset again after a short delay to handle browser scroll restoration
+      setTimeout(resetCarousel, 100);
+      setTimeout(resetCarousel, 300);
+      
+      // Also reset on window load and when page becomes visible
+      window.addEventListener('load', resetCarousel);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+          setTimeout(resetCarousel, 50);
+        }
+      });
     };
 
-    document.addEventListener('DOMContentLoaded', initMobileCarousel);
+    // Initialize on DOMContentLoaded and also immediately if DOM is already ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileCarousel);
+    } else {
+      initMobileCarousel();
+    }
+    
+    // Also initialize on window load as a fallback
+    window.addEventListener('load', initMobileCarousel);
   </script>
 </article>
 
