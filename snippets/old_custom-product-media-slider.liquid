@@ -29,7 +29,6 @@
                 loading='lazy'
                 width='750'
                 height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
-                {% if forloop.first %}data-main-image{% endif %}
               >
             </div>
           {% endunless %}
