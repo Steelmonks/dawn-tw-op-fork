@@ -294,7 +294,12 @@
         requestAnimationFrame(updateButtonVisibility);
       });
 
-      // Initial setup
+      // Initial setup: always scroll to the first slide and set it as active
+      if (slides.length > 0) {
+        slides.forEach((slide) => slide.classList.remove('active'));
+        slides[0].classList.add('active');
+        carousel.scrollLeft = 0;
+      }
       updateButtonVisibility();
     };
 
