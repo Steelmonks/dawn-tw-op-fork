@@ -20,9 +20,21 @@
   <figure class='product__media__main-image product__media__main-image--mobile'>
     <div class='mobile-carousel'>
       <div class='mobile-carousel__container'>
+        {%- assign featured_image_id = product.featured_image.id -%}
+        <!-- First slide: always the featured image -->
+        <div class='mobile-carousel__slide active'>
+          <img
+            src='{{ product.featured_image | image_url: width: 750 }}'
+            alt='{{ product.featured_image.alt | escape }}'
+            loading='lazy'
+            width='750'
+            height='{{ product.featured_image.height | times: 750.0 | divided_by: product.featured_image.width | round }}'
+          >
+        </div>
+        <!-- Then all other images except the featured image -->
         {% for media in product.media %}
-          {% unless media.alt contains 'Kundenfoto' %}
-            <div class='mobile-carousel__slide{% if forloop.first %} active{% endif %}'>
+          {% unless media.alt contains 'Kundenfoto' or media.id == featured_image_id %}
+            <div class='mobile-carousel__slide'>
               <img
                 src='{{ media | image_url: width: 750 }}'
                 alt='{{ media.alt | escape }}'
