@@ -22,28 +22,16 @@
       <div class='mobile-carousel__container'>
         {% for media in product.media %}
           {% unless media.alt contains 'Kundenfoto' %}
-            {% if forloop.first %}
-              <div class='mobile-carousel__slide {% if media == product.featured_image %}active{% endif %}'>
-                <img
-                  src='{{ media | image_url: width: 750 }}'
-                  alt='{{ media.alt | escape }}'
-                  loading='lazy'
-                  width='750'
-                  height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
-                  data-main-image
-                >
-              </div>
-            {% else %}
-              <div class='mobile-carousel__slide {% if media == product.featured_image %}active{% endif %}'>
-                <img
-                  src='{{ media | image_url: width: 750 }}'
-                  alt='{{ media.alt | escape }}'
-                  loading='lazy'
-                  width='750'
-                  height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
-                >
-              </div>
-            {% endif %}
+            <div class='mobile-carousel__slide{% if forloop.first %} active{% endif %}'>
+              <img
+                src='{{ media | image_url: width: 750 }}'
+                alt='{{ media.alt | escape }}'
+                loading='lazy'
+                width='750'
+                height='{{ media.height | times: 750.0 | divided_by: media.width | round }}'
+                {% if forloop.first %}data-main-image{% endif %}
+              >
+            </div>
           {% endunless %}
         {% endfor %}
       </div>
